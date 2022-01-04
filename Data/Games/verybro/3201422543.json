@@ -1,0 +1,180 @@
+{
+    "id": "ZHebeSYL",
+    "rated": true,
+    "variant": "standard",
+    "speed": "rapid",
+    "perf": "rapid",
+    "createdAt": "2021-06-27 22:08:02.928000+00:00",
+    "lastMoveAt": "2021-06-27 22:12:28.010000+00:00",
+    "status": "resign",
+    "players": {
+        "white": {
+            "user": {
+                "name": "Verybro",
+                "id": "verybro"
+            },
+            "rating": 1640,
+            "ratingDiff": -5,
+            "analysis": {
+                "inaccuracy": 0,
+                "mistake": 1,
+                "blunder": 2,
+                "acpl": 96
+            }
+        },
+        "black": {
+            "user": {
+                "name": "Sleepswimming",
+                "id": "sleepswimming"
+            },
+            "rating": 1657,
+            "ratingDiff": 9,
+            "analysis": {
+                "inaccuracy": 3,
+                "mistake": 0,
+                "blunder": 0,
+                "acpl": 29
+            }
+        }
+    },
+    "winner": "black",
+    "opening": {
+        "eco": "C23",
+        "name": "Bishop's Opening: Boi Variation",
+        "ply": 4
+    },
+    "moves": "e4 e5 Bc4 Bc5 Qf3 Nf6 d3 Nc6 Bg5 Nd4 Qd1 h6 Bh4 g5 Bg3 d6 c3 Ne6 b4 Bb6 Qf3 Qe7 Ne2 g4 Qf5 Ng7 Bxf7+ Kxf7 Qxf6+ Qxf6",
+    "analysis": [
+        {
+            "eval": 24
+        },
+        {
+            "eval": 20
+        },
+        {
+            "eval": 0
+        },
+        {
+            "eval": 32
+        },
+        {
+            "eval": 0
+        },
+        {
+            "eval": -5
+        },
+        {
+            "eval": -40
+        },
+        {
+            "eval": 0
+        },
+        {
+            "eval": -136,
+            "best": "g1e2",
+            "variation": "Ne2 d6 Nbc3 h6 O-O O-O Qg3 Kh7 Qh4 Kg8",
+            "judgment": {
+                "name": "Mistake",
+                "comment": "Mistake. Ne2 was best."
+            }
+        },
+        {
+            "eval": -150
+        },
+        {
+            "eval": -138
+        },
+        {
+            "eval": -113
+        },
+        {
+            "eval": -148
+        },
+        {
+            "eval": -70,
+            "best": "d7d5",
+            "variation": "d5 exd5 b5 Bb3 a5 c3 Nxb3 axb3 Qxd5 Nf3",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. d5 was best."
+            }
+        },
+        {
+            "eval": -95
+        },
+        {
+            "eval": -10,
+            "best": "d7d5",
+            "variation": "d5 exd5 b5 c3 bxc4 cxd4 exd4 Qa4+ Qd7 Qxd7+ Bxd7 dxc4 O-O-O Nf3",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. d5 was best."
+            }
+        },
+        {
+            "eval": -19
+        },
+        {
+            "eval": -33
+        },
+        {
+            "eval": -78
+        },
+        {
+            "eval": -78
+        },
+        {
+            "eval": -344,
+            "best": "a2a4",
+            "variation": "a4 a5",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. a4 was best."
+            }
+        },
+        {
+            "eval": -223,
+            "best": "h6h5",
+            "variation": "h5 a4 a5 bxa5 Rxa5 h4 Nf4 Bxf4 gxf4 d4 d5 exd5 Qe7 Qe2",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. h5 was best."
+            }
+        },
+        {
+            "eval": -816,
+            "best": "h2h3",
+            "variation": "h3 a5 bxa5 Rxa5 Nd2 Rg8 Rb1 h5 Bb5+ Bd7 Bxd7+ Nxd7 Qxh5 Ndc5",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. h3 was best."
+            }
+        },
+        {
+            "eval": -812
+        },
+        {
+            "eval": -809
+        },
+        {
+            "eval": -751
+        },
+        {
+            "eval": -1071
+        },
+        {
+            "eval": -1037
+        },
+        {
+            "eval": -1155
+        },
+        {
+            "eval": -1148
+        }
+    ],
+    "clock": {
+        "initial": 600,
+        "increment": 0,
+        "totalTime": 600
+    }
+}
