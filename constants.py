@@ -1,11 +1,10 @@
 # Will put constants here.
 
 import berserk
+import os
 
 # Change this to your own API TOKEN
-
-with open("/Users/ahmedalghafri/Documents/PROJECT_API_TOKENS/lichess_berserk_api_token_api.txt", "r") as f:
-    API_TOKEN = f.readline()
+API_TOKEN = os.environ.get("Lichess-API-Token")
 
 SESSION = berserk.TokenSession(API_TOKEN)
 
