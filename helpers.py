@@ -6,13 +6,10 @@
  * @desc This code generates a dataset containing data of chess games played on lichess.org
 '''
 
-import re
 import pandas as pd
-import time
 
 import constants as C
 import json
-import random
 import os
 import pickle
 
@@ -29,47 +26,31 @@ def write_usernames_in_txt(games, is_csv=True):
                 f.write(str(i))
 
 
-def generate_username_set(csv_file_path:str, players_id=True, prev_username_set=set()) -> tuple:
-    """
+def generate_username_set(csv_file_path:str):
+    '''
     This function takes a CSV file that contain records of chess games from lichess.org and return a Set of all the lichess usernames.
 
     Args:
-        csv_file_path (String): A string path to a CSV file that contains lichess.org chess games
-        ratings (bool): Does the 
+        csv_file_path (String): A string path to a CSV file that contains lichess.org usernamedata
 
     returns: 
-        A tuple containing:
-            1- usernames (Set): A set that contains all the usernames in the CSV games record (dataset)  
-            2- games (DataFrame): A cleaned DataFrame with relevant games only
-    """    
+        Set<String> containing usernames
+    '''
     
     # USES:
     # 
     # The generated set will be used to scrape new games (data)
     #
-    games = pd.read_csv(csv_file_path)
+    df = pd.read_csv(csv_file_path)
+    usernames = set()
 
-    # Attempts to read a previous username set
-    usernames = read_usernames(r"Data\Usernames\username_set.pkl") if os.path.exists(r"Data\Usernames\username_set.pkl") else set()
+    # for index, row in df.iterrows():
+    #     usernames.add(row['Username'])
+    # # Attempts to read a previous username set
     
-    if players_id:
-        
-        for i in range(len(games)):
-            # add white player to the set
-            usernames.add(games['white_id'][i])
 
-            # add black player to the set
-            usernames.add(games['black_id'][i])
-
-            if (games['turns'][i] < 10) or (int(games["increment_code"][i].split('+')[0]) <= 10) or (abs(games['white_rating'][i] - games['black_rating'][i]) > 50) or (games['rated'][i] != True):
-                games.drop(i, axis=0, inplace=True)
-        
-
-    else:
-        # only game id 
-        # open the username .txt file
-        write_usernames_in_txt(games)
-    return (usernames, games)
+    
+    return usernames
 
 
 def write_usernames(username_set:set, output_path=r'Data\Usernames'):
