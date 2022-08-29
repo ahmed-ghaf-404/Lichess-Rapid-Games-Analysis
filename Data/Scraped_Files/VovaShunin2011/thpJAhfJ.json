@@ -1,0 +1,136 @@
+{
+    "id": "thpJAhfJ",
+    "rated": true,
+    "variant": "standard",
+    "speed": "rapid",
+    "perf": "rapid",
+    "createdAt": "2022-03-18 14:19:06.111000+00:00",
+    "lastMoveAt": "2022-03-18 14:21:37.840000+00:00",
+    "status": "resign",
+    "players": {
+        "white": {
+            "user": {
+                "name": "boufos",
+                "id": "boufos"
+            },
+            "rating": 1603,
+            "ratingDiff": 4,
+            "analysis": {
+                "inaccuracy": 0,
+                "mistake": 0,
+                "blunder": 1,
+                "acpl": 27
+            }
+        },
+        "black": {
+            "user": {
+                "name": "VovaShunin2011",
+                "id": "vovashunin2011"
+            },
+            "rating": 1518,
+            "ratingDiff": -4,
+            "analysis": {
+                "inaccuracy": 0,
+                "mistake": 1,
+                "blunder": 1,
+                "acpl": 128
+            }
+        }
+    },
+    "winner": "white",
+    "opening": {
+        "eco": "C55",
+        "name": "Italian Game: Scotch Gambit, Max Lange Attack, Spielmann Defense",
+        "ply": 12
+    },
+    "moves": "e4 e5 Nf3 Nc6 Bc4 Bc5 O-O Nf6 d4 exd4 e5 Ng4 Bxf7+ Kxf7 Ng5+ Kg8 Qxg4 d6 Qe4 h6 Qd5+",
+    "analysis": [
+        {
+            "eval": 28
+        },
+        {
+            "eval": 12
+        },
+        {
+            "eval": 19
+        },
+        {
+            "eval": 32
+        },
+        {
+            "eval": 19
+        },
+        {
+            "eval": 20
+        },
+        {
+            "eval": 21
+        },
+        {
+            "eval": 21
+        },
+        {
+            "eval": -1
+        },
+        {
+            "eval": 48
+        },
+        {
+            "eval": 39
+        },
+        {
+            "eval": 31
+        },
+        {
+            "eval": 0
+        },
+        {
+            "eval": 0
+        },
+        {
+            "eval": -32
+        },
+        {
+            "eval": -21
+        },
+        {
+            "eval": -15
+        },
+        {
+            "eval": 133,
+            "best": "d7d5",
+            "variation": "d5 Qg3",
+            "judgment": {
+                "name": "Mistake",
+                "comment": "Mistake. d5 was best."
+            }
+        },
+        {
+            "eval": -61,
+            "best": "g4f3",
+            "variation": "Qf3 Qe7 exd6 cxd6 Bd2 Qf6 Qb3+ Kf8 Na3 h6 Ne4 Qe6 Rfe1 Qxb3",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Qf3 was best."
+            }
+        },
+        {
+            "mate": 3,
+            "best": "d6d5",
+            "variation": "d5 Qf4 Qf8 Qg3 h6 Nf3 Bf5 c3 dxc3 bxc3 Re8 Nbd2 Re6 Nh4",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Checkmate is now unavoidable. d5 was best."
+            }
+        },
+        {
+            "mate": 2
+        }
+    ],
+    "tournament": "ihbjyOzd",
+    "clock": {
+        "initial": 600,
+        "increment": 0,
+        "totalTime": 600
+    }
+}
