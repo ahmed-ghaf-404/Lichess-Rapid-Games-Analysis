@@ -63,9 +63,19 @@ def buildDataset(path="Data/Scraped_Files"):
     def buildRow(path):
         # path here is the path to the players folder
         # It's currently at Data/Scraped_Files/username
+
+        # [id, white, white rating, white average pawn loss, black, black rating, black acpl, time_control, rating_diff, provisional?]
+
+
+        #! IDEA: (a inaccuracy + b mistake + c blunder + d) / num_moves= acpl
+        #! vector-like?
+
         return
     
+    df = pd.DataFrame()
     for username in os.walk(path):
-        print(username)
-        
+        row = buildRow(username[0])
+        df = df.append(row, True)
+
+
     return
