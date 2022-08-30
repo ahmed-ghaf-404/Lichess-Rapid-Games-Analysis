@@ -1,0 +1,143 @@
+{
+    "id": "4QuYhgXU",
+    "rated": true,
+    "variant": "standard",
+    "speed": "rapid",
+    "perf": "rapid",
+    "createdAt": "2021-02-13 15:46:05.627000+00:00",
+    "lastMoveAt": "2021-02-13 15:50:45.481000+00:00",
+    "status": "mate",
+    "players": {
+        "white": {
+            "user": {
+                "name": "waldameise",
+                "id": "waldameise"
+            },
+            "rating": 1712,
+            "ratingDiff": -6,
+            "analysis": {
+                "inaccuracy": 1,
+                "mistake": 2,
+                "blunder": 1,
+                "acpl": 127
+            }
+        },
+        "black": {
+            "user": {
+                "name": "aditya051",
+                "id": "aditya051"
+            },
+            "rating": 1714,
+            "ratingDiff": 7,
+            "analysis": {
+                "inaccuracy": 0,
+                "mistake": 1,
+                "blunder": 0,
+                "acpl": 30
+            }
+        }
+    },
+    "winner": "black",
+    "opening": {
+        "eco": "C42",
+        "name": "Russian Game: Stafford Gambit",
+        "ply": 8
+    },
+    "moves": "e4 e5 Nf3 Nf6 Nxe5 Nc6 Nxc6 dxc6 Nc3 Bc5 Be2 h5 d4 Bxd4 Bg5 Qd6 O-O Ng4 Bh4 Qxh2#",
+    "analysis": [
+        {
+            "eval": 25
+        },
+        {
+            "eval": 31
+        },
+        {
+            "eval": 28
+        },
+        {
+            "eval": 48
+        },
+        {
+            "eval": 43
+        },
+        {
+            "eval": 159,
+            "best": "d7d6",
+            "variation": "d6 Nf3 Nxe4 Bd3 Nc5 Be2 Be7 c4 O-O Nc3",
+            "judgment": {
+                "name": "Mistake",
+                "comment": "Mistake. d6 was best."
+            }
+        },
+        {
+            "eval": 161
+        },
+        {
+            "eval": 184
+        },
+        {
+            "eval": 180
+        },
+        {
+            "eval": 167
+        },
+        {
+            "eval": 35,
+            "best": "h2h3",
+            "variation": "h3 Qe7 Qe2 Be6 g3 O-O-O Bg2 Nd7 d3 Bd4",
+            "judgment": {
+                "name": "Mistake",
+                "comment": "Mistake. h3 was best."
+            }
+        },
+        {
+            "eval": 90,
+            "best": "d8d4",
+            "variation": "Qd4 O-O Nxe4 Bf3 Ng5 d3 h6 Be3 Qd6 Qe2"
+        },
+        {
+            "eval": -1,
+            "best": "d2d3",
+            "variation": "d3 Ng4 Bxg4 hxg4 Be3 Bxe3 fxe3 Qd6 Kd2 Be6",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. d3 was best."
+            }
+        },
+        {
+            "eval": 0
+        },
+        {
+            "eval": 10
+        },
+        {
+            "eval": -10
+        },
+        {
+            "eval": -159,
+            "best": "d1d2",
+            "variation": "Qd2 Be6 f3 O-O-O O-O-O Qe5 Be3 Bb6 Bd3 h4 a3 Bxe3 Qxe3 Kb8",
+            "judgment": {
+                "name": "Mistake",
+                "comment": "Mistake. Qd2 was best."
+            }
+        },
+        {
+            "eval": -112
+        },
+        {
+            "mate": -1,
+            "best": "e4e5",
+            "variation": "e5 Qxe5 Bxg4 Bxg4 Qd2 Bxc3 bxc3 O-O Rfe1 Qa5 h3 Be6 Bf4 Rad8",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Checkmate is now unavoidable. e5 was best."
+            }
+        }
+    ],
+    "clock": {
+        "initial": 600,
+        "increment": 0,
+        "totalTime": 600
+    }
+}

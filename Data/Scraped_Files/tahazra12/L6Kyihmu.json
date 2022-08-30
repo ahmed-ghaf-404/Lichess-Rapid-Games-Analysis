@@ -1,0 +1,207 @@
+{
+    "id": "L6Kyihmu",
+    "rated": true,
+    "variant": "standard",
+    "speed": "rapid",
+    "perf": "rapid",
+    "createdAt": "2022-04-26 13:25:59.279000+00:00",
+    "lastMoveAt": "2022-04-26 13:40:15.445000+00:00",
+    "status": "resign",
+    "players": {
+        "white": {
+            "user": {
+                "name": "HeimoWasserschneider",
+                "id": "heimowasserschneider"
+            },
+            "rating": 1048,
+            "ratingDiff": -7,
+            "analysis": {
+                "inaccuracy": 1,
+                "mistake": 2,
+                "blunder": 1,
+                "acpl": 57
+            }
+        },
+        "black": {
+            "user": {
+                "name": "tahazra12",
+                "id": "tahazra12"
+            },
+            "rating": 948,
+            "ratingDiff": 30,
+            "analysis": {
+                "inaccuracy": 0,
+                "mistake": 0,
+                "blunder": 0,
+                "acpl": 12
+            }
+        }
+    },
+    "winner": "black",
+    "opening": {
+        "eco": "B10",
+        "name": "Caro-Kann Defense: Two Knights Attack",
+        "ply": 5
+    },
+    "moves": "e4 c6 Nf3 d5 Nc3 dxe4 Nxe4 Bg4 h3 Bxf3 gxf3 Nd7 d4 Ngf6 Nxf6+ Nxf6 Be3 e6 f4 Qd6 Qf3 Qb4+ c3 Qxb2 Rd1 Qxc3+ Rd2 Bb4 Rg1 Qa1+ Ke2 Bxd2 Bxd2 Qxd4 Rxg7 Ne4 Qb3 Qxg7 Qxb7 O-O Qxc6 Qd4 f3",
+    "analysis": [
+        {
+            "eval": 33
+        },
+        {
+            "eval": 56
+        },
+        {
+            "eval": 35
+        },
+        {
+            "eval": 27
+        },
+        {
+            "eval": 0
+        },
+        {
+            "eval": 47
+        },
+        {
+            "eval": 25
+        },
+        {
+            "eval": 41
+        },
+        {
+            "eval": 48
+        },
+        {
+            "eval": 45
+        },
+        {
+            "eval": 0
+        },
+        {
+            "eval": 0
+        },
+        {
+            "eval": -12
+        },
+        {
+            "eval": -3
+        },
+        {
+            "eval": -95,
+            "best": "c1e3",
+            "variation": "Be3 Qb6",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. Be3 was best."
+            }
+        },
+        {
+            "eval": -80
+        },
+        {
+            "eval": -91
+        },
+        {
+            "eval": -100
+        },
+        {
+            "eval": -109
+        },
+        {
+            "eval": -91
+        },
+        {
+            "eval": -367,
+            "best": "c2c4",
+            "variation": "c4 Qc7",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. c4 was best."
+            }
+        },
+        {
+            "eval": -398
+        },
+        {
+            "eval": -419
+        },
+        {
+            "eval": -412
+        },
+        {
+            "eval": -861,
+            "best": "a1c1",
+            "variation": "Rc1 Qxa2 f5 Qd5 Bg2 Qxf3 Bxf3 exf5 O-O Bd6 Rb1 O-O-O Ra1 a6",
+            "judgment": {
+                "name": "Mistake",
+                "comment": "Mistake. Rc1 was best."
+            }
+        },
+        {
+            "eval": -865
+        },
+        {
+            "eval": -859
+        },
+        {
+            "eval": -883
+        },
+        {
+            "eval": -879
+        },
+        {
+            "eval": -830
+        },
+        {
+            "eval": -905
+        },
+        {
+            "eval": -890
+        },
+        {
+            "eval": -843
+        },
+        {
+            "eval": -855
+        },
+        {
+            "eval": -979
+        },
+        {
+            "eval": -960
+        },
+        {
+            "eval": -1705
+        },
+        {
+            "eval": -1055
+        },
+        {
+            "eval": -1024
+        },
+        {
+            "eval": -1017
+        },
+        {
+            "eval": -1275
+        },
+        {
+            "eval": -960
+        },
+        {
+            "mate": -1,
+            "best": "d2e3",
+            "variation": "Be3 Qb2+",
+            "judgment": {
+                "name": "Mistake",
+                "comment": "Checkmate is now unavoidable. Be3 was best."
+            }
+        }
+    ],
+    "clock": {
+        "initial": 600,
+        "increment": 5,
+        "totalTime": 800
+    }
+}

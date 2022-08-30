@@ -1,0 +1,186 @@
+{
+    "id": "HNiv8YJD",
+    "rated": true,
+    "variant": "standard",
+    "speed": "rapid",
+    "perf": "rapid",
+    "createdAt": "2022-05-10 00:03:26.581000+00:00",
+    "lastMoveAt": "2022-05-10 00:16:09.949000+00:00",
+    "status": "mate",
+    "players": {
+        "white": {
+            "user": {
+                "name": "Abdullah33",
+                "id": "abdullah33"
+            },
+            "rating": 2092,
+            "ratingDiff": 5,
+            "analysis": {
+                "inaccuracy": 1,
+                "mistake": 1,
+                "blunder": 0,
+                "acpl": 56
+            }
+        },
+        "black": {
+            "user": {
+                "name": "bradycorrigan",
+                "id": "bradycorrigan"
+            },
+            "rating": 2046,
+            "ratingDiff": -9,
+            "analysis": {
+                "inaccuracy": 0,
+                "mistake": 0,
+                "blunder": 3,
+                "acpl": 110
+            }
+        }
+    },
+    "winner": "white",
+    "opening": {
+        "eco": "B01",
+        "name": "Scandinavian Defense: Mieses-Kotroc Variation",
+        "ply": 4
+    },
+    "moves": "e4 d5 exd5 Qxd5 d4 e5 Nc3 Bb4 Qe2 Nc6 Nf3 Nxd4 Nxd4 Qxd4 Bd2 Bf5 O-O-O Nf6 Be3 Qg4 f3 Qg6 Qb5+ c6 Qxb4 Bxc2 Rd2 Bf5 Bc5 Nd7 Bd6 O-O-O Qa5 Nb8 Qc7#",
+    "analysis": [
+        {
+            "eval": 33
+        },
+        {
+            "eval": 82
+        },
+        {
+            "eval": 66
+        },
+        {
+            "eval": 75
+        },
+        {
+            "eval": 15,
+            "best": "b1c3",
+            "variation": "Nc3 Qa5 d4 Nf6 Nf3 Bf5 Ne5 c6 Bf4 Nbd7",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. Nc3 was best."
+            }
+        },
+        {
+            "eval": 44
+        },
+        {
+            "eval": 21
+        },
+        {
+            "eval": 64
+        },
+        {
+            "eval": -92,
+            "best": "g1e2",
+            "variation": "Ne2 Nc6 Bd2 Qd7 dxe5 Nxe5 a3 Ba5 Ng3 Nf6",
+            "judgment": {
+                "name": "Mistake",
+                "comment": "Mistake. Ne2 was best."
+            }
+        },
+        {
+            "eval": -79
+        },
+        {
+            "eval": -67
+        },
+        {
+            "eval": -25
+        },
+        {
+            "eval": -43
+        },
+        {
+            "eval": -31
+        },
+        {
+            "eval": -50
+        },
+        {
+            "eval": 203,
+            "best": "g8f6",
+            "variation": "Nf6 O-O-O O-O f3 Qc5 a3 Bxc3 Bxc3 Re8 Qd2 Bf5 g4 Be6 Re1",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Nf6 was best."
+            }
+        },
+        {
+            "eval": 207
+        },
+        {
+            "eval": 585,
+            "best": "d4c5",
+            "variation": "Qc5 a3",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Qc5 was best."
+            }
+        },
+        {
+            "eval": 608
+        },
+        {
+            "eval": 644
+        },
+        {
+            "eval": 650
+        },
+        {
+            "eval": 798
+        },
+        {
+            "eval": 787
+        },
+        {
+            "eval": 950
+        },
+        {
+            "eval": 944
+        },
+        {
+            "eval": 960
+        },
+        {
+            "eval": 953
+        },
+        {
+            "eval": 992
+        },
+        {
+            "eval": 769
+        },
+        {
+            "eval": 959
+        },
+        {
+            "eval": 784
+        },
+        {
+            "eval": 839
+        },
+        {
+            "eval": 607
+        },
+        {
+            "mate": 1,
+            "best": "d7b6",
+            "variation": "Nb6 Qc5 Rxd6 Qxd6 Qxd6 Rxd6 Kc7 Rd2 a5 b3 a4 Kb2 e4 fxe4",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Checkmate is now unavoidable. Nb6 was best."
+            }
+        }
+    ],
+    "clock": {
+        "initial": 600,
+        "increment": 5,
+        "totalTime": 800
+    }
+}

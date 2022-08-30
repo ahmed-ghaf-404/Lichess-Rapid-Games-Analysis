@@ -1,0 +1,123 @@
+{
+    "id": "1I7kVkAU",
+    "rated": true,
+    "variant": "standard",
+    "speed": "rapid",
+    "perf": "rapid",
+    "createdAt": "2022-08-16 01:23:36.095000+00:00",
+    "lastMoveAt": "2022-08-16 01:24:48.889000+00:00",
+    "status": "resign",
+    "players": {
+        "white": {
+            "user": {
+                "name": "F_Aceso",
+                "id": "f_aceso"
+            },
+            "rating": 1993,
+            "ratingDiff": 5,
+            "analysis": {
+                "inaccuracy": 0,
+                "mistake": 0,
+                "blunder": 0,
+                "acpl": 11
+            }
+        },
+        "black": {
+            "user": {
+                "name": "wfroese",
+                "id": "wfroese"
+            },
+            "rating": 1941,
+            "ratingDiff": -5,
+            "analysis": {
+                "inaccuracy": 1,
+                "mistake": 0,
+                "blunder": 1,
+                "acpl": 119
+            }
+        }
+    },
+    "winner": "white",
+    "opening": {
+        "eco": "B21",
+        "name": "Sicilian Defense: Smith-Morra Gambit",
+        "ply": 5
+    },
+    "moves": "e4 c5 d4 cxd4 c3 dxc3 Nxc3 Nc6 Nf3 d6 Bc4 Nf6 e5 dxe5 Qxd8+ Nxd8 Nb5 Kd7 Nxe5+",
+    "analysis": [
+        {
+            "eval": 33
+        },
+        {
+            "eval": 32
+        },
+        {
+            "eval": 10
+        },
+        {
+            "eval": 1
+        },
+        {
+            "eval": -26
+        },
+        {
+            "eval": -20
+        },
+        {
+            "eval": -28
+        },
+        {
+            "eval": -19
+        },
+        {
+            "eval": -64
+        },
+        {
+            "eval": -29
+        },
+        {
+            "eval": -35
+        },
+        {
+            "eval": 24,
+            "best": "a7a6",
+            "variation": "a6 Bf4 e6 O-O Nf6 Qe2 Nh5 Be3 Be7 Bb3",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. a6 was best."
+            }
+        },
+        {
+            "eval": 21
+        },
+        {
+            "eval": 51
+        },
+        {
+            "eval": 65
+        },
+        {
+            "eval": 90
+        },
+        {
+            "eval": 96
+        },
+        {
+            "mate": 2,
+            "best": "a8b8",
+            "variation": "Rb8 Nc7+ Kd7 Nb5 e6 Nxe5+ Ke7 Be3 Nd7 Bf4 Ra8 Nc7 Nxe5 Bxe5",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Checkmate is now unavoidable. Rb8 was best."
+            }
+        },
+        {
+            "mate": 1
+        }
+    ],
+    "clock": {
+        "initial": 600,
+        "increment": 5,
+        "totalTime": 800
+    }
+}

@@ -1,0 +1,117 @@
+{
+    "id": "dkOtaxDf",
+    "rated": true,
+    "variant": "standard",
+    "speed": "rapid",
+    "perf": "rapid",
+    "createdAt": "2022-08-19 09:22:27.579000+00:00",
+    "lastMoveAt": "2022-08-19 09:24:31.660000+00:00",
+    "status": "cheat",
+    "players": {
+        "white": {
+            "user": {
+                "name": "arragon32",
+                "id": "arragon32"
+            },
+            "rating": 1830,
+            "ratingDiff": 2,
+            "analysis": {
+                "inaccuracy": 2,
+                "mistake": 1,
+                "blunder": 0,
+                "acpl": 43
+            }
+        },
+        "black": {
+            "user": {
+                "name": "AdNaNUlaCO12",
+                "id": "adnanulaco12"
+            },
+            "rating": 1608,
+            "ratingDiff": -3,
+            "analysis": {
+                "inaccuracy": 0,
+                "mistake": 0,
+                "blunder": 0,
+                "acpl": 15
+            }
+        }
+    },
+    "winner": "white",
+    "opening": {
+        "eco": "E76",
+        "name": "King's Indian Defense: Four Pawns Attack",
+        "ply": 9
+    },
+    "moves": "d4 Nf6 c4 g6 Nc3 Bg7 e4 d6 f4 c5 e5 Nfd7 Nf3 cxd4 Qxd4",
+    "analysis": [
+        {
+            "eval": 0
+        },
+        {
+            "eval": 23
+        },
+        {
+            "eval": 34
+        },
+        {
+            "eval": 30
+        },
+        {
+            "eval": 31
+        },
+        {
+            "eval": 70
+        },
+        {
+            "eval": 67
+        },
+        {
+            "eval": 65
+        },
+        {
+            "eval": -13,
+            "best": "f1e2",
+            "variation": "Be2 O-O Be3 Na6 h3 e5 d5 Nc5 Qc2 Ne8",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. Be2 was best."
+            }
+        },
+        {
+            "eval": 10
+        },
+        {
+            "eval": -56,
+            "best": "d4d5",
+            "variation": "d5 O-O Bd3 e6 Nge2 exd5 exd5 Nh5 O-O f5",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. d5 was best."
+            }
+        },
+        {
+            "eval": -38
+        },
+        {
+            "eval": -171,
+            "best": "d4d5",
+            "variation": "d5 dxe5 Nf3 O-O Bd3 e6 O-O exd5 cxd5 Nb6",
+            "judgment": {
+                "name": "Mistake",
+                "comment": "Mistake. d5 was best."
+            }
+        },
+        {
+            "eval": -167
+        },
+        {
+            "eval": -213
+        }
+    ],
+    "clock": {
+        "initial": 600,
+        "increment": 10,
+        "totalTime": 1000
+    }
+}

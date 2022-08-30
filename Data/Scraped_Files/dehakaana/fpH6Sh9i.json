@@ -1,0 +1,159 @@
+{
+    "id": "fpH6Sh9i",
+    "rated": true,
+    "variant": "standard",
+    "speed": "rapid",
+    "perf": "rapid",
+    "createdAt": "2022-08-06 12:46:34.184000+00:00",
+    "lastMoveAt": "2022-08-06 12:48:26.328000+00:00",
+    "status": "mate",
+    "players": {
+        "white": {
+            "user": {
+                "name": "dehakaana",
+                "id": "dehakaana"
+            },
+            "rating": 1252,
+            "ratingDiff": -4,
+            "analysis": {
+                "inaccuracy": 4,
+                "mistake": 0,
+                "blunder": 1,
+                "acpl": 112
+            }
+        },
+        "black": {
+            "user": {
+                "name": "devanshpune",
+                "id": "devanshpune"
+            },
+            "rating": 1320,
+            "ratingDiff": 8,
+            "analysis": {
+                "inaccuracy": 1,
+                "mistake": 1,
+                "blunder": 0,
+                "acpl": 24
+            }
+        }
+    },
+    "winner": "black",
+    "opening": {
+        "eco": "C57",
+        "name": "Italian Game: Two Knights Defense, Traxler Counterattack, Knight Sacrifice Line",
+        "ply": 9
+    },
+    "moves": "e4 e5 Bc4 Nf6 Nf3 Nc6 Ng5 Bc5 Nxf7 Bxf2+ Kxf2 Nxe4+ Ke2 Nd4+ Ke1 Qh4+ g3 Nxg3 Nxh8 Nxh1+ Kf1 Qf2#",
+    "analysis": [
+        {
+            "eval": 33
+        },
+        {
+            "eval": 12
+        },
+        {
+            "eval": 9
+        },
+        {
+            "eval": 4
+        },
+        {
+            "eval": -69,
+            "best": "b1c3",
+            "variation": "Nc3 Bc5 Nf3 d6 O-O O-O d4 exd4 Nxd4 Bg4",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. Nc3 was best."
+            }
+        },
+        {
+            "eval": 18,
+            "best": "f6e4",
+            "variation": "Nxe4 Nxe5 d5 Be2 Bd6 Nf3 O-O O-O Re8 d3",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. Nxe4 was best."
+            }
+        },
+        {
+            "eval": 5
+        },
+        {
+            "eval": 135,
+            "best": "d7d5",
+            "variation": "d5 exd5 Na5 Bb5+ c6 dxc6 bxc6 Bd3 Nd5 Nf3",
+            "judgment": {
+                "name": "Mistake",
+                "comment": "Mistake. d5 was best."
+            }
+        },
+        {
+            "eval": 77,
+            "best": "c4f7",
+            "variation": "Bxf7+ Ke7 Bb3 d6 d3 Qe8 c3 Rf8 Nf3 Qh5",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. Bxf7+ was best."
+            }
+        },
+        {
+            "eval": 65
+        },
+        {
+            "eval": 0,
+            "best": "e1f1",
+            "variation": "Kf1 Qe7 Nxh8 d5 exd5 Nd4 d6 Qxd6 Nf7 Qc5",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. Kf1 was best."
+            }
+        },
+        {
+            "eval": 13
+        },
+        {
+            "eval": -848,
+            "best": "f2e3",
+            "variation": "Ke3 Qh4 g3 Nxg3 hxg3 Qd4+ Kf3 O-O Rh4 e4+",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Ke3 was best."
+            }
+        },
+        {
+            "eval": -840
+        },
+        {
+            "eval": -1435
+        },
+        {
+            "eval": -1524
+        },
+        {
+            "eval": -1563
+        },
+        {
+            "eval": -1463
+        },
+        {
+            "mate": -2,
+            "best": "e1f2",
+            "variation": "Kf2 Ne4+ Ke3 Qf4+ Kd3 Nf2+ Kc3 Nxd1+ Rxd1 Qf3+ Bd3 Kxf7 Rf1 Ne2+",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Checkmate is now unavoidable. Kf2 was best."
+            }
+        },
+        {
+            "mate": -1
+        },
+        {
+            "mate": -1
+        }
+    ],
+    "clock": {
+        "initial": 600,
+        "increment": 0,
+        "totalTime": 600
+    }
+}
