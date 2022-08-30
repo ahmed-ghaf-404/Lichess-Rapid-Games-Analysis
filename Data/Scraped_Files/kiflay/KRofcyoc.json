@@ -1,0 +1,154 @@
+{
+    "id": "KRofcyoc",
+    "rated": true,
+    "variant": "standard",
+    "speed": "rapid",
+    "perf": "rapid",
+    "createdAt": "2021-06-05 16:35:09.914000+00:00",
+    "lastMoveAt": "2021-06-05 16:38:27.044000+00:00",
+    "status": "mate",
+    "players": {
+        "white": {
+            "user": {
+                "name": "kiflay",
+                "id": "kiflay"
+            },
+            "rating": 2013,
+            "ratingDiff": -1,
+            "analysis": {
+                "inaccuracy": 2,
+                "mistake": 0,
+                "blunder": 3,
+                "acpl": 108
+            }
+        },
+        "black": {
+            "user": {
+                "name": "Voin55115",
+                "id": "voin55115"
+            },
+            "rating": 2326,
+            "ratingDiff": 2,
+            "analysis": {
+                "inaccuracy": 1,
+                "mistake": 0,
+                "blunder": 0,
+                "acpl": 17
+            }
+        }
+    },
+    "winner": "black",
+    "opening": {
+        "eco": "B03",
+        "name": "Alekhine Defense",
+        "ply": 6
+    },
+    "moves": "e4 Nf6 e5 Nd5 d4 d6 f4 dxe5 fxe5 Bf5 Nf3 c5 c4 Nb4 Na3 e6 Bd2 cxd4 Qa4+ N8c6 O-O-O Nxa2#",
+    "analysis": [
+        {
+            "eval": 24
+        },
+        {
+            "eval": 29
+        },
+        {
+            "eval": 35
+        },
+        {
+            "eval": 55
+        },
+        {
+            "eval": 62
+        },
+        {
+            "eval": 60
+        },
+        {
+            "eval": -33,
+            "best": "c2c4",
+            "variation": "c4 Nb6 exd6 exd6 Nf3 Be7 h3 Bf5 Bd3 Qd7",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. c4 was best."
+            }
+        },
+        {
+            "eval": 0
+        },
+        {
+            "eval": -13
+        },
+        {
+            "eval": -10
+        },
+        {
+            "eval": -7
+        },
+        {
+            "eval": 95,
+            "best": "e7e6",
+            "variation": "e6 Nc3 Bb4 Qd2 O-O a3 Bxc3 bxc3 c5 Bd3",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. e6 was best."
+            }
+        },
+        {
+            "eval": -126,
+            "best": "f1b5",
+            "variation": "Bb5+ Nc6 c4 Nb6 d5 a6 Ba4 Nxa4 Qxa4 Qa5+",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Bb5+ was best."
+            }
+        },
+        {
+            "eval": -143
+        },
+        {
+            "eval": -142
+        },
+        {
+            "eval": -141
+        },
+        {
+            "eval": -447,
+            "best": "d4d5",
+            "variation": "d5 exd5",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. d5 was best."
+            }
+        },
+        {
+            "eval": -445
+        },
+        {
+            "eval": -567,
+            "best": "c4c5",
+            "variation": "c5",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. c5 was best."
+            }
+        },
+        {
+            "eval": -570
+        },
+        {
+            "mate": -1,
+            "best": "c4c5",
+            "variation": "c5 Bxc5 Rc1 Be7 Bb5 O-O O-O Be4 Rce1 Bg6 Rc1 d3 Kh1 h6",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Checkmate is now unavoidable. c5 was best."
+            }
+        }
+    ],
+    "tournament": "8EpaOgA9",
+    "clock": {
+        "initial": 600,
+        "increment": 0,
+        "totalTime": 600
+    }
+}

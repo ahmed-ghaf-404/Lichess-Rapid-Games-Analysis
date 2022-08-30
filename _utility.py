@@ -32,7 +32,7 @@ def createUsernameCSV(username_set: set):
     '''
     df = pd.DataFrame()
     df['Username'] = list(username_set)
-    df.to_csv('Data/Prepared_Data/Usernames-{}.csv'.format(datetime.datetime.now()))
+    df.to_csv('Data/Prepared_Data/Usernames-{}.csv'.format(datetime.datetime.now()), index=False)
     return 
 
 def scrape_n_rapid_games(username:str, num_of_games:int=1, duplicate=False, is_need_more_players=False):
