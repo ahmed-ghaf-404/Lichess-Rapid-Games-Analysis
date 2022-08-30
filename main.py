@@ -13,8 +13,8 @@ def main():
         except Exception as e:
             continue 
         count +=1
-        if count == 8:
-            time.sleep(3)
+        if count == 10:
+            time.sleep(1)
             count = 0
 
     util.buildDataset('Data/Scraped_Files')

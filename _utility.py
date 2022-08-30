@@ -1,9 +1,10 @@
-import time
 import pandas as pd
 import datetime
 import constants as C
 import json
 import os
+
+
 
 def getUsernameSet(csv_path: str):
     '''
@@ -34,13 +35,21 @@ def createUsernameCSV(username_set: set):
     df.to_csv('Data/Prepared_Data/Usernames-{}.csv'.format(datetime.datetime.now()))
     return 
 
-def scrape_n_rapid_games(username:str, num_of_games:int=1):
+def scrape_n_rapid_games(username:str, num_of_games:int=1, duplicate=False, is_need_more_players=False):
     '''
     PARAM:
         username String: a lichess username
+        num_of_games int: number of games to scrape
+        no_duplicate bool: whether you want to mine an already existing username.
     Creates a JSON file containing the game review data
     '''
-    print('scraping {} game(s) the username: {}'.format(num_of_games, username))
+    if not duplicate and username in C.SCRAPED_USERNAMES:
+        print("{} has already been mined".format(username))
+        s =  set()
+        s.add(username)
+        return s
+
+    # print('scraping {} game(s) the username: {}'.format(num_of_games, username))
     new_username_set = set()
     try:
         for game in C.CLIENT.games.export_by_player(username=username, as_pgn=False, max=num_of_games,rated=True,perf_type="rapid", analysed=True, moves=True, evals=True,opening=True):
@@ -48,9 +57,9 @@ def scrape_n_rapid_games(username:str, num_of_games:int=1):
                 os.mkdir("Data/Scraped_Files/{}".format(username))
             with open("Data/Scraped_Files/{}/{}.json".format(username, game['id']), 'w') as f:
                 json.dump(game, f, indent=4, sort_keys=False, default=str)
-            new_username_set.add(game["players"]["white"]["user"]["name"])
-            new_username_set.add(game["players"]["black"]["user"]["name"])
-            time.sleep(0.1)
+            if is_need_more_players:
+                new_username_set.add(game["players"]["white"]["user"]["name"])
+                new_username_set.add(game["players"]["black"]["user"]["name"])
     except Exception as e:
         raise e
     

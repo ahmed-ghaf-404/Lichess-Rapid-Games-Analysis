@@ -1,0 +1,140 @@
+{
+    "id": "eJpHuYPg",
+    "rated": true,
+    "variant": "fromPosition",
+    "speed": "rapid",
+    "perf": "rapid",
+    "createdAt": "2022-08-20 15:53:16.424000+00:00",
+    "lastMoveAt": "2022-08-20 15:55:59.776000+00:00",
+    "status": "resign",
+    "players": {
+        "white": {
+            "user": {
+                "name": "ShahMatKanal",
+                "title": "CM",
+                "patron": true,
+                "id": "shahmatkanal"
+            },
+            "rating": 2409,
+            "ratingDiff": 0,
+            "analysis": {
+                "inaccuracy": 1,
+                "mistake": 0,
+                "blunder": 1,
+                "acpl": 41
+            }
+        },
+        "black": {
+            "user": {
+                "name": "Shanenkow2007",
+                "id": "shanenkow2007"
+            },
+            "rating": 1707,
+            "ratingDiff": -1,
+            "analysis": {
+                "inaccuracy": 0,
+                "mistake": 2,
+                "blunder": 2,
+                "acpl": 128
+            }
+        }
+    },
+    "initialFen": "rnbqkb1r/pppp1ppp/8/4p3/2B1n3/2N5/PPPP1PPP/R1BQK1NR w KQkq - 0 4",
+    "winner": "white",
+    "moves": "Bxf7+ Kxf7 Nxe4 d5 Nc3 Bc5 Nf3 e4 Ne5+ Kg8 d4 Bd6 Nxd5 Bxe5 dxe5 c6 Nf6+",
+    "analysis": [
+        {
+            "eval": -61,
+            "best": "d1h5",
+            "variation": "Qh5 Nd6 Qxe5+ Qe7 Qxe7+ Bxe7 Be2 Nc6 Nf3 Nf5",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. Qh5 was best."
+            }
+        },
+        {
+            "eval": -57
+        },
+        {
+            "eval": -78
+        },
+        {
+            "eval": -80
+        },
+        {
+            "eval": -91
+        },
+        {
+            "eval": 118,
+            "best": "c7c6",
+            "variation": "c6 Nf3 Bd6 d4 exd4 Qxd4 Qf6 Be3 Qxd4 Nxd4",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. c6 was best."
+            }
+        },
+        {
+            "eval": -51,
+            "best": "d1f3",
+            "variation": "Qf3+ Ke8 Qxd5 Qxd5 Nxd5 Na6 d3 b6 Ne3 Bb7",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Qf3+ was best."
+            }
+        },
+        {
+            "eval": 106,
+            "best": "b8c6",
+            "variation": "Nc6 O-O Re8 d4 exd4 Bg5 Qd7 Nb5 Bb6 Nbxd4 Nxd4 Nxd4 Kg8 Qd2",
+            "judgment": {
+                "name": "Mistake",
+                "comment": "Mistake. Nc6 was best."
+            }
+        },
+        {
+            "eval": 53
+        },
+        {
+            "eval": 83
+        },
+        {
+            "eval": 83
+        },
+        {
+            "eval": 207,
+            "best": "c5b6",
+            "variation": "Bb6 a4",
+            "judgment": {
+                "name": "Mistake",
+                "comment": "Mistake. Bb6 was best."
+            }
+        },
+        {
+            "eval": 205
+        },
+        {
+            "eval": 189
+        },
+        {
+            "eval": 191
+        },
+        {
+            "eval": 690,
+            "best": "b8c6",
+            "variation": "Nc6 Be3 Be6 Nc3 h6 Qh5 Qd7 Rd1 Qe8 Qxe8+ Rxe8 O-O Bf5 Bf4",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Nc6 was best."
+            }
+        },
+        {
+            "eval": 653
+        }
+    ],
+    "tournament": "OpBnB49X",
+    "clock": {
+        "initial": 600,
+        "increment": 0,
+        "totalTime": 600
+    }
+}

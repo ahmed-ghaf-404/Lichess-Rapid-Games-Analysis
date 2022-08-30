@@ -1,0 +1,146 @@
+{
+    "id": "bbv8j05L",
+    "rated": true,
+    "variant": "standard",
+    "speed": "rapid",
+    "perf": "rapid",
+    "createdAt": "2022-08-28 15:38:56.529000+00:00",
+    "lastMoveAt": "2022-08-28 15:47:51.140000+00:00",
+    "status": "resign",
+    "players": {
+        "white": {
+            "user": {
+                "name": "Thorwald5",
+                "title": "FM",
+                "id": "thorwald5"
+            },
+            "rating": 2612,
+            "ratingDiff": 11,
+            "provisional": true,
+            "analysis": {
+                "inaccuracy": 1,
+                "mistake": 0,
+                "blunder": 0,
+                "acpl": 19
+            }
+        },
+        "black": {
+            "user": {
+                "name": "mati44",
+                "id": "mati44"
+            },
+            "rating": 2313,
+            "ratingDiff": -4,
+            "analysis": {
+                "inaccuracy": 1,
+                "mistake": 1,
+                "blunder": 1,
+                "acpl": 73
+            }
+        }
+    },
+    "winner": "white",
+    "opening": {
+        "eco": "A00",
+        "name": "Van Geet Opening",
+        "ply": 1
+    },
+    "moves": "Nc3 Nf6 e4 d6 d4 Nbd7 Nf3 e6 Bf4 h6 h3 c5 dxc5 Nxc5 e5 Nh5 Bh2 g6 g4 Ng7 exd6 a6",
+    "analysis": [
+        {
+            "eval": -13
+        },
+        {
+            "eval": 12
+        },
+        {
+            "eval": 0
+        },
+        {
+            "eval": 72,
+            "best": "d7d5",
+            "variation": "d5 e5 Nfd7 f4 c5 d4 e6 Nf3 Nc6 Be3",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. d5 was best."
+            }
+        },
+        {
+            "eval": 74
+        },
+        {
+            "eval": 72
+        },
+        {
+            "eval": 70
+        },
+        {
+            "eval": 84
+        },
+        {
+            "eval": 98
+        },
+        {
+            "eval": 85
+        },
+        {
+            "eval": 90
+        },
+        {
+            "eval": 112
+        },
+        {
+            "eval": 91
+        },
+        {
+            "eval": 96
+        },
+        {
+            "eval": 76
+        },
+        {
+            "eval": 457,
+            "best": "f6e4",
+            "variation": "Nfe4",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Nfe4 was best."
+            }
+        },
+        {
+            "eval": 332,
+            "best": "f4e3",
+            "variation": "Be3 g5 exd6 Qxd6 Qxd6 Bxd6 Nb5 Ne4 Nd2 Nxd2 Nxd6+ Kd7 Nxf7 Nxf1",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. Be3 was best."
+            }
+        },
+        {
+            "eval": 566,
+            "best": "g7g5",
+            "variation": "g5 exd6",
+            "judgment": {
+                "name": "Mistake",
+                "comment": "Mistake. g5 was best."
+            }
+        },
+        {
+            "eval": 604
+        },
+        {
+            "eval": 596
+        },
+        {
+            "eval": 657
+        },
+        {
+            "eval": 712
+        }
+    ],
+    "clock": {
+        "initial": 600,
+        "increment": 15,
+        "totalTime": 1200
+    }
+}
