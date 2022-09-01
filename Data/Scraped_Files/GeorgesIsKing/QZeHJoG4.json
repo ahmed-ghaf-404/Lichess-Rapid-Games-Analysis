@@ -1,0 +1,132 @@
+{
+    "id": "QZeHJoG4",
+    "rated": true,
+    "variant": "standard",
+    "speed": "rapid",
+    "perf": "rapid",
+    "createdAt": "2022-06-13 13:55:03.632000+00:00",
+    "lastMoveAt": "2022-06-13 13:56:31.472000+00:00",
+    "status": "resign",
+    "players": {
+        "white": {
+            "user": {
+                "name": "GeorgesIsKing",
+                "id": "georgesisking"
+            },
+            "rating": 1132,
+            "ratingDiff": -9,
+            "analysis": {
+                "inaccuracy": 2,
+                "mistake": 0,
+                "blunder": 2,
+                "acpl": 129
+            }
+        },
+        "black": {
+            "user": {
+                "name": "YetiBarBar",
+                "id": "yetibarbar"
+            },
+            "rating": 1071,
+            "ratingDiff": 7,
+            "analysis": {
+                "inaccuracy": 1,
+                "mistake": 0,
+                "blunder": 2,
+                "acpl": 74
+            }
+        }
+    },
+    "winner": "black",
+    "opening": {
+        "eco": "C30",
+        "name": "King's Gambit Declined: Petrov's Defense",
+        "ply": 4
+    },
+    "moves": "e4 e5 f4 Nf6 fxe5 Nxe4 d4 g6 h4 h5 Qe2 Ng3",
+    "analysis": [
+        {
+            "eval": 33
+        },
+        {
+            "eval": 12
+        },
+        {
+            "eval": -55,
+            "best": "g1f3",
+            "variation": "Nf3 Nc6 Bb5 Nf6 O-O Nxe4 Re1 Nd6 Nxe5 Be7",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. Nf3 was best."
+            }
+        },
+        {
+            "eval": 21,
+            "best": "e5f4",
+            "variation": "exf4 Nf3 d6 d4 g5 g3 Bg7 h3 g4 hxg4",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. exf4 was best."
+            }
+        },
+        {
+            "eval": 28
+        },
+        {
+            "eval": 9
+        },
+        {
+            "eval": -97,
+            "best": "g1f3",
+            "variation": "Nf3 Ng5 d4 Nxf3+ Qxf3 Qh4+ Qf2 Qxf2+ Kxf2 d5",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. Nf3 was best."
+            }
+        },
+        {
+            "eval": 98,
+            "best": "d8h4",
+            "variation": "Qh4+ g3 Nxg3 hxg3 Qxh1 Kf2 Qh2+ Bg2 d6 Qe2",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Qh4+ was best."
+            }
+        },
+        {
+            "eval": -91,
+            "best": "f1d3",
+            "variation": "Bd3 d5 Ne2 Bg7 Nbc3 f5 h4 c5 Bxe4 dxe4 Bg5 Qa5 dxc5 Qxc5",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Bd3 was best."
+            }
+        },
+        {
+            "eval": 82,
+            "best": "f8e7",
+            "variation": "Be7 Nf3",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Be7 was best."
+            }
+        },
+        {
+            "eval": -330,
+            "best": "f1d3",
+            "variation": "Bd3 d5",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Bd3 was best."
+            }
+        },
+        {
+            "eval": -341
+        }
+    ],
+    "clock": {
+        "initial": 600,
+        "increment": 0,
+        "totalTime": 600
+    }
+}
