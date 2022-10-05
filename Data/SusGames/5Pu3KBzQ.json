@@ -1,0 +1,136 @@
+{
+    "id": "5Pu3KBzQ",
+    "rated": true,
+    "variant": "standard",
+    "speed": "rapid",
+    "perf": "rapid",
+    "createdAt": "2022-06-26 05:58:58.361000+00:00",
+    "lastMoveAt": "2022-06-26 06:03:02.915000+00:00",
+    "status": "resign",
+    "players": {
+        "white": {
+            "user": {
+                "name": "BennyST",
+                "id": "bennyst"
+            },
+            "rating": 792,
+            "ratingDiff": 45,
+            "provisional": true,
+            "analysis": {
+                "inaccuracy": 0,
+                "mistake": 0,
+                "blunder": 1,
+                "acpl": 149
+            }
+        },
+        "black": {
+            "user": {
+                "name": "Vanek2013",
+                "id": "vanek2013"
+            },
+            "rating": 922,
+            "ratingDiff": -9,
+            "analysis": {
+                "inaccuracy": 2,
+                "mistake": 0,
+                "blunder": 1,
+                "acpl": 108
+            }
+        }
+    },
+    "winner": "white",
+    "opening": {
+        "eco": "C25",
+        "name": "Vienna Game",
+        "ply": 3
+    },
+    "moves": "e4 e5 Nc3 Bb4 Nf3 Bxc3 dxc3 Nf6 Nxe5 Nxe4 Bg5 Qxg5 Nd3 Qe7 Be2 Ng5 O-O Qe4 Re1",
+    "analysis": [
+        {
+            "eval": 33
+        },
+        {
+            "eval": 12
+        },
+        {
+            "eval": 16
+        },
+        {
+            "eval": 50
+        },
+        {
+            "eval": 39
+        },
+        {
+            "eval": 39
+        },
+        {
+            "eval": 1
+        },
+        {
+            "eval": 65,
+            "best": "d7d6",
+            "variation": "d6 Bd3 Nf6 Be3 O-O h3 Be6 Nd2 a6 Qf3",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. d6 was best."
+            }
+        },
+        {
+            "eval": 40
+        },
+        {
+            "eval": 355,
+            "best": "d7d6",
+            "variation": "d6 Nd3 Nxe4 g3 O-O Bg2 Re8 O-O Bf5 g4",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. d6 was best."
+            }
+        },
+        {
+            "eval": -740,
+            "best": "d1g4",
+            "variation": "Qg4 d6 Qxg7 Qf6 Qxf6 Nxf6 Nd3 Bf5 Bg5 Nbd7",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Qg4 was best."
+            }
+        },
+        {
+            "eval": -670
+        },
+        {
+            "eval": -878
+        },
+        {
+            "eval": -761
+        },
+        {
+            "eval": -877
+        },
+        {
+            "eval": -747
+        },
+        {
+            "eval": -729
+        },
+        {
+            "eval": -491,
+            "best": "e8h8",
+            "variation": "O-O Re1",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. O-O was best."
+            }
+        },
+        {
+            "eval": -469
+        }
+    ],
+    "clock": {
+        "initial": 600,
+        "increment": 3,
+        "totalTime": 720
+    }
+}

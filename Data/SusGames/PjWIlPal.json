@@ -1,0 +1,165 @@
+{
+    "id": "PjWIlPal",
+    "rated": true,
+    "variant": "standard",
+    "speed": "rapid",
+    "perf": "rapid",
+    "createdAt": "2022-07-03 13:50:40.008000+00:00",
+    "lastMoveAt": "2022-07-03 13:52:05.904000+00:00",
+    "status": "resign",
+    "players": {
+        "white": {
+            "user": {
+                "name": "SleepingViper",
+                "id": "sleepingviper"
+            },
+            "rating": 1545,
+            "ratingDiff": 6,
+            "analysis": {
+                "inaccuracy": 1,
+                "mistake": 1,
+                "blunder": 0,
+                "acpl": 37
+            }
+        },
+        "black": {
+            "user": {
+                "name": "A2L",
+                "id": "a2l"
+            },
+            "rating": 1504,
+            "ratingDiff": -6,
+            "analysis": {
+                "inaccuracy": 1,
+                "mistake": 0,
+                "blunder": 3,
+                "acpl": 119
+            }
+        }
+    },
+    "winner": "white",
+    "opening": {
+        "eco": "D02",
+        "name": "Queen's Pawn Game: Chigorin Variation",
+        "ply": 4
+    },
+    "moves": "d4 d5 Nf3 Nc6 g3 g6 Bg2 Bg7 O-O Nh6 h3 O-O Be3 f5 Qd2 f4 Bxf4 Bd7 Bxh6 Bxh6 Qxh6 Qc8 Ng5 Rf7",
+    "analysis": [
+        {
+            "eval": 0
+        },
+        {
+            "eval": 38
+        },
+        {
+            "eval": 28
+        },
+        {
+            "eval": 63
+        },
+        {
+            "eval": 30
+        },
+        {
+            "eval": 56
+        },
+        {
+            "eval": 43
+        },
+        {
+            "eval": 37
+        },
+        {
+            "eval": 38
+        },
+        {
+            "eval": 116,
+            "best": "g8f6",
+            "variation": "Nf6 c4 dxc4 Na3 a5 Nxc4 a4 Bf4 O-O Rc1",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. Nf6 was best."
+            }
+        },
+        {
+            "eval": 36,
+            "best": "c2c4",
+            "variation": "c4 Nf5 cxd5 Ncxd4 Nbd2 Nxf3+ Nxf3 e5 dxe6 Bxe6",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. c4 was best."
+            }
+        },
+        {
+            "eval": 56
+        },
+        {
+            "eval": -108,
+            "best": "c2c3",
+            "variation": "c3 Nf5 Re1 Nd6 Nbd2 f5 b4 a6 Bb2 e6 Qb3 b5 a4 Bd7",
+            "judgment": {
+                "name": "Mistake",
+                "comment": "Mistake. c3 was best."
+            }
+        },
+        {
+            "eval": 117,
+            "best": "h6f5",
+            "variation": "Nf5 Qd2 Re8 Rd1 e5 dxe5 Nxe3 Qxe3 Nxe5 Nxe5 Rxe5 Qd2 Qe7 Nc3",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Nf5 was best."
+            }
+        },
+        {
+            "eval": 63,
+            "best": "c2c4",
+            "variation": "c4 e6 cxd5 exd5 Nc3 Nf7 Rc1 Nb8 b4 a6 a4 c6 b5 axb5"
+        },
+        {
+            "eval": 248,
+            "best": "h6f7",
+            "variation": "Nf7",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Nf7 was best."
+            }
+        },
+        {
+            "eval": 224
+        },
+        {
+            "eval": 933,
+            "best": "h6f7",
+            "variation": "Nf7 c3 a5 Na3 Bf5 Ng5 Nxg5 Bxg5 Qd7 g4 Be6 Rae1 a4 Nc2",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Nf7 was best."
+            }
+        },
+        {
+            "eval": 911
+        },
+        {
+            "eval": 925
+        },
+        {
+            "eval": 900
+        },
+        {
+            "eval": 1346
+        },
+        {
+            "eval": 1286
+        },
+        {
+            "eval": 1279
+        }
+    ],
+    "tournament": "PBKH1dFS",
+    "clock": {
+        "initial": 600,
+        "increment": 0,
+        "totalTime": 600
+    }
+}

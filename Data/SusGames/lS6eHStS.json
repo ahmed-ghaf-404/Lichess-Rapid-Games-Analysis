@@ -1,0 +1,190 @@
+{
+    "id": "lS6eHStS",
+    "rated": true,
+    "variant": "standard",
+    "speed": "rapid",
+    "perf": "rapid",
+    "createdAt": "2021-02-07 19:10:11.818000+00:00",
+    "lastMoveAt": "2021-02-07 19:13:42.113000+00:00",
+    "status": "mate",
+    "players": {
+        "white": {
+            "user": {
+                "name": "vande89",
+                "id": "vande89"
+            },
+            "rating": 1500,
+            "ratingDiff": -169,
+            "provisional": true,
+            "analysis": {
+                "inaccuracy": 3,
+                "mistake": 3,
+                "blunder": 1,
+                "acpl": 93
+            }
+        },
+        "black": {
+            "user": {
+                "name": "Pavel199214",
+                "id": "pavel199214"
+            },
+            "rating": 1631,
+            "ratingDiff": 12,
+            "analysis": {
+                "inaccuracy": 0,
+                "mistake": 1,
+                "blunder": 0,
+                "acpl": 24
+            }
+        }
+    },
+    "winner": "black",
+    "opening": {
+        "eco": "B00",
+        "name": "Owen Defense",
+        "ply": 2
+    },
+    "moves": "e4 b6 d4 Bb7 Bf4 e6 e5 d6 Nc3 dxe5 Bxe5 Nf6 Qb1 Bd6 Bxd6 Qxd6 Bb5+ Ke7 Nf3 Bxf3 O-O Bb7 Qe1 a6 g3 axb5 Nxb5 Qd5 Nxc7 Qg2#",
+    "analysis": [
+        {
+            "eval": 25
+        },
+        {
+            "eval": 48
+        },
+        {
+            "eval": 79
+        },
+        {
+            "eval": 75
+        },
+        {
+            "eval": -65,
+            "best": "f1d3",
+            "variation": "Bd3 e6 Nf3 c5 c3 Nf6 Qe2 d5 e5 Nfd7",
+            "judgment": {
+                "name": "Mistake",
+                "comment": "Mistake. Bd3 was best."
+            }
+        },
+        {
+            "eval": 65,
+            "best": "b7e4",
+            "variation": "Bxe4 d5 c6 Nc3 Bxd5 Nxd5 cxd5 Qxd5 Nc6 Bb5",
+            "judgment": {
+                "name": "Mistake",
+                "comment": "Mistake. Bxe4 was best."
+            }
+        },
+        {
+            "eval": 23
+        },
+        {
+            "eval": 50
+        },
+        {
+            "eval": -20,
+            "best": "g1f3",
+            "variation": "Nf3 Nc6 Nc3 dxe5 Nxe5 Nxe5 Bxe5 Nf6 Be2 Bxg2",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. Nf3 was best."
+            }
+        },
+        {
+            "eval": -33
+        },
+        {
+            "eval": -23
+        },
+        {
+            "eval": -1
+        },
+        {
+            "eval": -142,
+            "best": "c3b5",
+            "variation": "Nb5",
+            "judgment": {
+                "name": "Mistake",
+                "comment": "Mistake. Nb5 was best."
+            }
+        },
+        {
+            "eval": -98
+        },
+        {
+            "eval": -251,
+            "best": "g1f3",
+            "variation": "Nf3",
+            "judgment": {
+                "name": "Mistake",
+                "comment": "Mistake. Nf3 was best."
+            }
+        },
+        {
+            "eval": -250
+        },
+        {
+            "eval": -215
+        },
+        {
+            "eval": -237
+        },
+        {
+            "eval": -265
+        },
+        {
+            "eval": -272
+        },
+        {
+            "eval": -671,
+            "best": "g2f3",
+            "variation": "gxf3 Qxd4",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. gxf3 was best."
+            }
+        },
+        {
+            "eval": -594
+        },
+        {
+            "eval": -614
+        },
+        {
+            "eval": -601
+        },
+        {
+            "eval": -1002,
+            "best": "b5d3",
+            "variation": "Bd3 Qxd4 Rd1 Qf4 Ne2 Qg5 Ng3 Nbd7 b4 Qf4 f3 a5 bxa5 Rxa5",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. Bd3 was best."
+            }
+        },
+        {
+            "eval": -1025
+        },
+        {
+            "eval": -1315
+        },
+        {
+            "eval": -1302
+        },
+        {
+            "mate": -1,
+            "best": "f2f3",
+            "variation": "f3",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Checkmate is now unavoidable. f3 was best."
+            }
+        }
+    ],
+    "clock": {
+        "initial": 600,
+        "increment": 0,
+        "totalTime": 600
+    }
+}

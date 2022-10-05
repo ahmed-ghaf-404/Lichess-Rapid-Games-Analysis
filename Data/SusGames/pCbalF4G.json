@@ -1,0 +1,121 @@
+{
+    "id": "pCbalF4G",
+    "rated": true,
+    "variant": "standard",
+    "speed": "rapid",
+    "perf": "rapid",
+    "createdAt": "2022-08-07 11:03:31.043000+00:00",
+    "lastMoveAt": "2022-08-07 11:07:02.530000+00:00",
+    "status": "mate",
+    "players": {
+        "white": {
+            "user": {
+                "name": "U9B_4A_PARTHIV",
+                "id": "u9b_4a_parthiv"
+            },
+            "rating": 1776,
+            "ratingDiff": 3,
+            "analysis": {
+                "inaccuracy": 0,
+                "mistake": 0,
+                "blunder": 0,
+                "acpl": 14
+            }
+        },
+        "black": {
+            "user": {
+                "name": "parvithavishnu",
+                "id": "parvithavishnu"
+            },
+            "rating": 1482,
+            "ratingDiff": -7,
+            "analysis": {
+                "inaccuracy": 1,
+                "mistake": 0,
+                "blunder": 2,
+                "acpl": 118
+            }
+        }
+    },
+    "winner": "white",
+    "opening": {
+        "eco": "C57",
+        "name": "Italian Game: Two Knights Defense, Fried Liver Attack",
+        "ply": 11
+    },
+    "moves": "e4 e5 Nf3 Nc6 Bc4 Nf6 Ng5 d5 exd5 Nxd5 Nxf7 Kxf7 Qf3+ Ke8 Bxd5 Nd4 Qf7#",
+    "analysis": [
+        {
+            "eval": 33
+        },
+        {
+            "eval": 12
+        },
+        {
+            "eval": 19
+        },
+        {
+            "eval": 32
+        },
+        {
+            "eval": 21
+        },
+        {
+            "eval": 18
+        },
+        {
+            "eval": 5
+        },
+        {
+            "eval": 12
+        },
+        {
+            "eval": 0
+        },
+        {
+            "eval": 86,
+            "best": "c6a5",
+            "variation": "Na5 Bb5+ c6 dxc6 bxc6 Bd3 Nd5 Nf3 Bd6 Nc3",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. Na5 was best."
+            }
+        },
+        {
+            "eval": 55
+        },
+        {
+            "eval": 88
+        },
+        {
+            "eval": 44
+        },
+        {
+            "eval": 232,
+            "best": "f7e6",
+            "variation": "Ke6 Nc3 Nb4 O-O c6 d4 Qf6 Qe2 Ke7 dxe5",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Ke6 was best."
+            }
+        },
+        {
+            "eval": 382
+        },
+        {
+            "mate": 1,
+            "best": "d8f6",
+            "variation": "Qf6",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Checkmate is now unavoidable. Qf6 was best."
+            }
+        }
+    ],
+    "tournament": "yPJeLTOP",
+    "clock": {
+        "initial": 600,
+        "increment": 5,
+        "totalTime": 800
+    }
+}

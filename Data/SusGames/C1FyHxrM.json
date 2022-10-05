@@ -1,0 +1,204 @@
+{
+    "id": "C1FyHxrM",
+    "rated": true,
+    "variant": "standard",
+    "speed": "rapid",
+    "perf": "rapid",
+    "createdAt": "2018-09-15 18:11:35.421000+00:00",
+    "lastMoveAt": "2018-09-15 18:16:38.660000+00:00",
+    "status": "resign",
+    "players": {
+        "white": {
+            "user": {
+                "name": "EricRosen",
+                "title": "IM",
+                "patron": true,
+                "id": "ericrosen"
+            },
+            "rating": 2289,
+            "ratingDiff": 3,
+            "analysis": {
+                "inaccuracy": 1,
+                "mistake": 2,
+                "blunder": 0,
+                "acpl": 43
+            }
+        },
+        "black": {
+            "user": {
+                "name": "Victor_Kruse06",
+                "id": "victor_kruse06"
+            },
+            "rating": 1868,
+            "ratingDiff": -2,
+            "analysis": {
+                "inaccuracy": 2,
+                "mistake": 1,
+                "blunder": 2,
+                "acpl": 92
+            }
+        }
+    },
+    "winner": "white",
+    "opening": {
+        "eco": "B10",
+        "name": "Caro-Kann Defense: Accelerated Panov Attack, Modern Variation",
+        "ply": 8
+    },
+    "moves": "e4 c6 c4 d5 exd5 cxd5 cxd5 Nf6 Nc3 Nxd5 Nf3 Nxc3 bxc3 Nc6 d4 Bg4 h3 Bh5 d5 Bxf3 Qxf3 Ne5 Bb5+ Nd7 O-O a6 Ba4 b5 Bb3 Nc5 d6 Nxb3 d7+",
+    "analysis": [
+        {
+            "eval": 0
+        },
+        {
+            "eval": 31
+        },
+        {
+            "eval": 25
+        },
+        {
+            "eval": 21
+        },
+        {
+            "eval": 12
+        },
+        {
+            "eval": 19
+        },
+        {
+            "eval": 0
+        },
+        {
+            "eval": 12
+        },
+        {
+            "eval": 7
+        },
+        {
+            "eval": 22
+        },
+        {
+            "eval": 12
+        },
+        {
+            "eval": 40
+        },
+        {
+            "eval": 8
+        },
+        {
+            "eval": 68,
+            "best": "g7g6",
+            "variation": "g6 Bb5+ Bd7 a4 Bg7 O-O O-O Re1 e6 d4",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. g6 was best."
+            }
+        },
+        {
+            "eval": 96
+        },
+        {
+            "eval": 265,
+            "best": "e7e6",
+            "variation": "e6 Bd3 h6 O-O Qc7 Re1 Bd6 Rb1 O-O Qe2 b6 Bd2 f5 c4",
+            "judgment": {
+                "name": "Mistake",
+                "comment": "Mistake. e6 was best."
+            }
+        },
+        {
+            "eval": 127,
+            "best": "d4d5",
+            "variation": "d5",
+            "judgment": {
+                "name": "Mistake",
+                "comment": "Mistake. d5 was best."
+            }
+        },
+        {
+            "eval": 337,
+            "best": "g4f3",
+            "variation": "Bxf3 Qxf3 e6 Rb1 Qd7 Bd3 Be7 O-O O-O Re1 g6 Bh6 Rfd8 Rb2",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Bxf3 was best."
+            }
+        },
+        {
+            "eval": 334
+        },
+        {
+            "eval": 460,
+            "best": "f7f6",
+            "variation": "f6 dxc6",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. f6 was best."
+            }
+        },
+        {
+            "eval": 445
+        },
+        {
+            "eval": 464
+        },
+        {
+            "eval": 445
+        },
+        {
+            "eval": 454
+        },
+        {
+            "eval": 417
+        },
+        {
+            "eval": 457
+        },
+        {
+            "eval": 432
+        },
+        {
+            "eval": 437
+        },
+        {
+            "eval": 393
+        },
+        {
+            "eval": 423
+        },
+        {
+            "eval": 296,
+            "best": "f1e1",
+            "variation": "Re1 Ra7",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. Re1 was best."
+            }
+        },
+        {
+            "mate": 10,
+            "best": "e7e6",
+            "variation": "e6 Qc6+ Nd7 Rd1 g6 a4 Rc8 Qxa6 Ra8 Qxb5 Ra5 Qe2 Bg7 Ba3",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Checkmate is now unavoidable. e6 was best."
+            }
+        },
+        {
+            "eval": 767,
+            "best": "f3c6",
+            "variation": "Qc6+ Qd7 Qxa8+ Qd8 d7+ Kxd7 Rd1+ Nd4 Rxd4+ Ke6 Qe4+ Kf6 Bg5+ Kxg5",
+            "judgment": {
+                "name": "Mistake",
+                "comment": "Lost forced checkmate sequence. Qc6+ was best."
+            }
+        }
+    ],
+    "tournament": "VflEZOXg",
+    "clock": {
+        "initial": 600,
+        "increment": 0,
+        "totalTime": 600
+    }
+}

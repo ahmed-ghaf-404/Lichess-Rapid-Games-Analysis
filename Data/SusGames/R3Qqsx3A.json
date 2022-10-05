@@ -1,0 +1,187 @@
+{
+    "id": "R3Qqsx3A",
+    "rated": true,
+    "variant": "standard",
+    "speed": "rapid",
+    "perf": "rapid",
+    "createdAt": "2020-04-07 09:36:02.430000+00:00",
+    "lastMoveAt": "2020-04-07 09:48:04.365000+00:00",
+    "status": "mate",
+    "players": {
+        "white": {
+            "user": {
+                "name": "DeDodgingEse",
+                "id": "dedodgingese"
+            },
+            "rating": 1248,
+            "ratingDiff": 15,
+            "analysis": {
+                "inaccuracy": 1,
+                "mistake": 1,
+                "blunder": 0,
+                "acpl": 41
+            }
+        },
+        "black": {
+            "user": {
+                "name": "ElectricNN",
+                "id": "electricnn"
+            },
+            "rating": 1151,
+            "ratingDiff": -56,
+            "provisional": true,
+            "analysis": {
+                "inaccuracy": 3,
+                "mistake": 1,
+                "blunder": 2,
+                "acpl": 110
+            }
+        }
+    },
+    "winner": "white",
+    "opening": {
+        "eco": "B12",
+        "name": "Caro-Kann Defense: Advance Variation",
+        "ply": 5
+    },
+    "moves": "e4 c6 d4 d5 e5 e6 Nf3 b6 Bg5 f6 Bh4 c5 Nc3 cxd4 Qxd4 fxe5 Qxe5 Qe7 Bxe7 Nxe7 Nd4 Ng6 Bb5+ Bd7 Qxe6+ Be7 Nxd5 Nf8 Qxe7#",
+    "analysis": [
+        {
+            "eval": 24
+        },
+        {
+            "eval": 13
+        },
+        {
+            "eval": 35
+        },
+        {
+            "eval": 22
+        },
+        {
+            "eval": 0
+        },
+        {
+            "eval": 24
+        },
+        {
+            "eval": 45
+        },
+        {
+            "eval": 68
+        },
+        {
+            "eval": 25
+        },
+        {
+            "eval": 113,
+            "best": "g8e7",
+            "variation": "Ne7 c3 h6 Bf4 c5 Bd3 Nbc6 O-O Nf5 Na3",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. Ne7 was best."
+            }
+        },
+        {
+            "eval": 66
+        },
+        {
+            "eval": 123,
+            "best": "f8e7",
+            "variation": "Be7 Bd3",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. Be7 was best."
+            }
+        },
+        {
+            "eval": 74
+        },
+        {
+            "eval": 209,
+            "best": "a7a6",
+            "variation": "a6 exf6",
+            "judgment": {
+                "name": "Mistake",
+                "comment": "Mistake. a6 was best."
+            }
+        },
+        {
+            "eval": 95,
+            "best": "f1b5",
+            "variation": "Bb5+ Kf7 Qxd4 a6 Bd3 Bc5 Qf4 Nc6 O-O Kf8 Rfe1 Qc7 Bg3 Nb4",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. Bb5+ was best."
+            }
+        },
+        {
+            "eval": 650,
+            "best": "a7a6",
+            "variation": "a6 Qa4+",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. a6 was best."
+            }
+        },
+        {
+            "eval": 345,
+            "best": "f1b5",
+            "variation": "Bb5+ Bd7",
+            "judgment": {
+                "name": "Mistake",
+                "comment": "Mistake. Bb5+ was best."
+            }
+        },
+        {
+            "eval": 1627,
+            "best": "g8f6",
+            "variation": "Nf6",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Nf6 was best."
+            }
+        },
+        {
+            "eval": 1596
+        },
+        {
+            "eval": 1531
+        },
+        {
+            "eval": 1234
+        },
+        {
+            "eval": 1487
+        },
+        {
+            "eval": 1233
+        },
+        {
+            "eval": 2193
+        },
+        {
+            "eval": 2160
+        },
+        {
+            "eval": 2135
+        },
+        {
+            "eval": 2057
+        },
+        {
+            "mate": 1,
+            "best": "e8f8",
+            "variation": "Kf8",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Checkmate is now unavoidable. Kf8 was best."
+            }
+        }
+    ],
+    "clock": {
+        "initial": 900,
+        "increment": 10,
+        "totalTime": 1300
+    }
+}

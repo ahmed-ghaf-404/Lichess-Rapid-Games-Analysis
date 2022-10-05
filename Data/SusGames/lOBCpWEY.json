@@ -1,0 +1,168 @@
+{
+    "id": "lOBCpWEY",
+    "rated": true,
+    "variant": "standard",
+    "speed": "rapid",
+    "perf": "rapid",
+    "createdAt": "2022-08-24 17:03:03.130000+00:00",
+    "lastMoveAt": "2022-08-24 17:09:07.927000+00:00",
+    "status": "resign",
+    "players": {
+        "white": {
+            "user": {
+                "name": "lhdsbm",
+                "id": "lhdsbm"
+            },
+            "rating": 1671,
+            "ratingDiff": -6,
+            "analysis": {
+                "inaccuracy": 2,
+                "mistake": 1,
+                "blunder": 2,
+                "acpl": 158
+            }
+        },
+        "black": {
+            "user": {
+                "name": "rog_o",
+                "id": "rog_o"
+            },
+            "rating": 1657,
+            "ratingDiff": 6,
+            "analysis": {
+                "inaccuracy": 2,
+                "mistake": 0,
+                "blunder": 1,
+                "acpl": 75
+            }
+        }
+    },
+    "winner": "black",
+    "opening": {
+        "eco": "C42",
+        "name": "Russian Game: Stafford Gambit",
+        "ply": 8
+    },
+    "moves": "e4 e5 Nf3 Nf6 Nxe5 Nc6 Nxc6 dxc6 Nc3 Bc5 e5 Ng4 Ne4 Qd4 Qf3 Nxe5 Qe3 Ng4 Qf4 f5 Nxc5 Qxf4",
+    "analysis": [
+        {
+            "eval": 33
+        },
+        {
+            "eval": 12
+        },
+        {
+            "eval": 19
+        },
+        {
+            "eval": 50
+        },
+        {
+            "eval": 34
+        },
+        {
+            "eval": 140,
+            "best": "d7d6",
+            "variation": "d6 Nf3 Nxe4 d4 d5 Bd3 Bd6 O-O O-O c4",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. d6 was best."
+            }
+        },
+        {
+            "eval": 230
+        },
+        {
+            "eval": 253
+        },
+        {
+            "eval": 180,
+            "best": "d2d3",
+            "variation": "d3 Be6 Be2 Qe7 Nc3 O-O-O Be3 Rg8 f4 g5",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. d3 was best."
+            }
+        },
+        {
+            "eval": 236
+        },
+        {
+            "eval": -263,
+            "best": "h2h3",
+            "variation": "h3 Bd4 d3 Be6 g3 Qd6 Bg2 O-O-O Ne2 Bb6",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. h3 was best."
+            }
+        },
+        {
+            "eval": -268
+        },
+        {
+            "eval": -390
+        },
+        {
+            "eval": 90,
+            "best": "c5f2",
+            "variation": "Bxf2+ Nxf2 Nxf2 Kxf2 Qd4+ Ke1 Qh4+ g3 Qe4+ Qe2",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Bxf2+ was best."
+            }
+        },
+        {
+            "eval": -66,
+            "best": "f2f3",
+            "variation": "f3 Be7 c3 Qxe5 Bc4 Nf6 d4 Qf5 O-O O-O",
+            "judgment": {
+                "name": "Mistake",
+                "comment": "Mistake. f3 was best."
+            }
+        },
+        {
+            "eval": 7,
+            "best": "d4e5",
+            "variation": "Qxe5 Qe2",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. Qxe5 was best."
+            }
+        },
+        {
+            "eval": 7
+        },
+        {
+            "eval": 27
+        },
+        {
+            "eval": -525,
+            "best": "e3d4",
+            "variation": "Qxd4",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Qxd4 was best."
+            }
+        },
+        {
+            "eval": -491
+        },
+        {
+            "eval": -809,
+            "best": "h2h3",
+            "variation": "h3 fxe4",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. h3 was best."
+            }
+        },
+        {
+            "eval": -825
+        }
+    ],
+    "clock": {
+        "initial": 600,
+        "increment": 5,
+        "totalTime": 800
+    }
+}

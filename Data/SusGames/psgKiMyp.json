@@ -1,0 +1,159 @@
+{
+    "id": "psgKiMyp",
+    "rated": true,
+    "variant": "standard",
+    "speed": "rapid",
+    "perf": "rapid",
+    "createdAt": "2020-05-01 20:34:44.905000+00:00",
+    "lastMoveAt": "2020-05-01 20:39:45.169000+00:00",
+    "status": "resign",
+    "players": {
+        "white": {
+            "user": {
+                "name": "Besch",
+                "id": "besch"
+            },
+            "rating": 1124,
+            "ratingDiff": -12,
+            "analysis": {
+                "inaccuracy": 2,
+                "mistake": 0,
+                "blunder": 1,
+                "acpl": 113
+            }
+        },
+        "black": {
+            "user": {
+                "name": "j_lucassoares",
+                "id": "j_lucassoares"
+            },
+            "rating": 1119,
+            "ratingDiff": 6,
+            "analysis": {
+                "inaccuracy": 2,
+                "mistake": 0,
+                "blunder": 0,
+                "acpl": 37
+            }
+        }
+    },
+    "winner": "black",
+    "opening": {
+        "eco": "C33",
+        "name": "King's Gambit Accepted: Dodo Variation",
+        "ply": 5
+    },
+    "moves": "e4 e5 f4 exf4 Qg4 d6 Qxf4 Nc6 Bb5 a6 e5 axb5 exd6 Bxd6 Qe4+ Nge7 Nf3 O-O d3 Bf5 Qe3 Nd5 Nc3 Nxe3 Bxe3",
+    "analysis": [
+        {
+            "eval": 24
+        },
+        {
+            "eval": 37
+        },
+        {
+            "eval": -46,
+            "best": "g1f3",
+            "variation": "Nf3 Nc6 Bb5 a6 Ba4 Nf6 O-O Be7 Re1 b5",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. Nf3 was best."
+            }
+        },
+        {
+            "eval": -35
+        },
+        {
+            "eval": -98,
+            "best": "g1f3",
+            "variation": "Nf3 d6 Bc4 h6 h4 Nf6 Nc3 c6 d4 b5",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. Nf3 was best."
+            }
+        },
+        {
+            "eval": 8,
+            "best": "b8c6",
+            "variation": "Nc6 Nf3 d5 Qxf4 dxe4 Qxe4+ Be7 Bb5 Bd7 d4",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. Nc6 was best."
+            }
+        },
+        {
+            "eval": -44
+        },
+        {
+            "eval": 18,
+            "best": "d6d5",
+            "variation": "d5",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. d5 was best."
+            }
+        },
+        {
+            "eval": 9
+        },
+        {
+            "eval": 26
+        },
+        {
+            "eval": -776,
+            "best": "b5c6",
+            "variation": "Bxc6+ bxc6",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Bxc6+ was best."
+            }
+        },
+        {
+            "eval": -770
+        },
+        {
+            "eval": -885
+        },
+        {
+            "eval": -874
+        },
+        {
+            "eval": -923
+        },
+        {
+            "eval": -924
+        },
+        {
+            "eval": -941
+        },
+        {
+            "eval": -821
+        },
+        {
+            "eval": -1189
+        },
+        {
+            "eval": -903
+        },
+        {
+            "eval": -1035
+        },
+        {
+            "eval": -1050
+        },
+        {
+            "eval": -1704
+        },
+        {
+            "eval": -1669
+        },
+        {
+            "eval": -1562
+        }
+    ],
+    "clock": {
+        "initial": 600,
+        "increment": 5,
+        "totalTime": 800
+    }
+}

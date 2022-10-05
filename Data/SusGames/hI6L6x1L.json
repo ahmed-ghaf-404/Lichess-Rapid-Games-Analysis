@@ -1,0 +1,127 @@
+{
+    "id": "hI6L6x1L",
+    "rated": true,
+    "variant": "standard",
+    "speed": "rapid",
+    "perf": "rapid",
+    "createdAt": "2022-04-14 18:56:15.645000+00:00",
+    "lastMoveAt": "2022-04-14 18:59:37.183000+00:00",
+    "status": "mate",
+    "players": {
+        "white": {
+            "user": {
+                "name": "GuvenistHayro",
+                "id": "guvenisthayro"
+            },
+            "rating": 1843,
+            "ratingDiff": 8,
+            "analysis": {
+                "inaccuracy": 1,
+                "mistake": 0,
+                "blunder": 0,
+                "acpl": 22
+            }
+        },
+        "black": {
+            "user": {
+                "name": "TearDrinker",
+                "id": "teardrinker"
+            },
+            "rating": 2058,
+            "ratingDiff": -9,
+            "analysis": {
+                "inaccuracy": 1,
+                "mistake": 0,
+                "blunder": 1,
+                "acpl": 130
+            }
+        }
+    },
+    "winner": "white",
+    "opening": {
+        "eco": "B10",
+        "name": "Caro-Kann Defense",
+        "ply": 2
+    },
+    "moves": "e4 c6 Nf3 d5 exd5 cxd5 d4 Nf6 Bf4 Nc6 c4 dxc4 Bxc4 Bg4 Qb3 Bxf3 Bxf7+ Kd7 Qe6#",
+    "analysis": [
+        {
+            "eval": 33
+        },
+        {
+            "eval": 56
+        },
+        {
+            "eval": 35
+        },
+        {
+            "eval": 27
+        },
+        {
+            "eval": 23
+        },
+        {
+            "eval": 15
+        },
+        {
+            "eval": 0
+        },
+        {
+            "eval": 25
+        },
+        {
+            "eval": 0
+        },
+        {
+            "eval": 1
+        },
+        {
+            "eval": -40
+        },
+        {
+            "eval": 6
+        },
+        {
+            "eval": 11
+        },
+        {
+            "eval": 88,
+            "best": "e7e6",
+            "variation": "e6 O-O Bd6 Be5 Bxe5 dxe5 Qxd1 Rxd1 Nd7 Bb5",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. e6 was best."
+            }
+        },
+        {
+            "eval": 0,
+            "best": "d4d5",
+            "variation": "d5 e5 dxc6 Qxd1+ Kxd1 exf4 cxb7 Rb8 Ba6 Kd8",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. d5 was best."
+            }
+        },
+        {
+            "mate": 2,
+            "best": "e7e6",
+            "variation": "e6 Qxb7 Bxf3 gxf3 Bb4+ Nd2 Bxd2+ Bxd2 Nxd4 Bb5+ Nxb5 Qxb5+ Qd7 Qxd7+",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Checkmate is now unavoidable. e6 was best."
+            }
+        },
+        {
+            "mate": 1
+        },
+        {
+            "mate": 1
+        }
+    ],
+    "tournament": "Ma4zBLZ0",
+    "clock": {
+        "initial": 600,
+        "increment": 0,
+        "totalTime": 600
+    }
+}

@@ -1,0 +1,110 @@
+{
+    "id": "OdIUEJvB",
+    "rated": true,
+    "variant": "standard",
+    "speed": "rapid",
+    "perf": "rapid",
+    "createdAt": "2019-03-24 04:44:46.137000+00:00",
+    "lastMoveAt": "2019-03-24 04:47:40.981000+00:00",
+    "status": "mate",
+    "players": {
+        "white": {
+            "user": {
+                "name": "jens009",
+                "id": "jens009"
+            },
+            "rating": 1701,
+            "ratingDiff": 11,
+            "analysis": {
+                "inaccuracy": 1,
+                "mistake": 0,
+                "blunder": 0,
+                "acpl": 25
+            }
+        },
+        "black": {
+            "user": {
+                "name": "roneymagalhaes",
+                "id": "roneymagalhaes"
+            },
+            "rating": 1691,
+            "ratingDiff": -10,
+            "analysis": {
+                "inaccuracy": 1,
+                "mistake": 0,
+                "blunder": 1,
+                "acpl": 157
+            }
+        }
+    },
+    "winner": "white",
+    "opening": {
+        "eco": "B23",
+        "name": "Sicilian Defense: Closed",
+        "ply": 3
+    },
+    "moves": "e4 c5 Nc3 e5 Bc4 d6 Nf3 Bg4 Nxe5 Bxd1 Bxf7+ Ke7 Nd5#",
+    "analysis": [
+        {
+            "eval": 12
+        },
+        {
+            "eval": 18
+        },
+        {
+            "eval": 0
+        },
+        {
+            "eval": 95,
+            "best": "e7e6",
+            "variation": "e6 Nf3 a6 d4 cxd4 Nxd4 Qc7 Qf3 Nf6 Be2",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. e6 was best."
+            }
+        },
+        {
+            "eval": 47
+        },
+        {
+            "eval": 100,
+            "best": "g8f6",
+            "variation": "Nf6 d3 d6 Nge2 a6 a4 Nc6 O-O Be7 f4"
+        },
+        {
+            "eval": 20,
+            "best": "d2d3",
+            "variation": "d3 Nf6 Nge2 Be7 O-O a6 a4 Nc6 f4 Bd7",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. d3 was best."
+            }
+        },
+        {
+            "eval": 55
+        },
+        {
+            "eval": 250
+        },
+        {
+            "mate": 2,
+            "best": "d6e5",
+            "variation": "dxe5 Qxg4 Nc6 Qg3 Nf6 d3 Nh5 Qg4 Nf6 Qg5",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Checkmate is now unavoidable. dxe5 was best."
+            }
+        },
+        {
+            "mate": 1
+        },
+        {
+            "mate": 1
+        }
+    ],
+    "clock": {
+        "initial": 900,
+        "increment": 0,
+        "totalTime": 900
+    }
+}

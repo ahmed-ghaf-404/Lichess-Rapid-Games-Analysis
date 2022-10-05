@@ -1,0 +1,138 @@
+{
+    "id": "XP4pP87U",
+    "rated": true,
+    "variant": "standard",
+    "speed": "rapid",
+    "perf": "rapid",
+    "createdAt": "2022-07-04 16:15:43.156000+00:00",
+    "lastMoveAt": "2022-07-04 16:18:47.264000+00:00",
+    "status": "resign",
+    "players": {
+        "white": {
+            "user": {
+                "name": "Toni221156",
+                "id": "toni221156"
+            },
+            "rating": 1349,
+            "ratingDiff": 7,
+            "analysis": {
+                "inaccuracy": 0,
+                "mistake": 0,
+                "blunder": 2,
+                "acpl": 65
+            }
+        },
+        "black": {
+            "user": {
+                "name": "SlapDaniels",
+                "id": "slapdaniels"
+            },
+            "rating": 1409,
+            "ratingDiff": -7,
+            "analysis": {
+                "inaccuracy": 1,
+                "mistake": 0,
+                "blunder": 1,
+                "acpl": 86
+            }
+        }
+    },
+    "winner": "white",
+    "opening": {
+        "eco": "A45",
+        "name": "Indian Defense",
+        "ply": 2
+    },
+    "moves": "d4 Nf6 b4 e6 c3 d5 e3 Bd6 a3 b6 c4 Bb7 Qc2 Nbd7 c5 bxc5 bxc5 Rc8 Nc3",
+    "analysis": [
+        {
+            "eval": 0
+        },
+        {
+            "eval": 23
+        },
+        {
+            "eval": -28,
+            "best": "g1f3",
+            "variation": "Nf3 d5 c4 e6 Nc3 Bb4 Qa4+ Nc6 e3 O-O"
+        },
+        {
+            "eval": -35
+        },
+        {
+            "eval": -62
+        },
+        {
+            "eval": -62
+        },
+        {
+            "eval": -52
+        },
+        {
+            "eval": -46
+        },
+        {
+            "eval": -67
+        },
+        {
+            "eval": -19
+        },
+        {
+            "eval": -54
+        },
+        {
+            "eval": 28,
+            "best": "d5c4",
+            "variation": "dxc4",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. dxc4 was best."
+            }
+        },
+        {
+            "eval": -156,
+            "best": "c4c5",
+            "variation": "c5",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. c5 was best."
+            }
+        },
+        {
+            "eval": 412,
+            "best": "d5c4",
+            "variation": "dxc4 Qxc4 c5 bxc5 bxc5 Qb3 Qc8 dxc5 Be7 Nf3 Nbd7 Nbd2 O-O c6",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. dxc4 was best."
+            }
+        },
+        {
+            "eval": 364
+        },
+        {
+            "eval": 389
+        },
+        {
+            "eval": 382
+        },
+        {
+            "eval": 402
+        },
+        {
+            "eval": 136,
+            "best": "c5d6",
+            "variation": "cxd6 O-O Qb2 Rb8 Nc3 Ba6 Qa2 Bxf1 Kxf1 c5 Nge2 cxd4 exd4 Nb6",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. cxd6 was best."
+            }
+        }
+    ],
+    "tournament": "wY94YFL5",
+    "clock": {
+        "initial": 600,
+        "increment": 0,
+        "totalTime": 600
+    }
+}

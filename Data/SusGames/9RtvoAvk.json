@@ -1,0 +1,145 @@
+{
+    "id": "9RtvoAvk",
+    "rated": true,
+    "variant": "standard",
+    "speed": "rapid",
+    "perf": "rapid",
+    "createdAt": "2022-07-30 17:17:48.763000+00:00",
+    "lastMoveAt": "2022-07-30 17:20:58.820000+00:00",
+    "status": "timeout",
+    "players": {
+        "white": {
+            "user": {
+                "name": "RL12",
+                "title": "IM",
+                "id": "rl12"
+            },
+            "rating": 2250,
+            "ratingDiff": -13,
+            "analysis": {
+                "inaccuracy": 1,
+                "mistake": 0,
+                "blunder": 1,
+                "acpl": 89
+            }
+        },
+        "black": {
+            "user": {
+                "name": "Boston46",
+                "id": "boston46"
+            },
+            "rating": 2280,
+            "ratingDiff": 6,
+            "analysis": {
+                "inaccuracy": 1,
+                "mistake": 0,
+                "blunder": 0,
+                "acpl": 13
+            }
+        }
+    },
+    "winner": "black",
+    "opening": {
+        "eco": "B30",
+        "name": "Sicilian Defense: Old Sicilian",
+        "ply": 4
+    },
+    "moves": "e4 c5 Nf3 Nc6 Nc3 e6 Be2 Be7 O-O d6 d4 cxd4 Nxd4 Nf6 Nxc6 bxc6 Bg5 h6 Bxf6 Bxf6 Qd2 O-O Ba6 Bxa6",
+    "analysis": [
+        {
+            "eval": 33
+        },
+        {
+            "eval": 32
+        },
+        {
+            "eval": 0
+        },
+        {
+            "eval": 0
+        },
+        {
+            "eval": 23
+        },
+        {
+            "eval": 49
+        },
+        {
+            "eval": 0
+        },
+        {
+            "eval": 58,
+            "best": "c6d4",
+            "variation": "Nd4 Bd3 a6 O-O Nc6 Be2 Nd4",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. Nd4 was best."
+            }
+        },
+        {
+            "eval": 25
+        },
+        {
+            "eval": 12
+        },
+        {
+            "eval": 10
+        },
+        {
+            "eval": 26
+        },
+        {
+            "eval": 0
+        },
+        {
+            "eval": 29
+        },
+        {
+            "eval": 28
+        },
+        {
+            "eval": 33
+        },
+        {
+            "eval": -9
+        },
+        {
+            "eval": -17
+        },
+        {
+            "eval": -85,
+            "best": "g5d2",
+            "variation": "Bd2 O-O Re1 e5 h3 d5 Bf3 d4 Na4 Re8 b3 a5 Nb2 Bf8",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. Bd2 was best."
+            }
+        },
+        {
+            "eval": -93
+        },
+        {
+            "eval": -86
+        },
+        {
+            "eval": -78
+        },
+        {
+            "eval": -896,
+            "best": "a1d1",
+            "variation": "Rad1 d5 Na4 Qc7 Qe3 Bg5 f4 Be7 b3 Bb7 c4 Rfd8 c5 Qa5",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Rad1 was best."
+            }
+        },
+        {
+            "eval": -883
+        }
+    ],
+    "clock": {
+        "initial": 600,
+        "increment": 0,
+        "totalTime": 600
+    }
+}

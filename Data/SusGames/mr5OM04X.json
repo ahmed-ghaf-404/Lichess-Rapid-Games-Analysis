@@ -1,0 +1,132 @@
+{
+    "id": "mr5OM04X",
+    "rated": true,
+    "variant": "standard",
+    "speed": "rapid",
+    "perf": "rapid",
+    "createdAt": "2022-07-14 11:54:47.062000+00:00",
+    "lastMoveAt": "2022-07-14 11:58:48.165000+00:00",
+    "status": "mate",
+    "players": {
+        "white": {
+            "user": {
+                "name": "Buhbuhich",
+                "id": "buhbuhich"
+            },
+            "rating": 1019,
+            "ratingDiff": 12,
+            "analysis": {
+                "inaccuracy": 1,
+                "mistake": 1,
+                "blunder": 0,
+                "acpl": 45
+            }
+        },
+        "black": {
+            "user": {
+                "name": "mohammadrezaxa",
+                "id": "mohammadrezaxa"
+            },
+            "rating": 1085,
+            "ratingDiff": -13,
+            "analysis": {
+                "inaccuracy": 2,
+                "mistake": 0,
+                "blunder": 2,
+                "acpl": 182
+            }
+        }
+    },
+    "winner": "white",
+    "opening": {
+        "eco": "C20",
+        "name": "King's Pawn Game: Wayward Queen Attack",
+        "ply": 3
+    },
+    "moves": "e4 e5 Qh5 g5 Bc4 Qf6 d3 Bb4+ c3 Bc5 Bxg5 Qxf2+ Kd1 Qxg2 Qxf7#",
+    "analysis": [
+        {
+            "eval": 33
+        },
+        {
+            "eval": 12
+        },
+        {
+            "eval": -47,
+            "best": "g1f3",
+            "variation": "Nf3 Nc6 Bb5 Nf6 O-O Nxe4 Re1 Nd6 Nxe5 Be7",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. Nf3 was best."
+            }
+        },
+        {
+            "eval": 156,
+            "best": "b8c6",
+            "variation": "Nc6 Bc4 g6 Qf3 Nf6 Ne2 d6 Nbc3 Bg7 d3",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Nc6 was best."
+            }
+        },
+        {
+            "eval": 112
+        },
+        {
+            "eval": 217,
+            "best": "d8e7",
+            "variation": "Qe7 d4 Nf6 Qe2 Nc6 dxe5 Nxe5 Bb3 h6 Nc3",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. Qe7 was best."
+            }
+        },
+        {
+            "eval": 197
+        },
+        {
+            "eval": 273,
+            "best": "h7h6",
+            "variation": "h6 h4 Bg7 Nc3 Ne7 Nge2 c6 Ng3 d6 hxg5 hxg5 Qxg5 Rxh1+ Nxh1",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. h6 was best."
+            }
+        },
+        {
+            "eval": 285
+        },
+        {
+            "eval": 347
+        },
+        {
+            "eval": 158,
+            "best": "g1f3",
+            "variation": "Nf3 Nc6",
+            "judgment": {
+                "name": "Mistake",
+                "comment": "Mistake. Nf3 was best."
+            }
+        },
+        {
+            "eval": 203
+        },
+        {
+            "eval": 218
+        },
+        {
+            "mate": 1,
+            "best": "g8e7",
+            "variation": "Ne7 Nf3 d5 Bxd5 Nxd5 exd5 Qxg2 Re1 O-O Bh6 f6 Re2 Qg6 Qxg6+",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Checkmate is now unavoidable. Ne7 was best."
+            }
+        }
+    ],
+    "clock": {
+        "initial": 600,
+        "increment": 0,
+        "totalTime": 600
+    }
+}

@@ -1,0 +1,162 @@
+{
+    "id": "r4wndw8h",
+    "rated": true,
+    "variant": "standard",
+    "speed": "rapid",
+    "perf": "rapid",
+    "createdAt": "2021-09-18 09:34:05.501000+00:00",
+    "lastMoveAt": "2021-09-18 09:38:58.314000+00:00",
+    "status": "resign",
+    "players": {
+        "white": {
+            "user": {
+                "name": "danielsuter",
+                "id": "danielsuter"
+            },
+            "rating": 1726,
+            "ratingDiff": -23,
+            "analysis": {
+                "inaccuracy": 2,
+                "mistake": 0,
+                "blunder": 1,
+                "acpl": 94
+            }
+        },
+        "black": {
+            "user": {
+                "name": "aaradhya14",
+                "id": "aaradhya14"
+            },
+            "rating": 1710,
+            "ratingDiff": 6,
+            "analysis": {
+                "inaccuracy": 0,
+                "mistake": 1,
+                "blunder": 1,
+                "acpl": 32
+            }
+        }
+    },
+    "winner": "black",
+    "opening": {
+        "eco": "B72",
+        "name": "Sicilian Defense: Dragon Variation",
+        "ply": 11
+    },
+    "moves": "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3 g6 Be3 Bg7 Qd2 O-O O-O-O Bd7 f3 Nc6 a3 Rc8 h4 Ne5 Ndb5 Nc4 Nxa7 Nxd2",
+    "analysis": [
+        {
+            "eval": 24
+        },
+        {
+            "eval": 32
+        },
+        {
+            "eval": 0
+        },
+        {
+            "eval": 0
+        },
+        {
+            "eval": 15
+        },
+        {
+            "eval": 13
+        },
+        {
+            "eval": 0
+        },
+        {
+            "eval": 14
+        },
+        {
+            "eval": 18
+        },
+        {
+            "eval": 56
+        },
+        {
+            "eval": 46
+        },
+        {
+            "eval": 55
+        },
+        {
+            "eval": 33
+        },
+        {
+            "eval": 62
+        },
+        {
+            "eval": -34,
+            "best": "f2f3",
+            "variation": "f3 Nc6 O-O-O d5 exd5 Nxd5 Nxc6 bxc6 Bd4 Bxd4",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. f3 was best."
+            }
+        },
+        {
+            "eval": 138,
+            "best": "f6g4",
+            "variation": "Ng4",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Ng4 was best."
+            }
+        },
+        {
+            "eval": 148
+        },
+        {
+            "eval": 137
+        },
+        {
+            "eval": 87
+        },
+        {
+            "eval": 100
+        },
+        {
+            "eval": 51
+        },
+        {
+            "eval": 65
+        },
+        {
+            "eval": -24,
+            "best": "g2g4",
+            "variation": "g4 h5",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. g4 was best."
+            }
+        },
+        {
+            "eval": 98,
+            "best": "a7a6",
+            "variation": "a6 Nd4 h5 Kb1 b5 Be2 Re8 g4 hxg4 h5 Nxh5 Bh6 gxf3 Nxf3",
+            "judgment": {
+                "name": "Mistake",
+                "comment": "Mistake. a6 was best."
+            }
+        },
+        {
+            "eval": -761,
+            "best": "f1c4",
+            "variation": "Bxc4 Rxc4",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Bxc4 was best."
+            }
+        },
+        {
+            "eval": -768
+        }
+    ],
+    "clock": {
+        "initial": 600,
+        "increment": 5,
+        "totalTime": 800
+    }
+}

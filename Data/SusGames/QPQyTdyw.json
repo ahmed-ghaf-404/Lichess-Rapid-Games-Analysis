@@ -1,0 +1,146 @@
+{
+    "id": "QPQyTdyw",
+    "rated": true,
+    "variant": "standard",
+    "speed": "rapid",
+    "perf": "rapid",
+    "createdAt": "2022-03-21 09:50:13.552000+00:00",
+    "lastMoveAt": "2022-03-21 09:52:38.721000+00:00",
+    "status": "resign",
+    "players": {
+        "white": {
+            "user": {
+                "name": "rjn_nrynn",
+                "id": "rjn_nrynn"
+            },
+            "rating": 1428,
+            "ratingDiff": -7,
+            "analysis": {
+                "inaccuracy": 1,
+                "mistake": 0,
+                "blunder": 1,
+                "acpl": 202
+            }
+        },
+        "black": {
+            "user": {
+                "name": "saalaga",
+                "id": "saalaga"
+            },
+            "rating": 1526,
+            "ratingDiff": 4,
+            "analysis": {
+                "inaccuracy": 2,
+                "mistake": 0,
+                "blunder": 1,
+                "acpl": 97
+            }
+        }
+    },
+    "winner": "black",
+    "opening": {
+        "eco": "D02",
+        "name": "Queen's Pawn Game: London System",
+        "ply": 5
+    },
+    "moves": "d4 d5 Bf4 Nf6 Nf3 Nc6 e3 e6 c4 dxc4 Bxc4 Bb4+ Nc3 Bxc3+ bxc3 Ne4 Qd3 Nc5 Bxc7 Nxd3+",
+    "analysis": [
+        {
+            "eval": 30
+        },
+        {
+            "eval": 39
+        },
+        {
+            "eval": 0
+        },
+        {
+            "eval": 0
+        },
+        {
+            "eval": 0
+        },
+        {
+            "eval": 52,
+            "best": "c7c5",
+            "variation": "c5 e3 Nc6 Nbd2 Qb6 dxc5 Qxb2 Rb1 Qc3 Bb5"
+        },
+        {
+            "eval": 39
+        },
+        {
+            "eval": 52
+        },
+        {
+            "eval": 50
+        },
+        {
+            "eval": 96
+        },
+        {
+            "eval": 70
+        },
+        {
+            "eval": 97
+        },
+        {
+            "eval": 39,
+            "best": "b1d2",
+            "variation": "Nbd2 Ne4 a3 Nxd2 Nxd2 Bd6 Bg3 e5 Ne4 exd4",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. Nbd2 was best."
+            }
+        },
+        {
+            "eval": 98,
+            "best": "f6d5",
+            "variation": "Nd5 O-O Nxf4 exf4 O-O Bd3 Ne7 Qc2 h6 Rad1",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. Nd5 was best."
+            }
+        },
+        {
+            "eval": 122
+        },
+        {
+            "eval": 224,
+            "best": "e8h8",
+            "variation": "O-O Bg5 Ne7 O-O b6 Bxf6 gxf6 e4 Bb7 Re1 Kh8 d5 exd5 exd5",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. O-O was best."
+            }
+        },
+        {
+            "eval": 175
+        },
+        {
+            "eval": 838,
+            "best": "e4d6",
+            "variation": "Nd6",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Nd6 was best."
+            }
+        },
+        {
+            "eval": -997,
+            "best": "d4c5",
+            "variation": "dxc5",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. dxc5 was best."
+            }
+        },
+        {
+            "eval": -1000
+        }
+    ],
+    "clock": {
+        "initial": 600,
+        "increment": 0,
+        "totalTime": 600
+    }
+}

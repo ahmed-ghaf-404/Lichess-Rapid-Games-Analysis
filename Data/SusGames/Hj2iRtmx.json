@@ -1,0 +1,162 @@
+{
+    "id": "Hj2iRtmx",
+    "rated": true,
+    "variant": "standard",
+    "speed": "rapid",
+    "perf": "rapid",
+    "createdAt": "2022-05-15 14:58:56.116000+00:00",
+    "lastMoveAt": "2022-05-15 15:07:30.790000+00:00",
+    "status": "mate",
+    "players": {
+        "white": {
+            "user": {
+                "name": "Uddi211",
+                "id": "uddi211"
+            },
+            "rating": 1078,
+            "ratingDiff": 15,
+            "analysis": {
+                "inaccuracy": 1,
+                "mistake": 0,
+                "blunder": 2,
+                "acpl": 121
+            }
+        },
+        "black": {
+            "user": {
+                "name": "alevyksk",
+                "id": "alevyksk"
+            },
+            "rating": 1077,
+            "ratingDiff": -9,
+            "analysis": {
+                "inaccuracy": 0,
+                "mistake": 1,
+                "blunder": 3,
+                "acpl": 207
+            }
+        }
+    },
+    "winner": "white",
+    "opening": {
+        "eco": "C44",
+        "name": "Scotch Game: Scotch Gambit, Sarratt Variation",
+        "ply": 9
+    },
+    "moves": "e4 e5 Nf3 Nc6 d4 exd4 Bc4 Bc5 Ng5 Nh6 O-O f6 Nf3 Ne5 Nxe5 fxe5 c3 d6 Qh5+ Kf8 Bxh6 gxh6 Qf7#",
+    "analysis": [
+        {
+            "eval": 33
+        },
+        {
+            "eval": 12
+        },
+        {
+            "eval": 19
+        },
+        {
+            "eval": 32
+        },
+        {
+            "eval": 13
+        },
+        {
+            "eval": 13
+        },
+        {
+            "eval": 0
+        },
+        {
+            "eval": 0
+        },
+        {
+            "eval": 0
+        },
+        {
+            "eval": 13
+        },
+        {
+            "eval": -74,
+            "best": "g5f7",
+            "variation": "Nxf7 Nxf7 Bxf7+ Kxf7 Qh5+ g6 Qxc5 d5 O-O dxe4",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. Nxf7 was best."
+            }
+        },
+        {
+            "eval": 348,
+            "best": "e8h8",
+            "variation": "O-O h3 Kh8 c3 d6 cxd4 Nxd4 Nc3 f6 Be3",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. O-O was best."
+            }
+        },
+        {
+            "eval": 43,
+            "best": "d1h5",
+            "variation": "Qh5+ g6 Qxh6 fxg5 Bxg5 Bf8 Bxd8 Bxh6 Bxc7 Bf8",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Qh5+ was best."
+            }
+        },
+        {
+            "eval": 855,
+            "best": "h6g4",
+            "variation": "Ng4 Nxd4 Bxd4 Qxg4 Qe7 Qd1 d6 a4 a6 Re1",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Ng4 was best."
+            }
+        },
+        {
+            "eval": 885
+        },
+        {
+            "eval": 902
+        },
+        {
+            "eval": 0,
+            "best": "d1h5",
+            "variation": "Qh5+ Kf8 Bxh6 Qf6 Bd2 g6 Qh6+ Ke8 a4 a5 Bg5 Qf8 Qxf8+ Rxf8",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Qh5+ was best."
+            }
+        },
+        {
+            "eval": 765,
+            "best": "d8h4",
+            "variation": "Qh4 cxd4 Bxd4 Nd2 Ng4 Nf3 Bxf2+ Kh1 Qh5 h3 Bb6 Bg5 h6 Nxe5",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Qh4 was best."
+            }
+        },
+        {
+            "eval": 769
+        },
+        {
+            "eval": 831
+        },
+        {
+            "eval": 829
+        },
+        {
+            "mate": 1,
+            "best": "d8f6",
+            "variation": "Qf6",
+            "judgment": {
+                "name": "Mistake",
+                "comment": "Checkmate is now unavoidable. Qf6 was best."
+            }
+        }
+    ],
+    "clock": {
+        "initial": 600,
+        "increment": 5,
+        "totalTime": 800
+    }
+}

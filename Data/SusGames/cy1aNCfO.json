@@ -1,0 +1,86 @@
+{
+    "id": "cy1aNCfO",
+    "rated": true,
+    "variant": "standard",
+    "speed": "rapid",
+    "perf": "rapid",
+    "createdAt": "2022-08-11 16:19:48.894000+00:00",
+    "lastMoveAt": "2022-08-11 16:20:28.099000+00:00",
+    "status": "resign",
+    "players": {
+        "white": {
+            "user": {
+                "name": "Smurf8888",
+                "id": "smurf8888"
+            },
+            "rating": 2133,
+            "ratingDiff": 0,
+            "analysis": {
+                "inaccuracy": 0,
+                "mistake": 0,
+                "blunder": 1,
+                "acpl": 123
+            }
+        },
+        "black": {
+            "user": {
+                "name": "Pap-G",
+                "title": "GM",
+                "id": "pap-g"
+            },
+            "rating": 2703,
+            "ratingDiff": 1,
+            "analysis": {
+                "inaccuracy": 0,
+                "mistake": 0,
+                "blunder": 0,
+                "acpl": 6
+            }
+        }
+    },
+    "winner": "black",
+    "opening": {
+        "eco": "C70",
+        "name": "Ruy Lopez: Morphy Defense",
+        "ply": 6
+    },
+    "moves": "e4 e5 Nf3 Nc6 Bb5 a6 a3 axb5",
+    "analysis": [
+        {
+            "eval": 33
+        },
+        {
+            "eval": 12
+        },
+        {
+            "eval": 19
+        },
+        {
+            "eval": 32
+        },
+        {
+            "eval": 25
+        },
+        {
+            "eval": 37
+        },
+        {
+            "eval": -446,
+            "best": "b5a4",
+            "variation": "Ba4 Nf6 O-O Be7 Re1 b5 Bb3 O-O a4 Bb7",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Ba4 was best."
+            }
+        },
+        {
+            "eval": -790
+        }
+    ],
+    "tournament": "AMmFhzjW",
+    "clock": {
+        "initial": 600,
+        "increment": 0,
+        "totalTime": 600
+    }
+}

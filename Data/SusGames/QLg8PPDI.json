@@ -1,0 +1,136 @@
+{
+    "id": "QLg8PPDI",
+    "rated": true,
+    "variant": "standard",
+    "speed": "rapid",
+    "perf": "rapid",
+    "createdAt": "2022-08-22 19:03:17.713000+00:00",
+    "lastMoveAt": "2022-08-22 19:06:17.418000+00:00",
+    "status": "resign",
+    "players": {
+        "white": {
+            "user": {
+                "name": "bigpoppachess2",
+                "id": "bigpoppachess2"
+            },
+            "rating": 1571,
+            "ratingDiff": 12,
+            "analysis": {
+                "inaccuracy": 0,
+                "mistake": 1,
+                "blunder": 0,
+                "acpl": 39
+            }
+        },
+        "black": {
+            "user": {
+                "name": "KreyNey",
+                "id": "kreyney"
+            },
+            "rating": 1594,
+            "ratingDiff": -6,
+            "analysis": {
+                "inaccuracy": 0,
+                "mistake": 0,
+                "blunder": 3,
+                "acpl": 129
+            }
+        }
+    },
+    "winner": "white",
+    "opening": {
+        "eco": "B21",
+        "name": "Sicilian Defense: Smith-Morra Gambit",
+        "ply": 5
+    },
+    "moves": "e4 c5 d4 cxd4 c3 dxc3 Nxc3 Nc6 Nf3 e6 Bb5 d5 exd5 exd5 Nxd5 Bd7 Bf4 Nf6 Nc7+",
+    "analysis": [
+        {
+            "eval": 33
+        },
+        {
+            "eval": 32
+        },
+        {
+            "eval": 10
+        },
+        {
+            "eval": 1
+        },
+        {
+            "eval": -26
+        },
+        {
+            "eval": -20
+        },
+        {
+            "eval": -28
+        },
+        {
+            "eval": -19
+        },
+        {
+            "eval": -64
+        },
+        {
+            "eval": -12
+        },
+        {
+            "eval": -51
+        },
+        {
+            "eval": 147,
+            "best": "a7a6",
+            "variation": "a6 Bxc6 bxc6 O-O Nf6 Bf4 Be7 Rc1 O-O Bd6",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. a6 was best."
+            }
+        },
+        {
+            "eval": 134
+        },
+        {
+            "eval": 159
+        },
+        {
+            "eval": -8,
+            "best": "f3e5",
+            "variation": "Ne5 Ne7 O-O f6 Nf3 h5 Re1 Kf7 Ba4 g5",
+            "judgment": {
+                "name": "Mistake",
+                "comment": "Mistake. Ne5 was best."
+            }
+        },
+        {
+            "eval": 400,
+            "best": "g8e7",
+            "variation": "Ne7 Nb4 Qxd1+ Kxd1 Be6 Bd2 O-O-O Rc1 Kb8 Nxc6+ Nxc6 Bxc6 bxc6 Ne5",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Ne7 was best."
+            }
+        },
+        {
+            "eval": 352
+        },
+        {
+            "eval": 815,
+            "best": "f8b4",
+            "variation": "Bb4+ Kf1 Ba5 Qe2+ Be6 Rd1 Ne7 Nxe7 Qxe7 Bd6 Qf6 Ne5 Rc8 h4",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Bb4+ was best."
+            }
+        },
+        {
+            "eval": 794
+        }
+    ],
+    "tournament": "KQJDqkdV",
+    "clock": {
+        "initial": 600,
+        "increment": 0,
+        "totalTime": 600
+    }
+}

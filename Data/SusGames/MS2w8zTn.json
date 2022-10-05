@@ -1,0 +1,132 @@
+{
+    "id": "MS2w8zTn",
+    "rated": true,
+    "variant": "standard",
+    "speed": "rapid",
+    "perf": "rapid",
+    "createdAt": "2022-07-16 11:57:26.140000+00:00",
+    "lastMoveAt": "2022-07-16 12:00:44.364000+00:00",
+    "status": "mate",
+    "players": {
+        "white": {
+            "user": {
+                "name": "Penguin_123",
+                "id": "penguin_123"
+            },
+            "rating": 1619,
+            "ratingDiff": 11,
+            "analysis": {
+                "inaccuracy": 0,
+                "mistake": 0,
+                "blunder": 0,
+                "acpl": 13
+            }
+        },
+        "black": {
+            "user": {
+                "name": "Praveenraj2112",
+                "id": "praveenraj2112"
+            },
+            "rating": 1364,
+            "ratingDiff": -6,
+            "analysis": {
+                "inaccuracy": 1,
+                "mistake": 0,
+                "blunder": 2,
+                "acpl": 111
+            }
+        }
+    },
+    "winner": "white",
+    "opening": {
+        "eco": "C41",
+        "name": "Philidor Defense",
+        "ply": 5
+    },
+    "moves": "e4 e5 Nf3 d6 Bc4 Be6 Bxe6 fxe6 Nc3 Nc6 O-O Qd7 d4 exd4 Nxd4 Nxd4 Qxd4 O-O-O Qxa7 d5 Qa8#",
+    "analysis": [
+        {
+            "eval": 33
+        },
+        {
+            "eval": 12
+        },
+        {
+            "eval": 19
+        },
+        {
+            "eval": 82,
+            "best": "b8c6",
+            "variation": "Nc6 Bb5 Nf6 d3 Bc5 c3 O-O O-O d5 Nbd2",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. Nc6 was best."
+            }
+        },
+        {
+            "eval": 35
+        },
+        {
+            "eval": 85
+        },
+        {
+            "eval": 74
+        },
+        {
+            "eval": 63
+        },
+        {
+            "eval": 21
+        },
+        {
+            "eval": 56
+        },
+        {
+            "eval": 59
+        },
+        {
+            "eval": 58
+        },
+        {
+            "eval": 44
+        },
+        {
+            "eval": 40
+        },
+        {
+            "eval": 59
+        },
+        {
+            "eval": 75
+        },
+        {
+            "eval": 70
+        },
+        {
+            "eval": 290,
+            "best": "g8e7",
+            "variation": "Ne7 Be3 Nc6 Qc4 Be7 f4 Bf6 Rad1 Bxc3 Qxc3 O-O a3 Rf7 b4",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Ne7 was best."
+            }
+        },
+        {
+            "eval": 276
+        },
+        {
+            "mate": 1,
+            "best": "d7c6",
+            "variation": "Qc6",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Checkmate is now unavoidable. Qc6 was best."
+            }
+        }
+    ],
+    "clock": {
+        "initial": 540,
+        "increment": 0,
+        "totalTime": 540
+    }
+}

@@ -1,0 +1,115 @@
+{
+    "id": "8wtyNHJ8",
+    "rated": true,
+    "variant": "standard",
+    "speed": "rapid",
+    "perf": "rapid",
+    "createdAt": "2022-08-23 17:51:44.917000+00:00",
+    "lastMoveAt": "2022-08-23 17:53:26.661000+00:00",
+    "status": "mate",
+    "players": {
+        "white": {
+            "user": {
+                "name": "rushabhsons",
+                "id": "rushabhsons"
+            },
+            "rating": 1854,
+            "ratingDiff": 3,
+            "analysis": {
+                "inaccuracy": 1,
+                "mistake": 0,
+                "blunder": 1,
+                "acpl": 53
+            }
+        },
+        "black": {
+            "user": {
+                "name": "shrouded111",
+                "id": "shrouded111"
+            },
+            "rating": 1646,
+            "ratingDiff": -3,
+            "analysis": {
+                "inaccuracy": 0,
+                "mistake": 0,
+                "blunder": 2,
+                "acpl": 217
+            }
+        }
+    },
+    "winner": "white",
+    "opening": {
+        "eco": "C44",
+        "name": "Scotch Game",
+        "ply": 5
+    },
+    "moves": "e4 e5 Nf3 Nc6 d4 f5 dxe5 fxe4 Ng5 Nxe5 Qd5 Ng6 Qf7#",
+    "analysis": [
+        {
+            "eval": 33
+        },
+        {
+            "eval": 12
+        },
+        {
+            "eval": 19
+        },
+        {
+            "eval": 32
+        },
+        {
+            "eval": 13
+        },
+        {
+            "eval": 239,
+            "best": "e5d4",
+            "variation": "exd4 Nxd4 Nf6 Nxc6 bxc6 Nc3 Bb4 Bd3 d5 exd5",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. exd4 was best."
+            }
+        },
+        {
+            "eval": 9,
+            "best": "f3e5",
+            "variation": "Nxe5 fxe4 Nc3 Bb4 Qh5+ g6 Nxc6 gxh5 Nxd8 Kxd8",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Nxe5 was best."
+            }
+        },
+        {
+            "eval": 13
+        },
+        {
+            "eval": 7
+        },
+        {
+            "eval": 16
+        },
+        {
+            "eval": -47,
+            "best": "d1d4",
+            "variation": "Qd4 Nc6 Qxe4+ Qe7 Nc3 Nf6 Qxe7+ Bxe7 Be3 h6",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. Qd4 was best."
+            }
+        },
+        {
+            "mate": 1,
+            "best": "d7d6",
+            "variation": "d6 Nxe4 Nf6 Nxf6+ Qxf6 Be3 c6 Qd2 Be7 Nc3",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Checkmate is now unavoidable. d6 was best."
+            }
+        }
+    ],
+    "tournament": "pzxHm1Kn",
+    "clock": {
+        "initial": 600,
+        "increment": 0,
+        "totalTime": 600
+    }
+}

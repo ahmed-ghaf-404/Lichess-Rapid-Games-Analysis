@@ -1,0 +1,114 @@
+{
+    "id": "nvq7FIv0",
+    "rated": true,
+    "variant": "standard",
+    "speed": "rapid",
+    "perf": "rapid",
+    "createdAt": "2022-01-07 15:52:50.805000+00:00",
+    "lastMoveAt": "2022-01-07 15:55:49.256000+00:00",
+    "status": "mate",
+    "players": {
+        "white": {
+            "user": {
+                "name": "stegu",
+                "id": "stegu"
+            },
+            "rating": 1371,
+            "ratingDiff": 7,
+            "analysis": {
+                "inaccuracy": 1,
+                "mistake": 1,
+                "blunder": 0,
+                "acpl": 50
+            }
+        },
+        "black": {
+            "user": {
+                "name": "Deniztimur",
+                "id": "deniztimur"
+            },
+            "rating": 1399,
+            "ratingDiff": -14,
+            "analysis": {
+                "inaccuracy": 0,
+                "mistake": 0,
+                "blunder": 1,
+                "acpl": 191
+            }
+        }
+    },
+    "winner": "white",
+    "opening": {
+        "eco": "B20",
+        "name": "Sicilian Defense",
+        "ply": 2
+    },
+    "moves": "e4 c5 Qf3 Nc6 Bc4 e6 c3 Nge7 d3 b6 Nh3 Bb7 Ng5 h6 Qxf7#",
+    "analysis": [
+        {
+            "eval": 0
+        },
+        {
+            "eval": 32
+        },
+        {
+            "eval": -66,
+            "best": "g1f3",
+            "variation": "Nf3 Nc6 Bb5 d6 O-O Bd7 Re1 Nf6 h3 e6",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. Nf3 was best."
+            }
+        },
+        {
+            "eval": -49
+        },
+        {
+            "eval": -82
+        },
+        {
+            "eval": -49
+        },
+        {
+            "eval": -80
+        },
+        {
+            "eval": -64
+        },
+        {
+            "eval": -96
+        },
+        {
+            "eval": -80
+        },
+        {
+            "eval": -90
+        },
+        {
+            "eval": -66
+        },
+        {
+            "eval": -200,
+            "best": "b1a3",
+            "variation": "Na3 Ne5",
+            "judgment": {
+                "name": "Mistake",
+                "comment": "Mistake. Na3 was best."
+            }
+        },
+        {
+            "mate": 1,
+            "best": "c6e5",
+            "variation": "Ne5 Qe2",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Checkmate is now unavoidable. Ne5 was best."
+            }
+        }
+    ],
+    "clock": {
+        "initial": 600,
+        "increment": 0,
+        "totalTime": 600
+    }
+}

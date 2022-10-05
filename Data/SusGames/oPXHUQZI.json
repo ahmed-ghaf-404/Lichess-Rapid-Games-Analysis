@@ -1,0 +1,196 @@
+{
+    "id": "oPXHUQZI",
+    "rated": true,
+    "variant": "standard",
+    "speed": "rapid",
+    "perf": "rapid",
+    "createdAt": "2018-11-15 22:50:43.411000+00:00",
+    "lastMoveAt": "2018-11-15 23:02:53.181000+00:00",
+    "status": "resign",
+    "players": {
+        "white": {
+            "user": {
+                "name": "agentcero",
+                "id": "agentcero"
+            },
+            "rating": 1580,
+            "ratingDiff": 0,
+            "analysis": {
+                "inaccuracy": 1,
+                "mistake": 0,
+                "blunder": 3,
+                "acpl": 92
+            }
+        },
+        "black": {
+            "user": {
+                "name": "EricRosen",
+                "title": "IM",
+                "patron": true,
+                "id": "ericrosen"
+            },
+            "rating": 2346,
+            "ratingDiff": 1,
+            "analysis": {
+                "inaccuracy": 2,
+                "mistake": 1,
+                "blunder": 0,
+                "acpl": 28
+            }
+        }
+    },
+    "winner": "black",
+    "opening": {
+        "eco": "C57",
+        "name": "Italian Game: Two Knights Defense, Fritz Variation",
+        "ply": 10
+    },
+    "moves": "e4 e5 Nf3 Nc6 Bc4 Nf6 Ng5 d5 exd5 Nd4 O-O h6 Nf3 Bg4 h3 Nxf3+ gxf3 Bxh3 Re1 Bd6 f4 Ng4 f3 Qh4 Qe2 Bc5+ d4 Bxd4+ Be3 Bxe3+ Qxe3 Qg3+",
+    "analysis": [
+        {
+            "eval": 12
+        },
+        {
+            "eval": 37
+        },
+        {
+            "eval": 31
+        },
+        {
+            "eval": 15
+        },
+        {
+            "eval": 10
+        },
+        {
+            "eval": 26
+        },
+        {
+            "eval": 31
+        },
+        {
+            "eval": 32
+        },
+        {
+            "eval": 31
+        },
+        {
+            "eval": 84,
+            "best": "c6a5",
+            "variation": "Na5 Bb5+ Bd7 Qe2 Be7 Nf3 Nxd5 Nxe5 c6 Bd3"
+        },
+        {
+            "eval": 0,
+            "best": "c2c3",
+            "variation": "c3 h6 Nxf7 Kxf7 cxd4 b5 Be2 exd4 O-O Bb7",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. c3 was best."
+            }
+        },
+        {
+            "eval": -5
+        },
+        {
+            "eval": -15
+        },
+        {
+            "eval": 0
+        },
+        {
+            "eval": -224,
+            "best": "f1e1",
+            "variation": "Re1 Be7 c3 Nxf3+ gxf3 Bh3 d4 exd4 Qxd4 O-O",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Re1 was best."
+            }
+        },
+        {
+            "eval": -149,
+            "best": "g4f3",
+            "variation": "Bxf3 gxf3 Qd7 c3 Nf5 d4 Nh4 Kh2 exd4 f4 O-O-O cxd4 Bd6 Nc3",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. Bxf3 was best."
+            }
+        },
+        {
+            "eval": -177
+        },
+        {
+            "eval": -179
+        },
+        {
+            "eval": -154
+        },
+        {
+            "eval": 0,
+            "best": "f6d5",
+            "variation": "Nxd5",
+            "judgment": {
+                "name": "Mistake",
+                "comment": "Mistake. Nxd5 was best."
+            }
+        },
+        {
+            "eval": -206,
+            "best": "d2d4",
+            "variation": "d4 O-O dxe5 Bc5 Nc3 Nd7 f4 Qh4 Qf3 Bg4 Qg2 Bh3",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. d4 was best."
+            }
+        },
+        {
+            "eval": -98,
+            "best": "e5e4",
+            "variation": "e4 Qf3 Bf5 d3 O-O Qg2 exd3 Bxd3 Qd7 Nc3 Bxd3 cxd3 Qf5 Ne4",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. e4 was best."
+            }
+        },
+        {
+            "mate": -8,
+            "best": "d1f3",
+            "variation": "Qf3 Qh4 d4 f6 Nc3 O-O-O Ne4 f5 Qg3 Be7 Nc5 e4 Ne6 Rd7",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Checkmate is now unavoidable. Qf3 was best."
+            }
+        },
+        {
+            "mate": -7
+        },
+        {
+            "mate": -5
+        },
+        {
+            "mate": -4
+        },
+        {
+            "mate": -4
+        },
+        {
+            "mate": -3
+        },
+        {
+            "mate": -3
+        },
+        {
+            "mate": -2
+        },
+        {
+            "mate": -2
+        },
+        {
+            "mate": -1
+        }
+    ],
+    "clock": {
+        "initial": 600,
+        "increment": 10,
+        "totalTime": 1000
+    }
+}

@@ -1,0 +1,127 @@
+{
+    "id": "07tgtdVv",
+    "rated": true,
+    "variant": "standard",
+    "speed": "rapid",
+    "perf": "rapid",
+    "createdAt": "2021-09-12 19:52:02.122000+00:00",
+    "lastMoveAt": "2021-09-12 19:53:02.096000+00:00",
+    "status": "resign",
+    "players": {
+        "white": {
+            "user": {
+                "name": "brubie",
+                "id": "brubie"
+            },
+            "rating": 1880,
+            "ratingDiff": 32,
+            "analysis": {
+                "inaccuracy": 1,
+                "mistake": 0,
+                "blunder": 0,
+                "acpl": 20
+            }
+        },
+        "black": {
+            "user": {
+                "name": "DragonEndgame",
+                "id": "dragonendgame"
+            },
+            "rating": 2562,
+            "ratingDiff": -22,
+            "analysis": {
+                "inaccuracy": 0,
+                "mistake": 0,
+                "blunder": 1,
+                "acpl": 112
+            }
+        }
+    },
+    "winner": "white",
+    "opening": {
+        "eco": "B20",
+        "name": "Sicilian Defense: Wing Gambit, Marshall Variation",
+        "ply": 5
+    },
+    "moves": "e4 c5 b4 cxb4 a3 Nf6 e5 Nd5 axb4 e6 b5 d6 Nf3 dxe5 Nxe5 Bd6 d4 Nd7 Nc4 Ne7",
+    "analysis": [
+        {
+            "eval": 24
+        },
+        {
+            "eval": 32
+        },
+        {
+            "eval": -49,
+            "best": "g1f3",
+            "variation": "Nf3 Nc6 Bb5 d6 O-O Bd7 Re1 Nf6 h3 e6",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. Nf3 was best."
+            }
+        },
+        {
+            "eval": -46
+        },
+        {
+            "eval": -67
+        },
+        {
+            "eval": -28
+        },
+        {
+            "eval": -45
+        },
+        {
+            "eval": -48
+        },
+        {
+            "eval": -13
+        },
+        {
+            "eval": -1
+        },
+        {
+            "eval": -17
+        },
+        {
+            "eval": 13
+        },
+        {
+            "eval": 11
+        },
+        {
+            "eval": 8
+        },
+        {
+            "eval": 35
+        },
+        {
+            "eval": 52
+        },
+        {
+            "eval": 44
+        },
+        {
+            "eval": 75
+        },
+        {
+            "eval": 25
+        },
+        {
+            "eval": 1047,
+            "best": "d6e7",
+            "variation": "Be7",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Be7 was best."
+            }
+        }
+    ],
+    "tournament": "j6dKHXmT",
+    "clock": {
+        "initial": 600,
+        "increment": 0,
+        "totalTime": 600
+    }
+}

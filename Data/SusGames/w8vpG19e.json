@@ -1,0 +1,150 @@
+{
+    "id": "w8vpG19e",
+    "rated": true,
+    "variant": "standard",
+    "speed": "rapid",
+    "perf": "rapid",
+    "createdAt": "2022-07-31 16:33:12.808000+00:00",
+    "lastMoveAt": "2022-07-31 16:34:39.755000+00:00",
+    "status": "resign",
+    "players": {
+        "white": {
+            "user": {
+                "name": "ShrekLover",
+                "id": "shreklover"
+            },
+            "rating": 1957,
+            "ratingDiff": 6,
+            "analysis": {
+                "inaccuracy": 1,
+                "mistake": 0,
+                "blunder": 0,
+                "acpl": 18
+            }
+        },
+        "black": {
+            "user": {
+                "name": "Cromyup",
+                "id": "cromyup"
+            },
+            "rating": 1967,
+            "ratingDiff": -6,
+            "analysis": {
+                "inaccuracy": 1,
+                "mistake": 0,
+                "blunder": 2,
+                "acpl": 97
+            }
+        }
+    },
+    "winner": "white",
+    "opening": {
+        "eco": "C51",
+        "name": "Italian Game: Evans Gambit, McDonnell Defense",
+        "ply": 10
+    },
+    "moves": "e4 e5 Nf3 Nc6 Bc4 Bc5 b4 Bxb4 c3 Bc5 d4 exd4 O-O Nf6 cxd4 Be7 e5 Na5 exf6 Nxc4 fxe7 Qxe7 Re1 Qxe1+",
+    "analysis": [
+        {
+            "eval": 33
+        },
+        {
+            "eval": 12
+        },
+        {
+            "eval": 19
+        },
+        {
+            "eval": 32
+        },
+        {
+            "eval": 21
+        },
+        {
+            "eval": 20
+        },
+        {
+            "eval": -48,
+            "best": "c2c3",
+            "variation": "c3 Nf6 d3 a5 O-O d6 Re1 O-O Nbd2 Bb6",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. c3 was best."
+            }
+        },
+        {
+            "eval": 0
+        },
+        {
+            "eval": -40
+        },
+        {
+            "eval": 7
+        },
+        {
+            "eval": 0
+        },
+        {
+            "eval": 6
+        },
+        {
+            "eval": -36
+        },
+        {
+            "eval": 281,
+            "best": "d7d6",
+            "variation": "d6 cxd4 Bb6 Nc3 Na5 Bd3 Ne7 h3 O-O Re1",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. d6 was best."
+            }
+        },
+        {
+            "eval": 316
+        },
+        {
+            "eval": 340
+        },
+        {
+            "eval": 338
+        },
+        {
+            "eval": 722,
+            "best": "f6g8",
+            "variation": "Ng8 d5 Na5 Bd3 Kf8 Re1 d6 Nc3 dxe5 Nxe5 Nf6 Qf3 c6 Ne4",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Ng8 was best."
+            }
+        },
+        {
+            "eval": 674
+        },
+        {
+            "eval": 1103,
+            "best": "g7f6",
+            "variation": "gxf6 Bd3 d5 Nc3 Be6 Bf4 c6 Qc2 Nc4 Na4 Na3 Qc3 b6 Rfe1",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. gxf6 was best."
+            }
+        },
+        {
+            "eval": 1089
+        },
+        {
+            "eval": 1073
+        },
+        {
+            "eval": 1087
+        },
+        {
+            "eval": 1147
+        }
+    ],
+    "clock": {
+        "initial": 600,
+        "increment": 0,
+        "totalTime": 600
+    }
+}

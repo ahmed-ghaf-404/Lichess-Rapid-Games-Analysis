@@ -1,0 +1,194 @@
+{
+    "id": "ryjYqAkA",
+    "rated": true,
+    "variant": "standard",
+    "speed": "rapid",
+    "perf": "rapid",
+    "createdAt": "2021-03-15 13:35:09.762000+00:00",
+    "lastMoveAt": "2021-03-15 13:43:24.701000+00:00",
+    "status": "resign",
+    "players": {
+        "white": {
+            "user": {
+                "name": "ternoz",
+                "id": "ternoz"
+            },
+            "rating": 1565,
+            "ratingDiff": 0,
+            "analysis": {
+                "inaccuracy": 1,
+                "mistake": 0,
+                "blunder": 3,
+                "acpl": 94
+            }
+        },
+        "black": {
+            "user": {
+                "name": "EricRosen",
+                "title": "IM",
+                "patron": true,
+                "id": "ericrosen"
+            },
+            "rating": 2477,
+            "ratingDiff": 0,
+            "analysis": {
+                "inaccuracy": 2,
+                "mistake": 0,
+                "blunder": 1,
+                "acpl": 31
+            }
+        }
+    },
+    "winner": "black",
+    "opening": {
+        "eco": "C42",
+        "name": "Russian Game: Stafford Gambit",
+        "ply": 8
+    },
+    "moves": "e4 e5 Nf3 Nf6 Nxe5 Nc6 Nxc6 dxc6 d3 Bc5 Be2 h5 h3 Qd4 O-O Qd6 c3 Ng4 Bxg4 hxg4 e5 Qg6 d4 gxh3 g3 Bg4 Qb3 Qe4 f3 Qe2 Rf2 Qe1+",
+    "analysis": [
+        {
+            "eval": 25
+        },
+        {
+            "eval": 31
+        },
+        {
+            "eval": 23
+        },
+        {
+            "eval": 48
+        },
+        {
+            "eval": 43
+        },
+        {
+            "eval": 225,
+            "best": "d7d6",
+            "variation": "d6 Nf3 Nxe4 Bd3 Nc5 Be2 Be7 c4 O-O Nc3",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. d6 was best."
+            }
+        },
+        {
+            "eval": 161
+        },
+        {
+            "eval": 184
+        },
+        {
+            "eval": 168
+        },
+        {
+            "eval": 180
+        },
+        {
+            "eval": 151
+        },
+        {
+            "eval": 266,
+            "best": "f6g4",
+            "variation": "Ng4 Bxg4 Qh4 O-O Bxg4 Qd2 O-O-O Qg5 Qxg5 Bxg5",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. Ng4 was best."
+            }
+        },
+        {
+            "eval": 244
+        },
+        {
+            "eval": 269
+        },
+        {
+            "eval": 171,
+            "best": "e1h1",
+            "variation": "O-O Qd6 c3 Bb6 a4 a5 Nd2 Bxh3 d4 Bg4",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. O-O was best."
+            }
+        },
+        {
+            "eval": 234,
+            "best": "d4e5",
+            "variation": "Qe5 c3",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. Qe5 was best."
+            }
+        },
+        {
+            "eval": 225
+        },
+        {
+            "eval": 264
+        },
+        {
+            "eval": -51,
+            "best": "e4e5",
+            "variation": "e5 Qg6 d4 Be7 Bd3 Bf5 Bxf5 Qxf5 Nd2 O-O-O Qe2 Nh6 Re1 f6",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. e5 was best."
+            }
+        },
+        {
+            "eval": -52
+        },
+        {
+            "eval": -237,
+            "best": "d3d4",
+            "variation": "d4",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. d4 was best."
+            }
+        },
+        {
+            "eval": -250
+        },
+        {
+            "eval": -260
+        },
+        {
+            "eval": -277
+        },
+        {
+            "eval": -260
+        },
+        {
+            "eval": -252
+        },
+        {
+            "mate": -4,
+            "best": "f2f3",
+            "variation": "f3",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Checkmate is now unavoidable. f3 was best."
+            }
+        },
+        {
+            "mate": -6
+        },
+        {
+            "mate": -3
+        },
+        {
+            "mate": -5
+        },
+        {
+            "mate": -3
+        },
+        {
+            "mate": -2
+        }
+    ],
+    "clock": {
+        "initial": 600,
+        "increment": 0,
+        "totalTime": 600
+    }
+}

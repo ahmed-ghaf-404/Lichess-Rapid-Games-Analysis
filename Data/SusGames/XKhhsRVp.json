@@ -1,0 +1,102 @@
+{
+    "id": "XKhhsRVp",
+    "rated": true,
+    "variant": "standard",
+    "speed": "rapid",
+    "perf": "rapid",
+    "createdAt": "2022-02-05 04:48:58.438000+00:00",
+    "lastMoveAt": "2022-02-05 04:49:53.979000+00:00",
+    "status": "resign",
+    "players": {
+        "white": {
+            "user": {
+                "name": "Fnr1",
+                "id": "fnr1"
+            },
+            "rating": 1901,
+            "ratingDiff": -27,
+            "analysis": {
+                "inaccuracy": 1,
+                "mistake": 0,
+                "blunder": 1,
+                "acpl": 161
+            }
+        },
+        "black": {
+            "user": {
+                "name": "Jamin5555",
+                "id": "jamin5555"
+            },
+            "rating": 1836,
+            "ratingDiff": 11,
+            "analysis": {
+                "inaccuracy": 0,
+                "mistake": 0,
+                "blunder": 0,
+                "acpl": 50
+            }
+        }
+    },
+    "winner": "black",
+    "opening": {
+        "eco": "C20",
+        "name": "King's Pawn Game: Leonardis Variation",
+        "ply": 3
+    },
+    "moves": "d3 e5 e4 d5 Nc3 d4 Nd5 c6 Ne3 dxe3 fxe3 Be7",
+    "analysis": [
+        {
+            "eval": 0
+        },
+        {
+            "eval": 0
+        },
+        {
+            "eval": -13
+        },
+        {
+            "eval": 0
+        },
+        {
+            "eval": -75,
+            "best": "e4d5",
+            "variation": "exd5 Qxd5 Nc3 Bb4 Ne2 Nc6 a3 Bxc3+ Nxc3 Qe6",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. exd5 was best."
+            }
+        },
+        {
+            "eval": -71
+        },
+        {
+            "eval": -621,
+            "best": "c3e2",
+            "variation": "Nce2 c5 f4 exf4 Nxf4 Nc6 Nf3 Bd6 Be2 Nf6",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Nce2 was best."
+            }
+        },
+        {
+            "eval": -378
+        },
+        {
+            "eval": -637
+        },
+        {
+            "eval": -652
+        },
+        {
+            "eval": -706
+        },
+        {
+            "eval": -668
+        }
+    ],
+    "clock": {
+        "initial": 600,
+        "increment": 5,
+        "totalTime": 800
+    }
+}

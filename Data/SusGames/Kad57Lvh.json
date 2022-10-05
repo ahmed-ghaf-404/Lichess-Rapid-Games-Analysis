@@ -1,0 +1,175 @@
+{
+    "id": "Kad57Lvh",
+    "rated": true,
+    "variant": "standard",
+    "speed": "rapid",
+    "perf": "rapid",
+    "createdAt": "2022-08-28 12:38:18.988000+00:00",
+    "lastMoveAt": "2022-08-28 12:41:38.462000+00:00",
+    "status": "mate",
+    "players": {
+        "white": {
+            "user": {
+                "name": "Titanic-Jess",
+                "id": "titanic-jess"
+            },
+            "rating": 1545,
+            "ratingDiff": 9,
+            "analysis": {
+                "inaccuracy": 4,
+                "mistake": 0,
+                "blunder": 0,
+                "acpl": 43
+            }
+        },
+        "black": {
+            "user": {
+                "name": "emo17",
+                "id": "emo17"
+            },
+            "rating": 1763,
+            "ratingDiff": -9,
+            "analysis": {
+                "inaccuracy": 2,
+                "mistake": 1,
+                "blunder": 2,
+                "acpl": 133
+            }
+        }
+    },
+    "winner": "white",
+    "opening": {
+        "eco": "C30",
+        "name": "King's Gambit",
+        "ply": 3
+    },
+    "moves": "e4 e5 f4 d6 Nf3 Nf6 Nc3 Nc6 Bc4 Bg4 d3 Nd4 O-O Nh5 Bxf7+ Kxf7 Ng5+ Kg6 Qxg4 Nf6 f5+ Kh6 Nf7#",
+    "analysis": [
+        {
+            "eval": 33
+        },
+        {
+            "eval": 12
+        },
+        {
+            "eval": -65,
+            "best": "g1f3",
+            "variation": "Nf3 Nc6 Bb5 Nf6 O-O Nxe4 Re1 Nd6 Nxe5 Be7",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. Nf3 was best."
+            }
+        },
+        {
+            "eval": 31,
+            "best": "e5f4",
+            "variation": "exf4 Nf3 d6 Bc4 h6 h4 Nf6 Nc3 Nc6 d4",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. exf4 was best."
+            }
+        },
+        {
+            "eval": -57,
+            "best": "d2d3",
+            "variation": "d3 Nc6 Nf3 h6 Be2 exf4 Bxf4 g5 Be3 Bg7",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. d3 was best."
+            }
+        },
+        {
+            "eval": 62,
+            "best": "e5f4",
+            "variation": "exf4 d4 g5 g3 Bg7 h3 g4 hxg4 fxg3 g5",
+            "judgment": {
+                "name": "Mistake",
+                "comment": "Mistake. exf4 was best."
+            }
+        },
+        {
+            "eval": 42
+        },
+        {
+            "eval": 56
+        },
+        {
+            "eval": -13,
+            "best": "d2d4",
+            "variation": "d4 exd4 Nxd4 g6 Bb5 Bd7 Nxc6 bxc6 Bd3 Rb8",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. d4 was best."
+            }
+        },
+        {
+            "eval": 26
+        },
+        {
+            "eval": 0
+        },
+        {
+            "eval": 0
+        },
+        {
+            "eval": 0
+        },
+        {
+            "eval": 556,
+            "best": "d4f3",
+            "variation": "Nxf3+ gxf3 Bh3 Rf2 Be7 d4 exf4 Bxf4 O-O Kh1",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Nxf3+ was best."
+            }
+        },
+        {
+            "eval": 382,
+            "best": "f3e5",
+            "variation": "Nxe5",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. Nxe5 was best."
+            }
+        },
+        {
+            "eval": 390
+        },
+        {
+            "eval": 373
+        },
+        {
+            "eval": 1176,
+            "best": "f7g8",
+            "variation": "Kg8 Qxg4 Nf6 Qd1 h6 Nf3 Nxf3+ Qxf3 Qd7 h3 Be7 fxe5 dxe5 Be3",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Kg8 was best."
+            }
+        },
+        {
+            "eval": 1262
+        },
+        {
+            "mate": 3,
+            "best": "h5f4",
+            "variation": "Nxf4 Ne6+",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Checkmate is now unavoidable. Nxf4 was best."
+            }
+        },
+        {
+            "mate": 2
+        },
+        {
+            "mate": 1
+        }
+    ],
+    "tournament": "bXQu4gdV",
+    "clock": {
+        "initial": 600,
+        "increment": 0,
+        "totalTime": 600
+    }
+}
