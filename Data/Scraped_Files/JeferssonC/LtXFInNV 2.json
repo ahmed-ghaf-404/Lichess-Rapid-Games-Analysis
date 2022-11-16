@@ -1,0 +1,180 @@
+{
+    "id": "LtXFInNV",
+    "rated": true,
+    "variant": "standard",
+    "speed": "rapid",
+    "perf": "rapid",
+    "createdAt": "2022-08-03 21:25:33.575000+00:00",
+    "lastMoveAt": "2022-08-03 21:28:52.228000+00:00",
+    "status": "resign",
+    "players": {
+        "white": {
+            "user": {
+                "name": "JeferssonC",
+                "id": "jeferssonc"
+            },
+            "rating": 1898,
+            "ratingDiff": -8,
+            "analysis": {
+                "inaccuracy": 1,
+                "mistake": 1,
+                "blunder": 1,
+                "acpl": 60
+            }
+        },
+        "black": {
+            "user": {
+                "name": "jeoBlack",
+                "id": "jeoblack"
+            },
+            "rating": 1787,
+            "ratingDiff": 8,
+            "analysis": {
+                "inaccuracy": 2,
+                "mistake": 0,
+                "blunder": 0,
+                "acpl": 13
+            }
+        }
+    },
+    "winner": "black",
+    "opening": {
+        "eco": "B90",
+        "name": "Sicilian Defense: Najdorf Variation",
+        "ply": 10
+    },
+    "moves": "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3 a6 f3 e5 Nb3 Be6 Be3 Nbd7 Be2 Rc8 O-O Be7 Rc1 O-O Nd5 Nxd5 exd5 Bf5 c4 Bg5 Bxg5 Qxg5 Bd3 Qe3+",
+    "analysis": [
+        {
+            "eval": 33
+        },
+        {
+            "eval": 32
+        },
+        {
+            "eval": 0
+        },
+        {
+            "eval": 0
+        },
+        {
+            "eval": 30
+        },
+        {
+            "eval": 13
+        },
+        {
+            "eval": 29
+        },
+        {
+            "eval": 31
+        },
+        {
+            "eval": 18
+        },
+        {
+            "eval": 0
+        },
+        {
+            "eval": 33
+        },
+        {
+            "eval": 34
+        },
+        {
+            "eval": 26
+        },
+        {
+            "eval": 38
+        },
+        {
+            "eval": 40
+        },
+        {
+            "eval": 49
+        },
+        {
+            "eval": 17
+        },
+        {
+            "eval": -4
+        },
+        {
+            "eval": 5
+        },
+        {
+            "eval": 32
+        },
+        {
+            "eval": -82,
+            "best": "a2a4",
+            "variation": "a4",
+            "judgment": {
+                "name": "Mistake",
+                "comment": "Mistake. a4 was best."
+            }
+        },
+        {
+            "eval": -8,
+            "best": "d7b6",
+            "variation": "Nb6",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. Nb6 was best."
+            }
+        },
+        {
+            "eval": -29
+        },
+        {
+            "eval": 34,
+            "best": "e6d5",
+            "variation": "Bxd5 exd5 b5 c4 bxc4 Bxc4 Nb6 Bxa6 Rxc1 Nxc1 Nbxd5 Bf2 Qa8 Bc4",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. Bxd5 was best."
+            }
+        },
+        {
+            "eval": 41
+        },
+        {
+            "eval": 29
+        },
+        {
+            "eval": -32,
+            "best": "d1d2",
+            "variation": "Qd2 h6",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. Qd2 was best."
+            }
+        },
+        {
+            "eval": -28
+        },
+        {
+            "eval": -16
+        },
+        {
+            "eval": 3
+        },
+        {
+            "eval": -673,
+            "best": "d1d2",
+            "variation": "Qd2 Qxd2",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Qd2 was best."
+            }
+        },
+        {
+            "eval": -673
+        }
+    ],
+    "clock": {
+        "initial": 900,
+        "increment": 4,
+        "totalTime": 1060
+    }
+}

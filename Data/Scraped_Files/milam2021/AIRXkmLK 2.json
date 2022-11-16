@@ -1,0 +1,162 @@
+{
+    "id": "AIRXkmLK",
+    "rated": true,
+    "variant": "standard",
+    "speed": "rapid",
+    "perf": "rapid",
+    "createdAt": "2022-06-26 18:50:28.345000+00:00",
+    "lastMoveAt": "2022-06-26 18:53:15.283000+00:00",
+    "status": "mate",
+    "players": {
+        "white": {
+            "user": {
+                "name": "milam2021",
+                "id": "milam2021"
+            },
+            "rating": 1224,
+            "ratingDiff": 14,
+            "analysis": {
+                "inaccuracy": 1,
+                "mistake": 1,
+                "blunder": 1,
+                "acpl": 63
+            }
+        },
+        "black": {
+            "user": {
+                "name": "giorgioperla",
+                "id": "giorgioperla"
+            },
+            "rating": 1480,
+            "ratingDiff": -9,
+            "analysis": {
+                "inaccuracy": 1,
+                "mistake": 0,
+                "blunder": 2,
+                "acpl": 143
+            }
+        }
+    },
+    "winner": "white",
+    "opening": {
+        "eco": "B02",
+        "name": "Alekhine Defense: Brooklyn Variation",
+        "ply": 4
+    },
+    "moves": "e4 Nf6 e5 Ng8 d4 d6 Nf3 dxe5 Nxe5 Nf6 Bc4 e6 Bg5 Be7 Bxf6 Bxf6 Qh5 Bxe5 Qxe5 O-O Bd3 Nc6 Qe4 a6 Qxh7#",
+    "analysis": [
+        {
+            "eval": 33
+        },
+        {
+            "eval": 29
+        },
+        {
+            "eval": 35
+        },
+        {
+            "eval": 92,
+            "best": "f6d5",
+            "variation": "Nd5 d4 d6 Nf3 g6 Bc4 Nb6 Bb3 Bg7 Qe2",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. Nd5 was best."
+            }
+        },
+        {
+            "eval": 93
+        },
+        {
+            "eval": 94
+        },
+        {
+            "eval": 83
+        },
+        {
+            "eval": 92
+        },
+        {
+            "eval": 78
+        },
+        {
+            "eval": 78
+        },
+        {
+            "eval": 87
+        },
+        {
+            "eval": 91
+        },
+        {
+            "eval": 84
+        },
+        {
+            "eval": 85
+        },
+        {
+            "eval": -4,
+            "best": "b1c3",
+            "variation": "Nc3 O-O O-O h6 Be3 Nc6 Nxc6 bxc6 Qf3 Nd5 Na4 Bd6 Nc5 Nxe3",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. Nc3 was best."
+            }
+        },
+        {
+            "eval": 5
+        },
+        {
+            "eval": -505,
+            "best": "b1c3",
+            "variation": "Nc3 O-O Ne4 c5 Nxf6+ Qxf6 O-O Nd7 f4 Qe7 c3 Rd8 Bb3 a5",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Nc3 was best."
+            }
+        },
+        {
+            "eval": 0,
+            "best": "d8d4",
+            "variation": "Qxd4",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Qxd4 was best."
+            }
+        },
+        {
+            "eval": -3
+        },
+        {
+            "eval": -6
+        },
+        {
+            "eval": -123,
+            "best": "c2c3",
+            "variation": "c3 Nd7",
+            "judgment": {
+                "name": "Mistake",
+                "comment": "Mistake. c3 was best."
+            }
+        },
+        {
+            "eval": -112
+        },
+        {
+            "eval": -121
+        },
+        {
+            "mate": 1,
+            "best": "f7f5",
+            "variation": "f5 Qe3 Qxd4 Qxd4 Nxd4 Na3 a6 O-O-O b5 c3 Nc6 Be2 Bb7 Rd7",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Checkmate is now unavoidable. f5 was best."
+            }
+        }
+    ],
+    "clock": {
+        "initial": 600,
+        "increment": 0,
+        "totalTime": 600
+    }
+}

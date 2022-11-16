@@ -1,0 +1,114 @@
+{
+    "id": "J9di9moV",
+    "rated": true,
+    "variant": "standard",
+    "speed": "rapid",
+    "perf": "rapid",
+    "createdAt": "2022-08-21 07:16:03.898000+00:00",
+    "lastMoveAt": "2022-08-21 07:17:20.224000+00:00",
+    "status": "resign",
+    "players": {
+        "white": {
+            "user": {
+                "name": "MOHAMED_ALHARTHI",
+                "id": "mohamed_alharthi"
+            },
+            "rating": 1809,
+            "ratingDiff": -7,
+            "analysis": {
+                "inaccuracy": 0,
+                "mistake": 1,
+                "blunder": 1,
+                "acpl": 206
+            }
+        },
+        "black": {
+            "user": {
+                "name": "Zeeeeeeeel",
+                "id": "zeeeeeeeel"
+            },
+            "rating": 1774,
+            "ratingDiff": 7,
+            "analysis": {
+                "inaccuracy": 0,
+                "mistake": 1,
+                "blunder": 0,
+                "acpl": 61
+            }
+        }
+    },
+    "winner": "black",
+    "opening": {
+        "eco": "D07",
+        "name": "Queen's Gambit Declined: Chigorin Defense",
+        "ply": 5
+    },
+    "moves": "d4 d5 c4 Nc6 Nc3 Nf6 a3 Bf5 Qb3 Nxd4 Qxb7 Nc2+ Kd2 dxc4+",
+    "analysis": [
+        {
+            "eval": 0
+        },
+        {
+            "eval": 38
+        },
+        {
+            "eval": 27
+        },
+        {
+            "eval": 57
+        },
+        {
+            "eval": 50
+        },
+        {
+            "eval": 69
+        },
+        {
+            "eval": -88,
+            "best": "g1f3",
+            "variation": "Nf3 e6 Bg5 dxc4 e3 Na5 Ne5 c6 Nxc4 Nxc4",
+            "judgment": {
+                "name": "Mistake",
+                "comment": "Mistake. Nf3 was best."
+            }
+        },
+        {
+            "eval": 58,
+            "best": "d5c4",
+            "variation": "dxc4 Nf3 a6 e4 b5 d5 Na5 e5 Nd7 Be3",
+            "judgment": {
+                "name": "Mistake",
+                "comment": "Mistake. dxc4 was best."
+            }
+        },
+        {
+            "eval": -831,
+            "best": "c4d5",
+            "variation": "cxd5 Nxd5 Bd2 Nf6 Nf3 Nxd4 e4 Nxf3+ Qxf3 Bd7",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. cxd5 was best."
+            }
+        },
+        {
+            "eval": -763
+        },
+        {
+            "eval": -1034
+        },
+        {
+            "eval": -872
+        },
+        {
+            "eval": -1135
+        },
+        {
+            "eval": -1168
+        }
+    ],
+    "clock": {
+        "initial": 600,
+        "increment": 0,
+        "totalTime": 600
+    }
+}

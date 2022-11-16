@@ -1,0 +1,108 @@
+{
+    "id": "IUpKa5tF",
+    "rated": true,
+    "variant": "standard",
+    "speed": "rapid",
+    "perf": "rapid",
+    "createdAt": "2022-04-30 22:43:32.237000+00:00",
+    "lastMoveAt": "2022-04-30 22:45:47.594000+00:00",
+    "status": "resign",
+    "players": {
+        "white": {
+            "user": {
+                "name": "yoav_regev",
+                "id": "yoav_regev"
+            },
+            "rating": 1219,
+            "ratingDiff": -4,
+            "analysis": {
+                "inaccuracy": 2,
+                "mistake": 0,
+                "blunder": 1,
+                "acpl": 132
+            }
+        },
+        "black": {
+            "user": {
+                "name": "avS2",
+                "id": "avs2"
+            },
+            "rating": 1310,
+            "ratingDiff": 4,
+            "analysis": {
+                "inaccuracy": 0,
+                "mistake": 0,
+                "blunder": 0,
+                "acpl": 5
+            }
+        }
+    },
+    "winner": "black",
+    "opening": {
+        "eco": "A40",
+        "name": "Englund Gambit Declined: Reversed French",
+        "ply": 3
+    },
+    "moves": "e3 e5 d4 exd4 Qxd4 Nf6 Qc4 d5 Qf4 Bd6 Qf3 Bg4",
+    "analysis": [
+        {
+            "eval": 13
+        },
+        {
+            "eval": 21
+        },
+        {
+            "eval": 11
+        },
+        {
+            "eval": 12
+        },
+        {
+            "eval": -36
+        },
+        {
+            "eval": -34
+        },
+        {
+            "eval": -121,
+            "best": "g1f3",
+            "variation": "Nf3 d5 Qd1 Nc6 Nbd2 Bf5 Bd3 Bg6 O-O Bd6",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. Nf3 was best."
+            }
+        },
+        {
+            "eval": -140
+        },
+        {
+            "eval": -206,
+            "best": "c4d3",
+            "variation": "Qd3",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. Qd3 was best."
+            }
+        },
+        {
+            "eval": -267
+        },
+        {
+            "eval": -846,
+            "best": "f4d4",
+            "variation": "Qd4 c5",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Qd4 was best."
+            }
+        },
+        {
+            "eval": -830
+        }
+    ],
+    "clock": {
+        "initial": 600,
+        "increment": 0,
+        "totalTime": 600
+    }
+}

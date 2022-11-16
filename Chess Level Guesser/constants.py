@@ -1,6 +1,4 @@
 # Will put constants here.
-
-from multiprocessing.connection import Client
 import berserk
 import os
 

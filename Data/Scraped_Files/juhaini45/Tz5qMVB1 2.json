@@ -1,0 +1,202 @@
+{
+    "id": "Tz5qMVB1",
+    "rated": true,
+    "variant": "standard",
+    "speed": "rapid",
+    "perf": "rapid",
+    "createdAt": "2019-08-22 08:46:42.714000+00:00",
+    "lastMoveAt": "2019-08-22 08:51:11.950000+00:00",
+    "status": "resign",
+    "players": {
+        "white": {
+            "user": {
+                "name": "juhaini45",
+                "id": "juhaini45"
+            },
+            "rating": 2003,
+            "ratingDiff": 7,
+            "analysis": {
+                "inaccuracy": 1,
+                "mistake": 0,
+                "blunder": 0,
+                "acpl": 14
+            }
+        },
+        "black": {
+            "user": {
+                "name": "QW2512",
+                "id": "qw2512"
+            },
+            "rating": 1977,
+            "ratingDiff": -6,
+            "analysis": {
+                "inaccuracy": 3,
+                "mistake": 2,
+                "blunder": 1,
+                "acpl": 71
+            }
+        }
+    },
+    "winner": "white",
+    "opening": {
+        "eco": "C00",
+        "name": "Rat Defense: Small Center Defense",
+        "ply": 4
+    },
+    "moves": "e4 e6 d4 d6 Nf3 g6 Nc3 Bg7 Bg5 f6 Be3 Ne7 Qd2 b6 Bd3 Bb7 O-O-O Nd7 h4 c5 h5 cxd4 Nxd4 Nf8 h6 Bxh6 Bxh6 e5 Bb5+ Nd7 Ne6 Qc8 Qxd6 Bc6 Nc7+",
+    "analysis": [
+        {
+            "eval": 24
+        },
+        {
+            "eval": 30
+        },
+        {
+            "eval": 8
+        },
+        {
+            "eval": 77,
+            "best": "d7d5",
+            "variation": "d5 Nd2 c5 exd5 Qxd5 Ngf3 cxd4 Bc4 Qd8 O-O",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. d5 was best."
+            }
+        },
+        {
+            "eval": 44
+        },
+        {
+            "eval": 57
+        },
+        {
+            "eval": 84
+        },
+        {
+            "eval": 90
+        },
+        {
+            "eval": 40
+        },
+        {
+            "eval": 108,
+            "best": "g8f6",
+            "variation": "Nf6 h3 a6 Be2 h6 Be3 Nc6 a3 b5 O-O",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. Nf6 was best."
+            }
+        },
+        {
+            "eval": 97
+        },
+        {
+            "eval": 127
+        },
+        {
+            "eval": 127
+        },
+        {
+            "eval": 158
+        },
+        {
+            "eval": 147
+        },
+        {
+            "eval": 145
+        },
+        {
+            "eval": 136
+        },
+        {
+            "eval": 128
+        },
+        {
+            "eval": 148
+        },
+        {
+            "eval": 354,
+            "best": "h7h5",
+            "variation": "h5",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. h5 was best."
+            }
+        },
+        {
+            "eval": 335
+        },
+        {
+            "eval": 572,
+            "best": "e8g8",
+            "variation": "O-O Nb5",
+            "judgment": {
+                "name": "Mistake",
+                "comment": "Mistake. O-O was best."
+            }
+        },
+        {
+            "eval": 497
+        },
+        {
+            "eval": 1021,
+            "best": "d7c5",
+            "variation": "Nc5 Bc4",
+            "judgment": {
+                "name": "Mistake",
+                "comment": "Mistake. Nc5 was best."
+            }
+        },
+        {
+            "eval": 1019
+        },
+        {
+            "eval": 983
+        },
+        {
+            "eval": 958
+        },
+        {
+            "eval": 1091
+        },
+        {
+            "eval": 1094
+        },
+        {
+            "eval": 1583
+        },
+        {
+            "eval": 1477
+        },
+        {
+            "eval": 3199
+        },
+        {
+            "eval": 2936
+        },
+        {
+            "mate": 11,
+            "best": "e8f7",
+            "variation": "Kf7 Bxd7 Qxd7 Qxd7 Bc8 Nd8+ Rxd8 Qxd8 Bb7 Qc7 g5 Qxb7 Re8 Rd7",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Checkmate is now unavoidable. Kf7 was best."
+            }
+        },
+        {
+            "eval": 2578,
+            "best": "e6g7",
+            "variation": "Ng7+ Kd8 Nd5 Bxd5 Rxd5 Nxd5 Ne6+ Ke8 exd5 Rg8 Bg5 a5 Rxh7 Qxc2+",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Lost forced checkmate sequence. Ng7+ was best."
+            }
+        }
+    ],
+    "tournament": "MkgrPR0E",
+    "clock": {
+        "initial": 600,
+        "increment": 0,
+        "totalTime": 600
+    }
+}

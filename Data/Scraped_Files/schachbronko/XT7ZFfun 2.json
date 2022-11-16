@@ -1,0 +1,148 @@
+{
+    "id": "XT7ZFfun",
+    "rated": true,
+    "variant": "standard",
+    "speed": "rapid",
+    "perf": "rapid",
+    "createdAt": "2022-08-15 17:39:47.826000+00:00",
+    "lastMoveAt": "2022-08-15 17:41:40.523000+00:00",
+    "status": "resign",
+    "players": {
+        "white": {
+            "user": {
+                "name": "schachbronko",
+                "id": "schachbronko"
+            },
+            "rating": 1995,
+            "ratingDiff": 9,
+            "analysis": {
+                "inaccuracy": 2,
+                "mistake": 1,
+                "blunder": 0,
+                "acpl": 39
+            }
+        },
+        "black": {
+            "user": {
+                "name": "Aiyan1",
+                "id": "aiyan1"
+            },
+            "rating": 1998,
+            "ratingDiff": -13,
+            "analysis": {
+                "inaccuracy": 1,
+                "mistake": 0,
+                "blunder": 2,
+                "acpl": 154
+            }
+        }
+    },
+    "winner": "white",
+    "opening": {
+        "eco": "C27",
+        "name": "Bishop's Opening: Boden-Kieseritzky Gambit",
+        "ply": 7
+    },
+    "moves": "e4 e5 Nf3 Nf6 Bc4 Nxe4 Nc3 Nxc3 dxc3 f6 Nh4 g6 O-O Bg7 f4 exf4 Re1+ Kf8 Qd5",
+    "analysis": [
+        {
+            "eval": 33
+        },
+        {
+            "eval": 12
+        },
+        {
+            "eval": 19
+        },
+        {
+            "eval": 50
+        },
+        {
+            "eval": -69,
+            "best": "f3e5",
+            "variation": "Nxe5 d6 Nf3 Nxe4 d4 d5 Bd3 Bd6 O-O O-O",
+            "judgment": {
+                "name": "Mistake",
+                "comment": "Mistake. Nxe5 was best."
+            }
+        },
+        {
+            "eval": -29
+        },
+        {
+            "eval": -73
+        },
+        {
+            "eval": -60
+        },
+        {
+            "eval": -70
+        },
+        {
+            "eval": -86
+        },
+        {
+            "eval": -95
+        },
+        {
+            "eval": -96
+        },
+        {
+            "eval": -211,
+            "best": "f2f4",
+            "variation": "f4 Qe7 f5 Qg7 fxg6 hxg6 Qg4 Kd8 Qg3 g5",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. f4 was best."
+            }
+        },
+        {
+            "eval": 163,
+            "best": "c7c6",
+            "variation": "c6 Bb3 Bc5 Bh6 Qe7 Kh1 Kd8 a3 a5 Ba2",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. c6 was best."
+            }
+        },
+        {
+            "eval": 68,
+            "best": "h4f5",
+            "variation": "Nf5 Kf8",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. Nf5 was best."
+            }
+        },
+        {
+            "eval": 1250,
+            "best": "d7d5",
+            "variation": "d5 Bxd5",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. d5 was best."
+            }
+        },
+        {
+            "eval": 1108
+        },
+        {
+            "mate": 12,
+            "best": "d8e7",
+            "variation": "Qe7 Rxe7+ Kxe7 Qd5 Rf8 Bxf4 Kd8 Nf5 gxf5 Qxf5 Rh8 Bg5 c5 Bxf6+",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Checkmate is now unavoidable. Qe7 was best."
+            }
+        },
+        {
+            "mate": 11
+        }
+    ],
+    "tournament": "lsxE8hb6",
+    "clock": {
+        "initial": 600,
+        "increment": 0,
+        "totalTime": 600
+    }
+}

@@ -1,0 +1,141 @@
+{
+    "id": "cQ4aMQc9",
+    "rated": true,
+    "variant": "standard",
+    "speed": "rapid",
+    "perf": "rapid",
+    "createdAt": "2022-05-27 19:16:51.106000+00:00",
+    "lastMoveAt": "2022-05-27 19:21:46.248000+00:00",
+    "status": "resign",
+    "players": {
+        "white": {
+            "user": {
+                "name": "ANILCETIN0025-2_ac",
+                "id": "anilcetin0025-2_ac"
+            },
+            "rating": 1545,
+            "ratingDiff": -6,
+            "analysis": {
+                "inaccuracy": 2,
+                "mistake": 2,
+                "blunder": 1,
+                "acpl": 161
+            }
+        },
+        "black": {
+            "user": {
+                "name": "zacharias726",
+                "id": "zacharias726"
+            },
+            "rating": 1718,
+            "ratingDiff": 87,
+            "provisional": true,
+            "analysis": {
+                "inaccuracy": 1,
+                "mistake": 0,
+                "blunder": 0,
+                "acpl": 63
+            }
+        }
+    },
+    "winner": "black",
+    "opening": {
+        "eco": "B12",
+        "name": "Caro-Kann Defense: Advance Variation",
+        "ply": 5
+    },
+    "moves": "e4 c6 d4 d5 e5 Bf5 Qf3 Bxc2 Nh3 e6 Ng5 Bb4+ Bd2 Bxd2+ Nxd2 Qxg5",
+    "analysis": [
+        {
+            "eval": 33
+        },
+        {
+            "eval": 56
+        },
+        {
+            "eval": 39
+        },
+        {
+            "eval": 50
+        },
+        {
+            "eval": 28
+        },
+        {
+            "eval": 50
+        },
+        {
+            "eval": -95,
+            "best": "f1e2",
+            "variation": "Be2 e6 Nf3 Ne7 c3 Nd7 Nh4 Be4 Nd2 c5",
+            "judgment": {
+                "name": "Mistake",
+                "comment": "Mistake. Be2 was best."
+            }
+        },
+        {
+            "eval": -83
+        },
+        {
+            "eval": -218,
+            "best": "f3c3",
+            "variation": "Qc3 Bf5 Be3 e6 Nd2 Ne7 Ngf3 Ng6 Be2 Be7",
+            "judgment": {
+                "name": "Mistake",
+                "comment": "Mistake. Qc3 was best."
+            }
+        },
+        {
+            "eval": -142
+        },
+        {
+            "eval": -208,
+            "best": "f3c3",
+            "variation": "Qc3 Bf5 Be3 a5 Qb3 Nd7 Nc3 b5 Qd1 Bxh3",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. Qc3 was best."
+            }
+        },
+        {
+            "eval": -148,
+            "best": "g8h6",
+            "variation": "Nh6 g4 Nd7 h4 c5 Na3 Ba4 Be2 cxd4 Bf4 Nc5 O-O d3 Bxd3"
+        },
+        {
+            "eval": -759,
+            "best": "b1c3",
+            "variation": "Nc3 Nh6",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Nc3 was best."
+            }
+        },
+        {
+            "eval": -462,
+            "best": "d8g5",
+            "variation": "Qxg5",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. Qxg5 was best."
+            }
+        },
+        {
+            "eval": -753,
+            "best": "e1d2",
+            "variation": "Kxd2 Bg6 Qe3 Ne7 Qc3 h6 Nf3 Nd7 Ke1 Rc8 b4 a5 a3 Ra8",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. Kxd2 was best."
+            }
+        },
+        {
+            "eval": -751
+        }
+    ],
+    "clock": {
+        "initial": 900,
+        "increment": 10,
+        "totalTime": 1300
+    }
+}

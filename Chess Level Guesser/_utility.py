@@ -99,25 +99,13 @@ def validateGame(path):
         if game['variant']!='standard':
             # sus game
             filename = path.split('/')[-1]
-            os.rename(path, f'./Data/SusGames/{filename}')
+            # ! DANGEROUS
+            # os.rename(path, f'./Data/SusGames/{filename}')
+            print(game['variant'])
             return False
-    
-    return True
-def returnGame(path):
-    with open(path, 'r') as f:
-        game = json.load(f)
-        filename = path.split('/')[-1]
-        white = game['players']['white']['user']['name']
-        if not os.path.exists(f'Data/Scraped_Files/{white}'):
-            os.mkdir(f'Data/Scraped_Files/{white}')
-        os.rename(path, f'Data/Scraped_Files/{white}/{filename}')
-        
     
     return True
 
 if __name__ == '__main__':
     validateGame("Data/Scraped_Files/RatchetLodross/fOBrhnyQ.json")
-    for subdir, dirs, files in os.walk('Data/SusGames'):
-        for file in files:
-            print(os.path.join(subdir, file))
-            returnGame(os.path.join(subdir, file))
+    

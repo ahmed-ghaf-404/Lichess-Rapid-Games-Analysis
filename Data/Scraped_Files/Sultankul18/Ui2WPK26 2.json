@@ -1,0 +1,138 @@
+{
+    "id": "Ui2WPK26",
+    "rated": true,
+    "variant": "standard",
+    "speed": "rapid",
+    "perf": "rapid",
+    "createdAt": "2022-03-29 13:33:19.461000+00:00",
+    "lastMoveAt": "2022-03-29 13:35:20.252000+00:00",
+    "status": "timeout",
+    "players": {
+        "white": {
+            "user": {
+                "name": "Sultankul18",
+                "id": "sultankul18"
+            },
+            "rating": 1667,
+            "ratingDiff": -5,
+            "analysis": {
+                "inaccuracy": 0,
+                "mistake": 1,
+                "blunder": 0,
+                "acpl": 24
+            }
+        },
+        "black": {
+            "user": {
+                "name": "BlitzFitz",
+                "id": "blitzfitz"
+            },
+            "rating": 1742,
+            "ratingDiff": 5,
+            "analysis": {
+                "inaccuracy": 2,
+                "mistake": 0,
+                "blunder": 0,
+                "acpl": 26
+            }
+        }
+    },
+    "winner": "black",
+    "opening": {
+        "eco": "C24",
+        "name": "Bishop's Opening: Berlin Defense",
+        "ply": 4
+    },
+    "moves": "e4 e5 Bc4 Nf6 Qf3 Bc5 Nc3 O-O Nd5 Nxd5 Bxd5 c6 Bc4 b5 Bb3 Qb6 d3 a5 a4 b4 Qg3 d6",
+    "analysis": [
+        {
+            "eval": 28
+        },
+        {
+            "eval": 12
+        },
+        {
+            "eval": 9
+        },
+        {
+            "eval": 0
+        },
+        {
+            "eval": -31
+        },
+        {
+            "eval": 0
+        },
+        {
+            "eval": -26
+        },
+        {
+            "eval": 0
+        },
+        {
+            "eval": -129,
+            "best": "d2d3",
+            "variation": "d3 d6 Bg5 Nbd7 a4 c6 Nge2 h6 Bd2 Nb6",
+            "judgment": {
+                "name": "Mistake",
+                "comment": "Mistake. d3 was best."
+            }
+        },
+        {
+            "eval": -157
+        },
+        {
+            "eval": -94
+        },
+        {
+            "eval": -91
+        },
+        {
+            "eval": -90
+        },
+        {
+            "eval": -78
+        },
+        {
+            "eval": -114
+        },
+        {
+            "eval": -16,
+            "best": "a7a5",
+            "variation": "a5",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. a5 was best."
+            }
+        },
+        {
+            "eval": -30
+        },
+        {
+            "eval": -39
+        },
+        {
+            "eval": -68
+        },
+        {
+            "eval": 37,
+            "best": "b5a4",
+            "variation": "bxa4 Rxa4",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. bxa4 was best."
+            }
+        },
+        {
+            "eval": 52
+        },
+        {
+            "eval": 65
+        }
+    ],
+    "clock": {
+        "initial": 600,
+        "increment": 0,
+        "totalTime": 600
+    }
+}
