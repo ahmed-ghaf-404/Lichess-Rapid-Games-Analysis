@@ -1,0 +1,165 @@
+{
+    "id": "8wDlkgkG",
+    "rated": true,
+    "variant": "standard",
+    "speed": "rapid",
+    "perf": "rapid",
+    "createdAt": "2022-05-07 12:06:11.394000+00:00",
+    "lastMoveAt": "2022-05-07 12:11:09.058000+00:00",
+    "status": "resign",
+    "players": {
+        "white": {
+            "user": {
+                "name": "guoma",
+                "id": "guoma"
+            },
+            "rating": 1403,
+            "ratingDiff": 6,
+            "analysis": {
+                "inaccuracy": 1,
+                "mistake": 0,
+                "blunder": 0,
+                "acpl": 18
+            }
+        },
+        "black": {
+            "user": {
+                "name": "rjn_nrynn",
+                "id": "rjn_nrynn"
+            },
+            "rating": 1412,
+            "ratingDiff": -10,
+            "analysis": {
+                "inaccuracy": 1,
+                "mistake": 0,
+                "blunder": 1,
+                "acpl": 82
+            }
+        }
+    },
+    "winner": "white",
+    "opening": {
+        "eco": "C67",
+        "name": "Ruy Lopez: Berlin Defense, Rio Gambit Accepted",
+        "ply": 8
+    },
+    "moves": "e4 e5 Nf3 Nc6 Bb5 Nf6 O-O Nxe4 d4 exd4 Re1 f5 Nxd4 Nxd4 Qxd4 Bc5 Rxe4+ fxe4 Qxc5 b6 Qh5+ g6 Qe5+ Qe7 Qxh8+ Qf8 Qxh7 Qe7 Qxg6+ Kd8 Bg5",
+    "analysis": [
+        {
+            "eval": 33
+        },
+        {
+            "eval": 12
+        },
+        {
+            "eval": 19
+        },
+        {
+            "eval": 32
+        },
+        {
+            "eval": 24
+        },
+        {
+            "eval": 35
+        },
+        {
+            "eval": 0
+        },
+        {
+            "eval": 32
+        },
+        {
+            "eval": 28
+        },
+        {
+            "eval": 50
+        },
+        {
+            "eval": 75
+        },
+        {
+            "eval": 67
+        },
+        {
+            "eval": 66
+        },
+        {
+            "eval": 44
+        },
+        {
+            "eval": 69
+        },
+        {
+            "eval": 898,
+            "best": "c7c6",
+            "variation": "c6",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. c6 was best."
+            }
+        },
+        {
+            "eval": 718
+        },
+        {
+            "eval": 723
+        },
+        {
+            "eval": 736
+        },
+        {
+            "eval": 755
+        },
+        {
+            "eval": 703
+        },
+        {
+            "eval": 1245
+        },
+        {
+            "eval": 1253
+        },
+        {
+            "eval": 1343
+        },
+        {
+            "eval": 1293
+        },
+        {
+            "eval": 1317
+        },
+        {
+            "eval": 1311
+        },
+        {
+            "eval": 1634
+        },
+        {
+            "eval": 1563
+        },
+        {
+            "mate": 2,
+            "best": "e7f7",
+            "variation": "Qf7 Qxe4+ Qe7 Qxa8 Qe1+ Bf1 Qxc1 Qxc8+ Ke7 Qa6 Kf6 Qa3 Qxf1+ Kxf1",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Checkmate is now unavoidable. Qf7 was best."
+            }
+        },
+        {
+            "eval": 2103,
+            "best": "g6g8",
+            "variation": "Qg8+ Qe8 Bg5#",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Lost forced checkmate sequence. Qg8+ was best."
+            }
+        }
+    ],
+    "clock": {
+        "initial": 600,
+        "increment": 0,
+        "totalTime": 600
+    }
+}

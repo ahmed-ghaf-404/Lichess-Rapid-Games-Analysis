@@ -1,0 +1,141 @@
+{
+    "id": "KpFfj4to",
+    "rated": true,
+    "variant": "standard",
+    "speed": "rapid",
+    "perf": "rapid",
+    "createdAt": "2022-05-07 20:11:35.654000+00:00",
+    "lastMoveAt": "2022-05-07 20:12:16.239000+00:00",
+    "status": "mate",
+    "players": {
+        "white": {
+            "user": {
+                "name": "hal4711",
+                "id": "hal4711"
+            },
+            "rating": 1164,
+            "ratingDiff": -6,
+            "analysis": {
+                "inaccuracy": 3,
+                "mistake": 0,
+                "blunder": 2,
+                "acpl": 193
+            }
+        },
+        "black": {
+            "user": {
+                "name": "StingerPawn",
+                "id": "stingerpawn"
+            },
+            "rating": 1118,
+            "ratingDiff": 22,
+            "analysis": {
+                "inaccuracy": 0,
+                "mistake": 0,
+                "blunder": 2,
+                "acpl": 77
+            }
+        }
+    },
+    "winner": "black",
+    "opening": {
+        "eco": "C57",
+        "name": "Italian Game: Two Knights Defense, Traxler Counterattack, Knight Sacrifice Line",
+        "ply": 9
+    },
+    "moves": "e4 e5 Nf3 Nf6 Bc4 Bc5 Ng5 Nc6 Nxf7 Bxf2+ Kxf2 Nxe4+ Kg1 Qh4 Nxh8 Qf2#",
+    "analysis": [
+        {
+            "eval": 33
+        },
+        {
+            "eval": 12
+        },
+        {
+            "eval": 19
+        },
+        {
+            "eval": 40
+        },
+        {
+            "eval": -69,
+            "best": "f3e5",
+            "variation": "Nxe5 d6 Nf3 Nxe4 d4 d5 Bd3 Bd6 O-O O-O",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. Nxe5 was best."
+            }
+        },
+        {
+            "eval": 213,
+            "best": "f6e4",
+            "variation": "Nxe4 Nxe5 d5 Be2 Bd6 Nf3 O-O O-O Re8 d3",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Nxe4 was best."
+            }
+        },
+        {
+            "eval": -87,
+            "best": "f3e5",
+            "variation": "Nxe5 O-O Bxf7+ Kh8 d4 Bb6 Bb3 Nc6 Be3 d5",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Nxe5 was best."
+            }
+        },
+        {
+            "eval": 135,
+            "best": "e8h8",
+            "variation": "O-O O-O h6 Nf3 Nxe4 d3 Nxf2 Rxf2 Bxf2+ Kxf2",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. O-O was best."
+            }
+        },
+        {
+            "eval": 77,
+            "best": "c4f7",
+            "variation": "Bxf7+ Ke7 Bb3 d6 d3 Qe8 c3 Rf8 Nf3 Qh5",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. Bxf7+ was best."
+            }
+        },
+        {
+            "eval": 65
+        },
+        {
+            "eval": 0,
+            "best": "e1f1",
+            "variation": "Kf1 Qe7 Nxh8 d5 exd5 Nd4 d6 Qxd6 Nf7 Qc5",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. Kf1 was best."
+            }
+        },
+        {
+            "eval": 13
+        },
+        {
+            "eval": 0
+        },
+        {
+            "eval": 0
+        },
+        {
+            "mate": -1,
+            "best": "d1e2",
+            "variation": "Qe2 Nd4 Qe3 Nxc2 Qe2 Rf8 g3 Qf6 Qxe4 d5",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Checkmate is now unavoidable. Qe2 was best."
+            }
+        }
+    ],
+    "clock": {
+        "initial": 600,
+        "increment": 0,
+        "totalTime": 600
+    }
+}

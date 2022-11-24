@@ -1,0 +1,135 @@
+{
+    "id": "2pwbjo4a",
+    "rated": true,
+    "variant": "standard",
+    "speed": "rapid",
+    "perf": "rapid",
+    "createdAt": "2022-08-29 11:38:23.157000+00:00",
+    "lastMoveAt": "2022-08-29 11:39:25.453000+00:00",
+    "status": "resign",
+    "players": {
+        "white": {
+            "user": {
+                "name": "egorbyg",
+                "id": "egorbyg"
+            },
+            "rating": 1832,
+            "ratingDiff": 5,
+            "analysis": {
+                "inaccuracy": 1,
+                "mistake": 0,
+                "blunder": 0,
+                "acpl": 13
+            }
+        },
+        "black": {
+            "user": {
+                "name": "jayjaycalub",
+                "id": "jayjaycalub"
+            },
+            "rating": 1824,
+            "ratingDiff": -5,
+            "analysis": {
+                "inaccuracy": 1,
+                "mistake": 3,
+                "blunder": 0,
+                "acpl": 69
+            }
+        }
+    },
+    "winner": "white",
+    "opening": {
+        "eco": "C50",
+        "name": "Italian Game: Anti-Fried Liver Defense",
+        "ply": 6
+    },
+    "moves": "e4 e5 Nf3 Nc6 Bc4 h6 Nc3 Bc5 Nd5 Nf6 c3 Nxd5 exd5 Na5 Bd3 d6 b4",
+    "analysis": [
+        {
+            "eval": 33
+        },
+        {
+            "eval": 12
+        },
+        {
+            "eval": 19
+        },
+        {
+            "eval": 32
+        },
+        {
+            "eval": 21
+        },
+        {
+            "eval": 76,
+            "best": "f8c5",
+            "variation": "Bc5 c3 Nf6 d3 O-O O-O d6 h3 a6 Re1",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. Bc5 was best."
+            }
+        },
+        {
+            "eval": 13,
+            "best": "d2d4",
+            "variation": "d4 exd4 Nxd4 Nf6 Nc3 Bb4 Nxc6 bxc6 O-O Bxc3",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. d4 was best."
+            }
+        },
+        {
+            "eval": 40
+        },
+        {
+            "eval": 26
+        },
+        {
+            "eval": 27
+        },
+        {
+            "eval": 34
+        },
+        {
+            "eval": 162,
+            "best": "e8h8",
+            "variation": "O-O d3 Na5 b4 Nxc4 bxc5 Nxd5 exd5 Na5 O-O",
+            "judgment": {
+                "name": "Mistake",
+                "comment": "Mistake. O-O was best."
+            }
+        },
+        {
+            "eval": 143
+        },
+        {
+            "eval": 271,
+            "best": "e5e4",
+            "variation": "e4 dxc6 exf3 cxd7+ Bxd7 Qxf3 Qe7+ Qe2 Qxe2+ Bxe2 a5 d4 Bd6 Be3",
+            "judgment": {
+                "name": "Mistake",
+                "comment": "Mistake. e4 was best."
+            }
+        },
+        {
+            "eval": 264
+        },
+        {
+            "eval": 466,
+            "best": "e8h8",
+            "variation": "O-O O-O Bd6 b4 e4 Bxe4 Nc4 a4 a5 b5 Nb6 Re1 Be7 c4",
+            "judgment": {
+                "name": "Mistake",
+                "comment": "Mistake. O-O was best."
+            }
+        },
+        {
+            "eval": 474
+        }
+    ],
+    "clock": {
+        "initial": 600,
+        "increment": 0,
+        "totalTime": 600
+    }
+}

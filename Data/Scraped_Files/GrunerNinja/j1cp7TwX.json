@@ -1,0 +1,156 @@
+{
+    "id": "j1cp7TwX",
+    "rated": true,
+    "variant": "standard",
+    "speed": "rapid",
+    "perf": "rapid",
+    "createdAt": "2022-08-19 11:06:46.225000+00:00",
+    "lastMoveAt": "2022-08-19 11:13:43.438000+00:00",
+    "status": "mate",
+    "players": {
+        "white": {
+            "user": {
+                "name": "karimesmaeilpour2",
+                "id": "karimesmaeilpour2"
+            },
+            "rating": 2198,
+            "ratingDiff": 2,
+            "analysis": {
+                "inaccuracy": 0,
+                "mistake": 1,
+                "blunder": 1,
+                "acpl": 58
+            }
+        },
+        "black": {
+            "user": {
+                "name": "GrunerNinja",
+                "id": "grunerninja"
+            },
+            "rating": 1906,
+            "ratingDiff": -2,
+            "analysis": {
+                "inaccuracy": 1,
+                "mistake": 0,
+                "blunder": 3,
+                "acpl": 124
+            }
+        }
+    },
+    "winner": "white",
+    "opening": {
+        "eco": "C27",
+        "name": "Bishop's Opening: Boden-Kieseritzky Gambit",
+        "ply": 7
+    },
+    "moves": "e4 e5 Nf3 Nf6 Bc4 Nxe4 Nc3 Nxc3 dxc3 Nc6 Ng5 Bc5 O-O O-O Qh5 h6 Nxf7 Qf6 Nxh6+ Kh8 Nf7+ Kg8 Qh8#",
+    "analysis": [
+        {
+            "eval": 33
+        },
+        {
+            "eval": 12
+        },
+        {
+            "eval": 19
+        },
+        {
+            "eval": 50
+        },
+        {
+            "eval": -69,
+            "best": "f3e5",
+            "variation": "Nxe5 d6 Nf3 Nxe4 d4 d5 Bd3 Bd6 O-O O-O",
+            "judgment": {
+                "name": "Mistake",
+                "comment": "Mistake. Nxe5 was best."
+            }
+        },
+        {
+            "eval": -29
+        },
+        {
+            "eval": -73
+        },
+        {
+            "eval": -60
+        },
+        {
+            "eval": -70
+        },
+        {
+            "eval": 309,
+            "best": "f7f6",
+            "variation": "f6 O-O Nc6 b4 d6 a4 Qe7 Nd4 exd4 Re1",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. f6 was best."
+            }
+        },
+        {
+            "eval": 428
+        },
+        {
+            "eval": 675,
+            "best": "d8f6",
+            "variation": "Qf6 Nxf7 Bc5 O-O Rf8 Ng5 d6 Nxh7 Qh4 Nxf8",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. Qf6 was best."
+            }
+        },
+        {
+            "eval": 240,
+            "best": "c4f7",
+            "variation": "Bxf7+ Kf8 Bd5 d6 Ne4 Qd7 Nxc5 dxc5 Be3 Ke8",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Bxf7+ was best."
+            }
+        },
+        {
+            "eval": 533,
+            "best": "h8f8",
+            "variation": "Rf8 Bxf7+ Rxf7 Nxf7 Qf6 Ng5 Qg6 Qd5 h6 Qxc5",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Rf8 was best."
+            }
+        },
+        {
+            "eval": 670
+        },
+        {
+            "eval": 712
+        },
+        {
+            "eval": 680
+        },
+        {
+            "mate": 7,
+            "best": "f8f7",
+            "variation": "Rxf7 Bxf7+ Kf8 Be3 Bb6 Bxb6 axb6 f4 e4 Bd5 Qf6 Bxe4 d6 Rae1",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Checkmate is now unavoidable. Rxf7 was best."
+            }
+        },
+        {
+            "mate": 6
+        },
+        {
+            "mate": 2
+        },
+        {
+            "mate": 1
+        },
+        {
+            "mate": 1
+        }
+    ],
+    "clock": {
+        "initial": 600,
+        "increment": 5,
+        "totalTime": 800
+    }
+}

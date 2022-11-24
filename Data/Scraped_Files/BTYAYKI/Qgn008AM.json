@@ -1,0 +1,187 @@
+{
+    "id": "Qgn008AM",
+    "rated": true,
+    "variant": "standard",
+    "speed": "rapid",
+    "perf": "rapid",
+    "createdAt": "2022-08-30 16:07:59.973000+00:00",
+    "lastMoveAt": "2022-08-30 16:12:36.153000+00:00",
+    "status": "resign",
+    "players": {
+        "white": {
+            "user": {
+                "name": "BTYAYKI",
+                "id": "btyayki"
+            },
+            "rating": 1804,
+            "ratingDiff": -10,
+            "analysis": {
+                "inaccuracy": 3,
+                "mistake": 0,
+                "blunder": 1,
+                "acpl": 91
+            }
+        },
+        "black": {
+            "user": {
+                "name": "JLFATaylor",
+                "patron": true,
+                "id": "jlfataylor"
+            },
+            "rating": 1817,
+            "ratingDiff": 6,
+            "analysis": {
+                "inaccuracy": 1,
+                "mistake": 1,
+                "blunder": 0,
+                "acpl": 28
+            }
+        }
+    },
+    "winner": "black",
+    "opening": {
+        "eco": "B12",
+        "name": "Caro-Kann Defense: Advance Variation, Bayonet Attack",
+        "ply": 7
+    },
+    "moves": "e4 c6 d4 d5 e5 Bf5 g4 Bg6 h4 h6 f4 e6 Bd3 Bxd3 Qxd3 c5 Be3 cxd4 Bxd4 Nc6 Nf3 Nxd4 Nxd4 Ne7 Nd2 Qb6 O-O-O Nc6 Nxc6 bxc6 Qa3 Bxa3",
+    "analysis": [
+        {
+            "eval": 33
+        },
+        {
+            "eval": 56
+        },
+        {
+            "eval": 41
+        },
+        {
+            "eval": 28
+        },
+        {
+            "eval": 28
+        },
+        {
+            "eval": 50
+        },
+        {
+            "eval": 0
+        },
+        {
+            "eval": 44
+        },
+        {
+            "eval": -45,
+            "best": "g1e2",
+            "variation": "Ne2 c5 h4 Be4 Rg1 e6 Nd2 Nc6 c3 Qb6",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. Ne2 was best."
+            }
+        },
+        {
+            "eval": 98,
+            "best": "h7h5",
+            "variation": "h5 e6 hxg4 Qxg4 Nh6 exf7+ Bxf7 Qg5 Nd7 Bh3",
+            "judgment": {
+                "name": "Mistake",
+                "comment": "Mistake. h5 was best."
+            }
+        },
+        {
+            "eval": 73
+        },
+        {
+            "eval": 70
+        },
+        {
+            "eval": -9,
+            "best": "h4h5",
+            "variation": "h5 Bh7 Bd3 Bxd3 Qxd3 c5 Nf3 Nc6 dxc5 Bxc5",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. h5 was best."
+            }
+        },
+        {
+            "eval": 23
+        },
+        {
+            "eval": 10
+        },
+        {
+            "eval": 12
+        },
+        {
+            "eval": -55,
+            "best": "h4h5",
+            "variation": "h5 Nc6",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. h5 was best."
+            }
+        },
+        {
+            "eval": -12
+        },
+        {
+            "eval": -40
+        },
+        {
+            "eval": -28
+        },
+        {
+            "eval": -16
+        },
+        {
+            "eval": 72,
+            "best": "h6h5",
+            "variation": "h5 gxh5",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. h5 was best."
+            }
+        },
+        {
+            "eval": 50
+        },
+        {
+            "eval": 76
+        },
+        {
+            "eval": 69
+        },
+        {
+            "eval": 73
+        },
+        {
+            "eval": 77
+        },
+        {
+            "eval": 64
+        },
+        {
+            "eval": 62
+        },
+        {
+            "eval": 73
+        },
+        {
+            "eval": -980,
+            "best": "f4f5",
+            "variation": "f5 Rb8 b3 Be7 Kb1 Qb4 g5 exf5 Qxf5 g6 Qd3 hxg5 hxg5 Rxh1",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. f5 was best."
+            }
+        },
+        {
+            "eval": -984
+        }
+    ],
+    "clock": {
+        "initial": 600,
+        "increment": 5,
+        "totalTime": 800
+    }
+}

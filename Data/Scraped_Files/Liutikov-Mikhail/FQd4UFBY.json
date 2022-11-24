@@ -1,0 +1,174 @@
+{
+    "id": "FQd4UFBY",
+    "rated": true,
+    "variant": "standard",
+    "speed": "rapid",
+    "perf": "rapid",
+    "createdAt": "2022-07-18 12:58:12.952000+00:00",
+    "lastMoveAt": "2022-07-18 13:01:23.572000+00:00",
+    "status": "resign",
+    "players": {
+        "white": {
+            "user": {
+                "name": "Liutikov-Mikhail",
+                "id": "liutikov-mikhail"
+            },
+            "rating": 2076,
+            "ratingDiff": -7,
+            "analysis": {
+                "inaccuracy": 1,
+                "mistake": 1,
+                "blunder": 2,
+                "acpl": 109
+            }
+        },
+        "black": {
+            "user": {
+                "name": "Diddy2000",
+                "id": "diddy2000"
+            },
+            "rating": 1998,
+            "ratingDiff": 7,
+            "analysis": {
+                "inaccuracy": 2,
+                "mistake": 0,
+                "blunder": 0,
+                "acpl": 37
+            }
+        }
+    },
+    "winner": "black",
+    "opening": {
+        "eco": "B03",
+        "name": "Alekhine Defense: Modern Variation, Alekhine Gambit",
+        "ply": 11
+    },
+    "moves": "e4 Nf6 e5 Nd5 d4 d6 c4 Nb6 Nf3 Bg4 Be2 dxe5 Nxe5 Bxe2 Kxe2 N8d7 Nxd7 Qxd7 b3 Qg4+ f3 Qxg2+ Ke3 O-O-O Bb2 e5 d5 Qxb2",
+    "analysis": [
+        {
+            "eval": 33
+        },
+        {
+            "eval": 29
+        },
+        {
+            "eval": 35
+        },
+        {
+            "eval": 89
+        },
+        {
+            "eval": 79
+        },
+        {
+            "eval": 78
+        },
+        {
+            "eval": 58
+        },
+        {
+            "eval": 25
+        },
+        {
+            "eval": 13
+        },
+        {
+            "eval": 98,
+            "best": "d6e5",
+            "variation": "dxe5 Nxe5 g6 Be3 Bg7 Nc3 c5 Be2 O-O O-O",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. dxe5 was best."
+            }
+        },
+        {
+            "eval": 0,
+            "best": "e5d6",
+            "variation": "exd6 exd6 Nc3 g6 Be2 Nc6 O-O Bg7 Bg5 Qd7",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. exd6 was best."
+            }
+        },
+        {
+            "eval": 9
+        },
+        {
+            "eval": -44
+        },
+        {
+            "eval": -17
+        },
+        {
+            "eval": -12
+        },
+        {
+            "eval": -1
+        },
+        {
+            "eval": -221,
+            "best": "b2b3",
+            "variation": "b3 g6",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. b3 was best."
+            }
+        },
+        {
+            "eval": -215
+        },
+        {
+            "eval": -193
+        },
+        {
+            "eval": -195
+        },
+        {
+            "eval": -448,
+            "best": "e2d3",
+            "variation": "Kd3 Qg6+",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Kd3 was best."
+            }
+        },
+        {
+            "eval": -464
+        },
+        {
+            "eval": -584
+        },
+        {
+            "eval": -444,
+            "best": "e7e5",
+            "variation": "e5",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. e5 was best."
+            }
+        },
+        {
+            "eval": -1147,
+            "best": "d1f1",
+            "variation": "Qf1 Qg6",
+            "judgment": {
+                "name": "Mistake",
+                "comment": "Mistake. Qf1 was best."
+            }
+        },
+        {
+            "eval": -817
+        },
+        {
+            "eval": -1013
+        },
+        {
+            "eval": -1037
+        }
+    ],
+    "clock": {
+        "initial": 600,
+        "increment": 0,
+        "totalTime": 600
+    }
+}

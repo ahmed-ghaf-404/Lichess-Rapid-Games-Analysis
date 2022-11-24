@@ -1,0 +1,177 @@
+{
+    "id": "4B5B24Go",
+    "rated": true,
+    "variant": "standard",
+    "speed": "rapid",
+    "perf": "rapid",
+    "createdAt": "2021-08-11 14:43:47.904000+00:00",
+    "lastMoveAt": "2021-08-11 14:46:11.789000+00:00",
+    "status": "resign",
+    "players": {
+        "white": {
+            "user": {
+                "name": "Sigivaahan",
+                "id": "sigivaahan"
+            },
+            "rating": 767,
+            "ratingDiff": 10,
+            "analysis": {
+                "inaccuracy": 2,
+                "mistake": 0,
+                "blunder": 1,
+                "acpl": 111
+            }
+        },
+        "black": {
+            "user": {
+                "name": "KBA3024_abiyatul",
+                "id": "kba3024_abiyatul"
+            },
+            "rating": 700,
+            "ratingDiff": -23,
+            "analysis": {
+                "inaccuracy": 1,
+                "mistake": 1,
+                "blunder": 4,
+                "acpl": 208
+            }
+        }
+    },
+    "winner": "white",
+    "opening": {
+        "eco": "A40",
+        "name": "Englund Gambit",
+        "ply": 2
+    },
+    "moves": "d4 e5 dxe5 Bc5 Qd2 Qh4 Qc3 Qxf2+ Kd2 Qf5 Qxc5 Qe6 Qe3 Qe7 Nf3 Qd8 Ng5 Qxg5 Qxg5 f6 exf6 Kd8 fxg7+",
+    "analysis": [
+        {
+            "eval": 0
+        },
+        {
+            "eval": 174,
+            "best": "e7e6",
+            "variation": "e6 c4 d5 Nf3 Nf6 cxd5 exd5 Bf4 c5 Nc3",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. e6 was best."
+            }
+        },
+        {
+            "eval": 125
+        },
+        {
+            "eval": 163
+        },
+        {
+            "eval": 82,
+            "best": "c1f4",
+            "variation": "Bf4 d5 exd6 Bxd6 Qd2 Bxf4 Qxf4 Nf6 Nc3 O-O",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. Bf4 was best."
+            }
+        },
+        {
+            "eval": 217,
+            "best": "b8c6",
+            "variation": "Nc6 Nf3 d6 exd6 Nf6 Nc3 O-O g3 cxd6 Bg2",
+            "judgment": {
+                "name": "Mistake",
+                "comment": "Mistake. Nc6 was best."
+            }
+        },
+        {
+            "eval": -709,
+            "best": "d2f4",
+            "variation": "Qf4",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Qf4 was best."
+            }
+        },
+        {
+            "eval": -728
+        },
+        {
+            "eval": -713
+        },
+        {
+            "eval": -90,
+            "best": "f2f4",
+            "variation": "Qf4+",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Qf4+ was best."
+            }
+        },
+        {
+            "eval": -104
+        },
+        {
+            "eval": 482,
+            "best": "f5f1",
+            "variation": "Qxf1",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Qxf1 was best."
+            }
+        },
+        {
+            "eval": 430
+        },
+        {
+            "eval": 536
+        },
+        {
+            "eval": 570
+        },
+        {
+            "eval": 615
+        },
+        {
+            "eval": 419,
+            "best": "b2b3",
+            "variation": "b3 Ne7",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. b3 was best."
+            }
+        },
+        {
+            "eval": 1315,
+            "best": "g8e7",
+            "variation": "Ne7",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Ne7 was best."
+            }
+        },
+        {
+            "eval": 1335
+        },
+        {
+            "eval": 1978
+        },
+        {
+            "eval": 1330
+        },
+        {
+            "mate": 5,
+            "best": "g8f6",
+            "variation": "Nxf6 Qxg7",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Checkmate is now unavoidable. Nxf6 was best."
+            }
+        },
+        {
+            "mate": 4
+        }
+    ],
+    "clock": {
+        "initial": 600,
+        "increment": 0,
+        "totalTime": 600
+    }
+}

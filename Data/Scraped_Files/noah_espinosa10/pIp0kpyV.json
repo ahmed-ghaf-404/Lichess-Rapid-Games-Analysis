@@ -1,0 +1,141 @@
+{
+    "id": "pIp0kpyV",
+    "rated": true,
+    "variant": "standard",
+    "speed": "rapid",
+    "perf": "rapid",
+    "createdAt": "2022-05-27 16:40:46.258000+00:00",
+    "lastMoveAt": "2022-05-27 16:42:42.686000+00:00",
+    "status": "resign",
+    "players": {
+        "white": {
+            "user": {
+                "name": "Coman23",
+                "id": "coman23"
+            },
+            "rating": 1839,
+            "ratingDiff": 5,
+            "analysis": {
+                "inaccuracy": 0,
+                "mistake": 0,
+                "blunder": 0,
+                "acpl": 19
+            }
+        },
+        "black": {
+            "user": {
+                "name": "noah_espinosa10",
+                "id": "noah_espinosa10"
+            },
+            "rating": 1826,
+            "ratingDiff": -6,
+            "analysis": {
+                "inaccuracy": 0,
+                "mistake": 2,
+                "blunder": 1,
+                "acpl": 104
+            }
+        }
+    },
+    "winner": "white",
+    "opening": {
+        "eco": "B21",
+        "name": "Sicilian Defense: Smith-Morra Gambit",
+        "ply": 5
+    },
+    "moves": "e4 c5 d4 cxd4 c3 dxc3 Nxc3 Nc6 Nf3 e5 Bc4 Nf6 Ng5 d5 Nxd5 Na5 Nxf6+ Qxf6 Bxf7+ Ke7 b3 h6 Ba3+",
+    "analysis": [
+        {
+            "eval": 33
+        },
+        {
+            "eval": 32
+        },
+        {
+            "eval": 0
+        },
+        {
+            "eval": 1
+        },
+        {
+            "eval": -26
+        },
+        {
+            "eval": -20
+        },
+        {
+            "eval": -28
+        },
+        {
+            "eval": -18
+        },
+        {
+            "eval": -64
+        },
+        {
+            "eval": 86,
+            "best": "e7e6",
+            "variation": "e6 Be2 Nf6 O-O Qc7 Bg5 Be7 Qd2 O-O Rfd1",
+            "judgment": {
+                "name": "Mistake",
+                "comment": "Mistake. e6 was best."
+            }
+        },
+        {
+            "eval": 36
+        },
+        {
+            "eval": 37
+        },
+        {
+            "eval": 63
+        },
+        {
+            "eval": 58
+        },
+        {
+            "eval": 30
+        },
+        {
+            "eval": 807,
+            "best": "h7h6",
+            "variation": "h6",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. h6 was best."
+            }
+        },
+        {
+            "eval": 778
+        },
+        {
+            "eval": 817
+        },
+        {
+            "eval": 848
+        },
+        {
+            "eval": 866
+        },
+        {
+            "eval": 862
+        },
+        {
+            "mate": 2,
+            "best": "c8d7",
+            "variation": "Bd7 Ba3+",
+            "judgment": {
+                "name": "Mistake",
+                "comment": "Checkmate is now unavoidable. Bd7 was best."
+            }
+        },
+        {
+            "mate": 1
+        }
+    ],
+    "clock": {
+        "initial": 600,
+        "increment": 0,
+        "totalTime": 600
+    }
+}

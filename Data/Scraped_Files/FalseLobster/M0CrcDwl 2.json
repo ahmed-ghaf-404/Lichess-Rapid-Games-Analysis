@@ -1,0 +1,176 @@
+{
+    "id": "M0CrcDwl",
+    "rated": true,
+    "variant": "standard",
+    "speed": "rapid",
+    "perf": "rapid",
+    "createdAt": "2021-09-16 01:59:41.619000+00:00",
+    "lastMoveAt": "2021-09-16 02:09:32.490000+00:00",
+    "status": "mate",
+    "players": {
+        "white": {
+            "user": {
+                "name": "FalseLobster",
+                "id": "falselobster"
+            },
+            "rating": 1632,
+            "ratingDiff": 15,
+            "analysis": {
+                "inaccuracy": 2,
+                "mistake": 0,
+                "blunder": 0,
+                "acpl": 43
+            }
+        },
+        "black": {
+            "user": {
+                "name": "Gribster",
+                "id": "gribster"
+            },
+            "rating": 1660,
+            "ratingDiff": -6,
+            "analysis": {
+                "inaccuracy": 0,
+                "mistake": 0,
+                "blunder": 4,
+                "acpl": 113
+            }
+        }
+    },
+    "winner": "white",
+    "opening": {
+        "eco": "B12",
+        "name": "Caro-Kann Defense: Advance Variation, Botvinnik-Carls Defense",
+        "ply": 6
+    },
+    "moves": "e4 c6 d4 d5 e5 c5 dxc5 Nc6 Nf3 Qa5+ Nc3 Bg4 Qxd5 Rd8 Qb3 Qxc5 Be3 Qa5 Qxb7 Nb4 Bb5+ Bd7 O-O-O Nxa2+ Nxa2 Qxa2 Bxd7+ Rxd7 Qxd7#",
+    "analysis": [
+        {
+            "eval": 24
+        },
+        {
+            "eval": 13
+        },
+        {
+            "eval": 17
+        },
+        {
+            "eval": 25
+        },
+        {
+            "eval": 23
+        },
+        {
+            "eval": 13
+        },
+        {
+            "eval": 27
+        },
+        {
+            "eval": 69
+        },
+        {
+            "eval": 15,
+            "best": "a2a3",
+            "variation": "a3 e6 Nf3 Bxc5 b4 Bb6 Bb2 Nge7 Nbd2 O-O"
+        },
+        {
+            "eval": 237,
+            "best": "c8g4",
+            "variation": "Bg4 Be3 e6 Nbd2 d4 Bf4 Bxc5 h3 Bh5 a3",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Bg4 was best."
+            }
+        },
+        {
+            "eval": 117,
+            "best": "c2c3",
+            "variation": "c3 Qxc5 b4 Qb6 Qxd5 Qc7 b5 Na5 Qe4 f5",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. c3 was best."
+            }
+        },
+        {
+            "eval": 143
+        },
+        {
+            "eval": 135
+        },
+        {
+            "eval": 359,
+            "best": "e7e6",
+            "variation": "e6 Qe4 Bf5 Qc4 Bxc5 Bd2 Bb4 a3 Nge7 Rd1 Bxc3 Bxc3 Qb6 Nd4",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. e6 was best."
+            }
+        },
+        {
+            "eval": 355
+        },
+        {
+            "eval": 392
+        },
+        {
+            "eval": 394
+        },
+        {
+            "eval": 878,
+            "best": "c5b4",
+            "variation": "Qb4 Bb5",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Qb4 was best."
+            }
+        },
+        {
+            "eval": 867
+        },
+        {
+            "eval": 1079
+        },
+        {
+            "eval": 1074
+        },
+        {
+            "eval": 1109
+        },
+        {
+            "eval": 597,
+            "best": "a1d1",
+            "variation": "Rd1 Bxb5 Rxd8+ Qxd8 Qxb5+ Qd7 Qb8+ Qd8 Qxb4 e6 Qa4+ Qd7 Nb5 a6",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. Rd1 was best."
+            }
+        },
+        {
+            "eval": 614
+        },
+        {
+            "eval": 613
+        },
+        {
+            "mate": 2,
+            "best": "a5b5",
+            "variation": "Qxb5",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Checkmate is now unavoidable. Qxb5 was best."
+            }
+        },
+        {
+            "mate": 1
+        },
+        {
+            "mate": 1
+        }
+    ],
+    "clock": {
+        "initial": 900,
+        "increment": 10,
+        "totalTime": 1300
+    }
+}

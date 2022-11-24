@@ -1,0 +1,138 @@
+{
+    "id": "a8of9kg5",
+    "rated": true,
+    "variant": "standard",
+    "speed": "rapid",
+    "perf": "rapid",
+    "createdAt": "2022-01-22 11:01:27.992000+00:00",
+    "lastMoveAt": "2022-01-22 11:04:01.653000+00:00",
+    "status": "mate",
+    "players": {
+        "white": {
+            "user": {
+                "name": "Hightowerer",
+                "id": "hightowerer"
+            },
+            "rating": 1199,
+            "ratingDiff": 8,
+            "analysis": {
+                "inaccuracy": 1,
+                "mistake": 0,
+                "blunder": 1,
+                "acpl": 67
+            }
+        },
+        "black": {
+            "user": {
+                "name": "MaximZgurov",
+                "id": "maximzgurov"
+            },
+            "rating": 1311,
+            "ratingDiff": -8,
+            "analysis": {
+                "inaccuracy": 0,
+                "mistake": 0,
+                "blunder": 1,
+                "acpl": 156
+            }
+        }
+    },
+    "winner": "white",
+    "opening": {
+        "eco": "D00",
+        "name": "Queen's Pawn Game: Accelerated London System",
+        "ply": 3
+    },
+    "moves": "d4 d5 Bf4 Nf6 e3 Nc6 c3 e6 Nf3 Bd6 Bg3 Bxg3 hxg3 O-O Nbd2 Qd6 Bd3 e5 Bxh7+ Nxh7 Qc2 exd4 Qxh7#",
+    "analysis": [
+        {
+            "eval": 30
+        },
+        {
+            "eval": 28
+        },
+        {
+            "eval": 0
+        },
+        {
+            "eval": 0
+        },
+        {
+            "eval": 0
+        },
+        {
+            "eval": 50
+        },
+        {
+            "eval": 18
+        },
+        {
+            "eval": 50
+        },
+        {
+            "eval": 28
+        },
+        {
+            "eval": 17
+        },
+        {
+            "eval": 27
+        },
+        {
+            "eval": 57
+        },
+        {
+            "eval": 38
+        },
+        {
+            "eval": 42
+        },
+        {
+            "eval": 62
+        },
+        {
+            "eval": 51
+        },
+        {
+            "eval": -4,
+            "best": "f1b5",
+            "variation": "Bb5 h6 O-O b6 Re1 Ne7 Bd3 Bb7 Ne5 Ne4 Nxe4 dxe4 Nc4 Qd5",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. Bb5 was best."
+            }
+        },
+        {
+            "eval": -10
+        },
+        {
+            "eval": -476,
+            "best": "d4e5",
+            "variation": "dxe5 Nxe5",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. dxe5 was best."
+            }
+        },
+        {
+            "eval": -487
+        },
+        {
+            "eval": -601
+        },
+        {
+            "mate": 1,
+            "best": "e5e4",
+            "variation": "e4",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Checkmate is now unavoidable. e4 was best."
+            }
+        }
+    ],
+    "clock": {
+        "initial": 600,
+        "increment": 0,
+        "totalTime": 600
+    }
+}

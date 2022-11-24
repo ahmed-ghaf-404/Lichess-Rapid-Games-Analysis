@@ -1,0 +1,171 @@
+{
+    "id": "aDAfAnNX",
+    "rated": true,
+    "variant": "standard",
+    "speed": "rapid",
+    "perf": "rapid",
+    "createdAt": "2021-08-28 20:17:45.004000+00:00",
+    "lastMoveAt": "2021-08-28 20:20:01.798000+00:00",
+    "status": "resign",
+    "players": {
+        "white": {
+            "user": {
+                "name": "Naoufel",
+                "id": "naoufel"
+            },
+            "rating": 1865,
+            "ratingDiff": 0,
+            "analysis": {
+                "inaccuracy": 2,
+                "mistake": 2,
+                "blunder": 1,
+                "acpl": 74
+            }
+        },
+        "black": {
+            "user": {
+                "name": "EricRosen",
+                "title": "IM",
+                "patron": true,
+                "id": "ericrosen"
+            },
+            "rating": 2637,
+            "ratingDiff": 0,
+            "analysis": {
+                "inaccuracy": 2,
+                "mistake": 0,
+                "blunder": 0,
+                "acpl": 22
+            }
+        }
+    },
+    "winner": "black",
+    "opening": {
+        "eco": "D00",
+        "name": "Blackmar-Diemer Gambit Declined: O'Kelly Defense",
+        "ply": 8
+    },
+    "moves": "d4 Nf6 Nc3 d5 e4 dxe4 f3 c6 fxe4 e5 d5 Bc5 Nf3 O-O Be2 Ng4 Rf1 Nxh2 Nxh2 Qh4+ g3 Qxh2 Qd3 Bh3",
+    "analysis": [
+        {
+            "eval": 0
+        },
+        {
+            "eval": 19
+        },
+        {
+            "eval": -17
+        },
+        {
+            "eval": -18
+        },
+        {
+            "eval": -82,
+            "best": "c1f4",
+            "variation": "Bf4 e6 Nb5 Na6 e3 Be7 Nf3 O-O Be2 c6",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. Bf4 was best."
+            }
+        },
+        {
+            "eval": -82
+        },
+        {
+            "eval": -86
+        },
+        {
+            "eval": -24,
+            "best": "e4f3",
+            "variation": "exf3 Nxf3 c6 Bd3 Bg4 Be3 e6 Qe2 Be7 Rf1",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. exf3 was best."
+            }
+        },
+        {
+            "eval": -40
+        },
+        {
+            "eval": -9
+        },
+        {
+            "eval": -186,
+            "best": "d4e5",
+            "variation": "dxe5 Qxd1+ Nxd1 Nxe4 Nf3 Nd7 Be3 Be7 Bc4 a5",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. dxe5 was best."
+            }
+        },
+        {
+            "eval": -143
+        },
+        {
+            "eval": -149
+        },
+        {
+            "eval": -121
+        },
+        {
+            "eval": -190,
+            "best": "d5c6",
+            "variation": "dxc6 Qb6",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. dxc6 was best."
+            }
+        },
+        {
+            "eval": -112,
+            "best": "c6d5",
+            "variation": "cxd5 exd5 Re8 Bg5 Nbd7 Nd2 Bd4 Nb3 Qb6 Na4 Qb4+ c3 Qxa4 cxd4",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. cxd5 was best."
+            }
+        },
+        {
+            "eval": -298,
+            "best": "d5c6",
+            "variation": "dxc6 Nxc6",
+            "judgment": {
+                "name": "Mistake",
+                "comment": "Mistake. dxc6 was best."
+            }
+        },
+        {
+            "eval": -303
+        },
+        {
+            "eval": -329
+        },
+        {
+            "eval": -322
+        },
+        {
+            "eval": -609,
+            "best": "e1d2",
+            "variation": "Kd2 Qxh2",
+            "judgment": {
+                "name": "Mistake",
+                "comment": "Mistake. Kd2 was best."
+            }
+        },
+        {
+            "eval": -674
+        },
+        {
+            "eval": -616
+        },
+        {
+            "eval": -623
+        }
+    ],
+    "tournament": "1yyapqPi",
+    "clock": {
+        "initial": 600,
+        "increment": 0,
+        "totalTime": 600
+    }
+}

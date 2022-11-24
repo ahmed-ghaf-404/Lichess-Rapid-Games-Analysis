@@ -1,0 +1,123 @@
+{
+    "id": "ve8nd1BB",
+    "rated": true,
+    "variant": "standard",
+    "speed": "rapid",
+    "perf": "rapid",
+    "createdAt": "2022-08-04 10:31:16.625000+00:00",
+    "lastMoveAt": "2022-08-04 10:32:52.094000+00:00",
+    "status": "timeout",
+    "players": {
+        "white": {
+            "user": {
+                "name": "VforVaro",
+                "id": "vforvaro"
+            },
+            "rating": 1798,
+            "ratingDiff": 6,
+            "analysis": {
+                "inaccuracy": 0,
+                "mistake": 0,
+                "blunder": 0,
+                "acpl": 20
+            }
+        },
+        "black": {
+            "user": {
+                "name": "KroNos773",
+                "id": "kronos773"
+            },
+            "rating": 1821,
+            "ratingDiff": -8,
+            "analysis": {
+                "inaccuracy": 2,
+                "mistake": 1,
+                "blunder": 0,
+                "acpl": 106
+            }
+        }
+    },
+    "winner": "white",
+    "opening": {
+        "eco": "B03",
+        "name": "Alekhine Defense",
+        "ply": 5
+    },
+    "moves": "e4 Nf6 e5 Nd5 d4 Nc6 c4 Ndb4 a3 Na6 b4 d5 b5 Nc5 bxc6 Ne4 cxb7",
+    "analysis": [
+        {
+            "eval": 33
+        },
+        {
+            "eval": 29
+        },
+        {
+            "eval": 35
+        },
+        {
+            "eval": 89
+        },
+        {
+            "eval": 79
+        },
+        {
+            "eval": 245,
+            "best": "d7d6",
+            "variation": "d6 c4 Nb6 f4 dxe5 fxe5 Nc6 Be3 Bf5 Nc3",
+            "judgment": {
+                "name": "Mistake",
+                "comment": "Mistake. d6 was best."
+            }
+        },
+        {
+            "eval": 318
+        },
+        {
+            "eval": 354
+        },
+        {
+            "eval": 349
+        },
+        {
+            "eval": 346
+        },
+        {
+            "eval": 403
+        },
+        {
+            "eval": 584,
+            "best": "a6b8",
+            "variation": "Nab8 Nf3 e6 d5 Ne7 Nc3 d6 exd6 cxd6 Bb2",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. Nab8 was best."
+            }
+        },
+        {
+            "eval": 564
+        },
+        {
+            "eval": 872,
+            "best": "c6e5",
+            "variation": "Nxe5 dxe5 Nc5 Nf3 d4 Nbd2 Bg4 Nb3 e6 Nxc5 Bxc5 Bd3 O-O h3",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. Nxe5 was best."
+            }
+        },
+        {
+            "eval": 830
+        },
+        {
+            "eval": 934
+        },
+        {
+            "eval": 831
+        }
+    ],
+    "clock": {
+        "initial": 600,
+        "increment": 0,
+        "totalTime": 600
+    }
+}

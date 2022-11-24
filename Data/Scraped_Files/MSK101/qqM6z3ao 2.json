@@ -1,0 +1,191 @@
+{
+    "id": "qqM6z3ao",
+    "rated": true,
+    "variant": "standard",
+    "speed": "rapid",
+    "perf": "rapid",
+    "createdAt": "2021-04-29 20:43:54.750000+00:00",
+    "lastMoveAt": "2021-04-29 20:48:32.547000+00:00",
+    "status": "resign",
+    "players": {
+        "white": {
+            "user": {
+                "name": "MSK101",
+                "title": "GM",
+                "id": "msk101"
+            },
+            "rating": 2618,
+            "ratingDiff": 14,
+            "provisional": true,
+            "analysis": {
+                "inaccuracy": 1,
+                "mistake": 0,
+                "blunder": 0,
+                "acpl": 18
+            }
+        },
+        "black": {
+            "user": {
+                "name": "Tatiana101",
+                "id": "tatiana101"
+            },
+            "rating": 2344,
+            "ratingDiff": -2,
+            "analysis": {
+                "inaccuracy": 2,
+                "mistake": 0,
+                "blunder": 2,
+                "acpl": 77
+            }
+        }
+    },
+    "winner": "white",
+    "opening": {
+        "eco": "A52",
+        "name": "Indian Defense: Budapest Defense, Rubinstein Variation",
+        "ply": 7
+    },
+    "moves": "d4 Nf6 c4 e5 dxe5 Ng4 Bf4 Bc5 e3 Nc6 Qxg4 Nb4 Qxg7 Rf8 Qxh7 d6 Nc3 dxe5 Rd1 Qe7 Bh6 Bg4 Be2 Bxe2 Ngxe2 Rd8 O-O Rxd1 Rxd1 Nc6 Bxf8 Qxf8 Ng3 Nb4 Nf5",
+    "analysis": [
+        {
+            "eval": 0
+        },
+        {
+            "eval": 19
+        },
+        {
+            "eval": 14
+        },
+        {
+            "eval": 108,
+            "best": "e7e6",
+            "variation": "e6 Nf3 b6 g3 Ba6 Nbd2 d5 Bg2 Be7 O-O",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. e6 was best."
+            }
+        },
+        {
+            "eval": 67
+        },
+        {
+            "eval": 74
+        },
+        {
+            "eval": 49
+        },
+        {
+            "eval": 225,
+            "best": "f8b4",
+            "variation": "Bb4+ Nc3 Bxc3+ bxc3 Nc6 Nf3 Qe7 Qd5 f6 exf6",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Bb4+ was best."
+            }
+        },
+        {
+            "eval": 234
+        },
+        {
+            "eval": 698,
+            "best": "d7d6",
+            "variation": "d6 exd6 Bxd6 Bxd6 Qxd6 Qxd6 cxd6 Nc3 Nf6 b3",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. d6 was best."
+            }
+        },
+        {
+            "eval": 677
+        },
+        {
+            "eval": 925
+        },
+        {
+            "eval": 910
+        },
+        {
+            "eval": 898
+        },
+        {
+            "eval": 897
+        },
+        {
+            "eval": 888
+        },
+        {
+            "eval": 882
+        },
+        {
+            "eval": 878
+        },
+        {
+            "eval": 840
+        },
+        {
+            "eval": 870
+        },
+        {
+            "eval": 883
+        },
+        {
+            "eval": 986
+        },
+        {
+            "eval": 927
+        },
+        {
+            "eval": 1025
+        },
+        {
+            "eval": 949
+        },
+        {
+            "eval": 1002
+        },
+        {
+            "eval": 950
+        },
+        {
+            "eval": 996
+        },
+        {
+            "eval": 994
+        },
+        {
+            "eval": 1348
+        },
+        {
+            "eval": 1328
+        },
+        {
+            "eval": 1277
+        },
+        {
+            "eval": 1330
+        },
+        {
+            "mate": 9,
+            "best": "c5d6",
+            "variation": "Bd6 c5 Bxc5 Qf5 Bd6 Qc8+ Nd8 Nd5 f6 Nxc7+ Kf7 Qd7+ Be7 Nf5",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Checkmate is now unavoidable. Bd6 was best."
+            }
+        },
+        {
+            "eval": 1455,
+            "best": "h7f5",
+            "variation": "Qf5 Bd6 Qc8+ Ke7 Nf5+ Kf6 Ne4+ Kg6 Rxd6+ cxd6 Qxf8 Kxf5 Qxf7+ Kg4",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Lost forced checkmate sequence. Qf5 was best."
+            }
+        }
+    ],
+    "clock": {
+        "initial": 480,
+        "increment": 2,
+        "totalTime": 560
+    }
+}

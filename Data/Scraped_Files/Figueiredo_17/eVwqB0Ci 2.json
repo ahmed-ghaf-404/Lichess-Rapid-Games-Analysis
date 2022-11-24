@@ -1,0 +1,94 @@
+{
+    "id": "eVwqB0Ci",
+    "rated": true,
+    "variant": "standard",
+    "speed": "rapid",
+    "perf": "rapid",
+    "createdAt": "2022-08-14 14:19:29.160000+00:00",
+    "lastMoveAt": "2022-08-14 14:21:35.682000+00:00",
+    "status": "mate",
+    "players": {
+        "white": {
+            "user": {
+                "name": "Figueiredo_17",
+                "id": "figueiredo_17"
+            },
+            "rating": 942,
+            "ratingDiff": -9,
+            "analysis": {
+                "inaccuracy": 0,
+                "mistake": 1,
+                "blunder": 1,
+                "acpl": 300
+            }
+        },
+        "black": {
+            "user": {
+                "name": "PV-CAE_00",
+                "id": "pv-cae_00"
+            },
+            "rating": 1017,
+            "ratingDiff": 85,
+            "provisional": true,
+            "analysis": {
+                "inaccuracy": 0,
+                "mistake": 0,
+                "blunder": 1,
+                "acpl": 62
+            }
+        }
+    },
+    "winner": "black",
+    "opening": {
+        "eco": "C00",
+        "name": "French Defense: Queen's Knight",
+        "ply": 3
+    },
+    "moves": "e4 e6 Nc3 Qf6 b3 Bc5 Bb2 Qxf2#",
+    "analysis": [
+        {
+            "eval": 33
+        },
+        {
+            "eval": 13
+        },
+        {
+            "eval": 0
+        },
+        {
+            "eval": 174,
+            "best": "d7d5",
+            "variation": "d5 d4 Nf6 e5 Nfd7 f4 c5 Nf3 Nc6 Be3",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. d5 was best."
+            }
+        },
+        {
+            "eval": 40,
+            "best": "d2d4",
+            "variation": "d4 Qd8 Nf3 d6 Bd3 Nd7 Qe2 a6 O-O Ne7",
+            "judgment": {
+                "name": "Mistake",
+                "comment": "Mistake. d4 was best."
+            }
+        },
+        {
+            "eval": 53
+        },
+        {
+            "mate": -1,
+            "best": "f2f4",
+            "variation": "f4 Qxf4 d4 Qf6 Nf3 Bb4 Bd2 Bxc3 Bxc3 Qf4",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Checkmate is now unavoidable. f4 was best."
+            }
+        }
+    ],
+    "clock": {
+        "initial": 900,
+        "increment": 10,
+        "totalTime": 1300
+    }
+}

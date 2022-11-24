@@ -1,0 +1,186 @@
+{
+    "id": "kbAk1PLa",
+    "rated": true,
+    "variant": "standard",
+    "speed": "rapid",
+    "perf": "rapid",
+    "createdAt": "2020-12-16 15:24:04.796000+00:00",
+    "lastMoveAt": "2020-12-16 15:27:27.497000+00:00",
+    "status": "resign",
+    "players": {
+        "white": {
+            "user": {
+                "name": "POCOST",
+                "id": "pocost"
+            },
+            "rating": 1082,
+            "ratingDiff": 27,
+            "analysis": {
+                "inaccuracy": 1,
+                "mistake": 1,
+                "blunder": 1,
+                "acpl": 52
+            }
+        },
+        "black": {
+            "user": {
+                "name": "NR57839",
+                "id": "nr57839"
+            },
+            "rating": 1086,
+            "ratingDiff": -5,
+            "analysis": {
+                "inaccuracy": 1,
+                "mistake": 0,
+                "blunder": 4,
+                "acpl": 113
+            }
+        }
+    },
+    "winner": "white",
+    "opening": {
+        "eco": "B20",
+        "name": "Sicilian Defense: Bowdler Attack",
+        "ply": 3
+    },
+    "moves": "e4 c5 Bc4 e6 Nf3 Nc6 Nc3 Nf6 d4 Nxd4 Nxd4 cxd4 Qxd4 d5 e5 Ne4 Bb5+ Bd7 Bxd7+ Qxd7 Nxe4 dxe4 Qxe4 f6 Bf4 b6 Qxa8+ Qd8",
+    "analysis": [
+        {
+            "eval": 0
+        },
+        {
+            "eval": 0
+        },
+        {
+            "eval": -33
+        },
+        {
+            "eval": 0
+        },
+        {
+            "eval": -40
+        },
+        {
+            "eval": -13
+        },
+        {
+            "eval": -39
+        },
+        {
+            "eval": -28
+        },
+        {
+            "eval": -13
+        },
+        {
+            "eval": 82,
+            "best": "d7d5",
+            "variation": "d5 exd5 exd5 Be2 cxd4 Nxd4 Bb4 O-O O-O Bf3",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. d5 was best."
+            }
+        },
+        {
+            "eval": 79
+        },
+        {
+            "eval": 92
+        },
+        {
+            "eval": 25
+        },
+        {
+            "eval": 255,
+            "best": "d7d6",
+            "variation": "d6 Be3 a6 f4 b5 Be2 Qc7 a4 b4 Qxb4",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. d6 was best."
+            }
+        },
+        {
+            "eval": -42,
+            "best": "e4d5",
+            "variation": "exd5 Be7 Bf4 exd5 Nxd5 O-O O-O-O Nxd5 Bxd5 Qa5 Qe5 Be6 Bxe6 Qxe5",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. exd5 was best."
+            }
+        },
+        {
+            "eval": 164,
+            "best": "d5c4",
+            "variation": "dxc4",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. dxc4 was best."
+            }
+        },
+        {
+            "eval": 75,
+            "best": "c3e4",
+            "variation": "Nxe4",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. Nxe4 was best."
+            }
+        },
+        {
+            "eval": 64
+        },
+        {
+            "eval": 90
+        },
+        {
+            "eval": 77
+        },
+        {
+            "eval": 84
+        },
+        {
+            "eval": 72
+        },
+        {
+            "eval": 99
+        },
+        {
+            "eval": 296,
+            "best": "f8c5",
+            "variation": "Bc5 O-O O-O c3 a5 Bf4 a4 Rad1 Qb5 Rd2 Be7 Rfd1 a3 b4",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Bc5 was best."
+            }
+        },
+        {
+            "eval": 144,
+            "best": "e5f6",
+            "variation": "exf6 gxf6",
+            "judgment": {
+                "name": "Mistake",
+                "comment": "Mistake. exf6 was best."
+            }
+        },
+        {
+            "eval": 917,
+            "best": "f6f5",
+            "variation": "f5",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. f5 was best."
+            }
+        },
+        {
+            "eval": 928
+        },
+        {
+            "eval": 928
+        }
+    ],
+    "clock": {
+        "initial": 300,
+        "increment": 10,
+        "totalTime": 700
+    }
+}

@@ -1,0 +1,169 @@
+{
+    "id": "xil66tkH",
+    "rated": true,
+    "variant": "standard",
+    "speed": "rapid",
+    "perf": "rapid",
+    "createdAt": "2022-04-16 19:41:52.808000+00:00",
+    "lastMoveAt": "2022-04-16 19:43:56.640000+00:00",
+    "status": "resign",
+    "players": {
+        "white": {
+            "user": {
+                "name": "thevau",
+                "id": "thevau"
+            },
+            "rating": 1421,
+            "ratingDiff": 6,
+            "analysis": {
+                "inaccuracy": 1,
+                "mistake": 0,
+                "blunder": 1,
+                "acpl": 42
+            }
+        },
+        "black": {
+            "user": {
+                "name": "EgeEla",
+                "id": "egeela"
+            },
+            "rating": 1447,
+            "ratingDiff": -35,
+            "provisional": true,
+            "analysis": {
+                "inaccuracy": 1,
+                "mistake": 1,
+                "blunder": 3,
+                "acpl": 93
+            }
+        }
+    },
+    "winner": "white",
+    "opening": {
+        "eco": "C21",
+        "name": "Danish Gambit Accepted: Classical Defense",
+        "ply": 10
+    },
+    "moves": "e4 e5 d4 exd4 c3 dxc3 Bc4 cxb2 Bxb2 Nf6 e5 Ne4 Bxf7+ Kxf7 Qd5+ Ke8 Qxe4 Be7 Nf3 d6 exd6 cxd6 O-O Kf8",
+    "analysis": [
+        {
+            "eval": 33
+        },
+        {
+            "eval": 12
+        },
+        {
+            "eval": -10
+        },
+        {
+            "eval": 0
+        },
+        {
+            "eval": -55,
+            "best": "g1f3",
+            "variation": "Nf3 Bb4+ Nbd2 Nc6 Bd3 Nge7 O-O Bc5 Nb3 d6",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. Nf3 was best."
+            }
+        },
+        {
+            "eval": -28
+        },
+        {
+            "eval": -56
+        },
+        {
+            "eval": -62
+        },
+        {
+            "eval": -49
+        },
+        {
+            "eval": -70
+        },
+        {
+            "eval": -83
+        },
+        {
+            "eval": 0,
+            "best": "f8b4",
+            "variation": "Bb4+ Bc3 Bxc3+ Nxc3 d5 exf6 dxc4 fxg7 Rg8 Qf3",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. Bb4+ was best."
+            }
+        },
+        {
+            "eval": 0
+        },
+        {
+            "eval": 0
+        },
+        {
+            "eval": -78
+        },
+        {
+            "eval": -67
+        },
+        {
+            "eval": -107
+        },
+        {
+            "eval": 115,
+            "best": "b8a6",
+            "variation": "Na6 Nf3",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Na6 was best."
+            }
+        },
+        {
+            "eval": 140
+        },
+        {
+            "eval": 365,
+            "best": "b8a6",
+            "variation": "Na6 O-O Nc5 Qg4 d5 Qxg7 Rf8 Nc3 c6 Ne2 Rxf3 gxf3 Be6 Qxh7",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Na6 was best."
+            }
+        },
+        {
+            "eval": 146,
+            "best": "b1c3",
+            "variation": "Nc3 Na6 Rd1 Nc5 Qe3 Kf7 Ba3 b6 Bxc5 bxc5 Qf4+ Kg8 Qc4+ Kf8",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Nc3 was best."
+            }
+        },
+        {
+            "eval": 422,
+            "best": "d8d6",
+            "variation": "Qxd6 O-O Qg6 Qe3 Bh3 Nh4 Qe6 Qg3 Qg4 Re1 Qxg3 fxg3 Bd7 Bxg7",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Qxd6 was best."
+            }
+        },
+        {
+            "eval": 378
+        },
+        {
+            "eval": 640,
+            "best": "b8c6",
+            "variation": "Nc6 Nc3 Qd7 Rfe1 Qg4 Qe2 Qh5 Rad1 Bg4 Nd5 Bxf3 gxf3 Kd8 Qb5",
+            "judgment": {
+                "name": "Mistake",
+                "comment": "Mistake. Nc6 was best."
+            }
+        }
+    ],
+    "clock": {
+        "initial": 900,
+        "increment": 10,
+        "totalTime": 1300
+    }
+}

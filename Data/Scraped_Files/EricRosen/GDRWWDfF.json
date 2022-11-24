@@ -1,0 +1,132 @@
+{
+    "id": "GDRWWDfF",
+    "rated": true,
+    "variant": "standard",
+    "speed": "rapid",
+    "perf": "rapid",
+    "createdAt": "2021-11-23 08:57:17.884000+00:00",
+    "lastMoveAt": "2021-11-23 08:58:32.009000+00:00",
+    "status": "resign",
+    "players": {
+        "white": {
+            "user": {
+                "name": "EricRosen",
+                "title": "IM",
+                "patron": true,
+                "id": "ericrosen"
+            },
+            "rating": 2612,
+            "ratingDiff": 0,
+            "analysis": {
+                "inaccuracy": 1,
+                "mistake": 0,
+                "blunder": 0,
+                "acpl": 25
+            }
+        },
+        "black": {
+            "user": {
+                "name": "Johan201023",
+                "id": "johan201023"
+            },
+            "rating": 1905,
+            "ratingDiff": 0,
+            "analysis": {
+                "inaccuracy": 1,
+                "mistake": 0,
+                "blunder": 2,
+                "acpl": 121
+            }
+        }
+    },
+    "winner": "white",
+    "opening": {
+        "eco": "C00",
+        "name": "French Defense: Two Knights Variation",
+        "ply": 5
+    },
+    "moves": "e4 e6 Nf3 d5 Nc3 dxe4 Nxe4 Nf6 Nxf6+ Qxf6 d4 Bb4+ c3 Ba5 Bd3 Bb6 Bg5",
+    "analysis": [
+        {
+            "eval": 23
+        },
+        {
+            "eval": 13
+        },
+        {
+            "eval": 0
+        },
+        {
+            "eval": 13
+        },
+        {
+            "eval": 0
+        },
+        {
+            "eval": 20
+        },
+        {
+            "eval": 32
+        },
+        {
+            "eval": 81
+        },
+        {
+            "eval": 67
+        },
+        {
+            "eval": 64
+        },
+        {
+            "eval": 53
+        },
+        {
+            "eval": 151,
+            "best": "f6d8",
+            "variation": "Qd8 Bd3 c5 dxc5 Bxc5 O-O Nc6 a3 Be7 Re1",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. Qd8 was best."
+            }
+        },
+        {
+            "eval": 131
+        },
+        {
+            "eval": 450,
+            "best": "b4d6",
+            "variation": "Bd6 Bg5 Qg6 Bd3 Qh5 h3 f6 Bd2 Bd7 Qe2",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Bd6 was best."
+            }
+        },
+        {
+            "eval": 298,
+            "best": "d1a4",
+            "variation": "Qa4+ Nc6 Bb5 Bd7 Bxc6 Bxc3+ bxc3 Bxc6 Qd1 O-O-O",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. Qa4+ was best."
+            }
+        },
+        {
+            "eval": 770,
+            "best": "f6d8",
+            "variation": "Qd8",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Qd8 was best."
+            }
+        },
+        {
+            "eval": 770
+        }
+    ],
+    "tournament": "7PcwpFCK",
+    "clock": {
+        "initial": 600,
+        "increment": 0,
+        "totalTime": 600
+    }
+}

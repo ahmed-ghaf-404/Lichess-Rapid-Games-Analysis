@@ -1,0 +1,118 @@
+{
+    "id": "oz0QgcQE",
+    "rated": true,
+    "variant": "standard",
+    "speed": "rapid",
+    "perf": "rapid",
+    "createdAt": "2022-03-30 14:08:00.738000+00:00",
+    "lastMoveAt": "2022-03-30 14:08:38.321000+00:00",
+    "status": "resign",
+    "players": {
+        "white": {
+            "user": {
+                "name": "NasrNasser",
+                "id": "nasrnasser"
+            },
+            "rating": 1821,
+            "ratingDiff": 1,
+            "analysis": {
+                "inaccuracy": 0,
+                "mistake": 0,
+                "blunder": 0,
+                "acpl": 10
+            }
+        },
+        "black": {
+            "user": {
+                "name": "Alexey_opr",
+                "id": "alexey_opr"
+            },
+            "rating": 1223,
+            "ratingDiff": -1,
+            "analysis": {
+                "inaccuracy": 2,
+                "mistake": 0,
+                "blunder": 1,
+                "acpl": 90
+            }
+        }
+    },
+    "winner": "white",
+    "opening": {
+        "eco": "C45",
+        "name": "Scotch Game",
+        "ply": 7
+    },
+    "moves": "e4 e5 Nf3 Nc6 d4 exd4 Nxd4 Nxd4 Qxd4 Nf6 e5 Nh5 g4 c5 Qe3",
+    "analysis": [
+        {
+            "eval": 28
+        },
+        {
+            "eval": 12
+        },
+        {
+            "eval": 19
+        },
+        {
+            "eval": 32
+        },
+        {
+            "eval": 13
+        },
+        {
+            "eval": 13
+        },
+        {
+            "eval": 3
+        },
+        {
+            "eval": 64,
+            "best": "g8f6",
+            "variation": "Nf6 Nc3 Bb4 Nxc6 bxc6 Bd3 d5 exd5 cxd5 O-O",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. Nf6 was best."
+            }
+        },
+        {
+            "eval": 86
+        },
+        {
+            "eval": 165,
+            "best": "d8f6",
+            "variation": "Qf6 Qc4 c6 Nc3 b5 Qd3 Be7 a3 Qe6 Bf4",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. Qf6 was best."
+            }
+        },
+        {
+            "eval": 165
+        },
+        {
+            "eval": 485,
+            "best": "c7c5",
+            "variation": "c5 Qe3 Nd5 Qf3 Nb4 Bc4 d5 exd6 Qf6 Qe4+",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. c5 was best."
+            }
+        },
+        {
+            "eval": 626
+        },
+        {
+            "eval": 784
+        },
+        {
+            "eval": 731
+        }
+    ],
+    "tournament": "FfUDZpiQ",
+    "clock": {
+        "initial": 600,
+        "increment": 0,
+        "totalTime": 600
+    }
+}

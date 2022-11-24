@@ -1,0 +1,159 @@
+{
+    "id": "S23AfM8E",
+    "rated": true,
+    "variant": "standard",
+    "speed": "rapid",
+    "perf": "rapid",
+    "createdAt": "2021-03-19 15:15:31.208000+00:00",
+    "lastMoveAt": "2021-03-19 15:28:11.272000+00:00",
+    "status": "resign",
+    "players": {
+        "white": {
+            "user": {
+                "name": "ItsMeMaho",
+                "id": "itsmemaho"
+            },
+            "rating": 1824,
+            "ratingDiff": 16,
+            "analysis": {
+                "inaccuracy": 1,
+                "mistake": 0,
+                "blunder": 0,
+                "acpl": 23
+            }
+        },
+        "black": {
+            "user": {
+                "name": "PauloGabita",
+                "id": "paulogabita"
+            },
+            "rating": 1819,
+            "ratingDiff": -6,
+            "analysis": {
+                "inaccuracy": 1,
+                "mistake": 0,
+                "blunder": 2,
+                "acpl": 96
+            }
+        }
+    },
+    "winner": "white",
+    "opening": {
+        "eco": "C51",
+        "name": "Italian Game: Evans Gambit, Anderssen Variation",
+        "ply": 10
+    },
+    "moves": "e4 e5 Nf3 Nc6 Bc4 Bc5 b4 Bxb4 c3 Be7 d4 d6 Qb3 Nh6 Bxh6 gxh6 Bxf7+ Kf8 Bh5 d5 exd5 Na5 Qa4 b6 Nxe5 Qxd5 Qe8+",
+    "analysis": [
+        {
+            "eval": 25
+        },
+        {
+            "eval": 15
+        },
+        {
+            "eval": 23
+        },
+        {
+            "eval": 27
+        },
+        {
+            "eval": 13
+        },
+        {
+            "eval": 25
+        },
+        {
+            "eval": -48,
+            "best": "d2d3",
+            "variation": "d3 d6 O-O h6 c3 Nf6 h3 O-O Re1 a5",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. d3 was best."
+            }
+        },
+        {
+            "eval": -20
+        },
+        {
+            "eval": -40
+        },
+        {
+            "eval": 0
+        },
+        {
+            "eval": -5
+        },
+        {
+            "eval": 95,
+            "best": "c6a5",
+            "variation": "Na5 Bd3 d6 dxe5 dxe5 Nxe5 Nf6 O-O O-O Nd2",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. Na5 was best."
+            }
+        },
+        {
+            "eval": 32
+        },
+        {
+            "eval": 75
+        },
+        {
+            "eval": 116
+        },
+        {
+            "eval": 444,
+            "best": "c6a5",
+            "variation": "Na5 Qa4+ c6 Be3 b5 Bxb5 cxb5 Qxb5+ Bd7 Qd3 Qc7 Nbd2 Rc8 O-O",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Na5 was best."
+            }
+        },
+        {
+            "eval": 457
+        },
+        {
+            "eval": 462
+        },
+        {
+            "eval": 438
+        },
+        {
+            "eval": 437
+        },
+        {
+            "eval": 424
+        },
+        {
+            "eval": 473
+        },
+        {
+            "eval": 446
+        },
+        {
+            "eval": 517
+        },
+        {
+            "eval": 433
+        },
+        {
+            "mate": 4,
+            "best": "h8g8",
+            "variation": "Rg8 O-O Bh3 Bf3 Bd6 Kh1 Qf6 Qd1 Re8 Re1 Bf5 Nd2 Bxe5 Bh5",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Checkmate is now unavoidable. Rg8 was best."
+            }
+        },
+        {
+            "mate": 3
+        }
+    ],
+    "clock": {
+        "initial": 900,
+        "increment": 10,
+        "totalTime": 1300
+    }
+}

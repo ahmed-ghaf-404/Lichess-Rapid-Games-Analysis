@@ -1,0 +1,129 @@
+{
+    "id": "o6GH90lQ",
+    "rated": true,
+    "variant": "standard",
+    "speed": "rapid",
+    "perf": "rapid",
+    "createdAt": "2021-08-16 21:00:52.269000+00:00",
+    "lastMoveAt": "2021-08-16 21:03:57.598000+00:00",
+    "status": "resign",
+    "players": {
+        "white": {
+            "user": {
+                "name": "iampolo87",
+                "id": "iampolo87"
+            },
+            "rating": 1315,
+            "ratingDiff": -7,
+            "analysis": {
+                "inaccuracy": 1,
+                "mistake": 0,
+                "blunder": 1,
+                "acpl": 143
+            }
+        },
+        "black": {
+            "user": {
+                "name": "MikeAsbestos",
+                "id": "mikeasbestos"
+            },
+            "rating": 1341,
+            "ratingDiff": 5,
+            "analysis": {
+                "inaccuracy": 1,
+                "mistake": 0,
+                "blunder": 1,
+                "acpl": 37
+            }
+        }
+    },
+    "winner": "black",
+    "opening": {
+        "eco": "A40",
+        "name": "Englund Gambit Complex: Englund Gambit",
+        "ply": 6
+    },
+    "moves": "d4 e5 dxe5 Nc6 Nf3 Qe7 Bf4 Qb4+ Qd2 Qxb2 Qc3 Bb4 Bc1 Bxc3+ Kd1 Qxa1 Nxc3",
+    "analysis": [
+        {
+            "eval": 0
+        },
+        {
+            "eval": 174,
+            "best": "e7e6",
+            "variation": "e6 c4 d5 Nf3 Nf6 cxd5 exd5 Bf4 c5 Nc3",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. e6 was best."
+            }
+        },
+        {
+            "eval": 125
+        },
+        {
+            "eval": 184
+        },
+        {
+            "eval": 157
+        },
+        {
+            "eval": 194
+        },
+        {
+            "eval": 188
+        },
+        {
+            "eval": 210
+        },
+        {
+            "eval": -651,
+            "best": "f4d2",
+            "variation": "Bd2 Qe7 Nc3 Nxe5 e4 Nf6 Nxe5 Qxe5 f4 Qc5",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Bd2 was best."
+            }
+        },
+        {
+            "eval": -667
+        },
+        {
+            "eval": -1380
+        },
+        {
+            "eval": -1392
+        },
+        {
+            "mate": -1,
+            "best": "e1d1",
+            "variation": "Kd1 Bxc3 Nxc3 Qxa1+ Kd2 Nb4 g3 Qb2 Ne1 Ne7",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Checkmate is now unavoidable. Kd1 was best."
+            }
+        },
+        {
+            "eval": -1772,
+            "best": "b2c1",
+            "variation": "Qxc1#",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Lost forced checkmate sequence. Qxc1# was best."
+            }
+        },
+        {
+            "eval": -1760
+        },
+        {
+            "eval": -1789
+        },
+        {
+            "eval": -1784
+        }
+    ],
+    "clock": {
+        "initial": 600,
+        "increment": 0,
+        "totalTime": 600
+    }
+}

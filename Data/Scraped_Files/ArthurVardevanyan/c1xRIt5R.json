@@ -1,0 +1,196 @@
+{
+    "id": "c1xRIt5R",
+    "rated": true,
+    "variant": "standard",
+    "speed": "rapid",
+    "perf": "rapid",
+    "createdAt": "2022-05-16 12:34:01.800000+00:00",
+    "lastMoveAt": "2022-05-16 12:45:20.666000+00:00",
+    "status": "resign",
+    "players": {
+        "white": {
+            "user": {
+                "name": "derechoharmonicacat",
+                "id": "derechoharmonicacat"
+            },
+            "rating": 1336,
+            "ratingDiff": 4,
+            "analysis": {
+                "inaccuracy": 1,
+                "mistake": 0,
+                "blunder": 0,
+                "acpl": 8
+            }
+        },
+        "black": {
+            "user": {
+                "name": "ArthurVardevanyan",
+                "id": "arthurvardevanyan"
+            },
+            "rating": 1500,
+            "ratingDiff": -386,
+            "provisional": true,
+            "analysis": {
+                "inaccuracy": 3,
+                "mistake": 0,
+                "blunder": 1,
+                "acpl": 57
+            }
+        }
+    },
+    "winner": "white",
+    "opening": {
+        "eco": "A40",
+        "name": "Horwitz Defense",
+        "ply": 2
+    },
+    "moves": "d4 e6 Bf4 Bb4+ c3 b5 cxb4 Nc6 Nc3 Nxb4 Nxb5 a6 Nxc7+ Kf8 Nxa8 Bb7 Bd6+ Ke8 Nc7+ Qxc7 Bxc7 Nf6 Nf3 a5 e3 Ne4 Bb5 Nc3 bxc3 Rf8 cxb4 axb4 Qb3 f5 Be5 g5 Qxe6+",
+    "analysis": [
+        {
+            "eval": 21
+        },
+        {
+            "eval": 20
+        },
+        {
+            "eval": 0
+        },
+        {
+            "eval": 56,
+            "best": "c7c5",
+            "variation": "c5 e3 Qb6 Nc3 cxd4 exd4 Qxb2 Nb5 Bb4+ Ke2",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. c5 was best."
+            }
+        },
+        {
+            "eval": 96
+        },
+        {
+            "eval": 837,
+            "best": "b4d6",
+            "variation": "Bd6 Bxd6 cxd6 e4 Ne7 Bd3 d5 e5 d6 f4",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Bd6 was best."
+            }
+        },
+        {
+            "eval": 836
+        },
+        {
+            "eval": 882
+        },
+        {
+            "eval": 950
+        },
+        {
+            "eval": 947
+        },
+        {
+            "eval": 813
+        },
+        {
+            "eval": 1086
+        },
+        {
+            "eval": 1119
+        },
+        {
+            "eval": 1115
+        },
+        {
+            "eval": 1142
+        },
+        {
+            "eval": 1193
+        },
+        {
+            "eval": 1195
+        },
+        {
+            "eval": 1850
+        },
+        {
+            "eval": 1838
+        },
+        {
+            "eval": 1845
+        },
+        {
+            "eval": 1843
+        },
+        {
+            "eval": 2019
+        },
+        {
+            "eval": 1764
+        },
+        {
+            "eval": 1892
+        },
+        {
+            "eval": 1761
+        },
+        {
+            "eval": 1961
+        },
+        {
+            "eval": 1876
+        },
+        {
+            "eval": 2185
+        },
+        {
+            "eval": 2176
+        },
+        {
+            "eval": 2423
+        },
+        {
+            "eval": 2426
+        },
+        {
+            "eval": 2500
+        },
+        {
+            "eval": 2584
+        },
+        {
+            "mate": 1,
+            "best": "b7c6",
+            "variation": "Bc6 Ne5",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Checkmate is now unavoidable. Bc6 was best."
+            }
+        },
+        {
+            "eval": 2737,
+            "best": "b3e6",
+            "variation": "Qxe6#",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Lost forced checkmate sequence. Qxe6# was best."
+            }
+        },
+        {
+            "mate": 2,
+            "best": "b7d5",
+            "variation": "Bd5 Bxd7+",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Checkmate is now unavoidable. Bd5 was best."
+            }
+        },
+        {
+            "mate": 1
+        }
+    ],
+    "clock": {
+        "initial": 900,
+        "increment": 10,
+        "totalTime": 1300
+    }
+}

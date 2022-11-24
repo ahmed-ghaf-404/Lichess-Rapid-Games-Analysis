@@ -1,0 +1,112 @@
+{
+    "id": "firE85jS",
+    "rated": true,
+    "variant": "standard",
+    "speed": "rapid",
+    "perf": "rapid",
+    "createdAt": "2022-06-20 09:31:12.814000+00:00",
+    "lastMoveAt": "2022-06-20 09:36:10.607000+00:00",
+    "status": "resign",
+    "players": {
+        "white": {
+            "user": {
+                "name": "LevJSM",
+                "id": "levjsm"
+            },
+            "rating": 1534,
+            "ratingDiff": 6,
+            "analysis": {
+                "inaccuracy": 0,
+                "mistake": 0,
+                "blunder": 0,
+                "acpl": 30
+            }
+        },
+        "black": {
+            "user": {
+                "name": "Zakhar_3axap",
+                "id": "zakhar_3axap"
+            },
+            "rating": 1481,
+            "ratingDiff": -5,
+            "analysis": {
+                "inaccuracy": 1,
+                "mistake": 0,
+                "blunder": 1,
+                "acpl": 171
+            }
+        }
+    },
+    "winner": "white",
+    "opening": {
+        "eco": "C24",
+        "name": "Bishop's Opening: Berlin Defense",
+        "ply": 4
+    },
+    "moves": "e4 e5 Bc4 Nf6 d3 Bc5 Bg5 O-O Nc3 Nc6 Nd5 Ng4 Bxd8 Bxf2+ Kd2",
+    "analysis": [
+        {
+            "eval": 33
+        },
+        {
+            "eval": 12
+        },
+        {
+            "eval": 9
+        },
+        {
+            "eval": 4
+        },
+        {
+            "eval": 0
+        },
+        {
+            "eval": 19
+        },
+        {
+            "eval": 13
+        },
+        {
+            "eval": 7
+        },
+        {
+            "eval": -12
+        },
+        {
+            "eval": 60,
+            "best": "h7h6",
+            "variation": "h6 Bh4 c6 a3 d6 Nge2 a5 O-O b5 Bb3",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. h6 was best."
+            }
+        },
+        {
+            "eval": 9
+        },
+        {
+            "eval": 995,
+            "best": "c5e7",
+            "variation": "Be7 Bxf6 Bxf6 Nf3 d6 a4 Nb8 O-O c6 Ne3",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Be7 was best."
+            }
+        },
+        {
+            "eval": 879
+        },
+        {
+            "eval": 1018
+        },
+        {
+            "eval": 956
+        }
+    ],
+    "tournament": "cgfgdvlA",
+    "clock": {
+        "initial": 600,
+        "increment": 0,
+        "totalTime": 600
+    }
+}

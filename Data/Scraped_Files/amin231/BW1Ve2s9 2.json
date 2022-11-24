@@ -1,0 +1,129 @@
+{
+    "id": "BW1Ve2s9",
+    "rated": true,
+    "variant": "standard",
+    "speed": "rapid",
+    "perf": "rapid",
+    "createdAt": "2022-08-14 08:40:54.110000+00:00",
+    "lastMoveAt": "2022-08-14 08:43:11.531000+00:00",
+    "status": "resign",
+    "players": {
+        "white": {
+            "user": {
+                "name": "amin231",
+                "id": "amin231"
+            },
+            "rating": 1675,
+            "ratingDiff": 6,
+            "analysis": {
+                "inaccuracy": 1,
+                "mistake": 0,
+                "blunder": 0,
+                "acpl": 17
+            }
+        },
+        "black": {
+            "user": {
+                "name": "leopoldtrof",
+                "id": "leopoldtrof"
+            },
+            "rating": 1710,
+            "ratingDiff": -6,
+            "analysis": {
+                "inaccuracy": 0,
+                "mistake": 0,
+                "blunder": 2,
+                "acpl": 129
+            }
+        }
+    },
+    "winner": "white",
+    "opening": {
+        "eco": "B15",
+        "name": "Caro-Kann Defense",
+        "ply": 5
+    },
+    "moves": "e4 c6 d4 d5 Nc3 c5 dxc5 Nc6 exd5 Nb4 a3 Na6 Bb5+ Bd7 c6 bxc6 dxc6 Bc8 c7+",
+    "analysis": [
+        {
+            "eval": 33
+        },
+        {
+            "eval": 56
+        },
+        {
+            "eval": 41
+        },
+        {
+            "eval": 28
+        },
+        {
+            "eval": 26
+        },
+        {
+            "eval": 230,
+            "best": "d5e4",
+            "variation": "dxe4 Nxe4 Bf5 Ng3 Bg6 Nf3 Nd7 Bf4 Ngf6 h4",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. dxe4 was best."
+            }
+        },
+        {
+            "eval": 130,
+            "best": "e4d5",
+            "variation": "exd5 cxd4 Qxd4 Nf6 Bg5 g6 Bb5+ Bd7 Bxf6 exf6",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. exd5 was best."
+            }
+        },
+        {
+            "eval": 746,
+            "best": "d5d4",
+            "variation": "d4 Bc4 Nc6 Na4 Qa5+ c3 dxc3 Nxc3 e6 Nf3",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. d4 was best."
+            }
+        },
+        {
+            "eval": 727
+        },
+        {
+            "eval": 915
+        },
+        {
+            "eval": 883
+        },
+        {
+            "eval": 900
+        },
+        {
+            "eval": 899
+        },
+        {
+            "eval": 876
+        },
+        {
+            "eval": 889
+        },
+        {
+            "eval": 1140
+        },
+        {
+            "eval": 1115
+        },
+        {
+            "eval": 1371
+        },
+        {
+            "eval": 1377
+        }
+    ],
+    "clock": {
+        "initial": 600,
+        "increment": 0,
+        "totalTime": 600
+    }
+}

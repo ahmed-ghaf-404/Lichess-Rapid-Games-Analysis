@@ -1,0 +1,156 @@
+{
+    "id": "FMkjG9kf",
+    "rated": true,
+    "variant": "standard",
+    "speed": "rapid",
+    "perf": "rapid",
+    "createdAt": "2022-06-11 15:17:38.838000+00:00",
+    "lastMoveAt": "2022-06-11 15:28:23.536000+00:00",
+    "status": "mate",
+    "players": {
+        "white": {
+            "user": {
+                "name": "lluckk88",
+                "id": "lluckk88"
+            },
+            "rating": 1794,
+            "ratingDiff": 10,
+            "analysis": {
+                "inaccuracy": 0,
+                "mistake": 0,
+                "blunder": 1,
+                "acpl": 44
+            }
+        },
+        "black": {
+            "user": {
+                "name": "mohammadrezaA1998",
+                "id": "mohammadrezaa1998"
+            },
+            "rating": 1784,
+            "ratingDiff": -5,
+            "analysis": {
+                "inaccuracy": 1,
+                "mistake": 1,
+                "blunder": 2,
+                "acpl": 127
+            }
+        }
+    },
+    "winner": "white",
+    "opening": {
+        "eco": "C24",
+        "name": "Bishop's Opening: Ponziani Gambit",
+        "ply": 5
+    },
+    "moves": "e4 e5 Bc4 Nf6 d4 Bd6 dxe5 Bxe5 f4 Nxe4 fxe5 Qh4+ g3 Nxg3 Bxf7+ Kd8 hxg3 Qxg3+ Kf1 Rf8 Qh5 g6 Bg5+ Qxg5 Qxg5#",
+    "analysis": [
+        {
+            "eval": 33
+        },
+        {
+            "eval": 12
+        },
+        {
+            "eval": 9
+        },
+        {
+            "eval": 4
+        },
+        {
+            "eval": -26
+        },
+        {
+            "eval": 416,
+            "best": "e5d4",
+            "variation": "exd4 Nf3 Bb4+ c3 dxc3 bxc3 d5 exd5 Bd6 O-O",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. exd4 was best."
+            }
+        },
+        {
+            "eval": 365
+        },
+        {
+            "eval": 405
+        },
+        {
+            "eval": 415
+        },
+        {
+            "eval": 636,
+            "best": "e5d6",
+            "variation": "Bd6 e5 Bb4+ c3 Bc5 exf6 O-O fxg7 Re8+ Kd2",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. Bd6 was best."
+            }
+        },
+        {
+            "eval": 251,
+            "best": "d1d5",
+            "variation": "Qd5 Qh4+ g3 Qe7 Qxe4 Bf6 Qxe7+ Kxe7 Kf2 Re8",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Qd5 was best."
+            }
+        },
+        {
+            "eval": 217
+        },
+        {
+            "eval": 229
+        },
+        {
+            "eval": 282
+        },
+        {
+            "eval": 258
+        },
+        {
+            "eval": 744,
+            "best": "e8e7",
+            "variation": "Ke7 Nf3",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Ke7 was best."
+            }
+        },
+        {
+            "eval": 724
+        },
+        {
+            "eval": 723
+        },
+        {
+            "eval": 724
+        },
+        {
+            "eval": 867
+        },
+        {
+            "eval": 856
+        },
+        {
+            "mate": 2,
+            "best": "h7h6",
+            "variation": "h6 Ne2",
+            "judgment": {
+                "name": "Mistake",
+                "comment": "Checkmate is now unavoidable. h6 was best."
+            }
+        },
+        {
+            "mate": 1
+        },
+        {
+            "mate": 1
+        }
+    ],
+    "clock": {
+        "initial": 600,
+        "increment": 5,
+        "totalTime": 800
+    }
+}

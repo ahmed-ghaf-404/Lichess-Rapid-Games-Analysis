@@ -1,0 +1,156 @@
+{
+    "id": "fEE7Rolj",
+    "rated": true,
+    "variant": "standard",
+    "speed": "rapid",
+    "perf": "rapid",
+    "createdAt": "2022-07-06 00:10:06.601000+00:00",
+    "lastMoveAt": "2022-07-06 00:14:55.378000+00:00",
+    "status": "mate",
+    "players": {
+        "white": {
+            "user": {
+                "name": "edobwi",
+                "id": "edobwi"
+            },
+            "rating": 2105,
+            "ratingDiff": 2,
+            "analysis": {
+                "inaccuracy": 0,
+                "mistake": 0,
+                "blunder": 0,
+                "acpl": 5
+            }
+        },
+        "black": {
+            "user": {
+                "name": "Pak_yasakcb",
+                "id": "pak_yasakcb"
+            },
+            "rating": 1885,
+            "ratingDiff": -3,
+            "analysis": {
+                "inaccuracy": 3,
+                "mistake": 1,
+                "blunder": 1,
+                "acpl": 74
+            }
+        }
+    },
+    "winner": "white",
+    "opening": {
+        "eco": "B00",
+        "name": "Nimzowitsch Defense",
+        "ply": 3
+    },
+    "moves": "e4 Nc6 d4 e6 Nf3 Nge7 d5 exd5 exd5 Nb4 Nc3 b6 a3 Na6 d6 Ng6 Bg5 f6 Qe2+ Kf7 Qc4+ Ke8 Qe4+ Kf7 Bc4#",
+    "analysis": [
+        {
+            "eval": 33
+        },
+        {
+            "eval": 64
+        },
+        {
+            "eval": 48
+        },
+        {
+            "eval": 105,
+            "best": "d7d5",
+            "variation": "d5 e5 Bf5 c3 e6 Bd3 Nge7 Ne2 Nb8 O-O",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. d5 was best."
+            }
+        },
+        {
+            "eval": 92
+        },
+        {
+            "eval": 150,
+            "best": "d7d5",
+            "variation": "d5 Nbd2 Nf6 e5 Nd7 Nb3 Be7 c3 O-O Bf4",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. d5 was best."
+            }
+        },
+        {
+            "eval": 164
+        },
+        {
+            "eval": 190
+        },
+        {
+            "eval": 184
+        },
+        {
+            "eval": 251,
+            "best": "c6b8",
+            "variation": "Nb8 Nc3 d6 Bb5+ c6 Ba4 Ng6 Qd4 b5 O-O",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. Nb8 was best."
+            }
+        },
+        {
+            "eval": 253
+        },
+        {
+            "eval": 608,
+            "best": "d7d6",
+            "variation": "d6 a3 Na6 h4 Nc5 h5 Nf5 Bb5+ Bd7 b4 Bxb5 Nxb5 Na4 c4",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. d6 was best."
+            }
+        },
+        {
+            "eval": 680
+        },
+        {
+            "eval": 677
+        },
+        {
+            "eval": 697
+        },
+        {
+            "eval": 725
+        },
+        {
+            "eval": 737
+        },
+        {
+            "eval": 796
+        },
+        {
+            "eval": 793
+        },
+        {
+            "eval": 959
+        },
+        {
+            "eval": 933
+        },
+        {
+            "eval": 949
+        },
+        {
+            "eval": 971
+        },
+        {
+            "mate": 1,
+            "best": "g6e7",
+            "variation": "Ne7 Qxa8 Nc6 Be3 Bxd6 O-O-O Kf7 Bc4+ Kf8 Bb5 Nab8 Bxc6 Nxc6 Nd4",
+            "judgment": {
+                "name": "Mistake",
+                "comment": "Checkmate is now unavoidable. Ne7 was best."
+            }
+        }
+    ],
+    "clock": {
+        "initial": 600,
+        "increment": 0,
+        "totalTime": 600
+    }
+}

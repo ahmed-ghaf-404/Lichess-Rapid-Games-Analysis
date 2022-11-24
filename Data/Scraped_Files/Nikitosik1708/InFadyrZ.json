@@ -1,0 +1,175 @@
+{
+    "id": "InFadyrZ",
+    "rated": true,
+    "variant": "standard",
+    "speed": "rapid",
+    "perf": "rapid",
+    "createdAt": "2022-08-05 17:41:20.891000+00:00",
+    "lastMoveAt": "2022-08-05 17:45:31.849000+00:00",
+    "status": "mate",
+    "players": {
+        "white": {
+            "user": {
+                "name": "Ziryanov_Viacheslav",
+                "id": "ziryanov_viacheslav"
+            },
+            "rating": 2026,
+            "ratingDiff": 4,
+            "analysis": {
+                "inaccuracy": 3,
+                "mistake": 0,
+                "blunder": 0,
+                "acpl": 35
+            }
+        },
+        "black": {
+            "user": {
+                "name": "Nikitosik1708",
+                "id": "nikitosik1708"
+            },
+            "rating": 1743,
+            "ratingDiff": -4,
+            "analysis": {
+                "inaccuracy": 2,
+                "mistake": 1,
+                "blunder": 1,
+                "acpl": 111
+            }
+        }
+    },
+    "winner": "white",
+    "opening": {
+        "eco": "C31",
+        "name": "King's Gambit Declined: Falkbeer Countergambit Accepted",
+        "ply": 5
+    },
+    "moves": "e4 e5 f4 d5 exd5 Qxd5 Nc3 Qd4 fxe5 Qxe5+ Qe2 Qxe2+ Bxe2 Nc6 Nf3 Bd7 d4 O-O-O Be3 Bb4 O-O-O Nf6 d5 Ne7 Bxa7 b6 Ba6#",
+    "analysis": [
+        {
+            "eval": 33
+        },
+        {
+            "eval": 12
+        },
+        {
+            "eval": -55,
+            "best": "g1f3",
+            "variation": "Nf3 Nc6 Bb5 Nf6 O-O Nxe4 Re1 Nd6 Nxe5 Be7",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. Nf3 was best."
+            }
+        },
+        {
+            "eval": -35
+        },
+        {
+            "eval": -39
+        },
+        {
+            "eval": 37,
+            "best": "e5f4",
+            "variation": "exf4 Nf3 Nf6 c4 c6 d4 Bb4+ Nc3 cxd5 Bd3",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. exf4 was best."
+            }
+        },
+        {
+            "eval": 47
+        },
+        {
+            "eval": 180,
+            "best": "d5d6",
+            "variation": "Qd6 fxe5 Qxe5+ Be2 Nc6 Nf3 Qa5 d4 Nf6 d5",
+            "judgment": {
+                "name": "Mistake",
+                "comment": "Mistake. Qd6 was best."
+            }
+        },
+        {
+            "eval": 66,
+            "best": "g1f3",
+            "variation": "Nf3 Qxf4 d4 Qg4 Bc4 e4 Bxf7+ Kd8 Qe2 Nf6",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. Nf3 was best."
+            }
+        },
+        {
+            "eval": 64
+        },
+        {
+            "eval": -9,
+            "best": "f1e2",
+            "variation": "Be2 Nc6 Nf3 Qa5 d4 Nf6 d5 Ne7 Bb5+ c6",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. Be2 was best."
+            }
+        },
+        {
+            "eval": 21
+        },
+        {
+            "eval": 0
+        },
+        {
+            "eval": 52
+        },
+        {
+            "eval": 19
+        },
+        {
+            "eval": 37
+        },
+        {
+            "eval": 8
+        },
+        {
+            "eval": 3
+        },
+        {
+            "eval": -40
+        },
+        {
+            "eval": -42
+        },
+        {
+            "eval": -69
+        },
+        {
+            "eval": 17,
+            "best": "d8e8",
+            "variation": "Re8 Ne5 Bxc3 bxc3 Nf6 Bc4 Nxe5 dxe5 Ng4 Bd4 Nxe5 Bxe5 Rxe5 Bxf7",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. Re8 was best."
+            }
+        },
+        {
+            "eval": -29
+        },
+        {
+            "eval": -26
+        },
+        {
+            "eval": -21
+        },
+        {
+            "mate": 1,
+            "best": "b4c3",
+            "variation": "Bxc3 bxc3 Nfxd5 Bc4 Nxc3 Rd3 Ne2+ Kb2 Nf4 Ra3 Nc6 Bf2 Kb8 Bxf7",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Checkmate is now unavoidable. Bxc3 was best."
+            }
+        }
+    ],
+    "swiss": "E2MB9BtA",
+    "clock": {
+        "initial": 600,
+        "increment": 2,
+        "totalTime": 680
+    }
+}

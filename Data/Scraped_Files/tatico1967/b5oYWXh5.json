@@ -1,0 +1,207 @@
+{
+    "id": "b5oYWXh5",
+    "rated": true,
+    "variant": "standard",
+    "speed": "rapid",
+    "perf": "rapid",
+    "createdAt": "2020-07-25 21:26:24.553000+00:00",
+    "lastMoveAt": "2020-07-25 21:28:38.110000+00:00",
+    "status": "resign",
+    "players": {
+        "white": {
+            "user": {
+                "name": "DejanRajcevski",
+                "id": "dejanrajcevski"
+            },
+            "rating": 2166,
+            "ratingDiff": 6,
+            "analysis": {
+                "inaccuracy": 5,
+                "mistake": 0,
+                "blunder": 1,
+                "acpl": 48
+            }
+        },
+        "black": {
+            "user": {
+                "name": "tatico1967",
+                "id": "tatico1967"
+            },
+            "rating": 2142,
+            "ratingDiff": -6,
+            "analysis": {
+                "inaccuracy": 0,
+                "mistake": 1,
+                "blunder": 1,
+                "acpl": 47
+            }
+        }
+    },
+    "winner": "white",
+    "opening": {
+        "eco": "C01",
+        "name": "French Defense: Exchange Variation",
+        "ply": 5
+    },
+    "moves": "e4 e6 d4 d5 exd5 exd5 Bf4 Bd6 Qd2 c6 f3 Bf5 Nc3 Qc7 Bxd6 Qxd6 O-O-O Nd7 Nge2 O-O-O Ng3 Bg6 Bd3 Bxd3 Qxd3 g6 Rde1 Ne7 Re2 Rhe8 Rhe1 f5 Kb1 Nf6 Re6",
+    "analysis": [
+        {
+            "eval": 0
+        },
+        {
+            "eval": 30
+        },
+        {
+            "eval": 8
+        },
+        {
+            "eval": 20
+        },
+        {
+            "eval": 17
+        },
+        {
+            "eval": 5
+        },
+        {
+            "eval": 0
+        },
+        {
+            "eval": 9
+        },
+        {
+            "eval": -9
+        },
+        {
+            "eval": 13
+        },
+        {
+            "eval": -54,
+            "best": "f1d3",
+            "variation": "Bd3 Nf6 Nf3 O-O O-O Ne4 Qe3 Re8 Nbd2 Bf5 Rae1 Na6 Ne5 Nb4",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. Bd3 was best."
+            }
+        },
+        {
+            "eval": -5
+        },
+        {
+            "eval": -86,
+            "best": "g1e2",
+            "variation": "Ne2 Ne7 Nbc3 h5 O-O-O Na6 Be5 Bxe5 dxe5 Nc5 Nd4 Qc7 Nxf5 Nxf5",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. Ne2 was best."
+            }
+        },
+        {
+            "eval": 34,
+            "best": "d6f4",
+            "variation": "Bxf4 Qxf4",
+            "judgment": {
+                "name": "Mistake",
+                "comment": "Mistake. Bxf4 was best."
+            }
+        },
+        {
+            "eval": 48
+        },
+        {
+            "eval": 52
+        },
+        {
+            "eval": 34
+        },
+        {
+            "eval": 49
+        },
+        {
+            "eval": 9
+        },
+        {
+            "eval": 27
+        },
+        {
+            "eval": -33,
+            "best": "g2g4",
+            "variation": "g4 Bg6",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. g4 was best."
+            }
+        },
+        {
+            "eval": -5
+        },
+        {
+            "eval": -64,
+            "best": "g3e2",
+            "variation": "Nge2 Ne7",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. Nge2 was best."
+            }
+        },
+        {
+            "eval": -59
+        },
+        {
+            "eval": -57
+        },
+        {
+            "eval": -28
+        },
+        {
+            "eval": -63
+        },
+        {
+            "eval": -36
+        },
+        {
+            "eval": -51
+        },
+        {
+            "eval": -52
+        },
+        {
+            "eval": -28
+        },
+        {
+            "eval": 404,
+            "best": "d7f8",
+            "variation": "Nf8 Na4 Ne6 Re5 b6 f4 Kb8 Nc3 c5 dxc5 bxc5 f5 gxf5 Qb5+",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Nf8 was best."
+            }
+        },
+        {
+            "eval": 35,
+            "best": "e2e6",
+            "variation": "Re6 Qf4+ Qd2 Qh4 Nxf5 Nxf5 Rxe8 Qxd4 Qxd4 Nxd4 R1e7 Rxe8 Rxe8+ Kc7",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Re6 was best."
+            }
+        },
+        {
+            "eval": 39
+        },
+        {
+            "eval": -22,
+            "best": "d3d2",
+            "variation": "Qd2 Neg8 Re5 Re7 Rxe7 Nxe7 Nce2 Re8 a4 Neg8 Nc1 Rxe1 Qxe1 b6",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. Qd2 was best."
+            }
+        }
+    ],
+    "clock": {
+        "initial": 600,
+        "increment": 0,
+        "totalTime": 600
+    }
+}

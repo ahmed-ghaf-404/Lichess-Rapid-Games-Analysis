@@ -1,0 +1,154 @@
+{
+    "id": "7aDo2e8g",
+    "rated": true,
+    "variant": "standard",
+    "speed": "rapid",
+    "perf": "rapid",
+    "createdAt": "2022-08-06 14:07:50.806000+00:00",
+    "lastMoveAt": "2022-08-06 14:10:19.769000+00:00",
+    "status": "mate",
+    "players": {
+        "white": {
+            "user": {
+                "name": "BindhuDileep",
+                "id": "bindhudileep"
+            },
+            "rating": 805,
+            "ratingDiff": -2,
+            "analysis": {
+                "inaccuracy": 1,
+                "mistake": 0,
+                "blunder": 3,
+                "acpl": 195
+            }
+        },
+        "black": {
+            "user": {
+                "name": "Shravan-ChessPlayer",
+                "id": "shravan-chessplayer"
+            },
+            "rating": 1389,
+            "ratingDiff": 1,
+            "analysis": {
+                "inaccuracy": 3,
+                "mistake": 1,
+                "blunder": 1,
+                "acpl": 80
+            }
+        }
+    },
+    "winner": "black",
+    "opening": {
+        "eco": "A00",
+        "name": "Anderssen's Opening",
+        "ply": 1
+    },
+    "moves": "a3 Nc6 h3 e6 Nc3 Bc5 Nf3 Qf6 Rh2 Ne5 Ra2 Nxf3+ gxf3 Qh4 Rh1 Bxf2#",
+    "analysis": [
+        {
+            "eval": 0
+        },
+        {
+            "eval": 40
+        },
+        {
+            "eval": -18,
+            "best": "d2d4",
+            "variation": "d4 d5 Nf3 Bf5 c4 e6 Nc3 Nf6 Bg5 Be7",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. d4 was best."
+            }
+        },
+        {
+            "eval": 55,
+            "best": "e7e5",
+            "variation": "e5 b4 d5 Bb2 a6 d3 Nf6 Nf3 Bd6 Nbd2",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. e5 was best."
+            }
+        },
+        {
+            "eval": 8
+        },
+        {
+            "eval": 87,
+            "best": "d7d5",
+            "variation": "d5 d4",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. d5 was best."
+            }
+        },
+        {
+            "eval": 57
+        },
+        {
+            "eval": 181,
+            "best": "c6d4",
+            "variation": "Nd4",
+            "judgment": {
+                "name": "Mistake",
+                "comment": "Mistake. Nd4 was best."
+            }
+        },
+        {
+            "eval": -33,
+            "best": "c3e4",
+            "variation": "Ne4",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Ne4 was best."
+            }
+        },
+        {
+            "eval": 39,
+            "best": "d7d5",
+            "variation": "d5 e3",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. d5 was best."
+            }
+        },
+        {
+            "eval": -164,
+            "best": "c3e4",
+            "variation": "Ne4 Nxf3+ gxf3 Qe5 Rg2 Bb6 c3 d5 d4 Qh5 Ng3 Qh4 e4 Ne7",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Ne4 was best."
+            }
+        },
+        {
+            "eval": -179
+        },
+        {
+            "eval": -180
+        },
+        {
+            "eval": -5,
+            "best": "d7d5",
+            "variation": "d5 e3 Ne7 d4 Bd6 f4 Bd7 Nb5 Bxb5 Bxb5+ c6 Bd3 Nf5 Rg2",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. d5 was best."
+            }
+        },
+        {
+            "mate": -1,
+            "best": "e2e4",
+            "variation": "e4 e5 Nd5 Bd6 Rg2 Ne7 Rg4 Qh5 Rxg7 Nxd5 exd5 Be7 d3 d6",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Checkmate is now unavoidable. e4 was best."
+            }
+        }
+    ],
+    "swiss": "Z25Efyf0",
+    "clock": {
+        "initial": 600,
+        "increment": 3,
+        "totalTime": 720
+    }
+}

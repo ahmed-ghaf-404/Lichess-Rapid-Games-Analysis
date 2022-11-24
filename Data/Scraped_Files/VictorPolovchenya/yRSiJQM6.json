@@ -1,0 +1,184 @@
+{
+    "id": "yRSiJQM6",
+    "rated": true,
+    "variant": "standard",
+    "speed": "rapid",
+    "perf": "rapid",
+    "createdAt": "2022-08-25 17:44:44.726000+00:00",
+    "lastMoveAt": "2022-08-25 17:46:26.062000+00:00",
+    "status": "resign",
+    "players": {
+        "white": {
+            "user": {
+                "name": "VictorPolovchenya",
+                "id": "victorpolovchenya"
+            },
+            "rating": 2108,
+            "ratingDiff": 8,
+            "analysis": {
+                "inaccuracy": 0,
+                "mistake": 0,
+                "blunder": 0,
+                "acpl": 15
+            }
+        },
+        "black": {
+            "user": {
+                "name": "clorx",
+                "id": "clorx"
+            },
+            "rating": 2055,
+            "ratingDiff": -7,
+            "analysis": {
+                "inaccuracy": 3,
+                "mistake": 1,
+                "blunder": 2,
+                "acpl": 78
+            }
+        }
+    },
+    "winner": "white",
+    "opening": {
+        "eco": "B90",
+        "name": "Sicilian Defense: Najdorf Variation, English Attack",
+        "ply": 11
+    },
+    "moves": "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3 a6 Be3 g6 f3 Bg7 Qd2 O-O O-O-O Nc6 h4 h5 g4 hxg4 h5 gxh5 Bh6 Nxd4 Bxg7 Kxg7 Qg5+ Kh7 Nd5",
+    "analysis": [
+        {
+            "eval": 33
+        },
+        {
+            "eval": 32
+        },
+        {
+            "eval": 0
+        },
+        {
+            "eval": 0
+        },
+        {
+            "eval": 30
+        },
+        {
+            "eval": 13
+        },
+        {
+            "eval": 27
+        },
+        {
+            "eval": 31
+        },
+        {
+            "eval": 18
+        },
+        {
+            "eval": 0
+        },
+        {
+            "eval": 24
+        },
+        {
+            "eval": 87,
+            "best": "e7e5",
+            "variation": "e5 Nb3 Be6 h3 Nbd7 g4 h6 Qd3 Be7 O-O-O",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. e5 was best."
+            }
+        },
+        {
+            "eval": 87
+        },
+        {
+            "eval": 77
+        },
+        {
+            "eval": 91
+        },
+        {
+            "eval": 149,
+            "best": "h7h5",
+            "variation": "h5 Be2",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. h5 was best."
+            }
+        },
+        {
+            "eval": 128
+        },
+        {
+            "eval": 167
+        },
+        {
+            "eval": 153
+        },
+        {
+            "eval": 184
+        },
+        {
+            "eval": 105
+        },
+        {
+            "eval": 127
+        },
+        {
+            "eval": 105
+        },
+        {
+            "eval": 417,
+            "best": "f6h5",
+            "variation": "Nxh5 Nf5",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Nxh5 was best."
+            }
+        },
+        {
+            "eval": 360
+        },
+        {
+            "eval": 980,
+            "best": "d8a5",
+            "variation": "Qa5 Nb3",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Qa5 was best."
+            }
+        },
+        {
+            "eval": 973
+        },
+        {
+            "mate": 8,
+            "best": "d4e6",
+            "variation": "Ne6 Bxf6 exf6 Qh6 Ng7 Nd5 f5 Nf6+ Qxf6 Qxf6 Re8 Rxd6 fxe4 fxe4",
+            "judgment": {
+                "name": "Mistake",
+                "comment": "Checkmate is now unavoidable. Ne6 was best."
+            }
+        },
+        {
+            "eval": 1084
+        },
+        {
+            "mate": 5,
+            "best": "g7h8",
+            "variation": "Kh8 Qh6+",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Checkmate is now unavoidable. Kh8 was best."
+            }
+        },
+        {
+            "mate": 4
+        }
+    ],
+    "tournament": "E5AhyzqN",
+    "clock": {
+        "initial": 600,
+        "increment": 0,
+        "totalTime": 600
+    }
+}

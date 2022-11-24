@@ -1,0 +1,253 @@
+{
+    "id": "wHaJmPwo",
+    "rated": true,
+    "variant": "fromPosition",
+    "speed": "rapid",
+    "perf": "rapid",
+    "createdAt": "2020-05-02 21:02:03.172000+00:00",
+    "lastMoveAt": "2020-05-02 21:10:12.780000+00:00",
+    "status": "resign",
+    "players": {
+        "white": {
+            "user": {
+                "name": "delfino10",
+                "id": "delfino10"
+            },
+            "rating": 1871,
+            "ratingDiff": 12,
+            "analysis": {
+                "inaccuracy": 0,
+                "mistake": 0,
+                "blunder": 1,
+                "acpl": 37
+            }
+        },
+        "black": {
+            "user": {
+                "name": "GisStar",
+                "id": "gisstar"
+            },
+            "rating": 1785,
+            "ratingDiff": -5,
+            "analysis": {
+                "inaccuracy": 3,
+                "mistake": 2,
+                "blunder": 2,
+                "acpl": 76
+            }
+        }
+    },
+    "initialFen": "rnbqk2r/ppp1ppbp/3p1np1/8/2PPP3/2N2P2/PP4PP/R1BQKBNR b KQkq - 1 1",
+    "winner": "white",
+    "moves": "O-O Bd3 Nc6 Be3 e5 d5 Nd4 Nge2 Nh5 Qd2 Nxe2 Nxe2 Nf4 Nxf4 exf4 Bxf4 Qf6 O-O-O a5 Bg5 Qd4 Be3 Qe5 Bh6 a4 a3 Bd7 h4 Qh5 Bxg7 Kxg7 g4 Qe5 h5 b5 hxg6 hxg6 Qh6+ Kf6 f4 Qd4 Qg5+ Kg7 f5 bxc4 f6+ Qxf6 Rh7+ Kg8 Qxf6",
+    "analysis": [
+        {
+            "eval": 51
+        },
+        {
+            "eval": -3,
+            "best": "g1e2",
+            "variation": "Nge2 c5 Be3 Nc6 d5 Ne5 Ng3 e6 Be2 exd5"
+        },
+        {
+            "eval": 28
+        },
+        {
+            "eval": 25
+        },
+        {
+            "eval": 58
+        },
+        {
+            "eval": 53
+        },
+        {
+            "eval": 39
+        },
+        {
+            "eval": 50
+        },
+        {
+            "eval": 51
+        },
+        {
+            "eval": 57
+        },
+        {
+            "eval": 82
+        },
+        {
+            "eval": 86
+        },
+        {
+            "eval": 156,
+            "best": "f7f5",
+            "variation": "f5",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. f5 was best."
+            }
+        },
+        {
+            "eval": 128
+        },
+        {
+            "eval": 139
+        },
+        {
+            "eval": 132
+        },
+        {
+            "eval": 208,
+            "best": "f7f5",
+            "variation": "f5",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. f5 was best."
+            }
+        },
+        {
+            "eval": 188
+        },
+        {
+            "eval": 242
+        },
+        {
+            "eval": 200
+        },
+        {
+            "eval": 189
+        },
+        {
+            "eval": 177
+        },
+        {
+            "eval": 223
+        },
+        {
+            "eval": 183
+        },
+        {
+            "eval": 173
+        },
+        {
+            "eval": 177
+        },
+        {
+            "eval": 180
+        },
+        {
+            "eval": 169
+        },
+        {
+            "eval": 306,
+            "best": "g7h6",
+            "variation": "Bxh6",
+            "judgment": {
+                "name": "Mistake",
+                "comment": "Mistake. Bxh6 was best."
+            }
+        },
+        {
+            "eval": 319
+        },
+        {
+            "eval": 289
+        },
+        {
+            "eval": 304
+        },
+        {
+            "eval": 302
+        },
+        {
+            "eval": 235,
+            "best": "f3f4",
+            "variation": "f4 Qd4"
+        },
+        {
+            "eval": 387,
+            "best": "g6g5",
+            "variation": "g5 h6+ Kh8 Kb1 Rab8 Rh5 f6 Rh2 b5 cxb5 Bxb5 Bxb5 Rxb5 Rc1",
+            "judgment": {
+                "name": "Mistake",
+                "comment": "Mistake. g5 was best."
+            }
+        },
+        {
+            "eval": 392
+        },
+        {
+            "eval": 1840,
+            "best": "f7g6",
+            "variation": "fxg6 Qh6+ Kf7 cxb5 Ke7 Qxh7+ Kd8 Kb1 Rb8 f4 Rxf4 Rc1 Rf3 Rh6",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. fxg6 was best."
+            }
+        },
+        {
+            "eval": 1793
+        },
+        {
+            "eval": 1714
+        },
+        {
+            "eval": 1599
+        },
+        {
+            "mate": 14,
+            "best": "e5b2",
+            "variation": "Qxb2+ Kxb2",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Checkmate is now unavoidable. Qxb2+ was best."
+            }
+        },
+        {
+            "mate": 13
+        },
+        {
+            "eval": 2707
+        },
+        {
+            "eval": 373,
+            "best": "e4e5",
+            "variation": "e5 dxe5 fxe5 f5 gxf5 Ra6 e6 Rxf5 Bxf5 Rxe6 Rxd4 Re1+ Rxe1 Bxf5",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. e5 was best."
+            }
+        },
+        {
+            "mate": 4,
+            "best": "f8h8",
+            "variation": "Rh8",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Checkmate is now unavoidable. Rh8 was best."
+            }
+        },
+        {
+            "mate": 3
+        },
+        {
+            "mate": 2
+        },
+        {
+            "mate": 3
+        },
+        {
+            "mate": 3
+        },
+        {
+            "mate": 2
+        }
+    ],
+    "tournament": "ADUowa0l",
+    "clock": {
+        "initial": 600,
+        "increment": 0,
+        "totalTime": 600
+    }
+}

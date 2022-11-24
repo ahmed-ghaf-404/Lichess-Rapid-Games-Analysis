@@ -1,0 +1,204 @@
+{
+    "id": "ndxmrDbg",
+    "rated": true,
+    "variant": "standard",
+    "speed": "rapid",
+    "perf": "rapid",
+    "createdAt": "2022-02-01 18:56:01.291000+00:00",
+    "lastMoveAt": "2022-02-01 19:07:38.593000+00:00",
+    "status": "mate",
+    "players": {
+        "white": {
+            "user": {
+                "name": "bmaas",
+                "id": "bmaas"
+            },
+            "rating": 1989,
+            "ratingDiff": 11,
+            "analysis": {
+                "inaccuracy": 1,
+                "mistake": 0,
+                "blunder": 0,
+                "acpl": 24
+            }
+        },
+        "black": {
+            "user": {
+                "name": "Shirvan40",
+                "id": "shirvan40"
+            },
+            "rating": 2030,
+            "ratingDiff": -6,
+            "analysis": {
+                "inaccuracy": 3,
+                "mistake": 1,
+                "blunder": 2,
+                "acpl": 78
+            }
+        }
+    },
+    "winner": "white",
+    "opening": {
+        "eco": "B30",
+        "name": "Sicilian Defense: Old Sicilian",
+        "ply": 4
+    },
+    "moves": "e4 c5 Nf3 Nc6 c3 e5 d4 cxd4 cxd4 exd4 Nxd4 Nf6 Nc3 Be7 Bc4 O-O O-O Ne5 Bb3 h6 f4 Ng6 e5 Ne8 Qg4 d5 Qg3 Bh4 Qd3 Nc7 Nf3 Nxf4 Bxf4 Be6 Bc2 Be7 Qh7#",
+    "analysis": [
+        {
+            "eval": 25
+        },
+        {
+            "eval": 32
+        },
+        {
+            "eval": 0
+        },
+        {
+            "eval": 0
+        },
+        {
+            "eval": 2
+        },
+        {
+            "eval": 29
+        },
+        {
+            "eval": 0
+        },
+        {
+            "eval": 8
+        },
+        {
+            "eval": 0
+        },
+        {
+            "eval": 12
+        },
+        {
+            "eval": 12
+        },
+        {
+            "eval": 22
+        },
+        {
+            "eval": 10
+        },
+        {
+            "eval": 50
+        },
+        {
+            "eval": 74
+        },
+        {
+            "eval": 50
+        },
+        {
+            "eval": 8
+        },
+        {
+            "eval": 117,
+            "best": "f6e4",
+            "variation": "Nxe4 Nxe4",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. Nxe4 was best."
+            }
+        },
+        {
+            "eval": 122
+        },
+        {
+            "eval": 183,
+            "best": "e7c5",
+            "variation": "Bc5 Kh1 d6 f3 Bd7 Bg5 h6 Bh4 Ng6 Bg3 Qb6 Bf2 a6 Qd2",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. Bc5 was best."
+            }
+        },
+        {
+            "eval": 181
+        },
+        {
+            "eval": 496,
+            "best": "e5c6",
+            "variation": "Nc6 Be3",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Nc6 was best."
+            }
+        },
+        {
+            "eval": 511
+        },
+        {
+            "eval": 484
+        },
+        {
+            "eval": 317,
+            "best": "c1e3",
+            "variation": "Be3 Bc5",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. Be3 was best."
+            }
+        },
+        {
+            "eval": 349
+        },
+        {
+            "eval": 328
+        },
+        {
+            "eval": 437,
+            "best": "e7c5",
+            "variation": "Bc5 Be3 Ne7 Rad1 Nc7 Qf2 b6 h3 Rb8 g4 Ne6 f5 Ba6 Rfe1",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. Bc5 was best."
+            }
+        },
+        {
+            "eval": 357
+        },
+        {
+            "eval": 358
+        },
+        {
+            "eval": 345
+        },
+        {
+            "eval": 920,
+            "best": "b7b6",
+            "variation": "b6",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. b6 was best."
+            }
+        },
+        {
+            "eval": 927
+        },
+        {
+            "eval": 968
+        },
+        {
+            "eval": 946
+        },
+        {
+            "mate": 1,
+            "best": "g7g6",
+            "variation": "g6 Bxh6 Bf5 Qe2 d4 Ne4 Nd5 Kh1 Rc8 Bb3 Ne3 Nd6 Rc6 Nxh4",
+            "judgment": {
+                "name": "Mistake",
+                "comment": "Checkmate is now unavoidable. g6 was best."
+            }
+        }
+    ],
+    "clock": {
+        "initial": 600,
+        "increment": 5,
+        "totalTime": 800
+    }
+}

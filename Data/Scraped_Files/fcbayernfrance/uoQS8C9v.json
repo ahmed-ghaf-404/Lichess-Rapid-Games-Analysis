@@ -1,0 +1,190 @@
+{
+    "id": "uoQS8C9v",
+    "rated": true,
+    "variant": "standard",
+    "speed": "rapid",
+    "perf": "rapid",
+    "createdAt": "2022-08-10 16:44:27.347000+00:00",
+    "lastMoveAt": "2022-08-10 16:46:42.761000+00:00",
+    "status": "resign",
+    "players": {
+        "white": {
+            "user": {
+                "name": "fcbayernfrance",
+                "id": "fcbayernfrance"
+            },
+            "rating": 1258,
+            "ratingDiff": 9,
+            "analysis": {
+                "inaccuracy": 1,
+                "mistake": 0,
+                "blunder": 2,
+                "acpl": 92
+            }
+        },
+        "black": {
+            "user": {
+                "name": "RR_005",
+                "id": "rr_005"
+            },
+            "rating": 1130,
+            "ratingDiff": -4,
+            "analysis": {
+                "inaccuracy": 2,
+                "mistake": 0,
+                "blunder": 4,
+                "acpl": 174
+            }
+        }
+    },
+    "winner": "white",
+    "opening": {
+        "eco": "C61",
+        "name": "Ruy Lopez: Bird Variation",
+        "ply": 6
+    },
+    "moves": "e4 e5 Nf3 Nc6 Bb5 Nd4 Nxd4 exd4 O-O Bd6 f4 g5 e5 Bc5 f5 f6 Qh5+ Kf8 Bc4 d3+ Kh1 Qe7 Nc3 fxe5 Nd5 Qf6 Nxf6",
+    "analysis": [
+        {
+            "eval": 33
+        },
+        {
+            "eval": 12
+        },
+        {
+            "eval": 19
+        },
+        {
+            "eval": 32
+        },
+        {
+            "eval": 25
+        },
+        {
+            "eval": 84,
+            "best": "g8f6",
+            "variation": "Nf6 d3 Bc5 c3 O-O O-O d5 Nbd2 dxe4 dxe4",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. Nf6 was best."
+            }
+        },
+        {
+            "eval": 64
+        },
+        {
+            "eval": 63
+        },
+        {
+            "eval": 67
+        },
+        {
+            "eval": 87
+        },
+        {
+            "eval": 40
+        },
+        {
+            "eval": 496,
+            "best": "c7c6",
+            "variation": "c6 Be2 Bc7 d3 d5 Nd2 Nh6 Nb3 O-O Bf3",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. c6 was best."
+            }
+        },
+        {
+            "eval": 506
+        },
+        {
+            "eval": 524
+        },
+        {
+            "eval": 88,
+            "best": "d1h5",
+            "variation": "Qh5",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Qh5 was best."
+            }
+        },
+        {
+            "eval": 322,
+            "best": "c7c6",
+            "variation": "c6 Bc4 d5 Bd3 h5 b3 Qe7 f6 Qf8 b4 Bb6 a4 Bc7 Qe1",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. c6 was best."
+            }
+        },
+        {
+            "eval": 313
+        },
+        {
+            "eval": 318
+        },
+        {
+            "eval": 209,
+            "best": "d2d3",
+            "variation": "d3 Qe8 Qxe8+ Kxe8 Nd2 h6 Ne4 b6 Bd2 c6 Bc4 fxe5 Bxg8 Rxg8",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. d3 was best."
+            }
+        },
+        {
+            "eval": 246
+        },
+        {
+            "eval": 224
+        },
+        {
+            "eval": 362,
+            "best": "d8e8",
+            "variation": "Qe8 Qxe8+",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. Qe8 was best."
+            }
+        },
+        {
+            "eval": 347
+        },
+        {
+            "eval": 1574,
+            "best": "e7e8",
+            "variation": "Qe8",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Qe8 was best."
+            }
+        },
+        {
+            "eval": 371,
+            "best": "f5f6",
+            "variation": "f6",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. f6 was best."
+            }
+        },
+        {
+            "mate": 6,
+            "best": "e7g7",
+            "variation": "Qg7 b4",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Checkmate is now unavoidable. Qg7 was best."
+            }
+        },
+        {
+            "mate": 5
+        }
+    ],
+    "tournament": "PBr7EWFo",
+    "clock": {
+        "initial": 600,
+        "increment": 0,
+        "totalTime": 600
+    }
+}

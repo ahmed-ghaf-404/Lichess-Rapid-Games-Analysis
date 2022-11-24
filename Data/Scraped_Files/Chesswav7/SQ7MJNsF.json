@@ -1,0 +1,90 @@
+{
+    "id": "SQ7MJNsF",
+    "rated": true,
+    "variant": "standard",
+    "speed": "rapid",
+    "perf": "rapid",
+    "createdAt": "2022-05-14 17:45:02.359000+00:00",
+    "lastMoveAt": "2022-05-14 17:45:49.433000+00:00",
+    "status": "mate",
+    "players": {
+        "white": {
+            "user": {
+                "name": "Chesswav7",
+                "id": "chesswav7"
+            },
+            "rating": 930,
+            "ratingDiff": 8,
+            "analysis": {
+                "inaccuracy": 1,
+                "mistake": 0,
+                "blunder": 0,
+                "acpl": 20
+            }
+        },
+        "black": {
+            "user": {
+                "name": "sir_alsjad",
+                "id": "sir_alsjad"
+            },
+            "rating": 1091,
+            "ratingDiff": -45,
+            "analysis": {
+                "inaccuracy": 0,
+                "mistake": 0,
+                "blunder": 1,
+                "acpl": 267
+            }
+        }
+    },
+    "winner": "white",
+    "opening": {
+        "eco": "C20",
+        "name": "King's Pawn Game: Wayward Queen Attack",
+        "ply": 3
+    },
+    "moves": "e4 e5 Qh5 Nc6 Bc4 g6 Qf3 d6 Qxf7#",
+    "analysis": [
+        {
+            "eval": 33
+        },
+        {
+            "eval": 12
+        },
+        {
+            "eval": -47,
+            "best": "g1f3",
+            "variation": "Nf3 Nc6 Bb5 Nf6 O-O Nxe4 Re1 Nd6 Nxe5 Be7",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. Nf3 was best."
+            }
+        },
+        {
+            "eval": -33
+        },
+        {
+            "eval": -42
+        },
+        {
+            "eval": -21
+        },
+        {
+            "eval": -31
+        },
+        {
+            "mate": 1,
+            "best": "g8f6",
+            "variation": "Nf6 Ne2 Bg7 Nbc3 O-O d3 d6 a3 h6 Bd2",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Checkmate is now unavoidable. Nf6 was best."
+            }
+        }
+    ],
+    "clock": {
+        "initial": 600,
+        "increment": 0,
+        "totalTime": 600
+    }
+}

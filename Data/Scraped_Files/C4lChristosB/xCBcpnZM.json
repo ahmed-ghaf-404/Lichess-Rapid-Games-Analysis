@@ -1,0 +1,138 @@
+{
+    "id": "xCBcpnZM",
+    "rated": true,
+    "variant": "standard",
+    "speed": "rapid",
+    "perf": "rapid",
+    "createdAt": "2022-08-27 19:30:08.263000+00:00",
+    "lastMoveAt": "2022-08-27 19:31:43.675000+00:00",
+    "status": "resign",
+    "players": {
+        "white": {
+            "user": {
+                "name": "C4lChristosB",
+                "id": "c4lchristosb"
+            },
+            "rating": 2167,
+            "ratingDiff": -6,
+            "analysis": {
+                "inaccuracy": 0,
+                "mistake": 1,
+                "blunder": 1,
+                "acpl": 49
+            }
+        },
+        "black": {
+            "user": {
+                "name": "denis78787",
+                "id": "denis78787"
+            },
+            "rating": 2141,
+            "ratingDiff": 6,
+            "analysis": {
+                "inaccuracy": 1,
+                "mistake": 1,
+                "blunder": 1,
+                "acpl": 55
+            }
+        }
+    },
+    "winner": "black",
+    "opening": {
+        "eco": "D10",
+        "name": "Slav Defense",
+        "ply": 6
+    },
+    "moves": "d4 d5 c4 c6 Nc3 dxc4 a4 Bd7 e4 b5 e5 e6 b3 b4 Ne4 c3 Nf3 a5",
+    "analysis": [
+        {
+            "eval": 0
+        },
+        {
+            "eval": 38
+        },
+        {
+            "eval": 27
+        },
+        {
+            "eval": 30
+        },
+        {
+            "eval": 16
+        },
+        {
+            "eval": 25
+        },
+        {
+            "eval": 0
+        },
+        {
+            "eval": 131,
+            "best": "e7e5",
+            "variation": "e5 dxe5 Qxd1+ Kxd1 Be6 e4 f6 f4 fxe5 f5",
+            "judgment": {
+                "name": "Mistake",
+                "comment": "Mistake. e5 was best."
+            }
+        },
+        {
+            "eval": 116
+        },
+        {
+            "eval": 90
+        },
+        {
+            "eval": 54
+        },
+        {
+            "eval": 87
+        },
+        {
+            "eval": -82,
+            "best": "g1h3",
+            "variation": "Nh3 Ne7 Be2 Nd5 O-O Be7 Nf4 O-O Nfxd5 cxd5",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Nh3 was best."
+            }
+        },
+        {
+            "eval": 99,
+            "best": "f8b4",
+            "variation": "Bb4 Bd2 Bxc3 Bxc3 cxb3 Qxb3 Ne7 axb5 cxb5 Bxb5 Bxb5 Qxb5+ Nbc6 Ne2",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Bb4 was best."
+            }
+        },
+        {
+            "eval": 145
+        },
+        {
+            "eval": 148
+        },
+        {
+            "eval": -9,
+            "best": "d1g4",
+            "variation": "Qg4 g6",
+            "judgment": {
+                "name": "Mistake",
+                "comment": "Mistake. Qg4 was best."
+            }
+        },
+        {
+            "eval": 87,
+            "best": "d7c8",
+            "variation": "Bc8 Qc2 a5 Bg5 Qc7 O-O-O Nd7 Kb1 Nb6 g4 h6 Bh4 Bb7 Bd3",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. Bc8 was best."
+            }
+        }
+    ],
+    "clock": {
+        "initial": 600,
+        "increment": 0,
+        "totalTime": 600
+    }
+}

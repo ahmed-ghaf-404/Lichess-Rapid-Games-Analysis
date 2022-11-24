@@ -1,0 +1,120 @@
+{
+    "id": "iV37Z3uO",
+    "rated": true,
+    "variant": "standard",
+    "speed": "rapid",
+    "perf": "rapid",
+    "createdAt": "2022-08-16 13:32:44.707000+00:00",
+    "lastMoveAt": "2022-08-16 13:35:24.993000+00:00",
+    "status": "resign",
+    "players": {
+        "white": {
+            "user": {
+                "name": "jasonparas",
+                "id": "jasonparas"
+            },
+            "rating": 2227,
+            "ratingDiff": -5,
+            "analysis": {
+                "inaccuracy": 1,
+                "mistake": 0,
+                "blunder": 1,
+                "acpl": 53
+            }
+        },
+        "black": {
+            "user": {
+                "name": "greek_Magnus",
+                "id": "greek_magnus"
+            },
+            "rating": 2263,
+            "ratingDiff": 5,
+            "analysis": {
+                "inaccuracy": 1,
+                "mistake": 1,
+                "blunder": 0,
+                "acpl": 51
+            }
+        }
+    },
+    "winner": "black",
+    "opening": {
+        "eco": "A02",
+        "name": "Bird Opening",
+        "ply": 1
+    },
+    "moves": "f4 b6 d3 Bb7 Nc3 f5 e4 e5 exf5 Qh4+ g3 Qe7 Nf3 exf4+",
+    "analysis": [
+        {
+            "eval": -31
+        },
+        {
+            "eval": 7
+        },
+        {
+            "eval": -31
+        },
+        {
+            "eval": 1
+        },
+        {
+            "eval": -22
+        },
+        {
+            "eval": 37,
+            "best": "d7d5",
+            "variation": "d5 e4",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. d5 was best."
+            }
+        },
+        {
+            "eval": 34
+        },
+        {
+            "eval": 193,
+            "best": "e7e6",
+            "variation": "e6",
+            "judgment": {
+                "name": "Mistake",
+                "comment": "Mistake. e6 was best."
+            }
+        },
+        {
+            "eval": 10,
+            "best": "f4e5",
+            "variation": "fxe5 Bb4 Nf3 Ne7 Be2 fxe4 dxe4 Nbc6 O-O O-O Nd5 Ng6 Bg5 Bc5+",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. fxe5 was best."
+            }
+        },
+        {
+            "eval": 21
+        },
+        {
+            "eval": 17
+        },
+        {
+            "eval": 74
+        },
+        {
+            "eval": 0,
+            "best": "c3e4",
+            "variation": "Ne4 exf4 Qe2 Nc6 Nf3 O-O-O Bxf4 Nf6 c3 Nxe4 dxe4 Re8 O-O-O Qxe4",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. Ne4 was best."
+            }
+        },
+        {
+            "eval": 0
+        }
+    ],
+    "clock": {
+        "initial": 480,
+        "increment": 0,
+        "totalTime": 480
+    }
+}

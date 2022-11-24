@@ -1,0 +1,183 @@
+{
+    "id": "PP9BUmd5",
+    "rated": true,
+    "variant": "standard",
+    "speed": "rapid",
+    "perf": "rapid",
+    "createdAt": "2022-07-24 10:39:52.996000+00:00",
+    "lastMoveAt": "2022-07-24 10:52:31.188000+00:00",
+    "status": "mate",
+    "players": {
+        "white": {
+            "user": {
+                "name": "RespectKarpov",
+                "id": "respectkarpov"
+            },
+            "rating": 2196,
+            "ratingDiff": -14,
+            "analysis": {
+                "inaccuracy": 2,
+                "mistake": 2,
+                "blunder": 1,
+                "acpl": 88
+            }
+        },
+        "black": {
+            "user": {
+                "name": "crestchess",
+                "id": "crestchess"
+            },
+            "rating": 2238,
+            "ratingDiff": 5,
+            "analysis": {
+                "inaccuracy": 1,
+                "mistake": 0,
+                "blunder": 0,
+                "acpl": 27
+            }
+        }
+    },
+    "winner": "black",
+    "opening": {
+        "eco": "D23",
+        "name": "Queen's Gambit Accepted",
+        "ply": 6
+    },
+    "moves": "d4 d5 c4 dxc4 Nf3 Nf6 Ne5 e6 Nxc4 c5 e3 cxd4 exd4 Nc6 Be3 Bb4+ Nc3 O-O Be2 b6 O-O Bb7 Bf3 Rc8 Nb5 Nd5 Bxd5 Qxd5 Nxa7 Nxa7 Nxb6 Qxg2#",
+    "analysis": [
+        {
+            "eval": 0
+        },
+        {
+            "eval": 38
+        },
+        {
+            "eval": 27
+        },
+        {
+            "eval": 33
+        },
+        {
+            "eval": 0
+        },
+        {
+            "eval": 32
+        },
+        {
+            "eval": -63,
+            "best": "e2e3",
+            "variation": "e3 c5 Bxc4 e6 O-O a6 dxc5 Bxc5 Qxd8+ Kxd8",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. e3 was best."
+            }
+        },
+        {
+            "eval": -13
+        },
+        {
+            "eval": -93,
+            "best": "e2e3",
+            "variation": "e3 c5 Bxc4 Qc7 Be2 Nbd7 f4 cxd4 exd4 Nd5",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. e3 was best."
+            }
+        },
+        {
+            "eval": -47
+        },
+        {
+            "eval": -69
+        },
+        {
+            "eval": -54
+        },
+        {
+            "eval": -85
+        },
+        {
+            "eval": -72
+        },
+        {
+            "eval": -108
+        },
+        {
+            "eval": -59
+        },
+        {
+            "eval": -95
+        },
+        {
+            "eval": -64
+        },
+        {
+            "eval": -101
+        },
+        {
+            "eval": -31,
+            "best": "f6d5",
+            "variation": "Nd5 Rc1 Nxe3 fxe3 b5 Na3 Qh4+ g3 Qh6 Nc2 Bxc3+ bxc3 Bb7 O-O",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. Nd5 was best."
+            }
+        },
+        {
+            "eval": -48
+        },
+        {
+            "eval": -30
+        },
+        {
+            "eval": -61
+        },
+        {
+            "eval": -61
+        },
+        {
+            "eval": -65
+        },
+        {
+            "eval": -64
+        },
+        {
+            "eval": -547,
+            "best": "a2a3",
+            "variation": "a3 Be7 Rc1 Qd7 a4 Rfd8 h3 h6 Qe2 Ba6 Rfd1 Bf6 Be4 Qe7",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. a3 was best."
+            }
+        },
+        {
+            "eval": -513
+        },
+        {
+            "eval": -984,
+            "best": "c4a3",
+            "variation": "Nca3 a6 Nc3 Bxc3 bxc3 Ne7 f3 Rxc3 Bc1 Rfc8 Bb2 R3c7 Qd2 h6",
+            "judgment": {
+                "name": "Mistake",
+                "comment": "Mistake. Nca3 was best."
+            }
+        },
+        {
+            "eval": -987
+        },
+        {
+            "mate": -1,
+            "best": "d1g4",
+            "variation": "Qg4 f5 Nxb6 fxg4 Nxd5 Bxd5 a4 Nc6 Rfc1 Ra8 Rc5 Bxc5 dxc5 g3",
+            "judgment": {
+                "name": "Mistake",
+                "comment": "Checkmate is now unavoidable. Qg4 was best."
+            }
+        }
+    ],
+    "clock": {
+        "initial": 900,
+        "increment": 10,
+        "totalTime": 1300
+    }
+}

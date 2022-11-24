@@ -1,0 +1,111 @@
+{
+    "id": "B98zjvgc",
+    "rated": true,
+    "variant": "standard",
+    "speed": "rapid",
+    "perf": "rapid",
+    "createdAt": "2022-08-28 20:51:47.212000+00:00",
+    "lastMoveAt": "2022-08-28 20:53:17.562000+00:00",
+    "status": "mate",
+    "players": {
+        "white": {
+            "user": {
+                "name": "Equasuon",
+                "id": "equasuon"
+            },
+            "rating": 1544,
+            "ratingDiff": -6,
+            "analysis": {
+                "inaccuracy": 0,
+                "mistake": 0,
+                "blunder": 2,
+                "acpl": 190
+            }
+        },
+        "black": {
+            "user": {
+                "name": "S14V45H",
+                "id": "s14v45h"
+            },
+            "rating": 1485,
+            "ratingDiff": 7,
+            "analysis": {
+                "inaccuracy": 0,
+                "mistake": 0,
+                "blunder": 1,
+                "acpl": 55
+            }
+        }
+    },
+    "winner": "black",
+    "opening": {
+        "eco": "C65",
+        "name": "Ruy Lopez: Berlin Defense",
+        "ply": 6
+    },
+    "moves": "e4 e5 Nf3 Nc6 Bb5 Nf6 Bxc6 dxc6 Nxe5 Qd4 f4 Nxe4 Nf3 Qf2#",
+    "analysis": [
+        {
+            "eval": 33
+        },
+        {
+            "eval": 12
+        },
+        {
+            "eval": 19
+        },
+        {
+            "eval": 32
+        },
+        {
+            "eval": 25
+        },
+        {
+            "eval": 34
+        },
+        {
+            "eval": 0
+        },
+        {
+            "eval": -15
+        },
+        {
+            "eval": -69
+        },
+        {
+            "eval": -64
+        },
+        {
+            "eval": -368,
+            "best": "e5f3",
+            "variation": "Nf3 Qxe4+ Qe2 Qxe2+ Kxe2 Nd5 Re1 f6 d3 Kf7",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Nf3 was best."
+            }
+        },
+        {
+            "eval": -66,
+            "best": "d4e4",
+            "variation": "Qxe4+ Qe2 Qxc2 Nc3 Be6 Qf2 Ne4 Qe2 Nxc3 dxc3",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Qxe4+ was best."
+            }
+        },
+        {
+            "mate": -1,
+            "best": "d1e2",
+            "variation": "Qe2 Bc5 Nc3 Bf5 Nf3 Qf2+ Qxf2 Bxf2+ Ke2 Bc5",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Checkmate is now unavoidable. Qe2 was best."
+            }
+        }
+    ],
+    "clock": {
+        "initial": 600,
+        "increment": 0,
+        "totalTime": 600
+    }
+}

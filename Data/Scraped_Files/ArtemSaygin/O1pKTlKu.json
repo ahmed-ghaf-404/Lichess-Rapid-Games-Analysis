@@ -1,0 +1,95 @@
+{
+    "id": "O1pKTlKu",
+    "rated": true,
+    "variant": "standard",
+    "speed": "rapid",
+    "perf": "rapid",
+    "createdAt": "2022-04-16 14:19:20.791000+00:00",
+    "lastMoveAt": "2022-04-16 14:20:03.954000+00:00",
+    "status": "draw",
+    "players": {
+        "white": {
+            "user": {
+                "name": "ArtemSaygin",
+                "id": "artemsaygin"
+            },
+            "rating": 1586,
+            "ratingDiff": 1,
+            "analysis": {
+                "inaccuracy": 1,
+                "mistake": 1,
+                "blunder": 0,
+                "acpl": 51
+            }
+        },
+        "black": {
+            "user": {
+                "name": "arnoldtimyr",
+                "id": "arnoldtimyr"
+            },
+            "rating": 1631,
+            "ratingDiff": -1,
+            "analysis": {
+                "inaccuracy": 1,
+                "mistake": 0,
+                "blunder": 0,
+                "acpl": 35
+            }
+        }
+    },
+    "opening": {
+        "eco": "A41",
+        "name": "Queen's Pawn Game",
+        "ply": 2
+    },
+    "moves": "d4 d6 Nf3 c6 b4 Nd7 Be3 Qc7",
+    "analysis": [
+        {
+            "eval": 30
+        },
+        {
+            "eval": 66
+        },
+        {
+            "eval": 55
+        },
+        {
+            "eval": 77
+        },
+        {
+            "eval": 9,
+            "best": "c2c4",
+            "variation": "c4 Nf6 Nc3 d5 e3 g6 h3 Bg7 Bd3 O-O",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. c4 was best."
+            }
+        },
+        {
+            "eval": 10
+        },
+        {
+            "eval": -115,
+            "best": "e2e4",
+            "variation": "e4 e5",
+            "judgment": {
+                "name": "Mistake",
+                "comment": "Mistake. e4 was best."
+            }
+        },
+        {
+            "eval": -34,
+            "best": "g8f6",
+            "variation": "Ngf6",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. Ngf6 was best."
+            }
+        }
+    ],
+    "clock": {
+        "initial": 1200,
+        "increment": 0,
+        "totalTime": 1200
+    }
+}

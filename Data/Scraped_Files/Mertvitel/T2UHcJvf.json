@@ -1,0 +1,214 @@
+{
+    "id": "T2UHcJvf",
+    "rated": true,
+    "variant": "standard",
+    "speed": "rapid",
+    "perf": "rapid",
+    "createdAt": "2022-08-15 02:10:22.617000+00:00",
+    "lastMoveAt": "2022-08-15 02:15:03.052000+00:00",
+    "status": "resign",
+    "players": {
+        "white": {
+            "user": {
+                "name": "Mertvitel",
+                "id": "mertvitel"
+            },
+            "rating": 1663,
+            "ratingDiff": 6,
+            "analysis": {
+                "inaccuracy": 0,
+                "mistake": 1,
+                "blunder": 0,
+                "acpl": 32
+            }
+        },
+        "black": {
+            "user": {
+                "name": "amgrim",
+                "patron": true,
+                "id": "amgrim"
+            },
+            "rating": 1678,
+            "ratingDiff": -6,
+            "analysis": {
+                "inaccuracy": 1,
+                "mistake": 3,
+                "blunder": 0,
+                "acpl": 73
+            }
+        }
+    },
+    "winner": "white",
+    "opening": {
+        "eco": "B21",
+        "name": "Sicilian Defense: Smith-Morra Gambit",
+        "ply": 5
+    },
+    "moves": "e4 c5 d4 cxd4 c3 dxc3 Nxc3 e5 Bc4 Bc5 Bxf7+ Kxf7 Qd5+ Kf8 Qxc5+ Ne7 Qxe5 d6 Qf4+ Kg8 Nf3 Ng6 Qg3 Nc6 O-O Be6 Bf4 Nxf4 Qxf4 Ne5 Nxe5 dxe5 Qxe5 Qb6 Nd5 Qc6 Rac1 Qe8 Nc7 Bxa2 Qxe8+ Rxe8 Nxe8",
+    "analysis": [
+        {
+            "eval": 33
+        },
+        {
+            "eval": 32
+        },
+        {
+            "eval": 10
+        },
+        {
+            "eval": 1
+        },
+        {
+            "eval": -26
+        },
+        {
+            "eval": -20
+        },
+        {
+            "eval": -28
+        },
+        {
+            "eval": 53,
+            "best": "b8c6",
+            "variation": "Nc6 Nf3 e6 Be2 Qc7 O-O Nf6 Qa4 d6 Bf4",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. Nc6 was best."
+            }
+        },
+        {
+            "eval": 13
+        },
+        {
+            "eval": 134,
+            "best": "g8f6",
+            "variation": "Nf6 Nf3 Nc6 Ng5 d5 exd5 Nd4 d6 Be6 Nxe6",
+            "judgment": {
+                "name": "Mistake",
+                "comment": "Mistake. Nf6 was best."
+            }
+        },
+        {
+            "eval": 155
+        },
+        {
+            "eval": 145
+        },
+        {
+            "eval": 208
+        },
+        {
+            "eval": 252
+        },
+        {
+            "eval": 278
+        },
+        {
+            "eval": 521,
+            "best": "d7d6",
+            "variation": "d6 Qa3",
+            "judgment": {
+                "name": "Mistake",
+                "comment": "Mistake. d6 was best."
+            }
+        },
+        {
+            "eval": 527
+        },
+        {
+            "eval": 656
+        },
+        {
+            "eval": 618
+        },
+        {
+            "eval": 634
+        },
+        {
+            "eval": 615
+        },
+        {
+            "eval": 703
+        },
+        {
+            "eval": 709
+        },
+        {
+            "eval": 699
+        },
+        {
+            "eval": 669
+        },
+        {
+            "eval": 676
+        },
+        {
+            "eval": 538
+        },
+        {
+            "eval": 537
+        },
+        {
+            "eval": 537
+        },
+        {
+            "eval": 606
+        },
+        {
+            "eval": 577
+        },
+        {
+            "eval": 600
+        },
+        {
+            "eval": 604
+        },
+        {
+            "eval": 745
+        },
+        {
+            "eval": 701
+        },
+        {
+            "eval": 1015
+        },
+        {
+            "eval": 804
+        },
+        {
+            "eval": 1018
+        },
+        {
+            "eval": 930
+        },
+        {
+            "mate": 4,
+            "best": "e8g6",
+            "variation": "Qg6 Rfd1 Qf6 Qd6 h5 e5 Qg6 Nxa8 Kh7 Nc7 Bg4 f3 Bc8 e6",
+            "judgment": {
+                "name": "Mistake",
+                "comment": "Checkmate is now unavoidable. Qg6 was best."
+            }
+        },
+        {
+            "eval": 961,
+            "best": "c7e8",
+            "variation": "Nxe8 Kf8 Rc7 g6 Qe7+ Kg8 Nf6#",
+            "judgment": {
+                "name": "Mistake",
+                "comment": "Lost forced checkmate sequence. Nxe8 was best."
+            }
+        },
+        {
+            "eval": 951
+        },
+        {
+            "eval": 967
+        }
+    ],
+    "clock": {
+        "initial": 600,
+        "increment": 0,
+        "totalTime": 600
+    }
+}

@@ -1,0 +1,183 @@
+{
+    "id": "uCk68zwO",
+    "rated": true,
+    "variant": "standard",
+    "speed": "rapid",
+    "perf": "rapid",
+    "createdAt": "2021-09-26 19:50:03.474000+00:00",
+    "lastMoveAt": "2021-09-26 19:54:26.538000+00:00",
+    "status": "resign",
+    "players": {
+        "white": {
+            "user": {
+                "name": "FatCrocodile3",
+                "id": "fatcrocodile3"
+            },
+            "rating": 2168,
+            "ratingDiff": -1,
+            "analysis": {
+                "inaccuracy": 0,
+                "mistake": 1,
+                "blunder": 2,
+                "acpl": 114
+            }
+        },
+        "black": {
+            "user": {
+                "name": "EricRosen",
+                "title": "IM",
+                "patron": true,
+                "id": "ericrosen"
+            },
+            "rating": 2651,
+            "ratingDiff": 1,
+            "analysis": {
+                "inaccuracy": 3,
+                "mistake": 0,
+                "blunder": 0,
+                "acpl": 39
+            }
+        }
+    },
+    "winner": "black",
+    "opening": {
+        "eco": "C42",
+        "name": "Russian Game: Stafford Gambit",
+        "ply": 8
+    },
+    "moves": "e4 e5 Nf3 Nf6 Nxe5 Nc6 Nxc6 dxc6 d3 Bc5 Be2 h5 c3 Ng4 d4 Qh4 g3 Qf6 Bf3 Be6 dxc5 Ne5 Be2 Rd8 Qc2 Nf3+ Bxf3 Qxf3 Rf1 Bg4",
+    "analysis": [
+        {
+            "eval": 24
+        },
+        {
+            "eval": 12
+        },
+        {
+            "eval": 17
+        },
+        {
+            "eval": 21
+        },
+        {
+            "eval": 31
+        },
+        {
+            "eval": 140,
+            "best": "d7d6",
+            "variation": "d6 Nf3 Nxe4 d4 d5 Bd3 Bd6 O-O O-O c4",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. d6 was best."
+            }
+        },
+        {
+            "eval": 230
+        },
+        {
+            "eval": 184
+        },
+        {
+            "eval": 168
+        },
+        {
+            "eval": 180
+        },
+        {
+            "eval": 151
+        },
+        {
+            "eval": 266,
+            "best": "f6g4",
+            "variation": "Ng4 Bxg4 Qh4 O-O Bxg4 Qd2 O-O-O Qg5 Qxg5 Bxg5",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. Ng4 was best."
+            }
+        },
+        {
+            "eval": 295
+        },
+        {
+            "eval": 281
+        },
+        {
+            "eval": 382
+        },
+        {
+            "eval": 426
+        },
+        {
+            "eval": 443
+        },
+        {
+            "eval": 426
+        },
+        {
+            "eval": 416
+        },
+        {
+            "eval": 597,
+            "best": "c5e7",
+            "variation": "Be7",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. Be7 was best."
+            }
+        },
+        {
+            "eval": 237,
+            "best": "h2h3",
+            "variation": "h3 O-O-O",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. h3 was best."
+            }
+        },
+        {
+            "eval": 286
+        },
+        {
+            "eval": 231
+        },
+        {
+            "eval": 309
+        },
+        {
+            "eval": -905,
+            "best": "b1d2",
+            "variation": "Nd2 h4",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Nd2 was best."
+            }
+        },
+        {
+            "eval": -962
+        },
+        {
+            "eval": -974
+        },
+        {
+            "eval": -984
+        },
+        {
+            "mate": -3,
+            "best": "b1d2",
+            "variation": "Nd2 Qxh1+ Nf1 Bc4 Qe2 Bxe2 Kxe2 Qxe4+ Be3 Qc2+ Kf3 Qxb2 Rc1 Rd3",
+            "judgment": {
+                "name": "Mistake",
+                "comment": "Checkmate is now unavoidable. Nd2 was best."
+            }
+        },
+        {
+            "mate": -2
+        }
+    ],
+    "tournament": "rsiM5TIu",
+    "clock": {
+        "initial": 600,
+        "increment": 0,
+        "totalTime": 600
+    }
+}

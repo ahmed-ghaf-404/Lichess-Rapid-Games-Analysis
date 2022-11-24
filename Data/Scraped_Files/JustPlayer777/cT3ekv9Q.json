@@ -1,0 +1,204 @@
+{
+    "id": "cT3ekv9Q",
+    "rated": true,
+    "variant": "standard",
+    "speed": "rapid",
+    "perf": "rapid",
+    "createdAt": "2022-07-25 11:59:34.543000+00:00",
+    "lastMoveAt": "2022-07-25 12:02:15.951000+00:00",
+    "status": "mate",
+    "players": {
+        "white": {
+            "user": {
+                "name": "JustPlayer777",
+                "id": "justplayer777"
+            },
+            "rating": 1787,
+            "ratingDiff": 9,
+            "analysis": {
+                "inaccuracy": 0,
+                "mistake": 0,
+                "blunder": 1,
+                "acpl": 36
+            }
+        },
+        "black": {
+            "user": {
+                "name": "Chutki123",
+                "id": "chutki123"
+            },
+            "rating": 1923,
+            "ratingDiff": -10,
+            "analysis": {
+                "inaccuracy": 2,
+                "mistake": 2,
+                "blunder": 2,
+                "acpl": 88
+            }
+        }
+    },
+    "winner": "white",
+    "opening": {
+        "eco": "C50",
+        "name": "Italian Game: Giuoco Pianissimo, Canal Variation",
+        "ply": 11
+    },
+    "moves": "e4 e5 Nf3 Nc6 Bc4 Bc5 Nc3 Nf6 d3 d6 Bg5 h6 Bh4 Bg4 h3 Bh5 g4 Bg6 Nd5 Nd4 Nxd4 Bxd4 c3 Bb6 Qb3 c6 Nxf6+ gxf6 O-O-O a5 a4 Bc7 Qxb7 Qc8 Qxc6+ Kd8 Bxf6#",
+    "analysis": [
+        {
+            "eval": 33
+        },
+        {
+            "eval": 12
+        },
+        {
+            "eval": 19
+        },
+        {
+            "eval": 32
+        },
+        {
+            "eval": 21
+        },
+        {
+            "eval": 20
+        },
+        {
+            "eval": 13
+        },
+        {
+            "eval": 21
+        },
+        {
+            "eval": 11
+        },
+        {
+            "eval": 11
+        },
+        {
+            "eval": 0
+        },
+        {
+            "eval": 0
+        },
+        {
+            "eval": -14
+        },
+        {
+            "eval": 0
+        },
+        {
+            "eval": -8
+        },
+        {
+            "eval": 62,
+            "best": "g4f3",
+            "variation": "Bxf3 Qxf3",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. Bxf3 was best."
+            }
+        },
+        {
+            "eval": 46
+        },
+        {
+            "eval": 134,
+            "best": "g7g5",
+            "variation": "g5 gxh5 gxh4 Bb5 Bb4 Qe2 Qd7 Nxh4 O-O-O Qf3 Qe6 Bxc6 bxc6 O-O-O",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. g5 was best."
+            }
+        },
+        {
+            "eval": 112
+        },
+        {
+            "eval": 517,
+            "best": "h6h5",
+            "variation": "h5",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. h5 was best."
+            }
+        },
+        {
+            "eval": 563
+        },
+        {
+            "eval": 534
+        },
+        {
+            "eval": 551
+        },
+        {
+            "eval": 565
+        },
+        {
+            "eval": 75,
+            "best": "d1f3",
+            "variation": "Qf3 Kd7 Nxf6+ gxf6 Bxf6 Qe8 Bxh8 Qxh8 h4 h5 O-O-O c6 Kb1 Kc7",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Qf3 was best."
+            }
+        },
+        {
+            "eval": 70
+        },
+        {
+            "eval": 55
+        },
+        {
+            "eval": 89
+        },
+        {
+            "eval": 90
+        },
+        {
+            "eval": 221,
+            "best": "h6h5",
+            "variation": "h5 Rdg1 Rh7 Kb1 hxg4 hxg4 Qe7 Qd1 Kd7 Rf1 Rah8 Bg3 Rxh1 Rxh1",
+            "judgment": {
+                "name": "Mistake",
+                "comment": "Mistake. h5 was best."
+            }
+        },
+        {
+            "eval": 213
+        },
+        {
+            "eval": 277
+        },
+        {
+            "eval": 257
+        },
+        {
+            "eval": 880,
+            "best": "e8d7",
+            "variation": "Kd7",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Kd7 was best."
+            }
+        },
+        {
+            "eval": 872
+        },
+        {
+            "mate": 1,
+            "best": "e8f8",
+            "variation": "Kf8 Bxf6 Rh7 Rdf1 h5 f4 exf4 g5 d5 Bxd5 Rb8 Bd4 Qd8 h4",
+            "judgment": {
+                "name": "Mistake",
+                "comment": "Checkmate is now unavoidable. Kf8 was best."
+            }
+        }
+    ],
+    "clock": {
+        "initial": 600,
+        "increment": 5,
+        "totalTime": 800
+    }
+}

@@ -1,0 +1,90 @@
+{
+    "id": "K9PqsOW4",
+    "rated": true,
+    "variant": "standard",
+    "speed": "rapid",
+    "perf": "rapid",
+    "createdAt": "2022-08-27 08:16:33.225000+00:00",
+    "lastMoveAt": "2022-08-27 08:18:02.663000+00:00",
+    "status": "resign",
+    "players": {
+        "white": {
+            "user": {
+                "name": "HunterBaba",
+                "id": "hunterbaba"
+            },
+            "rating": 2040,
+            "ratingDiff": -8,
+            "analysis": {
+                "inaccuracy": 1,
+                "mistake": 0,
+                "blunder": 1,
+                "acpl": 269
+            }
+        },
+        "black": {
+            "user": {
+                "name": "S0708",
+                "id": "s0708"
+            },
+            "rating": 2032,
+            "ratingDiff": 11,
+            "analysis": {
+                "inaccuracy": 0,
+                "mistake": 0,
+                "blunder": 0,
+                "acpl": 11
+            }
+        }
+    },
+    "winner": "black",
+    "opening": {
+        "eco": "B23",
+        "name": "Sicilian Defense: Closed",
+        "ply": 4
+    },
+    "moves": "e4 c5 Nc3 e6 Qg4 a6 Qxg7 Bxg7",
+    "analysis": [
+        {
+            "eval": 33
+        },
+        {
+            "eval": 32
+        },
+        {
+            "eval": 24
+        },
+        {
+            "eval": 45
+        },
+        {
+            "eval": -64,
+            "best": "g1f3",
+            "variation": "Nf3 Nc6 d4 cxd4 Nxd4 Qc7 g3 a6 Bg2 Nf6",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. Nf3 was best."
+            }
+        },
+        {
+            "eval": -41
+        },
+        {
+            "eval": -1167,
+            "best": "g4e2",
+            "variation": "Qe2 Nc6",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Qe2 was best."
+            }
+        },
+        {
+            "eval": -1170
+        }
+    ],
+    "clock": {
+        "initial": 600,
+        "increment": 5,
+        "totalTime": 800
+    }
+}

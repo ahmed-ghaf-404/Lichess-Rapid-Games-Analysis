@@ -1,0 +1,146 @@
+{
+    "id": "o3yWTdn4",
+    "rated": true,
+    "variant": "standard",
+    "speed": "rapid",
+    "perf": "rapid",
+    "createdAt": "2022-06-19 07:48:26.663000+00:00",
+    "lastMoveAt": "2022-06-19 07:50:20.156000+00:00",
+    "status": "mate",
+    "players": {
+        "white": {
+            "user": {
+                "name": "AKchess2012",
+                "id": "akchess2012"
+            },
+            "rating": 1420,
+            "ratingDiff": 1,
+            "analysis": {
+                "inaccuracy": 2,
+                "mistake": 2,
+                "blunder": 1,
+                "acpl": 80
+            }
+        },
+        "black": {
+            "user": {
+                "name": "KleinGeselle",
+                "id": "kleingeselle"
+            },
+            "rating": 1036,
+            "ratingDiff": -1,
+            "analysis": {
+                "inaccuracy": 0,
+                "mistake": 0,
+                "blunder": 2,
+                "acpl": 202
+            }
+        }
+    },
+    "winner": "white",
+    "opening": {
+        "eco": "C42",
+        "name": "Russian Game: Italian Variation",
+        "ply": 5
+    },
+    "moves": "e4 e5 Nf3 Nf6 Bc4 Bc5 d3 O-O Ng5 d5 Bxd5 Nxd5 exd5 Qxd5 Qh5 g6 Qxh7#",
+    "analysis": [
+        {
+            "eval": 33
+        },
+        {
+            "eval": 12
+        },
+        {
+            "eval": 19
+        },
+        {
+            "eval": 50
+        },
+        {
+            "eval": -69,
+            "best": "f3e5",
+            "variation": "Nxe5 d6 Nf3 Nxe4 d4 d5 Bd3 Bd6 O-O O-O",
+            "judgment": {
+                "name": "Mistake",
+                "comment": "Mistake. Nxe5 was best."
+            }
+        },
+        {
+            "eval": 213,
+            "best": "f6e4",
+            "variation": "Nxe4 Nxe5 d5 Be2 Bd6 Nf3 O-O O-O Re8 d3",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Nxe4 was best."
+            }
+        },
+        {
+            "eval": 9,
+            "best": "f3e5",
+            "variation": "Nxe5 O-O Bxf7+ Kh8 d4 Bb6 Bb3 Nc6 Be3 d5",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Nxe5 was best."
+            }
+        },
+        {
+            "eval": 21
+        },
+        {
+            "eval": -60,
+            "best": "e1h1",
+            "variation": "O-O d6 c3 h6 Nbd2 Re8 Re1 a5 h3 Ba7",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. O-O was best."
+            }
+        },
+        {
+            "eval": -9,
+            "best": "c7c6",
+            "variation": "c6 Bb3 a5 a4 d5 Nc3 h6 Nf3 Re8 O-O"
+        },
+        {
+            "eval": -131,
+            "best": "e4d5",
+            "variation": "exd5 c6 dxc6 b5 Bb3 Nxc6 O-O Bg4 Nf3 Bh5",
+            "judgment": {
+                "name": "Mistake",
+                "comment": "Mistake. exd5 was best."
+            }
+        },
+        {
+            "eval": -132
+        },
+        {
+            "eval": -120
+        },
+        {
+            "eval": -98
+        },
+        {
+            "eval": -214,
+            "best": "e1h1",
+            "variation": "O-O Bf5 Be3 Be7 Nc3 Qd7 Nge4 Nc6 Nc5 Bxc5",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. O-O was best."
+            }
+        },
+        {
+            "mate": 1,
+            "best": "c8f5",
+            "variation": "Bf5 O-O Nc6 Ne4 Bxe4 Nc3 Bf3 gxf3 Qd7 Be3 Be7 Kh1 f5 Rg1",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Checkmate is now unavoidable. Bf5 was best."
+            }
+        }
+    ],
+    "clock": {
+        "initial": 600,
+        "increment": 0,
+        "totalTime": 600
+    }
+}

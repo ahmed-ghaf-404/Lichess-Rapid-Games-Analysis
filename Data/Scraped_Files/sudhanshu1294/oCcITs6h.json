@@ -1,0 +1,105 @@
+{
+    "id": "oCcITs6h",
+    "rated": true,
+    "variant": "standard",
+    "speed": "rapid",
+    "perf": "rapid",
+    "createdAt": "2022-07-29 17:48:46.791000+00:00",
+    "lastMoveAt": "2022-07-29 17:49:06.726000+00:00",
+    "status": "resign",
+    "players": {
+        "white": {
+            "user": {
+                "name": "sudhanshu1294",
+                "id": "sudhanshu1294"
+            },
+            "rating": 2075,
+            "ratingDiff": 6,
+            "analysis": {
+                "inaccuracy": 0,
+                "mistake": 1,
+                "blunder": 0,
+                "acpl": 33
+            }
+        },
+        "black": {
+            "user": {
+                "name": "Julian1220",
+                "id": "julian1220"
+            },
+            "rating": 2078,
+            "ratingDiff": -8,
+            "analysis": {
+                "inaccuracy": 1,
+                "mistake": 0,
+                "blunder": 1,
+                "acpl": 53
+            }
+        }
+    },
+    "winner": "white",
+    "opening": {
+        "eco": "B00",
+        "name": "Owen Defense: Smith Gambit",
+        "ply": 5
+    },
+    "moves": "e4 b6 d4 Bb7 Nf3 d6 Nc3 e6 Bc4 Nf6 O-O",
+    "analysis": [
+        {
+            "eval": 33
+        },
+        {
+            "eval": 95,
+            "best": "e7e5",
+            "variation": "e5 Nf3 Nc6 Bb5 Nf6 O-O Nxe4 Re1 Nd6 Nxe5",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. e5 was best."
+            }
+        },
+        {
+            "eval": 98
+        },
+        {
+            "eval": 75
+        },
+        {
+            "eval": -72,
+            "best": "f1d3",
+            "variation": "Bd3 e6 Nf3 c5 c3 Nf6 Qe2 d5 e5 Nfd7",
+            "judgment": {
+                "name": "Mistake",
+                "comment": "Mistake. Bd3 was best."
+            }
+        },
+        {
+            "eval": 96,
+            "best": "b7e4",
+            "variation": "Bxe4 d5 e6 Nc3 Bb4 Bd2 Bxc3 Bxc3 Nf6 dxe6",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Bxe4 was best."
+            }
+        },
+        {
+            "eval": 98
+        },
+        {
+            "eval": 118
+        },
+        {
+            "eval": 70
+        },
+        {
+            "eval": 86
+        },
+        {
+            "eval": 88
+        }
+    ],
+    "clock": {
+        "initial": 600,
+        "increment": 5,
+        "totalTime": 800
+    }
+}

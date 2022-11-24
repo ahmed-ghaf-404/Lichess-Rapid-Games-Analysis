@@ -1,0 +1,217 @@
+{
+    "id": "pySluqxE",
+    "rated": true,
+    "variant": "standard",
+    "speed": "rapid",
+    "perf": "rapid",
+    "createdAt": "2020-08-19 10:54:14.696000+00:00",
+    "lastMoveAt": "2020-08-19 11:00:24.527000+00:00",
+    "status": "resign",
+    "players": {
+        "white": {
+            "user": {
+                "name": "knightsky9",
+                "id": "knightsky9"
+            },
+            "rating": 1937,
+            "ratingDiff": -5,
+            "analysis": {
+                "inaccuracy": 0,
+                "mistake": 2,
+                "blunder": 4,
+                "acpl": 94
+            }
+        },
+        "black": {
+            "user": {
+                "name": "pincet",
+                "id": "pincet"
+            },
+            "rating": 1980,
+            "ratingDiff": 57,
+            "provisional": true,
+            "analysis": {
+                "inaccuracy": 1,
+                "mistake": 0,
+                "blunder": 1,
+                "acpl": 40
+            }
+        }
+    },
+    "winner": "black",
+    "opening": {
+        "eco": "C47",
+        "name": "Four Knights Game: Italian Variation, Noa Gambit",
+        "ply": 9
+    },
+    "moves": "e4 e5 Nc3 Nf6 Nf3 Nc6 Bc4 Nxe4 Bxf7+ Kxf7 Nxe4 d5 Ng3 e4 Ng1 Bc5 Qh5+ g6 Qh6 Qf6 f3 Bf5 N1e2 exf3 gxf3 Rae8 d3 Nd4 Ne4 Nxf3+ Kd1 dxe4 Ng3 exd3 cxd3 Bxd3 Qh3 Qd4",
+    "analysis": [
+        {
+            "eval": 0
+        },
+        {
+            "eval": 32
+        },
+        {
+            "eval": 21
+        },
+        {
+            "eval": -5
+        },
+        {
+            "eval": 20
+        },
+        {
+            "eval": 0
+        },
+        {
+            "eval": 0
+        },
+        {
+            "eval": 13
+        },
+        {
+            "eval": -213,
+            "best": "c3e4",
+            "variation": "Nxe4 d5 Bd3 Nb4 Ng3 e4 Be2 exf3 Bxf3 Be7",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Nxe4 was best."
+            }
+        },
+        {
+            "eval": -235
+        },
+        {
+            "eval": -233
+        },
+        {
+            "eval": -234
+        },
+        {
+            "eval": -165
+        },
+        {
+            "eval": -163
+        },
+        {
+            "eval": -219
+        },
+        {
+            "eval": -139,
+            "best": "h7h5",
+            "variation": "h5 d4 exd3 Qxd3 Nb4 Qe2 h4 a3 hxg3 axb4 Bxb4+ Kd1 gxh2 Nf3",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. h5 was best."
+            }
+        },
+        {
+            "eval": -363,
+            "best": "d2d3",
+            "variation": "d3 Qf6",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. d3 was best."
+            }
+        },
+        {
+            "eval": -346
+        },
+        {
+            "eval": -359
+        },
+        {
+            "eval": -286
+        },
+        {
+            "eval": -663,
+            "best": "g1h3",
+            "variation": "Nh3 Bxh3",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Nh3 was best."
+            }
+        },
+        {
+            "eval": -229,
+            "best": "e4f3",
+            "variation": "exf3",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. exf3 was best."
+            }
+        },
+        {
+            "eval": -554,
+            "best": "g3f5",
+            "variation": "Nxf5 Qxf5",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Nxf5 was best."
+            }
+        },
+        {
+            "eval": -576
+        },
+        {
+            "eval": -584
+        },
+        {
+            "eval": -522
+        },
+        {
+            "eval": -532
+        },
+        {
+            "eval": -489
+        },
+        {
+            "eval": -1583,
+            "best": "e1d1",
+            "variation": "Kd1 Nxe2 Nxe2 Rxe2 Kxe2 Qd4 Be3 Re8 Qxh7+ Kf8 Qh6+ Kg8 Rae1 Rxe3+",
+            "judgment": {
+                "name": "Mistake",
+                "comment": "Mistake. Kd1 was best."
+            }
+        },
+        {
+            "eval": -1554
+        },
+        {
+            "eval": -1504
+        },
+        {
+            "eval": -1450
+        },
+        {
+            "eval": -6450
+        },
+        {
+            "eval": -3446
+        },
+        {
+            "eval": -6450
+        },
+        {
+            "eval": -988
+        },
+        {
+            "mate": -6,
+            "best": "h6f4",
+            "variation": "Qf4 Bd4",
+            "judgment": {
+                "name": "Mistake",
+                "comment": "Checkmate is now unavoidable. Qf4 was best."
+            }
+        },
+        {
+            "mate": -5
+        }
+    ],
+    "clock": {
+        "initial": 600,
+        "increment": 0,
+        "totalTime": 600
+    }
+}

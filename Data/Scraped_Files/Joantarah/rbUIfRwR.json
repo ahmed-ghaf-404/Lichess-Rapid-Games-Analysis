@@ -1,0 +1,144 @@
+{
+    "id": "rbUIfRwR",
+    "rated": true,
+    "variant": "standard",
+    "speed": "rapid",
+    "perf": "rapid",
+    "createdAt": "2022-07-31 15:55:24.907000+00:00",
+    "lastMoveAt": "2022-07-31 15:56:56.321000+00:00",
+    "status": "resign",
+    "players": {
+        "white": {
+            "user": {
+                "name": "Elad-Perlson",
+                "id": "elad-perlson"
+            },
+            "rating": 1479,
+            "ratingDiff": -9,
+            "analysis": {
+                "inaccuracy": 3,
+                "mistake": 0,
+                "blunder": 0,
+                "acpl": 27
+            }
+        },
+        "black": {
+            "user": {
+                "name": "Joantarah",
+                "id": "joantarah"
+            },
+            "rating": 1512,
+            "ratingDiff": 6,
+            "analysis": {
+                "inaccuracy": 1,
+                "mistake": 1,
+                "blunder": 0,
+                "acpl": 37
+            }
+        }
+    },
+    "winner": "black",
+    "opening": {
+        "eco": "B00",
+        "name": "Pirc Defense",
+        "ply": 4
+    },
+    "moves": "e4 d6 d4 Nf6 Nc3 b6 Nf3 Bb7 d5 e5 Bg5 Be7 Bb5+ Nbd7 O-O h6 Bxf6 Bxf6 h3 Qe7",
+    "analysis": [
+        {
+            "eval": 33
+        },
+        {
+            "eval": 75
+        },
+        {
+            "eval": 40
+        },
+        {
+            "eval": 63
+        },
+        {
+            "eval": 74
+        },
+        {
+            "eval": 127
+        },
+        {
+            "eval": 114
+        },
+        {
+            "eval": 145
+        },
+        {
+            "eval": 76,
+            "best": "f1b5",
+            "variation": "Bb5+ c6 Bd3 e6 O-O Be7 Re1 Nfd7 Bf4 O-O",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. Bb5+ was best."
+            }
+        },
+        {
+            "eval": 44
+        },
+        {
+            "eval": 72
+        },
+        {
+            "eval": 61
+        },
+        {
+            "eval": 48
+        },
+        {
+            "eval": 43
+        },
+        {
+            "eval": -23,
+            "best": "g5f6",
+            "variation": "Bxf6 Bxf6 a4 O-O a5 a6 Bc6 Qc8 b4 bxa5",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. Bxf6 was best."
+            }
+        },
+        {
+            "eval": 47,
+            "best": "a7a6",
+            "variation": "a6 Bxd7+",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. a6 was best."
+            }
+        },
+        {
+            "eval": 65
+        },
+        {
+            "eval": 56
+        },
+        {
+            "eval": -22,
+            "best": "b5c6",
+            "variation": "Bc6 Qc8 Qe2 a6 a4 O-O Rad1 g6 g3 Nb8 Bxb7 Qxb7 Ne1 Nd7",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. Bc6 was best."
+            }
+        },
+        {
+            "eval": 127,
+            "best": "a7a6",
+            "variation": "a6 Bxd7+",
+            "judgment": {
+                "name": "Mistake",
+                "comment": "Mistake. a6 was best."
+            }
+        }
+    ],
+    "clock": {
+        "initial": 600,
+        "increment": 0,
+        "totalTime": 600
+    }
+}

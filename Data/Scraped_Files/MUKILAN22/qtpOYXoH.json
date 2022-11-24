@@ -1,0 +1,183 @@
+{
+    "id": "qtpOYXoH",
+    "rated": true,
+    "variant": "standard",
+    "speed": "rapid",
+    "perf": "rapid",
+    "createdAt": "2022-08-07 11:22:48.343000+00:00",
+    "lastMoveAt": "2022-08-07 11:29:09.285000+00:00",
+    "status": "mate",
+    "players": {
+        "white": {
+            "user": {
+                "name": "MUKILAN22",
+                "id": "mukilan22"
+            },
+            "rating": 1691,
+            "ratingDiff": -11,
+            "analysis": {
+                "inaccuracy": 3,
+                "mistake": 2,
+                "blunder": 1,
+                "acpl": 88
+            }
+        },
+        "black": {
+            "user": {
+                "name": "Nonno_Mimmo",
+                "id": "nonno_mimmo"
+            },
+            "rating": 1650,
+            "ratingDiff": 7,
+            "analysis": {
+                "inaccuracy": 0,
+                "mistake": 0,
+                "blunder": 0,
+                "acpl": 26
+            }
+        }
+    },
+    "winner": "black",
+    "opening": {
+        "eco": "C02",
+        "name": "French Defense: Advance Variation, Nimzowitsch System",
+        "ply": 7
+    },
+    "moves": "e4 e6 d4 d5 e5 c5 Nf3 cxd4 Nxd4 Nc6 Nxc6 bxc6 c4 Ne7 Bg5 Qc7 Bf4 Ng6 Qf3 Rb8 b3 Bb4+ Kd1 O-O cxd5 cxd5 Qg3 Bb7 h4 Rbc8 h5 Qc2#",
+    "analysis": [
+        {
+            "eval": 33
+        },
+        {
+            "eval": 13
+        },
+        {
+            "eval": 24
+        },
+        {
+            "eval": 25
+        },
+        {
+            "eval": 0
+        },
+        {
+            "eval": 30
+        },
+        {
+            "eval": -24
+        },
+        {
+            "eval": 0
+        },
+        {
+            "eval": -13
+        },
+        {
+            "eval": 0
+        },
+        {
+            "eval": -20
+        },
+        {
+            "eval": -1
+        },
+        {
+            "eval": -93,
+            "best": "f1d3",
+            "variation": "Bd3 Ba6 O-O Bxd3 cxd3 Ne7 Be3 Nf5 Qa4 Qc7",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. Bd3 was best."
+            }
+        },
+        {
+            "eval": -63
+        },
+        {
+            "eval": -233,
+            "best": "c4d5",
+            "variation": "cxd5 Qxd5 Qxd5 exd5 Nc3 Ng6 f4 Rb8 Bd3 Bc5",
+            "judgment": {
+                "name": "Mistake",
+                "comment": "Mistake. cxd5 was best."
+            }
+        },
+        {
+            "eval": -244
+        },
+        {
+            "eval": -208
+        },
+        {
+            "eval": -231
+        },
+        {
+            "eval": -479,
+            "best": "f4g3",
+            "variation": "Bg3 Rb8",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Bg3 was best."
+            }
+        },
+        {
+            "eval": -494
+        },
+        {
+            "eval": -486
+        },
+        {
+            "eval": -467
+        },
+        {
+            "eval": -547
+        },
+        {
+            "eval": -539
+        },
+        {
+            "eval": -700,
+            "best": "a2a3",
+            "variation": "a3 Bc5",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. a3 was best."
+            }
+        },
+        {
+            "eval": -678
+        },
+        {
+            "eval": -839
+        },
+        {
+            "eval": -652
+        },
+        {
+            "eval": -1183,
+            "best": "f4d2",
+            "variation": "Bd2 Rbc8",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. Bd2 was best."
+            }
+        },
+        {
+            "eval": -964
+        },
+        {
+            "mate": -1,
+            "best": "f1d3",
+            "variation": "Bd3 Ba6 Bd2 Bxd2 Kxd2 Nxe5 Bxa6 Qc2+ Ke3 Qe4+ Kd2 Qd4+ Ke2 Rc2+",
+            "judgment": {
+                "name": "Mistake",
+                "comment": "Checkmate is now unavoidable. Bd3 was best."
+            }
+        }
+    ],
+    "clock": {
+        "initial": 600,
+        "increment": 5,
+        "totalTime": 800
+    }
+}

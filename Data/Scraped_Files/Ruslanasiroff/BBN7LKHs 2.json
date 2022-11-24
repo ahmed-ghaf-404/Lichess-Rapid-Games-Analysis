@@ -1,0 +1,170 @@
+{
+    "id": "BBN7LKHs",
+    "rated": true,
+    "variant": "fromPosition",
+    "speed": "rapid",
+    "perf": "rapid",
+    "createdAt": "2022-04-21 14:00:01.040000+00:00",
+    "lastMoveAt": "2022-04-21 14:04:02.728000+00:00",
+    "status": "draw",
+    "players": {
+        "white": {
+            "user": {
+                "name": "Ruslanasiroff",
+                "id": "ruslanasiroff"
+            },
+            "rating": 2409,
+            "ratingDiff": 2,
+            "analysis": {
+                "inaccuracy": 0,
+                "mistake": 0,
+                "blunder": 2,
+                "acpl": 36
+            }
+        },
+        "black": {
+            "user": {
+                "name": "Dramateurstein",
+                "id": "dramateurstein"
+            },
+            "rating": 2487,
+            "ratingDiff": -6,
+            "analysis": {
+                "inaccuracy": 2,
+                "mistake": 0,
+                "blunder": 1,
+                "acpl": 41
+            }
+        }
+    },
+    "initialFen": "rnbqkb1r/ppp2ppp/4pn2/3p4/3PP3/2N5/PPP2PPP/R1BQKBNR w KQkq - 2 4",
+    "moves": "Bg5 Be7 e5 Nfd7 h4 c5 Nb5 cxd4 Bxe7 Kxe7 f4 Nc6 Nf3 Qa5+ Qd2 Qxd2+ Kxd2 f6 exf6+ Nxf6 Nbxd4 Ne4+ Ke3 Nxd4 Nxd4 Bd7 Bd3 Nc5 Rae1 a5",
+    "analysis": [
+        {
+            "eval": 24
+        },
+        {
+            "eval": 37
+        },
+        {
+            "eval": 33
+        },
+        {
+            "eval": 32
+        },
+        {
+            "eval": 12
+        },
+        {
+            "eval": 102,
+            "best": "e7g5",
+            "variation": "Bxg5 hxg5 Qxg5 Nh3 Qh4 g3 Qe7 Qg4 g6 O-O-O",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. Bxg5 was best."
+            }
+        },
+        {
+            "eval": -172,
+            "best": "g5e7",
+            "variation": "Bxe7 Kxe7 Qd2 Nc6 dxc5 Ndxe5 O-O-O Qa5 f4 Ng4",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Bxe7 was best."
+            }
+        },
+        {
+            "eval": 188,
+            "best": "f7f6",
+            "variation": "f6 exf6 Nxf6 dxc5 O-O Nf3 Bxc5 Qd2 Qb6 b4",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. f6 was best."
+            }
+        },
+        {
+            "eval": 9,
+            "best": "b5d6",
+            "variation": "Nd6+ Kf8 Qh5 Nxe5 Bxe7+ Qxe7 Qxe5 Nc6 Qg3 e5",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Nd6+ was best."
+            }
+        },
+        {
+            "eval": -30
+        },
+        {
+            "eval": 4
+        },
+        {
+            "eval": 25
+        },
+        {
+            "eval": -5
+        },
+        {
+            "eval": -14
+        },
+        {
+            "eval": -10
+        },
+        {
+            "eval": -5
+        },
+        {
+            "eval": 6
+        },
+        {
+            "eval": -7
+        },
+        {
+            "eval": -5
+        },
+        {
+            "eval": 10
+        },
+        {
+            "eval": 6
+        },
+        {
+            "eval": 75,
+            "best": "c6d4",
+            "variation": "Nxd4 Nxd4",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. Nxd4 was best."
+            }
+        },
+        {
+            "eval": 58
+        },
+        {
+            "eval": 92
+        },
+        {
+            "eval": 117
+        },
+        {
+            "eval": 90
+        },
+        {
+            "eval": 84
+        },
+        {
+            "eval": 94
+        },
+        {
+            "eval": 91
+        },
+        {
+            "eval": 75
+        }
+    ],
+    "tournament": "TnMiquUB",
+    "clock": {
+        "initial": 600,
+        "increment": 0,
+        "totalTime": 600
+    }
+}

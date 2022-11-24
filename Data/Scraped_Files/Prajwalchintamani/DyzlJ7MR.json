@@ -1,0 +1,176 @@
+{
+    "id": "DyzlJ7MR",
+    "rated": true,
+    "variant": "standard",
+    "speed": "rapid",
+    "perf": "rapid",
+    "createdAt": "2021-07-23 13:16:38.297000+00:00",
+    "lastMoveAt": "2021-07-23 13:18:51.835000+00:00",
+    "status": "mate",
+    "players": {
+        "white": {
+            "user": {
+                "name": "Prajwalchintamani",
+                "id": "prajwalchintamani"
+            },
+            "rating": 1438,
+            "ratingDiff": 16,
+            "provisional": true,
+            "analysis": {
+                "inaccuracy": 1,
+                "mistake": 0,
+                "blunder": 3,
+                "acpl": 127
+            }
+        },
+        "black": {
+            "user": {
+                "name": "Chintamani2021",
+                "id": "chintamani2021"
+            },
+            "rating": 1136,
+            "ratingDiff": -2,
+            "analysis": {
+                "inaccuracy": 2,
+                "mistake": 1,
+                "blunder": 3,
+                "acpl": 226
+            }
+        }
+    },
+    "winner": "white",
+    "opening": {
+        "eco": "A40",
+        "name": "Englund Gambit Declined: Reversed Alekhine",
+        "ply": 3
+    },
+    "moves": "Nf3 e5 d4 exd4 Nxd4 Bc5 Nc3 Bxd4 Qxd4 c5 Qd1 Nf6 e3 Ng4 Qxg4 Nc6 Qxg7 Ne7 Bc4 Ng8 Qxf7#",
+    "analysis": [
+        {
+            "eval": 13
+        },
+        {
+            "eval": 158,
+            "best": "d7d5",
+            "variation": "d5 d4 e6 c4 dxc4 e3 Nf6 Bxc4 c5 O-O",
+            "judgment": {
+                "name": "Mistake",
+                "comment": "Mistake. d5 was best."
+            }
+        },
+        {
+            "eval": -29,
+            "best": "f3e5",
+            "variation": "Nxe5 d5 d4 Nf6 g3 c5 Bg2 cxd4 Qxd4 Nc6",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Nxe5 was best."
+            }
+        },
+        {
+            "eval": 0
+        },
+        {
+            "eval": 0
+        },
+        {
+            "eval": 25
+        },
+        {
+            "eval": -1
+        },
+        {
+            "eval": 293,
+            "best": "g8f6",
+            "variation": "Nf6 Bg5 h6 Bxf6 Qxf6 e3 O-O Ne4 Bb4+ c3",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Nf6 was best."
+            }
+        },
+        {
+            "eval": 148
+        },
+        {
+            "eval": 839,
+            "best": "g8f6",
+            "variation": "Nf6 Qe3+ Qe7 Qxe7+ Kxe7 Bg5 h6 Bxf6+ gxf6 Nd5+",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Nf6 was best."
+            }
+        },
+        {
+            "eval": 326,
+            "best": "d4g7",
+            "variation": "Qxg7",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Qxg7 was best."
+            }
+        },
+        {
+            "eval": 396
+        },
+        {
+            "eval": 3,
+            "best": "d1d6",
+            "variation": "Qd6 Qb6",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Qd6 was best."
+            }
+        },
+        {
+            "eval": 861,
+            "best": "d7d5",
+            "variation": "d5 Bd3 Nc6 O-O Be6 b3 O-O Bb2 Qe7 Ne2 c4 bxc4 dxc4 Bxf6",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. d5 was best."
+            }
+        },
+        {
+            "eval": 853
+        },
+        {
+            "eval": 1215
+        },
+        {
+            "eval": 1164
+        },
+        {
+            "mate": 9,
+            "best": "h8f8",
+            "variation": "Rf8 Nd5 d6 e4 Be6 Nf6+ Ke7 Bg5 Qa5+ c3 h6 Bh4 Rfc8 Be2",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Checkmate is now unavoidable. Rf8 was best."
+            }
+        },
+        {
+            "eval": 1240,
+            "best": "g7h8",
+            "variation": "Qxh8+ Ng8 Qxg8+ Ke7 Nd5+ Ke6 Qxd8 Kxd5 e4+ Kc6 Bf4 c4 Qc7+ Kb5",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Lost forced checkmate sequence. Qxh8+ was best."
+            }
+        },
+        {
+            "mate": 1,
+            "best": "h8f8",
+            "variation": "Rf8 Ne4 Nf5 Qe5+ Qe7 Qxf5 Kd8 Qxc5 Qxc5 Nxc5 d6 Ne4 Ke7 Bd3",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Checkmate is now unavoidable. Rf8 was best."
+            }
+        }
+    ],
+    "tournament": "QW1YJ3y6",
+    "clock": {
+        "initial": 300,
+        "increment": 6,
+        "totalTime": 540
+    }
+}

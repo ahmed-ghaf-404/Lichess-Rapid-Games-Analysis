@@ -1,0 +1,162 @@
+{
+    "id": "lmGdTgw1",
+    "rated": true,
+    "variant": "fromPosition",
+    "speed": "rapid",
+    "perf": "rapid",
+    "createdAt": "2022-07-17 15:18:56.331000+00:00",
+    "lastMoveAt": "2022-07-17 15:20:57.741000+00:00",
+    "status": "mate",
+    "players": {
+        "white": {
+            "user": {
+                "name": "blueboy-bjksatranc",
+                "id": "blueboy-bjksatranc"
+            },
+            "rating": 1575,
+            "ratingDiff": 6,
+            "analysis": {
+                "inaccuracy": 0,
+                "mistake": 0,
+                "blunder": 1,
+                "acpl": 38
+            }
+        },
+        "black": {
+            "user": {
+                "name": "adjustments1",
+                "id": "adjustments1"
+            },
+            "rating": 1492,
+            "ratingDiff": -5,
+            "analysis": {
+                "inaccuracy": 1,
+                "mistake": 3,
+                "blunder": 2,
+                "acpl": 113
+            }
+        }
+    },
+    "initialFen": "rnbqk2r/ppp1ppbp/3p1np1/8/2PPP3/2N2P2/PP4PP/R1BQKBNR b KQkq - 0 5",
+    "winner": "white",
+    "moves": "O-O Bg5 e5 Nd5 h6 Nxf6+ Bxf6 Bxh6 Re8 d5 g5 Qd2 Kh7 h4 Kxh6 hxg5+ Kg6 Rh6+ Kg7 gxf6+ Kg8 Qg5+ Kf8 Rh8#",
+    "analysis": [
+        {
+            "eval": 47
+        },
+        {
+            "eval": 20
+        },
+        {
+            "eval": 152,
+            "best": "c7c5",
+            "variation": "c5 d5 e6 Be2 h6 Be3 a6 a4 exd5 cxd5",
+            "judgment": {
+                "name": "Mistake",
+                "comment": "Mistake. c5 was best."
+            }
+        },
+        {
+            "eval": -149,
+            "best": "d4e5",
+            "variation": "dxe5 dxe5 Qxd8 Rxd8 Nd5 Nxd5 Bxd8 Ne3 Kf2 Bh6",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. dxe5 was best."
+            }
+        },
+        {
+            "eval": 94,
+            "best": "e5d4",
+            "variation": "exd4",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. exd4 was best."
+            }
+        },
+        {
+            "eval": 96
+        },
+        {
+            "eval": 87
+        },
+        {
+            "eval": 80
+        },
+        {
+            "eval": 194,
+            "best": "e5d4",
+            "variation": "exd4",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. exd4 was best."
+            }
+        },
+        {
+            "eval": 183
+        },
+        {
+            "eval": 330,
+            "best": "f6h4",
+            "variation": "Bh4+ g3 Bg5 Bxg5 Qxg5 Bd3 f5 Ne2 Qe3 Rf1 Na6 Qd2 Qxd2+ Kxd2",
+            "judgment": {
+                "name": "Mistake",
+                "comment": "Mistake. Bh4+ was best."
+            }
+        },
+        {
+            "eval": 305
+        },
+        {
+            "eval": 310
+        },
+        {
+            "eval": 276
+        },
+        {
+            "eval": 318
+        },
+        {
+            "eval": 330
+        },
+        {
+            "eval": 872,
+            "best": "h6g7",
+            "variation": "Kg7",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Kg7 was best."
+            }
+        },
+        {
+            "eval": 858
+        },
+        {
+            "eval": 854
+        },
+        {
+            "eval": 901
+        },
+        {
+            "mate": 2,
+            "best": "d8f6",
+            "variation": "Qxf6 Rxf6 Kxf6 Qh6+ Ke7 Qg5+ f6 Qg7+ Kd8 Qxf6+ Re7 c5 dxc5 d6",
+            "judgment": {
+                "name": "Mistake",
+                "comment": "Checkmate is now unavoidable. Qxf6 was best."
+            }
+        },
+        {
+            "mate": 1
+        },
+        {
+            "mate": 1
+        }
+    ],
+    "tournament": "4wy4DeF0",
+    "clock": {
+        "initial": 600,
+        "increment": 0,
+        "totalTime": 600
+    }
+}

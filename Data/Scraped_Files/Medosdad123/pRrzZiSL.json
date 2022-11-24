@@ -1,0 +1,93 @@
+{
+    "id": "pRrzZiSL",
+    "rated": true,
+    "variant": "standard",
+    "speed": "rapid",
+    "perf": "rapid",
+    "createdAt": "2022-08-06 17:29:42.795000+00:00",
+    "lastMoveAt": "2022-08-06 17:30:01.075000+00:00",
+    "status": "resign",
+    "players": {
+        "white": {
+            "user": {
+                "name": "sarpysarpy",
+                "id": "sarpysarpy"
+            },
+            "rating": 1597,
+            "ratingDiff": -4,
+            "analysis": {
+                "inaccuracy": 1,
+                "mistake": 0,
+                "blunder": 1,
+                "acpl": 81
+            }
+        },
+        "black": {
+            "user": {
+                "name": "Medosdad123",
+                "id": "medosdad123"
+            },
+            "rating": 1666,
+            "ratingDiff": 5,
+            "analysis": {
+                "inaccuracy": 1,
+                "mistake": 0,
+                "blunder": 0,
+                "acpl": 26
+            }
+        }
+    },
+    "winner": "black",
+    "opening": {
+        "eco": "C34",
+        "name": "King's Gambit Accepted: MacLeod Defense",
+        "ply": 6
+    },
+    "moves": "e4 e5 f4 exf4 Nf3 Nc6 Bd3",
+    "analysis": [
+        {
+            "eval": 33
+        },
+        {
+            "eval": 12
+        },
+        {
+            "eval": -55,
+            "best": "g1f3",
+            "variation": "Nf3 Nc6 Bb5 Nf6 O-O Nxe4 Re1 Nd6 Nxe5 Be7",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. Nf3 was best."
+            }
+        },
+        {
+            "eval": -43
+        },
+        {
+            "eval": -54
+        },
+        {
+            "eval": 13,
+            "best": "g8f6",
+            "variation": "Nf6 Nc3 d5 exd5 Nxd5 Bb5+ c6 Qe2+ Be6 Nxd5",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. Nf6 was best."
+            }
+        },
+        {
+            "eval": -232,
+            "best": "d2d4",
+            "variation": "d4 g5 d5 g4 dxc6 gxf3 Qxf3 Qh4+ g3 fxg3",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. d4 was best."
+            }
+        }
+    ],
+    "clock": {
+        "initial": 600,
+        "increment": 0,
+        "totalTime": 600
+    }
+}

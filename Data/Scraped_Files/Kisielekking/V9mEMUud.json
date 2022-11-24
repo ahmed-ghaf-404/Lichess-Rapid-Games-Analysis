@@ -1,0 +1,126 @@
+{
+    "id": "V9mEMUud",
+    "rated": true,
+    "variant": "standard",
+    "speed": "rapid",
+    "perf": "rapid",
+    "createdAt": "2022-03-09 23:56:35.638000+00:00",
+    "lastMoveAt": "2022-03-09 23:57:45.266000+00:00",
+    "status": "mate",
+    "players": {
+        "white": {
+            "user": {
+                "name": "Kisielekking",
+                "id": "kisielekking"
+            },
+            "rating": 1328,
+            "ratingDiff": 5,
+            "analysis": {
+                "inaccuracy": 0,
+                "mistake": 0,
+                "blunder": 1,
+                "acpl": 78
+            }
+        },
+        "black": {
+            "user": {
+                "name": "MarioIvanovic1",
+                "id": "marioivanovic1"
+            },
+            "rating": 1303,
+            "ratingDiff": -15,
+            "analysis": {
+                "inaccuracy": 0,
+                "mistake": 0,
+                "blunder": 2,
+                "acpl": 189
+            }
+        }
+    },
+    "winner": "white",
+    "opening": {
+        "eco": "C57",
+        "name": "Italian Game: Two Knights Defense, Knight Attack, Normal Variation",
+        "ply": 8
+    },
+    "moves": "e4 e5 Nf3 Nc6 Bc4 Nf6 Ng5 d5 Nxf7 Kxf7 exd5 Nxd5 Qf3+ Kg8 Bxd5+ Qxd5 Qxd5+ Be6 Qxe6#",
+    "analysis": [
+        {
+            "eval": 28
+        },
+        {
+            "eval": 12
+        },
+        {
+            "eval": 19
+        },
+        {
+            "eval": 35
+        },
+        {
+            "eval": 19
+        },
+        {
+            "eval": 26
+        },
+        {
+            "eval": 17
+        },
+        {
+            "eval": 12
+        },
+        {
+            "eval": -393,
+            "best": "e4d5",
+            "variation": "exd5 Na5 Bb5+ c6 dxc6 bxc6 Bd3 Nd5 Nf3 Bd6",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. exd5 was best."
+            }
+        },
+        {
+            "eval": -408
+        },
+        {
+            "eval": -641
+        },
+        {
+            "eval": 88,
+            "best": "b7b5",
+            "variation": "b5 dxc6+ bxc4 O-O Qd5 d3 Qxc6 Be3 Bb7 f3",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. b5 was best."
+            }
+        },
+        {
+            "eval": 51
+        },
+        {
+            "mate": 3,
+            "best": "f7e6",
+            "variation": "Ke6 Nc3 Nb4 O-O c6 d4 Qf6 Qe2 Ke7 Ne4",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Checkmate is now unavoidable. Ke6 was best."
+            }
+        },
+        {
+            "mate": 2
+        },
+        {
+            "mate": 2
+        },
+        {
+            "mate": 1
+        },
+        {
+            "mate": 1
+        }
+    ],
+    "clock": {
+        "initial": 600,
+        "increment": 0,
+        "totalTime": 600
+    }
+}

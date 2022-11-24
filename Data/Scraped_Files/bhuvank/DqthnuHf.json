@@ -1,0 +1,131 @@
+{
+    "id": "DqthnuHf",
+    "rated": true,
+    "variant": "standard",
+    "speed": "rapid",
+    "perf": "rapid",
+    "createdAt": "2022-03-02 12:16:55.748000+00:00",
+    "lastMoveAt": "2022-03-02 12:17:12.857000+00:00",
+    "status": "resign",
+    "players": {
+        "white": {
+            "user": {
+                "name": "bhuvank",
+                "id": "bhuvank"
+            },
+            "rating": 2083,
+            "ratingDiff": 10,
+            "analysis": {
+                "inaccuracy": 1,
+                "mistake": 0,
+                "blunder": 1,
+                "acpl": 79
+            }
+        },
+        "black": {
+            "user": {
+                "name": "Shaolin_Master",
+                "title": "GM",
+                "id": "shaolin_master"
+            },
+            "rating": 2489,
+            "ratingDiff": -59,
+            "analysis": {
+                "inaccuracy": 0,
+                "mistake": 0,
+                "blunder": 1,
+                "acpl": 169
+            }
+        }
+    },
+    "winner": "white",
+    "opening": {
+        "eco": "B10",
+        "name": "Caro-Kann Defense: Hillbilly Attack",
+        "ply": 3
+    },
+    "moves": "e4 c6 Bc4 d5 exd5 cxd5 Bb3 e6 d4 Nf6 Nf3 Bd6 O-O O-O c3 Ne4 Bg5 f5 Bxd8",
+    "analysis": [
+        {
+            "eval": 25
+        },
+        {
+            "eval": 56
+        },
+        {
+            "eval": -49,
+            "best": "d2d4",
+            "variation": "d4 d5 e5 c5 Nf3 cxd4 Nxd4 Nc6 Nxc6 bxc6",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. d4 was best."
+            }
+        },
+        {
+            "eval": -40
+        },
+        {
+            "eval": -28
+        },
+        {
+            "eval": -31
+        },
+        {
+            "eval": -50
+        },
+        {
+            "eval": -13
+        },
+        {
+            "eval": -12
+        },
+        {
+            "eval": 0
+        },
+        {
+            "eval": -28
+        },
+        {
+            "eval": 0
+        },
+        {
+            "eval": -15
+        },
+        {
+            "eval": -5
+        },
+        {
+            "eval": 11
+        },
+        {
+            "eval": 31
+        },
+        {
+            "eval": -592,
+            "best": "b1d2",
+            "variation": "Nbd2 Nf6",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Nbd2 was best."
+            }
+        },
+        {
+            "eval": 778,
+            "best": "e4g5",
+            "variation": "Nxg5",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Nxg5 was best."
+            }
+        },
+        {
+            "eval": 775
+        }
+    ],
+    "tournament": "DVlqncjq",
+    "clock": {
+        "initial": 600,
+        "increment": 0,
+        "totalTime": 600
+    }
+}

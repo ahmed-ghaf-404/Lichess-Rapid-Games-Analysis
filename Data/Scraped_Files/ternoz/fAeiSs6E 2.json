@@ -1,0 +1,87 @@
+{
+    "id": "fAeiSs6E",
+    "rated": true,
+    "variant": "standard",
+    "speed": "rapid",
+    "perf": "rapid",
+    "createdAt": "2022-06-19 10:18:20.928000+00:00",
+    "lastMoveAt": "2022-06-19 10:18:29.661000+00:00",
+    "status": "resign",
+    "players": {
+        "white": {
+            "user": {
+                "name": "ternoz",
+                "id": "ternoz"
+            },
+            "rating": 1694,
+            "ratingDiff": 10,
+            "analysis": {
+                "inaccuracy": 0,
+                "mistake": 0,
+                "blunder": 1,
+                "acpl": 173
+            }
+        },
+        "black": {
+            "user": {
+                "name": "Emretez",
+                "id": "emretez"
+            },
+            "rating": 1762,
+            "ratingDiff": -6,
+            "analysis": {
+                "inaccuracy": 0,
+                "mistake": 0,
+                "blunder": 1,
+                "acpl": 546
+            }
+        }
+    },
+    "winner": "white",
+    "opening": {
+        "eco": "B06",
+        "name": "Modern Defense",
+        "ply": 4
+    },
+    "moves": "e4 g6 d4 Bg7 Bh6 d6 Bxg7",
+    "analysis": [
+        {
+            "eval": 33
+        },
+        {
+            "eval": 71
+        },
+        {
+            "eval": 68
+        },
+        {
+            "eval": 73
+        },
+        {
+            "eval": -614,
+            "best": "b1c3",
+            "variation": "Nc3 d6 Be3 a6 Qd2 b5 O-O-O b4 Nd5 a5",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Nc3 was best."
+            }
+        },
+        {
+            "eval": 982,
+            "best": "g8h6",
+            "variation": "Nxh6 Nc3 d5 exd5 c6 Bc4 O-O Qd2 b5 Bd3",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Nxh6 was best."
+            }
+        },
+        {
+            "eval": 1009
+        }
+    ],
+    "clock": {
+        "initial": 600,
+        "increment": 0,
+        "totalTime": 600
+    }
+}

@@ -1,0 +1,135 @@
+{
+    "id": "t5snsAkk",
+    "rated": true,
+    "variant": "standard",
+    "speed": "rapid",
+    "perf": "rapid",
+    "createdAt": "2022-08-20 04:28:07.741000+00:00",
+    "lastMoveAt": "2022-08-20 04:30:30.193000+00:00",
+    "status": "resign",
+    "players": {
+        "white": {
+            "user": {
+                "name": "flashbangninja",
+                "id": "flashbangninja"
+            },
+            "rating": 1591,
+            "ratingDiff": -11,
+            "analysis": {
+                "inaccuracy": 1,
+                "mistake": 1,
+                "blunder": 2,
+                "acpl": 150
+            }
+        },
+        "black": {
+            "user": {
+                "name": "kamsterwong",
+                "id": "kamsterwong"
+            },
+            "rating": 1585,
+            "ratingDiff": 7,
+            "analysis": {
+                "inaccuracy": 1,
+                "mistake": 0,
+                "blunder": 0,
+                "acpl": 39
+            }
+        }
+    },
+    "winner": "black",
+    "opening": {
+        "eco": "B07",
+        "name": "Czech Defense",
+        "ply": 6
+    },
+    "moves": "e4 d6 d4 Nf6 Nc3 c6 Bf4 Qa5 Bc4 Nxe4 Ne2 e5 dxe5 dxe5 Bxe5 Qxe5 Qd2",
+    "analysis": [
+        {
+            "eval": 33
+        },
+        {
+            "eval": 75
+        },
+        {
+            "eval": 40
+        },
+        {
+            "eval": 63
+        },
+        {
+            "eval": 74
+        },
+        {
+            "eval": 76
+        },
+        {
+            "eval": 0,
+            "best": "f2f4",
+            "variation": "f4 Qa5 Bd3 e5 Nf3 exd4 Nxd4 Qb6 Nb3 a5",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. f4 was best."
+            }
+        },
+        {
+            "eval": 46
+        },
+        {
+            "eval": -149,
+            "best": "f4d2",
+            "variation": "Bd2 e5 Nf3 Qc7 Bd3 Nbd7 O-O g6 dxe5 dxe5",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Bd2 was best."
+            }
+        },
+        {
+            "eval": -122
+        },
+        {
+            "eval": -150
+        },
+        {
+            "eval": -122
+        },
+        {
+            "eval": -139
+        },
+        {
+            "eval": -62,
+            "best": "e4c3",
+            "variation": "Nxc3 bxc3 dxe5 Bd2 Nd7 O-O Nc5 Nd4 Qc7 Re1 Bd6 f4 O-O fxe5",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. Nxc3 was best."
+            }
+        },
+        {
+            "eval": -615,
+            "best": "f4e3",
+            "variation": "Be3 Bb4",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Be3 was best."
+            }
+        },
+        {
+            "eval": -552
+        },
+        {
+            "eval": -1217,
+            "best": "e1h1",
+            "variation": "O-O Bd6 f4 Qc5+ Kh1 Qxc4 Nxe4 Qxe4 Qxd6 Qe7 Qd2 O-O Ng3 Qd7",
+            "judgment": {
+                "name": "Mistake",
+                "comment": "Mistake. O-O was best."
+            }
+        }
+    ],
+    "clock": {
+        "initial": 600,
+        "increment": 0,
+        "totalTime": 600
+    }
+}

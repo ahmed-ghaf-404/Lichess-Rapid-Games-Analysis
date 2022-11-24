@@ -1,0 +1,186 @@
+{
+    "id": "CPELLjua",
+    "rated": true,
+    "variant": "standard",
+    "speed": "rapid",
+    "perf": "rapid",
+    "createdAt": "2022-07-19 11:42:53.333000+00:00",
+    "lastMoveAt": "2022-07-19 11:49:28.886000+00:00",
+    "status": "resign",
+    "players": {
+        "white": {
+            "user": {
+                "name": "Repomen",
+                "id": "repomen"
+            },
+            "rating": 1999,
+            "ratingDiff": -9,
+            "analysis": {
+                "inaccuracy": 0,
+                "mistake": 0,
+                "blunder": 3,
+                "acpl": 139
+            }
+        },
+        "black": {
+            "user": {
+                "name": "SchmiedErik",
+                "id": "schmiederik"
+            },
+            "rating": 1902,
+            "ratingDiff": 8,
+            "analysis": {
+                "inaccuracy": 3,
+                "mistake": 0,
+                "blunder": 2,
+                "acpl": 86
+            }
+        }
+    },
+    "winner": "black",
+    "opening": {
+        "eco": "B12",
+        "name": "Caro-Kann Defense: Mar\u00f3czy Variation, Mar\u00f3czy Gambit",
+        "ply": 11
+    },
+    "moves": "e4 c6 d4 d5 f3 dxe4 fxe4 e5 Nf3 exd4 Bc4 Bg4 Bxf7+ Kxf7 Ne5+ Ke8 Qxg4 Qa5+ Bd2 Qxe5 Qc8+ Kf7 O-O+ Nf6 Na3 d3 Bc3 Bc5+",
+    "analysis": [
+        {
+            "eval": 33
+        },
+        {
+            "eval": 56
+        },
+        {
+            "eval": 52
+        },
+        {
+            "eval": 28
+        },
+        {
+            "eval": 0
+        },
+        {
+            "eval": 29
+        },
+        {
+            "eval": 19
+        },
+        {
+            "eval": 33
+        },
+        {
+            "eval": 22
+        },
+        {
+            "eval": 84,
+            "best": "c8g4",
+            "variation": "Bg4 c3 Nf6 Bc4 Bh5 O-O Nbd7 Qe1 Bd6 Bg5",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. Bg4 was best."
+            }
+        },
+        {
+            "eval": 54
+        },
+        {
+            "eval": 354,
+            "best": "g8f6",
+            "variation": "Nf6 O-O Nbd7 Qe1 Nb6 Bb3 Be6 Ng5 Qd7 Nxe6",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Nf6 was best."
+            }
+        },
+        {
+            "eval": 320
+        },
+        {
+            "eval": 312
+        },
+        {
+            "eval": 321
+        },
+        {
+            "eval": 419,
+            "best": "f7e7",
+            "variation": "Ke7",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. Ke7 was best."
+            }
+        },
+        {
+            "eval": 401
+        },
+        {
+            "eval": 615,
+            "best": "b8d7",
+            "variation": "Nd7 Qh5+ g6 Nxg6 Ngf6 Qh3 Rg8 Nxf8 Nxf8 O-O Ng4 Qh5+ Rg6 h3",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. Nd7 was best."
+            }
+        },
+        {
+            "eval": 165,
+            "best": "b1d2",
+            "variation": "Nd2 Qxe5 Qc8+ Kf7 Qxb7+ Nd7 Qxa8 Ngf6 Qxc6 Bc5 Nf3 Qxe4+ Qxe4 Nxe4",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Nd2 was best."
+            }
+        },
+        {
+            "eval": 146
+        },
+        {
+            "eval": 157
+        },
+        {
+            "eval": 150
+        },
+        {
+            "eval": 155
+        },
+        {
+            "eval": 148
+        },
+        {
+            "eval": -270,
+            "best": "c8b7",
+            "variation": "Qxb7+ Nd7",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Qxb7+ was best."
+            }
+        },
+        {
+            "eval": 168,
+            "best": "e5h2",
+            "variation": "Qxh2+ Kxh2",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Qxh2+ was best."
+            }
+        },
+        {
+            "eval": -768,
+            "best": "c8b7",
+            "variation": "Qxb7+ Nd7",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Qxb7+ was best."
+            }
+        },
+        {
+            "eval": -737
+        }
+    ],
+    "clock": {
+        "initial": 600,
+        "increment": 0,
+        "totalTime": 600
+    }
+}

@@ -1,0 +1,123 @@
+{
+    "id": "ft0sRRP1",
+    "rated": true,
+    "variant": "standard",
+    "speed": "rapid",
+    "perf": "rapid",
+    "createdAt": "2022-08-05 08:08:39.859000+00:00",
+    "lastMoveAt": "2022-08-05 08:10:59.173000+00:00",
+    "status": "resign",
+    "players": {
+        "white": {
+            "user": {
+                "name": "GautamSriharshGSB",
+                "id": "gautamsriharshgsb"
+            },
+            "rating": 1818,
+            "ratingDiff": 10,
+            "analysis": {
+                "inaccuracy": 0,
+                "mistake": 1,
+                "blunder": 0,
+                "acpl": 23
+            }
+        },
+        "black": {
+            "user": {
+                "name": "ZANU_PF",
+                "id": "zanu_pf"
+            },
+            "rating": 1744,
+            "ratingDiff": -5,
+            "analysis": {
+                "inaccuracy": 0,
+                "mistake": 0,
+                "blunder": 2,
+                "acpl": 102
+            }
+        }
+    },
+    "winner": "white",
+    "opening": {
+        "eco": "B33",
+        "name": "Sicilian Defense: Lasker-Pelikan Variation",
+        "ply": 10
+    },
+    "moves": "e4 c5 Nf3 Nc6 d4 cxd4 Nxd4 Nf6 Nc3 e5 Ndb5 d6 f4 exf4 Bxf4 Nh5 Qxh5",
+    "analysis": [
+        {
+            "eval": 33
+        },
+        {
+            "eval": 32
+        },
+        {
+            "eval": 0
+        },
+        {
+            "eval": 0
+        },
+        {
+            "eval": 39
+        },
+        {
+            "eval": 38
+        },
+        {
+            "eval": 29
+        },
+        {
+            "eval": 36
+        },
+        {
+            "eval": 32
+        },
+        {
+            "eval": 13
+        },
+        {
+            "eval": 38
+        },
+        {
+            "eval": 42
+        },
+        {
+            "eval": -81,
+            "best": "c1g5",
+            "variation": "Bg5 a6 Na3 b5 Nd5 Be7 Bxf6 Bxf6 c3 Bg5",
+            "judgment": {
+                "name": "Mistake",
+                "comment": "Mistake. Bg5 was best."
+            }
+        },
+        {
+            "eval": 157,
+            "best": "a7a6",
+            "variation": "a6 fxe5 dxe5 Qxd8+ Kxd8 Na3 b5 Nab1 Nb4 Bd3",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. a6 was best."
+            }
+        },
+        {
+            "eval": 164
+        },
+        {
+            "eval": 734,
+            "best": "c8e6",
+            "variation": "Be6 Bxd6 Rc8 Bxf8 Kxf8 Qd6+ Qe7 O-O-O a6 Qxe7+ Kxe7 Nd6 Rc7 Nf5+",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Be6 was best."
+            }
+        },
+        {
+            "eval": 696
+        }
+    ],
+    "clock": {
+        "initial": 600,
+        "increment": 0,
+        "totalTime": 600
+    }
+}

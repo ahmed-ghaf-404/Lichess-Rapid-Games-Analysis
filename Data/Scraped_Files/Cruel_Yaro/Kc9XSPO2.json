@@ -1,0 +1,132 @@
+{
+    "id": "Kc9XSPO2",
+    "rated": true,
+    "variant": "standard",
+    "speed": "rapid",
+    "perf": "rapid",
+    "createdAt": "2022-08-26 00:15:37.207000+00:00",
+    "lastMoveAt": "2022-08-26 00:18:45.566000+00:00",
+    "status": "resign",
+    "players": {
+        "white": {
+            "user": {
+                "name": "Cruel_Yaro",
+                "title": "GM",
+                "patron": true,
+                "id": "cruel_yaro"
+            },
+            "rating": 2529,
+            "ratingDiff": 0,
+            "analysis": {
+                "inaccuracy": 1,
+                "mistake": 0,
+                "blunder": 0,
+                "acpl": 25
+            }
+        },
+        "black": {
+            "user": {
+                "name": "Narutoes21",
+                "id": "narutoes21"
+            },
+            "rating": 1452,
+            "ratingDiff": 0,
+            "analysis": {
+                "inaccuracy": 2,
+                "mistake": 0,
+                "blunder": 2,
+                "acpl": 167
+            }
+        }
+    },
+    "winner": "white",
+    "opening": {
+        "eco": "A06",
+        "name": "Nimzo-Larsen Attack: Classical Variation",
+        "ply": 3
+    },
+    "moves": "Nf3 d5 b3 b5 e3 Nc6 Bxb5 Bb7 Ne5 Qd6 f4 a6 Ba4 Kd8 Nxf7+",
+    "analysis": [
+        {
+            "eval": 25
+        },
+        {
+            "eval": 34
+        },
+        {
+            "eval": 0
+        },
+        {
+            "eval": 64,
+            "best": "c8f5",
+            "variation": "Bf5 Bb2 e6 g3 Nf6 Bg2 h6 O-O Be7 d3",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. Bf5 was best."
+            }
+        },
+        {
+            "eval": 61
+        },
+        {
+            "eval": 320,
+            "best": "c7c6",
+            "variation": "c6",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. c6 was best."
+            }
+        },
+        {
+            "eval": 340
+        },
+        {
+            "eval": 481,
+            "best": "c8d7",
+            "variation": "Bd7 Ba3",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. Bd7 was best."
+            }
+        },
+        {
+            "eval": 447
+        },
+        {
+            "eval": 428
+        },
+        {
+            "eval": 337,
+            "best": "d2d4",
+            "variation": "d4 Nf6",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. d4 was best."
+            }
+        },
+        {
+            "eval": 361
+        },
+        {
+            "eval": 325
+        },
+        {
+            "eval": 1024,
+            "best": "g8f6",
+            "variation": "Nf6 c4 Nd7 Ba3 Qe6 Bxc6 Bxc6 Nxc6 Qxc6 Qf3 e6 Bxf8 Kxf8 Nc3",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Nf6 was best."
+            }
+        },
+        {
+            "eval": 1017
+        }
+    ],
+    "tournament": "NReBrtt2",
+    "clock": {
+        "initial": 900,
+        "increment": 5,
+        "totalTime": 1100
+    }
+}

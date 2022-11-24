@@ -1,0 +1,127 @@
+{
+    "id": "2i6KtvbQ",
+    "rated": true,
+    "variant": "standard",
+    "speed": "rapid",
+    "perf": "rapid",
+    "createdAt": "2022-08-08 22:04:09.394000+00:00",
+    "lastMoveAt": "2022-08-08 22:11:03.254000+00:00",
+    "status": "mate",
+    "players": {
+        "white": {
+            "user": {
+                "name": "CamelClutcher",
+                "title": "NM",
+                "id": "camelclutcher"
+            },
+            "rating": 2463,
+            "ratingDiff": 5,
+            "analysis": {
+                "inaccuracy": 0,
+                "mistake": 0,
+                "blunder": 0,
+                "acpl": 9
+            }
+        },
+        "black": {
+            "user": {
+                "name": "TTcaptRush",
+                "id": "ttcaptrush"
+            },
+            "rating": 2402,
+            "ratingDiff": -21,
+            "analysis": {
+                "inaccuracy": 0,
+                "mistake": 0,
+                "blunder": 2,
+                "acpl": 109
+            }
+        }
+    },
+    "winner": "white",
+    "opening": {
+        "eco": "A28",
+        "name": "English Opening: King's English Variation, Four Knights Variation, Quiet Line",
+        "ply": 7
+    },
+    "moves": "c4 Nf6 Nc3 e5 Nf3 Nc6 e3 d5 cxd5 Nxd5 Bb5 Bg4 Qa4 Nxc3 Bxc6+ bxc6 Qxg4 Nd5 Nxe5 Qf6 Qd7#",
+    "analysis": [
+        {
+            "eval": 23
+        },
+        {
+            "eval": 29
+        },
+        {
+            "eval": 8
+        },
+        {
+            "eval": 32
+        },
+        {
+            "eval": 0
+        },
+        {
+            "eval": 18
+        },
+        {
+            "eval": 12
+        },
+        {
+            "eval": 40
+        },
+        {
+            "eval": 35
+        },
+        {
+            "eval": 43
+        },
+        {
+            "eval": 35
+        },
+        {
+            "eval": 346,
+            "best": "d5c3",
+            "variation": "Nxc3 bxc3 Bd6 d4 Bd7 O-O O-O Bxc6 Bxc6 dxe5",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Nxc3 was best."
+            }
+        },
+        {
+            "eval": 335
+        },
+        {
+            "eval": 298
+        },
+        {
+            "eval": 321
+        },
+        {
+            "eval": 330
+        },
+        {
+            "eval": 327
+        },
+        {
+            "eval": 315
+        },
+        {
+            "eval": 316
+        },
+        {
+            "mate": 1,
+            "best": "d5e7",
+            "variation": "Ne7 b3 Qd5 Bb2 h5 Qc4 f6 Nf3 Qxc4 bxc4 c5 Ke2 Nc6 d3",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Checkmate is now unavoidable. Ne7 was best."
+            }
+        }
+    ],
+    "clock": {
+        "initial": 600,
+        "increment": 0,
+        "totalTime": 600
+    }
+}

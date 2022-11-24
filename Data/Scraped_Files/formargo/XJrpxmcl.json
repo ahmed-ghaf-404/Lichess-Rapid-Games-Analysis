@@ -1,0 +1,108 @@
+{
+    "id": "XJrpxmcl",
+    "rated": true,
+    "variant": "fromPosition",
+    "speed": "rapid",
+    "perf": "rapid",
+    "createdAt": "2022-08-21 15:20:45.290000+00:00",
+    "lastMoveAt": "2022-08-21 15:22:17.928000+00:00",
+    "status": "resign",
+    "players": {
+        "white": {
+            "user": {
+                "name": "Riblar",
+                "id": "riblar"
+            },
+            "rating": 1218,
+            "ratingDiff": 0,
+            "analysis": {
+                "inaccuracy": 1,
+                "mistake": 0,
+                "blunder": 1,
+                "acpl": 157
+            }
+        },
+        "black": {
+            "user": {
+                "name": "formargo",
+                "id": "formargo"
+            },
+            "rating": 2261,
+            "ratingDiff": 1,
+            "analysis": {
+                "inaccuracy": 1,
+                "mistake": 0,
+                "blunder": 0,
+                "acpl": 14
+            }
+        }
+    },
+    "initialFen": "rnbqkbnr/pppp1p1p/8/6p1/4Pp2/5N2/PPPP2PP/RNBQKB1R w KQkq - 0 4",
+    "winner": "black",
+    "moves": "d4 g4 Ne5 Qh4+ g3 fxg3 Qxg4 g2+ Ke2 Qxg4+ Nxg4 gxh1=Q Nc3",
+    "analysis": [
+        {
+            "eval": -71,
+            "best": "h2h4",
+            "variation": "h4 g4 Ne5 d6 Nxg4 Be7 d4 Bxh4+ Nf2 Bg3",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. h4 was best."
+            }
+        },
+        {
+            "eval": -75
+        },
+        {
+            "eval": -59
+        },
+        {
+            "eval": -66
+        },
+        {
+            "eval": -75
+        },
+        {
+            "eval": -63
+        },
+        {
+            "eval": -70
+        },
+        {
+            "eval": 0,
+            "best": "h4g4",
+            "variation": "Qxg4 Nxg4 Nc6 c3 d5 Ne3 dxe4 hxg3 Bd6 Kf2",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. Qxg4 was best."
+            }
+        },
+        {
+            "eval": -1727,
+            "best": "g4h4",
+            "variation": "Qxh4 gxh1=Q Nc3 Nc6 Qh5 Nxe5 Qxe5+ Ne7 Bg5 f6",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Qxh4 was best."
+            }
+        },
+        {
+            "eval": -1762
+        },
+        {
+            "eval": -1718
+        },
+        {
+            "eval": -1777
+        },
+        {
+            "eval": -1712
+        }
+    ],
+    "tournament": "6lRRnjHX",
+    "clock": {
+        "initial": 600,
+        "increment": 0,
+        "totalTime": 600
+    }
+}

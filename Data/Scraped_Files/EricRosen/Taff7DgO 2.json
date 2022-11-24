@@ -1,0 +1,171 @@
+{
+    "id": "Taff7DgO",
+    "rated": true,
+    "variant": "standard",
+    "speed": "rapid",
+    "perf": "rapid",
+    "createdAt": "2020-12-17 19:27:26.696000+00:00",
+    "lastMoveAt": "2020-12-17 19:30:57.340000+00:00",
+    "status": "mate",
+    "players": {
+        "white": {
+            "user": {
+                "name": "EricRosen",
+                "title": "IM",
+                "patron": true,
+                "id": "ericrosen"
+            },
+            "rating": 2432,
+            "ratingDiff": 0,
+            "analysis": {
+                "inaccuracy": 2,
+                "mistake": 0,
+                "blunder": 0,
+                "acpl": 41
+            }
+        },
+        "black": {
+            "user": {
+                "name": "Raf_T",
+                "id": "raf_t"
+            },
+            "rating": 1762,
+            "ratingDiff": 0,
+            "analysis": {
+                "inaccuracy": 1,
+                "mistake": 2,
+                "blunder": 2,
+                "acpl": 123
+            }
+        }
+    },
+    "winner": "white",
+    "opening": {
+        "eco": "C00",
+        "name": "French Defense: Two Knights Variation",
+        "ply": 5
+    },
+    "moves": "e4 e6 Nc3 d5 Nf3 c5 exd5 exd5 d4 Nc6 Bb5 Bd7 O-O Nh6 Bxh6 gxh6 Nxd5 a6 Re1+ Be7 Qd2 axb5 Nf6+ Kf8 Qxh6#",
+    "analysis": [
+        {
+            "eval": 0
+        },
+        {
+            "eval": 13
+        },
+        {
+            "eval": 0
+        },
+        {
+            "eval": 37
+        },
+        {
+            "eval": -32,
+            "best": "d2d4",
+            "variation": "d4 Nf6 Bg5 dxe4 Nxe4 Be7 Nxf6+ Bxf6 Bxf6 Qxf6",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. d4 was best."
+            }
+        },
+        {
+            "eval": 90,
+            "best": "d5d4",
+            "variation": "d4 Ne2 c5 c3 Nf6 e5 Nfd7 cxd4 cxd4 Nexd4",
+            "judgment": {
+                "name": "Mistake",
+                "comment": "Mistake. d4 was best."
+            }
+        },
+        {
+            "eval": 56
+        },
+        {
+            "eval": 87
+        },
+        {
+            "eval": 17,
+            "best": "f1b5",
+            "variation": "Bb5+ Nc6 d4 Nf6 O-O Bg4 Bg5 Be7 Bxf6 Bxf6",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. Bb5+ was best."
+            }
+        },
+        {
+            "eval": 74,
+            "best": "c5c4",
+            "variation": "c4 b3 Nf6 bxc4 Bb4 Bd2 Bxc3 Bxc3 O-O cxd5",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. c4 was best."
+            }
+        },
+        {
+            "eval": 75
+        },
+        {
+            "eval": 243,
+            "best": "g8f6",
+            "variation": "Nf6 O-O Bd6 Bg5 O-O Bxf6 Qxf6 Nxd5 Qh6 dxc5",
+            "judgment": {
+                "name": "Mistake",
+                "comment": "Mistake. Nf6 was best."
+            }
+        },
+        {
+            "eval": 217
+        },
+        {
+            "eval": 540,
+            "best": "d7e6",
+            "variation": "Be6 Be3",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Be6 was best."
+            }
+        },
+        {
+            "eval": 548
+        },
+        {
+            "eval": 551
+        },
+        {
+            "eval": 539
+        },
+        {
+            "eval": 670
+        },
+        {
+            "eval": 664
+        },
+        {
+            "eval": 889
+        },
+        {
+            "eval": 637
+        },
+        {
+            "mate": 2,
+            "best": "d7e6",
+            "variation": "Be6 Bxc6+ bxc6 Nxe7 Qxe7 dxc5 Qxc5 Re5 Qe7 Qc3 O-O Re3 Rae8 h3",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Checkmate is now unavoidable. Be6 was best."
+            }
+        },
+        {
+            "mate": 1
+        },
+        {
+            "mate": 1
+        }
+    ],
+    "tournament": "v4x2hkoQ",
+    "clock": {
+        "initial": 600,
+        "increment": 0,
+        "totalTime": 600
+    }
+}

@@ -1,0 +1,129 @@
+{
+    "id": "2U2ZooI8",
+    "rated": true,
+    "variant": "standard",
+    "speed": "rapid",
+    "perf": "rapid",
+    "createdAt": "2022-05-28 20:41:30.206000+00:00",
+    "lastMoveAt": "2022-05-28 20:42:57.685000+00:00",
+    "status": "resign",
+    "players": {
+        "white": {
+            "user": {
+                "name": "NBC93",
+                "id": "nbc93"
+            },
+            "rating": 1956,
+            "ratingDiff": 11,
+            "analysis": {
+                "inaccuracy": 1,
+                "mistake": 0,
+                "blunder": 0,
+                "acpl": 12
+            }
+        },
+        "black": {
+            "user": {
+                "name": "SmUraLId1",
+                "id": "smuralid1"
+            },
+            "rating": 1954,
+            "ratingDiff": -6,
+            "analysis": {
+                "inaccuracy": 0,
+                "mistake": 1,
+                "blunder": 1,
+                "acpl": 79
+            }
+        }
+    },
+    "winner": "white",
+    "opening": {
+        "eco": "B10",
+        "name": "Caro-Kann Defense: Accelerated Panov Attack, Modern Variation",
+        "ply": 8
+    },
+    "moves": "e4 c6 c4 d5 exd5 cxd5 cxd5 Nf6 Nc3 Nxd5 Nf3 Bg4 Bc4 e6 Qa4+ Nc6 Bxd5 Bxf3 Bxf3",
+    "analysis": [
+        {
+            "eval": 33
+        },
+        {
+            "eval": 56
+        },
+        {
+            "eval": 0,
+            "best": "d2d4",
+            "variation": "d4 d5 e5 c5 Nf3 cxd4 Nxd4 Nc6 Nxc6 bxc6",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. d4 was best."
+            }
+        },
+        {
+            "eval": 10
+        },
+        {
+            "eval": 0
+        },
+        {
+            "eval": 25
+        },
+        {
+            "eval": -1
+        },
+        {
+            "eval": 0
+        },
+        {
+            "eval": 0
+        },
+        {
+            "eval": 4
+        },
+        {
+            "eval": 0
+        },
+        {
+            "eval": 141,
+            "best": "e7e6",
+            "variation": "e6 Bc4 Be7 O-O O-O Re1 Nc6 d4 Bf6 Ne4",
+            "judgment": {
+                "name": "Mistake",
+                "comment": "Mistake. e6 was best."
+            }
+        },
+        {
+            "eval": 122
+        },
+        {
+            "eval": 563,
+            "best": "d5c3",
+            "variation": "Nxc3 Qb3 e6 Qxb7 Bxf3 gxf3 Nd7 dxc3 Rb8 Qc6",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Nxc3 was best."
+            }
+        },
+        {
+            "eval": 678
+        },
+        {
+            "eval": 681
+        },
+        {
+            "eval": 676
+        },
+        {
+            "eval": 742
+        },
+        {
+            "eval": 745
+        }
+    ],
+    "clock": {
+        "initial": 900,
+        "increment": 10,
+        "totalTime": 1300
+    }
+}

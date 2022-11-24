@@ -1,0 +1,153 @@
+{
+    "id": "wWsFcu96",
+    "rated": true,
+    "variant": "standard",
+    "speed": "rapid",
+    "perf": "rapid",
+    "createdAt": "2022-06-04 15:17:15.721000+00:00",
+    "lastMoveAt": "2022-06-04 15:20:47.410000+00:00",
+    "status": "mate",
+    "players": {
+        "white": {
+            "user": {
+                "name": "Queda",
+                "id": "queda"
+            },
+            "rating": 2066,
+            "ratingDiff": -7,
+            "analysis": {
+                "inaccuracy": 2,
+                "mistake": 0,
+                "blunder": 2,
+                "acpl": 152
+            }
+        },
+        "black": {
+            "user": {
+                "name": "YNS35YNS",
+                "id": "yns35yns"
+            },
+            "rating": 1983,
+            "ratingDiff": 7,
+            "analysis": {
+                "inaccuracy": 0,
+                "mistake": 1,
+                "blunder": 1,
+                "acpl": 65
+            }
+        }
+    },
+    "winner": "black",
+    "opening": {
+        "eco": "D00",
+        "name": "Queen's Pawn Game: Accelerated London System",
+        "ply": 3
+    },
+    "moves": "d4 d5 Bf4 Nc6 e3 Bf5 c4 e6 c5 Nf6 Nc3 Ne4 Nb5 e5 Bxe5 Nxe5 dxe5 Bxc5 a3 Qh4 Nf3 Qxf2#",
+    "analysis": [
+        {
+            "eval": 21
+        },
+        {
+            "eval": 35
+        },
+        {
+            "eval": 0
+        },
+        {
+            "eval": 45
+        },
+        {
+            "eval": 50
+        },
+        {
+            "eval": 72
+        },
+        {
+            "eval": 58
+        },
+        {
+            "eval": 67
+        },
+        {
+            "eval": -24,
+            "best": "a2a3",
+            "variation": "a3 Bd6 Bxd6 Qxd6 Nd2 Nf6 Rc1 e5 cxd5 Qxd5",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. a3 was best."
+            }
+        },
+        {
+            "eval": 86,
+            "best": "e6e5",
+            "variation": "e5 Bg3 exd4 exd4 g6 Bb5 Bg7 Bxc6+ bxc6 Nc3",
+            "judgment": {
+                "name": "Mistake",
+                "comment": "Mistake. e5 was best."
+            }
+        },
+        {
+            "eval": 42
+        },
+        {
+            "eval": 45
+        },
+        {
+            "eval": -174,
+            "best": "c3e4",
+            "variation": "Nxe4 Bxe4 f3 Bf5 Bb5 Be7 Ne2 O-O O-O a6",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Nxe4 was best."
+            }
+        },
+        {
+            "eval": -153
+        },
+        {
+            "eval": -230,
+            "best": "f4g3",
+            "variation": "Bg3 h5 Rc1 a6 Nc3 exd4 exd4 h4 Bf4 g5 Be3 Nxc5 h3 Ne6",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. Bg3 was best."
+            }
+        },
+        {
+            "eval": -204
+        },
+        {
+            "eval": -221
+        },
+        {
+            "eval": -215
+        },
+        {
+            "eval": -251
+        },
+        {
+            "eval": 143,
+            "best": "c7c6",
+            "variation": "c6 Nc3",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. c6 was best."
+            }
+        },
+        {
+            "mate": -1,
+            "best": "b5c7",
+            "variation": "Nxc7+ Kf8",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Checkmate is now unavoidable. Nxc7+ was best."
+            }
+        }
+    ],
+    "clock": {
+        "initial": 600,
+        "increment": 0,
+        "totalTime": 600
+    }
+}

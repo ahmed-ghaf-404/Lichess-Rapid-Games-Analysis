@@ -1,0 +1,90 @@
+{
+    "id": "E4Qw38WC",
+    "rated": true,
+    "variant": "fromPosition",
+    "speed": "rapid",
+    "perf": "rapid",
+    "createdAt": "2022-08-23 07:48:50.737000+00:00",
+    "lastMoveAt": "2022-08-23 07:49:41.719000+00:00",
+    "status": "mate",
+    "players": {
+        "white": {
+            "user": {
+                "name": "Aziz_2013",
+                "id": "aziz_2013"
+            },
+            "rating": 1502,
+            "ratingDiff": -3,
+            "analysis": {
+                "inaccuracy": 1,
+                "mistake": 0,
+                "blunder": 1,
+                "acpl": 282
+            }
+        },
+        "black": {
+            "user": {
+                "name": "SHYRAA",
+                "id": "shyraa"
+            },
+            "rating": 1684,
+            "ratingDiff": 3,
+            "analysis": {
+                "inaccuracy": 1,
+                "mistake": 0,
+                "blunder": 0,
+                "acpl": 38
+            }
+        }
+    },
+    "initialFen": "rnbqk1nr/pppp1ppp/8/2b1p3/4PP2/8/PPPP2PP/RNBQKBNR w KQkq - 1 3",
+    "winner": "black",
+    "moves": "Nf3 Nc6 fxe5 Nxe5 Nxe5 Qh4+ Ke2 Qxe4#",
+    "analysis": [
+        {
+            "eval": 0
+        },
+        {
+            "eval": 87,
+            "best": "d7d6",
+            "variation": "d6 c3 Nc6 fxe5 dxe5 b4 Bb6 Bc4 Nf6 d3",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. d6 was best."
+            }
+        },
+        {
+            "eval": 0,
+            "best": "f3e5",
+            "variation": "Nxe5 d5 Nxc6 bxc6 d4 Bb6 e5 Ne7 Be3 Nf5",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. Nxe5 was best."
+            }
+        },
+        {
+            "eval": 0
+        },
+        {
+            "eval": 0
+        },
+        {
+            "eval": 27
+        },
+        {
+            "mate": -1,
+            "best": "g2g3",
+            "variation": "g3 Qxe4+ Qe2 Qxh1 Ng6+ Be7 Nxh8 d5 Nc3 Kf8",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Checkmate is now unavoidable. g3 was best."
+            }
+        }
+    ],
+    "tournament": "fWFnjE0a",
+    "clock": {
+        "initial": 600,
+        "increment": 0,
+        "totalTime": 600
+    }
+}

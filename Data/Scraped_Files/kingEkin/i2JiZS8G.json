@@ -1,0 +1,197 @@
+{
+    "id": "i2JiZS8G",
+    "rated": true,
+    "variant": "standard",
+    "speed": "rapid",
+    "perf": "rapid",
+    "createdAt": "2022-04-07 11:36:18.106000+00:00",
+    "lastMoveAt": "2022-04-07 11:42:43.052000+00:00",
+    "status": "resign",
+    "players": {
+        "white": {
+            "user": {
+                "name": "kingEkin",
+                "id": "kingekin"
+            },
+            "rating": 1171,
+            "ratingDiff": 18,
+            "analysis": {
+                "inaccuracy": 0,
+                "mistake": 0,
+                "blunder": 0,
+                "acpl": 23
+            }
+        },
+        "black": {
+            "user": {
+                "name": "PROKRISHNA",
+                "id": "prokrishna"
+            },
+            "rating": 1143,
+            "ratingDiff": -8,
+            "analysis": {
+                "inaccuracy": 2,
+                "mistake": 1,
+                "blunder": 1,
+                "acpl": 76
+            }
+        }
+    },
+    "winner": "white",
+    "opening": {
+        "eco": "D20",
+        "name": "Queen's Gambit Accepted: Central Variation, Greco Variation",
+        "ply": 6
+    },
+    "moves": "d4 d5 c4 dxc4 e4 b5 Nc3 a6 a4 c6 axb5 cxb5 Nxb5 Bd7 Bxc4 e6 Bf4 Bc6 Nc7+ Kd7 Nxa8 Bxa8 Qa4+ Nc6 d5 e5 Bxe5 Qe7 dxc6+ Bxc6 Qa5 f6 O-O-O+ Kc8 Qxa6+ Qb7 Be6+ Bd7 Bxd7+",
+    "analysis": [
+        {
+            "eval": 30
+        },
+        {
+            "eval": 35
+        },
+        {
+            "eval": 36
+        },
+        {
+            "eval": 33
+        },
+        {
+            "eval": 33
+        },
+        {
+            "eval": 30
+        },
+        {
+            "eval": -23,
+            "best": "a2a4",
+            "variation": "a4 c6 axb5 cxb5 Nc3 Qb6 b3 e6 bxc4 Bb4"
+        },
+        {
+            "eval": -14
+        },
+        {
+            "eval": -10
+        },
+        {
+            "eval": 75,
+            "best": "b5b4",
+            "variation": "b4 Nce2 Nc6 Nf3 e6 a5 b3 Bg5 Be7 Bxe7",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. b4 was best."
+            }
+        },
+        {
+            "eval": 47
+        },
+        {
+            "eval": 87
+        },
+        {
+            "eval": 63
+        },
+        {
+            "eval": 433,
+            "best": "a6b5",
+            "variation": "axb5 Rxa8 Bb7 Ra1 e6 Ne2 Bxe4 Nc3 Bb4 Be2",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. axb5 was best."
+            }
+        },
+        {
+            "eval": 411
+        },
+        {
+            "eval": 493
+        },
+        {
+            "eval": 501
+        },
+        {
+            "eval": 982,
+            "best": "f8b4",
+            "variation": "Bb4+ Kf1",
+            "judgment": {
+                "name": "Mistake",
+                "comment": "Mistake. Bb4+ was best."
+            }
+        },
+        {
+            "eval": 987
+        },
+        {
+            "eval": 977
+        },
+        {
+            "eval": 934
+        },
+        {
+            "eval": 981
+        },
+        {
+            "eval": 936
+        },
+        {
+            "eval": 992
+        },
+        {
+            "eval": 852
+        },
+        {
+            "eval": 1338
+        },
+        {
+            "eval": 968
+        },
+        {
+            "eval": 2224
+        },
+        {
+            "eval": 2176
+        },
+        {
+            "eval": 2266
+        },
+        {
+            "eval": 920
+        },
+        {
+            "eval": 1940
+        },
+        {
+            "eval": 1286
+        },
+        {
+            "mate": 5,
+            "best": "d7e8",
+            "variation": "Ke8",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Checkmate is now unavoidable. Ke8 was best."
+            }
+        },
+        {
+            "mate": 5
+        },
+        {
+            "mate": 5
+        },
+        {
+            "mate": 4
+        },
+        {
+            "mate": 4
+        },
+        {
+            "mate": 3
+        }
+    ],
+    "clock": {
+        "initial": 600,
+        "increment": 0,
+        "totalTime": 600
+    }
+}
