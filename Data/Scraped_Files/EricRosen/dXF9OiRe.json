@@ -1,0 +1,105 @@
+{
+    "id": "dXF9OiRe",
+    "rated": true,
+    "variant": "standard",
+    "speed": "rapid",
+    "perf": "rapid",
+    "createdAt": "2022-10-06 02:31:07.698000+00:00",
+    "lastMoveAt": "2022-10-06 02:32:13.661000+00:00",
+    "status": "resign",
+    "players": {
+        "white": {
+            "user": {
+                "name": "minsky6474",
+                "id": "minsky6474"
+            },
+            "rating": 1920,
+            "ratingDiff": 0,
+            "analysis": {
+                "inaccuracy": 0,
+                "mistake": 1,
+                "blunder": 1,
+                "acpl": 152
+            }
+        },
+        "black": {
+            "user": {
+                "name": "EricRosen",
+                "title": "IM",
+                "patron": true,
+                "id": "ericrosen"
+            },
+            "rating": 2615,
+            "ratingDiff": 0,
+            "analysis": {
+                "inaccuracy": 0,
+                "mistake": 0,
+                "blunder": 0,
+                "acpl": 13
+            }
+        }
+    },
+    "winner": "black",
+    "opening": {
+        "eco": "A52",
+        "name": "Indian Defense: Budapest Defense",
+        "ply": 6
+    },
+    "moves": "d4 Nf6 c4 e5 dxe5 Ng4 Nh3 Nxe5 Qd4 Nbc6 Qc3 Bb4",
+    "analysis": [
+        {
+            "eval": 0
+        },
+        {
+            "eval": 23
+        },
+        {
+            "eval": 29
+        },
+        {
+            "eval": 74
+        },
+        {
+            "eval": 75
+        },
+        {
+            "eval": 82
+        },
+        {
+            "eval": 52
+        },
+        {
+            "eval": 24
+        },
+        {
+            "eval": -107,
+            "best": "e2e3",
+            "variation": "e3 d5 cxd5 Bxh3 gxh3 Bd6 Bg2 Ng6 e4 O-O",
+            "judgment": {
+                "name": "Mistake",
+                "comment": "Mistake. e3 was best."
+            }
+        },
+        {
+            "eval": -109
+        },
+        {
+            "eval": -846,
+            "best": "d4e4",
+            "variation": "Qe4 Bb4+",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Qe4 was best."
+            }
+        },
+        {
+            "eval": -862
+        }
+    ],
+    "tournament": "TnCOq4wn",
+    "clock": {
+        "initial": 600,
+        "increment": 0,
+        "totalTime": 600
+    }
+}

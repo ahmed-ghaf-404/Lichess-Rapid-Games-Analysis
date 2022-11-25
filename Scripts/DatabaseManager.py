@@ -119,7 +119,6 @@ class DatabaseManager:
                 if not os.path.isdir(path+user):
                     print(f'{path+user} was skipped')
                     continue
-                print(f'{path+user}')
                 
                 for game in os.listdir(f"{path}/{user}"):
                     # we're in the user folder
@@ -154,7 +153,11 @@ class DatabaseManager:
                 self.userIds.add(userId)
                 title = f"'{title}'" if title is not None else 'NULL'
                 cmd += f"('{userId}', {title}, {rating}),"
+            else:
+                print(entry)
         cmd = cmd[:-1]
+        if cmd[-1] != ')':
+            return
         cmd += ';'
 
         try:
@@ -193,14 +196,13 @@ class DatabaseManager:
                 # we have access to indivisual users
                 if not os.path.isdir(path+user):
                     continue
+                if os.path.getsize(path+user)==0:
+                    print(path+user)
                 for g in os.listdir(path+user):
                     # we're in the user folder
                     # we have access to indivisual games
                     with open(path+user+'/'+g) as f:
                         game = json.load(f)
-                        if game['variant'] != 'rapid':
-                            os.remove(path+user+'/'+g)
-                            continue
                         gameId = game['id']
                         if gameId is not None and gameId not in self.gameIds:
                             self.gameIds.add(gameId)
