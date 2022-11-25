@@ -4,7 +4,8 @@
 - Pandas
 
 ## Data Scraping:
-- 
+- Used berserk API to extend on an [outdated kaggle dataset](https://www.kaggle.com/datasets/datasnaek/chess) and scrape more recent and active players.
+- Scraped Lichess Titled Arena to get high quality chess
 ## Data Cleaning:
 
 ## Feature Engineering:
