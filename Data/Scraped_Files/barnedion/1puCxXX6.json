@@ -1,0 +1,197 @@
+{
+    "id": "1puCxXX6",
+    "rated": true,
+    "variant": "standard",
+    "speed": "rapid",
+    "perf": "rapid",
+    "createdAt": "2022-05-02 11:08:42.808000+00:00",
+    "lastMoveAt": "2022-05-02 11:17:27.590000+00:00",
+    "status": "mate",
+    "players": {
+        "white": {
+            "user": {
+                "name": "willw1995",
+                "id": "willw1995"
+            },
+            "rating": 1249,
+            "ratingDiff": -6,
+            "analysis": {
+                "inaccuracy": 1,
+                "mistake": 1,
+                "blunder": 1,
+                "acpl": 67
+            }
+        },
+        "black": {
+            "user": {
+                "name": "barnedion",
+                "id": "barnedion"
+            },
+            "rating": 1230,
+            "ratingDiff": 7,
+            "analysis": {
+                "inaccuracy": 1,
+                "mistake": 0,
+                "blunder": 0,
+                "acpl": 17
+            }
+        }
+    },
+    "winner": "black",
+    "opening": {
+        "eco": "C55",
+        "name": "Italian Game: Two Knights Defense",
+        "ply": 6
+    },
+    "moves": "e4 e5 Nf3 Nc6 Bc4 Nf6 O-O Nxe4 d3 Nc5 Ng5 Ne6 Nc3 Nxg5 Bxg5 Qxg5 Qf3 f6 Qd5 Qg6 Ne4 Nb4 Qb5 Nxc2 Rac1 Nd4 Qc5 Bxc5 Nxc5 Ne2+ Kh1 Nxc1 Rxc1 d6 Ne6 Bxe6 Bxe6 Qxd3 Rxc7 Qd1#",
+    "analysis": [
+        {
+            "eval": 33
+        },
+        {
+            "eval": 12
+        },
+        {
+            "eval": 19
+        },
+        {
+            "eval": 32
+        },
+        {
+            "eval": 21
+        },
+        {
+            "eval": 26
+        },
+        {
+            "eval": -26,
+            "best": "d2d3",
+            "variation": "d3 Bc5 O-O d6 c3 O-O h3 h6 Nbd2 a6"
+        },
+        {
+            "eval": -29
+        },
+        {
+            "eval": -61
+        },
+        {
+            "eval": -2,
+            "best": "e4f6",
+            "variation": "Nf6 Re1 Be7 Nxe5 Nxe5 Rxe5 d5 Bb3 O-O h3",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. Nf6 was best."
+            }
+        },
+        {
+            "eval": -117,
+            "best": "f1e1",
+            "variation": "Re1 Be7 Nxe5 Nxe5 Rxe5 d6 Re1 Be6 Bxe6 Nxe6",
+            "judgment": {
+                "name": "Mistake",
+                "comment": "Mistake. Re1 was best."
+            }
+        },
+        {
+            "eval": -103
+        },
+        {
+            "eval": -563,
+            "best": "g5e6",
+            "variation": "Nxe6",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Nxe6 was best."
+            }
+        },
+        {
+            "eval": -565
+        },
+        {
+            "eval": -668
+        },
+        {
+            "eval": -623
+        },
+        {
+            "eval": -707
+        },
+        {
+            "eval": -646
+        },
+        {
+            "eval": -743
+        },
+        {
+            "eval": -735
+        },
+        {
+            "eval": -850
+        },
+        {
+            "eval": -799
+        },
+        {
+            "eval": -1000
+        },
+        {
+            "eval": -945
+        },
+        {
+            "eval": -992
+        },
+        {
+            "eval": -974
+        },
+        {
+            "eval": -1444
+        },
+        {
+            "eval": -1420
+        },
+        {
+            "eval": -1451
+        },
+        {
+            "eval": -1469
+        },
+        {
+            "eval": -1476
+        },
+        {
+            "eval": -1400
+        },
+        {
+            "eval": -1484
+        },
+        {
+            "eval": -1394
+        },
+        {
+            "eval": -1395
+        },
+        {
+            "eval": -1401
+        },
+        {
+            "eval": -1407
+        },
+        {
+            "eval": -1436
+        },
+        {
+            "mate": -1,
+            "best": "g2g3",
+            "variation": "g3 c6",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Checkmate is now unavoidable. g3 was best."
+            }
+        }
+    ],
+    "clock": {
+        "initial": 600,
+        "increment": 0,
+        "totalTime": 600
+    }
+}

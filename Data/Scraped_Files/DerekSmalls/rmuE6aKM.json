@@ -1,0 +1,232 @@
+{
+    "id": "rmuE6aKM",
+    "rated": true,
+    "variant": "standard",
+    "speed": "rapid",
+    "perf": "rapid",
+    "createdAt": "2022-09-19 17:06:27.907000+00:00",
+    "lastMoveAt": "2022-09-19 17:18:20.701000+00:00",
+    "status": "resign",
+    "players": {
+        "white": {
+            "user": {
+                "name": "Anatoliy19",
+                "id": "anatoliy19"
+            },
+            "rating": 1810,
+            "ratingDiff": -7,
+            "analysis": {
+                "inaccuracy": 3,
+                "mistake": 3,
+                "blunder": 1,
+                "acpl": 69
+            }
+        },
+        "black": {
+            "user": {
+                "name": "DerekSmalls",
+                "id": "dereksmalls"
+            },
+            "rating": 1810,
+            "ratingDiff": 7,
+            "analysis": {
+                "inaccuracy": 0,
+                "mistake": 1,
+                "blunder": 0,
+                "acpl": 23
+            }
+        }
+    },
+    "winner": "black",
+    "opening": {
+        "eco": "C50",
+        "name": "Italian Game: Giuoco Pianissimo, Italian Four Knights Variation",
+        "ply": 9
+    },
+    "moves": "e4 e5 Nf3 Nc6 Bc4 Nf6 Nc3 Bc5 d3 h6 Nd5 d6 a3 a6 b4 Ba7 O-O O-O b5 axb5 Bxb5 Nxd5 exd5 Ne7 c4 Bg4 Be3 f5 Bxa7 Rxa7 h3 Bh5 Qe1 Bxf3 gxf3 Ng6 d4 Qh4 Kh2 Nf4 dxe5 Qxh3+ Kg1",
+    "analysis": [
+        {
+            "eval": 0
+        },
+        {
+            "eval": 12
+        },
+        {
+            "eval": 19
+        },
+        {
+            "eval": 32
+        },
+        {
+            "eval": 21
+        },
+        {
+            "eval": 18
+        },
+        {
+            "eval": 0
+        },
+        {
+            "eval": 21
+        },
+        {
+            "eval": 11
+        },
+        {
+            "eval": 13
+        },
+        {
+            "eval": 0
+        },
+        {
+            "eval": 13
+        },
+        {
+            "eval": -8
+        },
+        {
+            "eval": 0
+        },
+        {
+            "eval": -24
+        },
+        {
+            "eval": -11
+        },
+        {
+            "eval": -18
+        },
+        {
+            "eval": -19
+        },
+        {
+            "eval": -183,
+            "best": "c1e3",
+            "variation": "Be3 Nxd5 Bxd5 Ne7 Bb3 Ng6 h3 Qe7 Qd2 Be6 Bxa7 Rxa7 d4 exd4",
+            "judgment": {
+                "name": "Mistake",
+                "comment": "Mistake. Be3 was best."
+            }
+        },
+        {
+            "eval": -196
+        },
+        {
+            "eval": -172
+        },
+        {
+            "eval": -169
+        },
+        {
+            "eval": -177
+        },
+        {
+            "eval": -174
+        },
+        {
+            "eval": -266,
+            "best": "b5c4",
+            "variation": "Bc4 Bb6",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. Bc4 was best."
+            }
+        },
+        {
+            "eval": -262
+        },
+        {
+            "eval": -428,
+            "best": "h2h3",
+            "variation": "h3 Bh5 g4 Bg6 Ra2 c6 dxc6 bxc6 Ba4 f5 Nh4 Bh7 Nxf5 Nxf5",
+            "judgment": {
+                "name": "Mistake",
+                "comment": "Mistake. h3 was best."
+            }
+        },
+        {
+            "eval": -345
+        },
+        {
+            "eval": -434,
+            "best": "d1b3",
+            "variation": "Qb3",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. Qb3 was best."
+            }
+        },
+        {
+            "eval": -406
+        },
+        {
+            "eval": -517,
+            "best": "f1e1",
+            "variation": "Re1 Ng6",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. Re1 was best."
+            }
+        },
+        {
+            "eval": -510
+        },
+        {
+            "eval": -592
+        },
+        {
+            "eval": -563
+        },
+        {
+            "eval": -623
+        },
+        {
+            "eval": -492
+        },
+        {
+            "mate": -4,
+            "best": "g1h2",
+            "variation": "Kh2 Qh4 Rg1 Nf4 Rg3 Nxd3 Qe3 Nc5 Rg6 Rf6 Be8 Ra8 Rag1 Rxg6",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Checkmate is now unavoidable. Kh2 was best."
+            }
+        },
+        {
+            "eval": -884,
+            "best": "g6f4",
+            "variation": "Nf4 h4 Qxh4 Ba6 Qg5+ Kh2 Qg2#",
+            "judgment": {
+                "name": "Mistake",
+                "comment": "Lost forced checkmate sequence. Nf4 was best."
+            }
+        },
+        {
+            "mate": -3,
+            "best": "e1e3",
+            "variation": "Qe3 Nf4 Qxf4 Qxf4 dxe5 dxe5 c5 Qxf3 Rfe1 Rf6 Be8 Qxd5 c6 Ra8",
+            "judgment": {
+                "name": "Mistake",
+                "comment": "Checkmate is now unavoidable. Qe3 was best."
+            }
+        },
+        {
+            "mate": -2
+        },
+        {
+            "mate": -2
+        },
+        {
+            "mate": -1
+        },
+        {
+            "mate": -1
+        }
+    ],
+    "tournament": "SPm7p6PI",
+    "clock": {
+        "initial": 600,
+        "increment": 0,
+        "totalTime": 600
+    }
+}

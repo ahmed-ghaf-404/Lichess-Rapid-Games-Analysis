@@ -1,0 +1,171 @@
+{
+    "id": "dOUhknw0",
+    "rated": true,
+    "variant": "standard",
+    "speed": "rapid",
+    "perf": "rapid",
+    "createdAt": "2022-09-08 13:14:01.700000+00:00",
+    "lastMoveAt": "2022-09-08 13:16:53+00:00",
+    "status": "mate",
+    "players": {
+        "white": {
+            "user": {
+                "name": "Ehmke",
+                "id": "ehmke"
+            },
+            "rating": 1117,
+            "ratingDiff": -7,
+            "analysis": {
+                "inaccuracy": 2,
+                "mistake": 0,
+                "blunder": 3,
+                "acpl": 149
+            }
+        },
+        "black": {
+            "user": {
+                "name": "peter01o",
+                "id": "peter01o"
+            },
+            "rating": 1038,
+            "ratingDiff": 7,
+            "analysis": {
+                "inaccuracy": 1,
+                "mistake": 0,
+                "blunder": 1,
+                "acpl": 80
+            }
+        }
+    },
+    "winner": "black",
+    "opening": {
+        "eco": "B10",
+        "name": "Caro-Kann Defense: Two Knights Attack",
+        "ply": 5
+    },
+    "moves": "e4 c6 Nf3 d5 Nc3 dxe4 Nxe4 Bf5 d3 Nd7 Neg5 h6 Nd4 hxg5 Nxf5 e6 Nd4 Ndf6 Bxg5 Qxd4 Be2 O-O-O O-O Qe5 Bd2 Qxh2#",
+    "analysis": [
+        {
+            "eval": 0
+        },
+        {
+            "eval": 56,
+            "best": "e7e6",
+            "variation": "e6 d4 d5 Nc3 Nf6 e5 Nfd7 f4 c5 Nf3",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. e6 was best."
+            }
+        },
+        {
+            "eval": 44
+        },
+        {
+            "eval": 27
+        },
+        {
+            "eval": 28
+        },
+        {
+            "eval": 29
+        },
+        {
+            "eval": 23
+        },
+        {
+            "eval": 67
+        },
+        {
+            "eval": 36
+        },
+        {
+            "eval": 32
+        },
+        {
+            "eval": -62,
+            "best": "d1e2",
+            "variation": "Qe2 e6 g3 Ngf6 Nxf6+ Nxf6 Bg2 Bb4+ Bd2 Bxd2+",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. Qe2 was best."
+            }
+        },
+        {
+            "eval": -52
+        },
+        {
+            "eval": -607,
+            "best": "g5e4",
+            "variation": "Ne4 e5 g3 Ngf6 Nxf6+ Nxf6 Bg2 Bb4+ Bd2 Bd6",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Ne4 was best."
+            }
+        },
+        {
+            "eval": -568
+        },
+        {
+            "eval": -646
+        },
+        {
+            "eval": 23,
+            "best": "d8a5",
+            "variation": "Qa5+ Qd2 Qxf5 Qxg5 g6 Qxf5 gxf5 a4 a5 Bd2 Ngf6 g3 e6 Bg2",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Qa5+ was best."
+            }
+        },
+        {
+            "eval": -58,
+            "best": "f5e3",
+            "variation": "Ne3",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. Ne3 was best."
+            }
+        },
+        {
+            "eval": -27
+        },
+        {
+            "eval": -648,
+            "best": "c2c3",
+            "variation": "c3 g4 Be2 Bc5 Be3 Qd6 Bxg4 Rxh2 Rxh2 Qxh2 Bf3 Ne7 Qe2 Qg1+",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. c3 was best."
+            }
+        },
+        {
+            "eval": -650
+        },
+        {
+            "eval": -675
+        },
+        {
+            "eval": -565
+        },
+        {
+            "eval": -621
+        },
+        {
+            "eval": -638
+        },
+        {
+            "mate": -1,
+            "best": "h2h4",
+            "variation": "h4 Ne7 g3 Nf5 Bf4 Qa5 Bf3 Nd4 Bg5 Nxf3+ Qxf3 Qd5 Qxd5 Rxd5",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Checkmate is now unavoidable. h4 was best."
+            }
+        }
+    ],
+    "clock": {
+        "initial": 600,
+        "increment": 0,
+        "totalTime": 600
+    }
+}

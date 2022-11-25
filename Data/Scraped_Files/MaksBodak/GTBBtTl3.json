@@ -1,0 +1,138 @@
+{
+    "id": "GTBBtTl3",
+    "rated": true,
+    "variant": "standard",
+    "speed": "rapid",
+    "perf": "rapid",
+    "createdAt": "2022-06-01 16:57:27.037000+00:00",
+    "lastMoveAt": "2022-06-01 16:59:27.363000+00:00",
+    "status": "resign",
+    "players": {
+        "white": {
+            "user": {
+                "name": "MaksBodak",
+                "id": "maksbodak"
+            },
+            "rating": 1676,
+            "ratingDiff": -5,
+            "analysis": {
+                "inaccuracy": 0,
+                "mistake": 1,
+                "blunder": 2,
+                "acpl": 139
+            }
+        },
+        "black": {
+            "user": {
+                "name": "mrmrg81",
+                "id": "mrmrg81"
+            },
+            "rating": 1760,
+            "ratingDiff": 5,
+            "analysis": {
+                "inaccuracy": 1,
+                "mistake": 0,
+                "blunder": 0,
+                "acpl": 29
+            }
+        }
+    },
+    "winner": "black",
+    "opening": {
+        "eco": "C42",
+        "name": "Russian Game: Stafford Gambit",
+        "ply": 8
+    },
+    "moves": "e4 e5 Nf3 Nf6 Nxe5 Nc6 Nxc6 dxc6 Nc3 Bc5 Bc4 Ng4 O-O Qh4 h3 Nxf2 Rxf2 Bxf2+ Kh1 Bxh3",
+    "analysis": [
+        {
+            "eval": 33
+        },
+        {
+            "eval": 12
+        },
+        {
+            "eval": 19
+        },
+        {
+            "eval": 50
+        },
+        {
+            "eval": 34
+        },
+        {
+            "eval": 140,
+            "best": "d7d6",
+            "variation": "d6 Nf3 Nxe4 d4 d5 Bd3 Bd6 O-O O-O c4",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. d6 was best."
+            }
+        },
+        {
+            "eval": 230
+        },
+        {
+            "eval": 188
+        },
+        {
+            "eval": 180
+        },
+        {
+            "eval": 236
+        },
+        {
+            "eval": -57,
+            "best": "h2h3",
+            "variation": "h3 Bd4 d3 Be6 g3 Qd6 Bg2 O-O-O Ne2 Bb6",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. h3 was best."
+            }
+        },
+        {
+            "eval": -67
+        },
+        {
+            "eval": -615,
+            "best": "h1f1",
+            "variation": "Rf1 Qf6 Qe2 Nxh2 Rh1 Ng4 Nd1 Ne5 f3 Nxc4",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Rf1 was best."
+            }
+        },
+        {
+            "eval": -563
+        },
+        {
+            "eval": -475
+        },
+        {
+            "eval": -428
+        },
+        {
+            "eval": -506
+        },
+        {
+            "eval": -552
+        },
+        {
+            "eval": -1627,
+            "best": "g1f1",
+            "variation": "Kf1 Be6",
+            "judgment": {
+                "name": "Mistake",
+                "comment": "Mistake. Kf1 was best."
+            }
+        },
+        {
+            "eval": -1683
+        }
+    ],
+    "clock": {
+        "initial": 600,
+        "increment": 5,
+        "totalTime": 800
+    }
+}

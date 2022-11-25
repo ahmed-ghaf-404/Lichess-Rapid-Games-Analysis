@@ -1,0 +1,144 @@
+{
+    "id": "R7Pk7o5P",
+    "rated": true,
+    "variant": "standard",
+    "speed": "rapid",
+    "perf": "rapid",
+    "createdAt": "2022-07-27 10:44:54.054000+00:00",
+    "lastMoveAt": "2022-07-27 10:47:40.519000+00:00",
+    "status": "resign",
+    "players": {
+        "white": {
+            "user": {
+                "name": "kai_roo",
+                "id": "kai_roo"
+            },
+            "rating": 1388,
+            "ratingDiff": 6,
+            "analysis": {
+                "inaccuracy": 1,
+                "mistake": 0,
+                "blunder": 1,
+                "acpl": 55
+            }
+        },
+        "black": {
+            "user": {
+                "name": "soheil100",
+                "id": "soheil100"
+            },
+            "rating": 1383,
+            "ratingDiff": -6,
+            "analysis": {
+                "inaccuracy": 1,
+                "mistake": 0,
+                "blunder": 2,
+                "acpl": 153
+            }
+        }
+    },
+    "winner": "white",
+    "opening": {
+        "eco": "D06",
+        "name": "Queen's Gambit Declined: Marshall Defense",
+        "ply": 4
+    },
+    "moves": "d4 d5 c4 Nf6 g3 Nc6 Bg2 Bf5 Nf3 Nb4 Qa4+ Qd7 Qxb4 Rb8 Ne5 e6 c5 Qe7 Nc3 b6",
+    "analysis": [
+        {
+            "eval": 0
+        },
+        {
+            "eval": 38
+        },
+        {
+            "eval": 27
+        },
+        {
+            "eval": 81
+        },
+        {
+            "eval": 0,
+            "best": "c4d5",
+            "variation": "cxd5 c6 dxc6 Nxc6 Nf3 e5 dxe5 Qxd1+ Kxd1 Ng4",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. cxd5 was best."
+            }
+        },
+        {
+            "eval": 13
+        },
+        {
+            "eval": 15
+        },
+        {
+            "eval": 386,
+            "best": "d5c4",
+            "variation": "dxc4 d5 Nb8 Qa4+ c6 dxc6 Nxc6 Nf3 Bd7 O-O",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. dxc4 was best."
+            }
+        },
+        {
+            "eval": 64,
+            "best": "c4d5",
+            "variation": "cxd5 Nxd5 e4 Bg4 Qxg4 Ndb4 Na3 Qxd4 Qe2 O-O-O",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. cxd5 was best."
+            }
+        },
+        {
+            "eval": 174,
+            "best": "e7e6",
+            "variation": "e6 O-O Be7 Nc3 dxc4 Qa4 O-O Qxc4 a5 Bf4",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. e6 was best."
+            }
+        },
+        {
+            "eval": 154
+        },
+        {
+            "eval": 837,
+            "best": "b4c6",
+            "variation": "Nc6 cxd5 Nxd5 Ne5 Bd7 Nxf7 Kxf7 Bxd5+ e6 Be4",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Nc6 was best."
+            }
+        },
+        {
+            "eval": 822
+        },
+        {
+            "eval": 842
+        },
+        {
+            "eval": 837
+        },
+        {
+            "eval": 839
+        },
+        {
+            "eval": 782
+        },
+        {
+            "eval": 864
+        },
+        {
+            "eval": 844
+        },
+        {
+            "eval": 1187
+        }
+    ],
+    "clock": {
+        "initial": 600,
+        "increment": 0,
+        "totalTime": 600
+    }
+}

@@ -1,0 +1,510 @@
+{
+    "id": "MBPTSQ5C",
+    "rated": true,
+    "variant": "standard",
+    "speed": "rapid",
+    "perf": "rapid",
+    "createdAt": "2022-11-06 15:44:00.356000+00:00",
+    "lastMoveAt": "2022-11-06 15:51:56.326000+00:00",
+    "status": "resign",
+    "players": {
+        "white": {
+            "user": {
+                "name": "sairam_1",
+                "id": "sairam_1"
+            },
+            "rating": 986,
+            "ratingDiff": -4,
+            "analysis": {
+                "inaccuracy": 10,
+                "mistake": 2,
+                "blunder": 5,
+                "acpl": 89
+            }
+        },
+        "black": {
+            "user": {
+                "name": "IALL",
+                "id": "iall"
+            },
+            "rating": 1029,
+            "ratingDiff": 5,
+            "analysis": {
+                "inaccuracy": 8,
+                "mistake": 2,
+                "blunder": 3,
+                "acpl": 68
+            }
+        }
+    },
+    "winner": "black",
+    "opening": {
+        "eco": "C20",
+        "name": "King's Pawn Game: Leonardis Variation",
+        "ply": 3
+    },
+    "moves": "d3 e5 e4 d5 Qf3 Nf6 Nh3 dxe4 dxe4 Bg4 Qg3 Nc6 f3 Bxh3 Qxh3 Qd7 Be3 Qxh3 gxh3 O-O-O Nc3 Kb8 Be2 Bb4 O-O h5 a3 Bxc3 bxc3 h4 f4 exf4 Bxf4 Nxe4 Rf3 g5 Be5 Nxe5 Rf5 Rde8 Rd1 b6 Rd5 Rhg8 Rd7 g4 Kg2 gxh3+ Kxh3 Rd8 Rdxf7 Nxf7 Rxf7 Ng5+ Kxh4 Nxf7 Bh5 Nh6 c4 Rg2 h3 Rxc2 Kg5 Rxc4 Kxh6 Rc3 h4 Rxa3 Kg5 a5 Bg6 b5 h5 b4 Bf7 Rf8 Bc4 Rc3 Bd5 a4 h6 Rh8 Kg6 Rxh6+ Kxh6 a3 Kg6 b3 Bxb3 Rxb3 Kf6 a2",
+    "analysis": [
+        {
+            "eval": 0
+        },
+        {
+            "eval": 0
+        },
+        {
+            "eval": 0
+        },
+        {
+            "eval": 10
+        },
+        {
+            "eval": -66,
+            "best": "e4d5",
+            "variation": "exd5 Qxd5 Nc3 Bb4 Ne2 Nc6 a3 Bxc3+ Nxc3 Qe6",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. exd5 was best."
+            }
+        },
+        {
+            "eval": -98
+        },
+        {
+            "eval": -298,
+            "best": "c1g5",
+            "variation": "Bg5 Nc6 exd5 Nd4 Qd1 Qxd5 c3 Nc6 Qb3 Be6",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Bg5 was best."
+            }
+        },
+        {
+            "eval": -100,
+            "best": "b8c6",
+            "variation": "Nc6 Bg5 Nd4 Qd1 Bg4 Qd2 Bxh3 c3 Ne6 gxh3 dxe4 Rg1 exd3 Bxd3",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Nc6 was best."
+            }
+        },
+        {
+            "eval": -97
+        },
+        {
+            "eval": -92
+        },
+        {
+            "mate": -1,
+            "best": "f3d3",
+            "variation": "Qd3 Qxd3 Bxd3 Bxh3 gxh3 Nbd7 Nd2 Nc5 a3 a5 Nc4 Nfxe4 Nxe5 Nxd3+",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Checkmate is now unavoidable. Qd3 was best."
+            }
+        },
+        {
+            "eval": -59,
+            "best": "d8d1",
+            "variation": "Qd1#",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Lost forced checkmate sequence. Qd1# was best."
+            }
+        },
+        {
+            "eval": -68
+        },
+        {
+            "eval": -58
+        },
+        {
+            "eval": -104
+        },
+        {
+            "eval": 60,
+            "best": "f8c5",
+            "variation": "Bc5 Nd2 Nb4 Kd1 Qd6 a3 Nc6 b4 Be3 Bd3 Rd8 Ra2 Bxd2 Kxd2",
+            "judgment": {
+                "name": "Mistake",
+                "comment": "Mistake. Bc5 was best."
+            }
+        },
+        {
+            "eval": -96,
+            "best": "h3d7",
+            "variation": "Qxd7+ Nxd7 c3 g6 h4 h5 Kd1 f5 Kc2 fxe4 fxe4 Nc5 Bb5 Nxe4",
+            "judgment": {
+                "name": "Mistake",
+                "comment": "Mistake. Qxd7+ was best."
+            }
+        },
+        {
+            "eval": -103
+        },
+        {
+            "eval": -111
+        },
+        {
+            "eval": 31,
+            "best": "c6d4",
+            "variation": "Nd4 Bxd4 exd4 Nd2 Bd6 Nb3 c5 Bc4 Nd7 Bd5 Ke7 O-O Rhb8 Na5",
+            "judgment": {
+                "name": "Mistake",
+                "comment": "Mistake. Nd4 was best."
+            }
+        },
+        {
+            "eval": -102,
+            "best": "c2c3",
+            "variation": "c3 a5 Bc4 Nd7 Bxf7 Bc5 Bg1 Ne7 Be6 Bxg1 Rxg1 Ng6 Bf5 Nh4",
+            "judgment": {
+                "name": "Mistake",
+                "comment": "Mistake. c3 was best."
+            }
+        },
+        {
+            "eval": -63
+        },
+        {
+            "eval": -97
+        },
+        {
+            "eval": -94
+        },
+        {
+            "eval": -104
+        },
+        {
+            "eval": -25,
+            "best": "c6d4",
+            "variation": "Nd4 Bd3",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. Nd4 was best."
+            }
+        },
+        {
+            "eval": -35
+        },
+        {
+            "eval": -10
+        },
+        {
+            "eval": -6
+        },
+        {
+            "eval": -16
+        },
+        {
+            "eval": -226,
+            "best": "e2c4",
+            "variation": "Bc4",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Bc4 was best."
+            }
+        },
+        {
+            "eval": -115,
+            "best": "f6e4",
+            "variation": "Nxe4 Bf3 exf4 Bxf4 Rhe8 Rae1 Nxc3 Bxc6 Rxe1 Rxe1 bxc6 Re7 Nd5 Rxf7",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. Nxe4 was best."
+            }
+        },
+        {
+            "eval": -226,
+            "best": "f1f4",
+            "variation": "Rxf4 Rhe8",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. Rxf4 was best."
+            }
+        },
+        {
+            "eval": -202
+        },
+        {
+            "eval": -337,
+            "best": "e2f3",
+            "variation": "Bf3",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. Bf3 was best."
+            }
+        },
+        {
+            "eval": -287
+        },
+        {
+            "eval": -938,
+            "best": "f4c1",
+            "variation": "Bc1",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Bc1 was best."
+            }
+        },
+        {
+            "eval": -951
+        },
+        {
+            "eval": -974
+        },
+        {
+            "eval": -959
+        },
+        {
+            "eval": -1139
+        },
+        {
+            "eval": -964
+        },
+        {
+            "eval": -1031
+        },
+        {
+            "eval": -632,
+            "best": "f7f6",
+            "variation": "f6 c4 Nc3 Bf1 Nxd5 cxd5 Rhf8 Bb5 Rd8 c4 Rd6 Kg2 Rfd8 Rf2",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. f6 was best."
+            }
+        },
+        {
+            "eval": -1421,
+            "best": "d5e5",
+            "variation": "Rdxe5 Nd6 Rxe8+ Rxe8 Rf2 Re5 Rg2 Ra5 Bd3 Kc8 Kf2 f6 Kf3 Ra4",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. Rdxe5 was best."
+            }
+        },
+        {
+            "eval": -1034
+        },
+        {
+            "eval": -1407
+        },
+        {
+            "eval": -1428
+        },
+        {
+            "eval": -1393
+        },
+        {
+            "eval": -102,
+            "best": "e5d7",
+            "variation": "Nxd7 Bb5 Re7 Bxd7 Rxd7 Kxh4 Re7 Kh5 Nd6 Rf4 f5 Kh6 Rg2 h4",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Nxd7 was best."
+            }
+        },
+        {
+            "eval": -1258,
+            "best": "d7d8",
+            "variation": "Rxd8+ Rxd8 Rxe5 Nxc3 Ba6 Nb1 Re3 c6 Kxh4 Kc7 Be2 Rd2 Kg3 Nxa3",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Rxd8+ was best."
+            }
+        },
+        {
+            "eval": -1420
+        },
+        {
+            "eval": -1503
+        },
+        {
+            "eval": -1492
+        },
+        {
+            "eval": -1509
+        },
+        {
+            "eval": -1485
+        },
+        {
+            "eval": -1810
+        },
+        {
+            "eval": -7259
+        },
+        {
+            "mate": -4,
+            "best": "h4h3",
+            "variation": "Kh3 Rd2 Be8 Rxe8 Kg3 Rxc2 Kf4 Rg8 Ke5 Rxc3 Kd5 Rg4 h3 Rxh3",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Checkmate is now unavoidable. Kh3 was best."
+            }
+        },
+        {
+            "eval": -1440,
+            "best": "h6f5",
+            "variation": "Nf5+ Kh3 Rd4 Bg4 Rdxg4 c5 Rh4#",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Lost forced checkmate sequence. Nf5+ was best."
+            }
+        },
+        {
+            "mate": -1,
+            "best": "h5f3",
+            "variation": "Bf3 Nf5+ Kh3 Rxc2 Be4 Rc3+ Kg4 Nd6 Bb1 Rg8+ Kf4 Rxc4+ Ke5 Rc3",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Checkmate is now unavoidable. Bf3 was best."
+            }
+        },
+        {
+            "eval": -1478,
+            "best": "h6f5",
+            "variation": "Nf5#",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Lost forced checkmate sequence. Nf5# was best."
+            }
+        },
+        {
+            "eval": -1534
+        },
+        {
+            "eval": -1466
+        },
+        {
+            "eval": -1748
+        },
+        {
+            "eval": -1393
+        },
+        {
+            "eval": -2563
+        },
+        {
+            "eval": -1500
+        },
+        {
+            "mate": -24,
+            "best": "h5g4",
+            "variation": "Bg4 b5 Kg5 b4 Kf6 a5 Ke7 Rd6 h5 b3 Bf3 b2 Be4 a4",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Checkmate is now unavoidable. Bg4 was best."
+            }
+        },
+        {
+            "eval": -1416,
+            "best": "a3a5",
+            "variation": "Ra5+",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Lost forced checkmate sequence. Ra5+ was best."
+            }
+        },
+        {
+            "eval": -2786
+        },
+        {
+            "eval": -1492
+        },
+        {
+            "eval": -1617
+        },
+        {
+            "eval": -1634
+        },
+        {
+            "eval": -1700
+        },
+        {
+            "eval": -1636
+        },
+        {
+            "eval": -1994
+        },
+        {
+            "eval": -1989
+        },
+        {
+            "mate": -8,
+            "best": "c4e2",
+            "variation": "Be2 b3 h6 a4 Kg6 Rg3+ Kh5 b2 Kh4 b1=Q Kxg3 Qe1+ Kg4 Qxe2+",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Checkmate is now unavoidable. Be2 was best."
+            }
+        },
+        {
+            "eval": -2418,
+            "best": "c3c5",
+            "variation": "Rc5 Kh6 Rxd5 Kg7 Rf2 Kg6 Rd1 Kg7 Rg1+ Kh7 Rh2 h6 Rh3 Kh8",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Lost forced checkmate sequence. Rc5 was best."
+            }
+        },
+        {
+            "mate": -20,
+            "best": "d5e6",
+            "variation": "Be6 a3",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Checkmate is now unavoidable. Be6 was best."
+            }
+        },
+        {
+            "eval": -1798,
+            "best": "c3c5",
+            "variation": "Rc5 Kh5 Rxd5+ Kg4 b3 Kh4 a3 Kg4 Rdd8 Kh4 a2 h7 b2 Kh5",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Lost forced checkmate sequence. Rc5 was best."
+            }
+        },
+        {
+            "eval": -1785
+        },
+        {
+            "eval": -2131
+        },
+        {
+            "eval": -1944
+        },
+        {
+            "eval": -2943
+        },
+        {
+            "eval": -3511
+        },
+        {
+            "eval": -2687
+        },
+        {
+            "mate": -8,
+            "best": "g6f6",
+            "variation": "Kf6 a2 Be4 a1=Q Kf7 Qc1 Bf5 Ka7 Bh7 Qf4+ Ke6 Qh6+ Kf5 Qxh7+",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Checkmate is now unavoidable. Kf6 was best."
+            }
+        },
+        {
+            "mate": -7
+        },
+        {
+            "mate": -7
+        },
+        {
+            "mate": -6
+        }
+    ],
+    "clock": {
+        "initial": 600,
+        "increment": 0,
+        "totalTime": 600
+    }
+}

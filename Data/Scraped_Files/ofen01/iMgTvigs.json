@@ -1,0 +1,192 @@
+{
+    "id": "iMgTvigs",
+    "rated": true,
+    "variant": "standard",
+    "speed": "rapid",
+    "perf": "rapid",
+    "createdAt": "2022-08-24 15:39:08.528000+00:00",
+    "lastMoveAt": "2022-08-24 15:52:00.158000+00:00",
+    "status": "mate",
+    "players": {
+        "white": {
+            "user": {
+                "name": "ofen01",
+                "id": "ofen01"
+            },
+            "rating": 1698,
+            "ratingDiff": 6,
+            "analysis": {
+                "inaccuracy": 2,
+                "mistake": 0,
+                "blunder": 1,
+                "acpl": 33
+            }
+        },
+        "black": {
+            "user": {
+                "name": "fredericms",
+                "id": "fredericms"
+            },
+            "rating": 1662,
+            "ratingDiff": -7,
+            "analysis": {
+                "inaccuracy": 0,
+                "mistake": 2,
+                "blunder": 3,
+                "acpl": 99
+            }
+        }
+    },
+    "winner": "white",
+    "opening": {
+        "eco": "C36",
+        "name": "King's Gambit Accepted: Modern Defense",
+        "ply": 7
+    },
+    "moves": "e4 e5 f4 exf4 Nf3 d5 exd5 Qxd5 Nc3 Qe6+ Be2 Bc5 d4 Bb6 Bxf4 Nf6 Ng5 Qe7 O-O O-O Bc4 Bg4 Qd3 Nc6 Nd5 Bxd4+ Kh1 Be2 Nxf6+ Qxf6 Qxh7#",
+    "analysis": [
+        {
+            "eval": 33
+        },
+        {
+            "eval": 12
+        },
+        {
+            "eval": -65,
+            "best": "g1f3",
+            "variation": "Nf3 Nc6 Bb5 Nf6 O-O Nxe4 Re1 Nd6 Nxe5 Be7",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. Nf3 was best."
+            }
+        },
+        {
+            "eval": -43
+        },
+        {
+            "eval": -54
+        },
+        {
+            "eval": -23
+        },
+        {
+            "eval": -14
+        },
+        {
+            "eval": 36
+        },
+        {
+            "eval": 2
+        },
+        {
+            "eval": 0
+        },
+        {
+            "eval": 0
+        },
+        {
+            "eval": 178,
+            "best": "f8d6",
+            "variation": "Bd6 O-O Ne7 d4 h6 d5 Qd7 Nh4 O-O Bxf4",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Bd6 was best."
+            }
+        },
+        {
+            "eval": 182
+        },
+        {
+            "eval": 207
+        },
+        {
+            "eval": 229
+        },
+        {
+            "eval": 194
+        },
+        {
+            "eval": 10,
+            "best": "e1g1",
+            "variation": "O-O O-O Kh1 Qd7 Qd2 Nc6 Rad1 Ba5 Bd3 Nb4 Ne5 Qe7 Bc4 Be6",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. O-O was best."
+            }
+        },
+        {
+            "eval": 5
+        },
+        {
+            "eval": -39
+        },
+        {
+            "eval": 72,
+            "best": "b8c6",
+            "variation": "Nc6",
+            "judgment": {
+                "name": "Mistake",
+                "comment": "Mistake. Nc6 was best."
+            }
+        },
+        {
+            "eval": 0,
+            "best": "g1h1",
+            "variation": "Kh1",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. Kh1 was best."
+            }
+        },
+        {
+            "eval": 400,
+            "best": "b8c6",
+            "variation": "Nc6 Qd3 Bxd4+ Kh1 Bxc3 Qxc3 Bf5 Be3 Ng4 Rxf5 Qxe3 Nxf7 Qxc3 bxc3",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Nc6 was best."
+            }
+        },
+        {
+            "eval": 330
+        },
+        {
+            "eval": 957,
+            "best": "g7g6",
+            "variation": "g6",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. g6 was best."
+            }
+        },
+        {
+            "eval": 1040
+        },
+        {
+            "eval": 942
+        },
+        {
+            "eval": 954
+        },
+        {
+            "mate": 2,
+            "best": "f8e8",
+            "variation": "Rfe8 Nxf6+",
+            "judgment": {
+                "name": "Mistake",
+                "comment": "Checkmate is now unavoidable. Rfe8 was best."
+            }
+        },
+        {
+            "mate": 1
+        },
+        {
+            "mate": 1
+        }
+    ],
+    "clock": {
+        "initial": 600,
+        "increment": 5,
+        "totalTime": 800
+    }
+}

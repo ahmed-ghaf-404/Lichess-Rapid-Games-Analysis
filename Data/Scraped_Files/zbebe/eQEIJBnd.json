@@ -1,0 +1,109 @@
+{
+    "id": "eQEIJBnd",
+    "rated": true,
+    "variant": "standard",
+    "speed": "rapid",
+    "perf": "rapid",
+    "createdAt": "2022-01-11 21:50:15.742000+00:00",
+    "lastMoveAt": "2022-01-11 21:51:25.251000+00:00",
+    "status": "timeout",
+    "players": {
+        "white": {
+            "user": {
+                "name": "T_K-1",
+                "id": "t_k-1"
+            },
+            "rating": 1532,
+            "ratingDiff": -7,
+            "analysis": {
+                "inaccuracy": 0,
+                "mistake": 0,
+                "blunder": 1,
+                "acpl": 42
+            }
+        },
+        "black": {
+            "user": {
+                "name": "zbebe",
+                "id": "zbebe"
+            },
+            "rating": 1484,
+            "ratingDiff": 16,
+            "analysis": {
+                "inaccuracy": 1,
+                "mistake": 1,
+                "blunder": 0,
+                "acpl": 38
+            }
+        }
+    },
+    "winner": "black",
+    "opening": {
+        "eco": "C24",
+        "name": "Bishop's Opening: Berlin Defense",
+        "ply": 4
+    },
+    "moves": "e4 e5 Bc4 Nf6 Nh3 d5 exd5 Nxd5 Qf3 Be6 Nc3 c6",
+    "analysis": [
+        {
+            "eval": 0
+        },
+        {
+            "eval": 12
+        },
+        {
+            "eval": 0
+        },
+        {
+            "eval": 6
+        },
+        {
+            "eval": -190,
+            "best": "b1c3",
+            "variation": "Nc3 Bc5 Nf3 d6 d4 exd4 Nxd4 a5 O-O Nbd7",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Nc3 was best."
+            }
+        },
+        {
+            "eval": -63,
+            "best": "f6e4",
+            "variation": "Nxe4 Nc3 Nxc3 dxc3 c6 Qh5 Qf6 Bg5 Qg6 Qg4",
+            "judgment": {
+                "name": "Mistake",
+                "comment": "Mistake. Nxe4 was best."
+            }
+        },
+        {
+            "eval": -58
+        },
+        {
+            "eval": 0,
+            "best": "c8g4",
+            "variation": "Bg4 Be2 Bxe2 Qxe2 Qxd5 O-O Nc6 Nc3 Nd4 Qd1",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. Bg4 was best."
+            }
+        },
+        {
+            "eval": -25
+        },
+        {
+            "eval": -9
+        },
+        {
+            "eval": -15
+        },
+        {
+            "eval": -7
+        }
+    ],
+    "tournament": "VxnYEBSH",
+    "clock": {
+        "initial": 600,
+        "increment": 0,
+        "totalTime": 600
+    }
+}

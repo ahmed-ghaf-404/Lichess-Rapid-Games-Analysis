@@ -1,0 +1,144 @@
+{
+    "id": "OYyir9CF",
+    "rated": true,
+    "variant": "standard",
+    "speed": "rapid",
+    "perf": "rapid",
+    "createdAt": "2022-08-08 18:03:01.103000+00:00",
+    "lastMoveAt": "2022-08-08 18:07:06.458000+00:00",
+    "status": "mate",
+    "players": {
+        "white": {
+            "user": {
+                "name": "Raggedyman420",
+                "id": "raggedyman420"
+            },
+            "rating": 1681,
+            "ratingDiff": 6,
+            "analysis": {
+                "inaccuracy": 0,
+                "mistake": 0,
+                "blunder": 0,
+                "acpl": 15
+            }
+        },
+        "black": {
+            "user": {
+                "name": "JesusDO",
+                "id": "jesusdo"
+            },
+            "rating": 1656,
+            "ratingDiff": -6,
+            "analysis": {
+                "inaccuracy": 2,
+                "mistake": 0,
+                "blunder": 2,
+                "acpl": 105
+            }
+        }
+    },
+    "winner": "white",
+    "opening": {
+        "eco": "A80",
+        "name": "Dutch Defense",
+        "ply": 2
+    },
+    "moves": "d4 f5 Bf4 e6 e3 b6 Nf3 Bb7 c4 Nf6 Be2 Bb4+ Nfd2 Bxg2 Rg1 Bb7 Rxg7 Rg8 Bh5+ Nxh5 Qxh5+ Kf8 Qf7#",
+    "analysis": [
+        {
+            "eval": 0
+        },
+        {
+            "eval": 62,
+            "best": "g8f6",
+            "variation": "Nf6 c4 e6 Nf3 d5 cxd5 exd5 Bf4 c6 Nc3",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. Nf6 was best."
+            }
+        },
+        {
+            "eval": 55
+        },
+        {
+            "eval": 79
+        },
+        {
+            "eval": 58
+        },
+        {
+            "eval": 76
+        },
+        {
+            "eval": 68
+        },
+        {
+            "eval": 75
+        },
+        {
+            "eval": 51
+        },
+        {
+            "eval": 60
+        },
+        {
+            "eval": 53
+        },
+        {
+            "eval": 75
+        },
+        {
+            "eval": 61
+        },
+        {
+            "eval": 293,
+            "best": "d7d6",
+            "variation": "d6 O-O Bxd2 Nxd2 O-O b4 Qe7 Bg3 a5 a3",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. d6 was best."
+            }
+        },
+        {
+            "eval": 254
+        },
+        {
+            "eval": 261
+        },
+        {
+            "eval": 226
+        },
+        {
+            "eval": 1343,
+            "best": "h7h5",
+            "variation": "h5 Nc3 Bxc3 bxc3 Kf8 Rg1 Qe7 Bg5 Qf7 Bf3 Bxf3 Qxf3 Nc6 O-O-O",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. h5 was best."
+            }
+        },
+        {
+            "eval": 1293
+        },
+        {
+            "mate": 2,
+            "best": "e8f8",
+            "variation": "Kf8 Rf7+ Ke8 Rxh7+ Rg6 Bxg6+ Kf8 Rh8+ Ke7 Rxd8 Kxd8 a3 Bd6 Bg5",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Checkmate is now unavoidable. Kf8 was best."
+            }
+        },
+        {
+            "mate": 1
+        },
+        {
+            "mate": 1
+        }
+    ],
+    "clock": {
+        "initial": 600,
+        "increment": 0,
+        "totalTime": 600
+    }
+}

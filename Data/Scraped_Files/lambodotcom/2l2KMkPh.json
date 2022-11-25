@@ -1,0 +1,93 @@
+{
+    "id": "2l2KMkPh",
+    "rated": true,
+    "variant": "standard",
+    "speed": "rapid",
+    "perf": "rapid",
+    "createdAt": "2022-11-22 20:41:34.115000+00:00",
+    "lastMoveAt": "2022-11-22 20:42:22.144000+00:00",
+    "status": "mate",
+    "players": {
+        "white": {
+            "user": {
+                "name": "LAMBOdotcom",
+                "id": "lambodotcom"
+            },
+            "rating": 1446,
+            "ratingDiff": -6,
+            "analysis": {
+                "inaccuracy": 0,
+                "mistake": 0,
+                "blunder": 1,
+                "acpl": 345
+            }
+        },
+        "black": {
+            "user": {
+                "name": "AdmiralDrake",
+                "id": "admiraldrake"
+            },
+            "rating": 1432,
+            "ratingDiff": 6,
+            "analysis": {
+                "inaccuracy": 0,
+                "mistake": 1,
+                "blunder": 1,
+                "acpl": 117
+            }
+        }
+    },
+    "winner": "black",
+    "opening": {
+        "eco": "C40",
+        "name": "King's Pawn Game: Busch-Gass Gambit",
+        "ply": 4
+    },
+    "moves": "e4 e5 Nf3 Bc5 Nxe5 Qh4 Nc3 Qxf2#",
+    "analysis": [
+        {
+            "eval": 36
+        },
+        {
+            "eval": 12
+        },
+        {
+            "eval": 29
+        },
+        {
+            "eval": 218,
+            "best": "b8c6",
+            "variation": "Nc6 Bb5 Nf6 O-O Nxe4 Re1 Nd6 Nxe5 Nxe5 Rxe5+",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Nc6 was best."
+            }
+        },
+        {
+            "eval": 208
+        },
+        {
+            "eval": 369,
+            "best": "b8c6",
+            "variation": "Nc6 Nxc6 dxc6 c3 Qh4 Qf3 Qh6 h3 Nf6 Na3",
+            "judgment": {
+                "name": "Mistake",
+                "comment": "Mistake. Nc6 was best."
+            }
+        },
+        {
+            "mate": -1,
+            "best": "d2d4",
+            "variation": "d4 Qxe4+ Be3 Be7 Nc3 Bb4 Qd2 Bxc3 Qxc3 Nf6",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Checkmate is now unavoidable. d4 was best."
+            }
+        }
+    ],
+    "clock": {
+        "initial": 600,
+        "increment": 0,
+        "totalTime": 600
+    }
+}

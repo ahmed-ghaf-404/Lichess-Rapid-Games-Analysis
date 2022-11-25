@@ -1,0 +1,209 @@
+{
+    "id": "AcvfKrVZ",
+    "rated": true,
+    "variant": "standard",
+    "speed": "rapid",
+    "perf": "rapid",
+    "createdAt": "2022-03-16 21:48:26.741000+00:00",
+    "lastMoveAt": "2022-03-16 22:02:34.878000+00:00",
+    "status": "mate",
+    "players": {
+        "white": {
+            "user": {
+                "name": "Ferzess",
+                "id": "ferzess"
+            },
+            "rating": 938,
+            "ratingDiff": -12,
+            "analysis": {
+                "inaccuracy": 0,
+                "mistake": 1,
+                "blunder": 2,
+                "acpl": 169
+            }
+        },
+        "black": {
+            "user": {
+                "name": "Stfnc",
+                "id": "stfnc"
+            },
+            "rating": 1008,
+            "ratingDiff": 4,
+            "analysis": {
+                "inaccuracy": 0,
+                "mistake": 0,
+                "blunder": 2,
+                "acpl": 127
+            }
+        }
+    },
+    "winner": "black",
+    "opening": {
+        "eco": "C20",
+        "name": "King's Pawn Game: Leonardis Variation",
+        "ply": 3
+    },
+    "moves": "e4 e5 d3 Nf6 Nf3 Nc6 Nc3 d5 d4 dxe4 Nxe4 Nxe4 Nxe5 Nxe5 Qe2 Qxd4 Qb5+ c6 Be3 Qd6 Qa4 Nc5 Qa3 Nc4 Qc3 Be6 Bxc4 O-O-O O-O Ne4 Qa5 Bxc4 Rfd1 Qe7 Qxa7 Nxf2 Bxf2 Rxd1+ Rxd1 Qe2 Rd4 Qf1#",
+    "analysis": [
+        {
+            "eval": 28
+        },
+        {
+            "eval": 12
+        },
+        {
+            "eval": 0
+        },
+        {
+            "eval": 0
+        },
+        {
+            "eval": -12
+        },
+        {
+            "eval": 0
+        },
+        {
+            "eval": -25
+        },
+        {
+            "eval": 0
+        },
+        {
+            "eval": -131,
+            "best": "e4d5",
+            "variation": "exd5 Nxd5 Be2 Bc5 O-O O-O Ne4 Be7 Re1 Bf5",
+            "judgment": {
+                "name": "Mistake",
+                "comment": "Mistake. exd5 was best."
+            }
+        },
+        {
+            "eval": -75,
+            "best": "f6e4",
+            "variation": "Nxe4 Bb5 Nxc3 bxc3 e4 Ne5 Bd7 Nxd7 Qxd7 f3"
+        },
+        {
+            "eval": -673,
+            "best": "f3e5",
+            "variation": "Nxe5 Qxd4 Bf4 Bb4 Qxd4 Nxd4 O-O-O Bxc3 bxc3 Ne6",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Nxe5 was best."
+            }
+        },
+        {
+            "eval": -695
+        },
+        {
+            "eval": -937
+        },
+        {
+            "eval": -946
+        },
+        {
+            "eval": -1080
+        },
+        {
+            "eval": -1085
+        },
+        {
+            "eval": -1733
+        },
+        {
+            "eval": -1692
+        },
+        {
+            "eval": -1692
+        },
+        {
+            "eval": -1085
+        },
+        {
+            "eval": -1045
+        },
+        {
+            "eval": -1007
+        },
+        {
+            "eval": -1046
+        },
+        {
+            "eval": -785
+        },
+        {
+            "eval": -1055
+        },
+        {
+            "eval": -823
+        },
+        {
+            "eval": -854
+        },
+        {
+            "eval": -763
+        },
+        {
+            "eval": -718
+        },
+        {
+            "eval": -708
+        },
+        {
+            "eval": -890
+        },
+        {
+            "eval": -955
+        },
+        {
+            "eval": -1630
+        },
+        {
+            "eval": -715
+        },
+        {
+            "eval": -664
+        },
+        {
+            "eval": 0,
+            "best": "d8d5",
+            "variation": "Rd5 Bf4",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Rd5 was best."
+            }
+        },
+        {
+            "eval": 0
+        },
+        {
+            "eval": 0
+        },
+        {
+            "eval": 0
+        },
+        {
+            "mate": 2,
+            "best": "c4d5",
+            "variation": "Bd5 Qa8+ Kc7 Bg3+ Kb6 Bf2+",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Checkmate is now unavoidable. Bd5 was best."
+            }
+        },
+        {
+            "mate": -1,
+            "best": "a7a8",
+            "variation": "Qa8+ Kc7 Qd8#",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Lost forced checkmate sequence. Qa8+ was best."
+            }
+        }
+    ],
+    "clock": {
+        "initial": 600,
+        "increment": 0,
+        "totalTime": 600
+    }
+}

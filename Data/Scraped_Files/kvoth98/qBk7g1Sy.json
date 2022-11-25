@@ -1,0 +1,213 @@
+{
+    "id": "qBk7g1Sy",
+    "rated": true,
+    "variant": "standard",
+    "speed": "rapid",
+    "perf": "rapid",
+    "createdAt": "2022-08-23 00:11:22.278000+00:00",
+    "lastMoveAt": "2022-08-23 00:19:17.118000+00:00",
+    "status": "resign",
+    "players": {
+        "white": {
+            "user": {
+                "name": "Pavl551",
+                "id": "pavl551"
+            },
+            "rating": 971,
+            "ratingDiff": -9,
+            "analysis": {
+                "inaccuracy": 2,
+                "mistake": 1,
+                "blunder": 1,
+                "acpl": 59
+            }
+        },
+        "black": {
+            "user": {
+                "name": "Kvoth98",
+                "id": "kvoth98"
+            },
+            "rating": 942,
+            "ratingDiff": 6,
+            "analysis": {
+                "inaccuracy": 2,
+                "mistake": 0,
+                "blunder": 0,
+                "acpl": 10
+            }
+        }
+    },
+    "winner": "black",
+    "opening": {
+        "eco": "B23",
+        "name": "Sicilian Defense: Closed",
+        "ply": 3
+    },
+    "moves": "e4 c5 Nc3 d6 Nf3 Nf6 e5 dxe5 Nxe5 g6 a3 Bg7 g3 a6 Bg2 O-O Bd5 Nxd5 Nxd5 Qxd5 Nf3 Bg4 d3 Bxf3 c4 Qh5 O-O Bxd1 Re1 Bf3 Rxe7 Nc6 Rxb7 Nd4 Ra2 Ne2+ Kf1 Nxc1 Ra1 Nxd3 b4",
+    "analysis": [
+        {
+            "eval": 33
+        },
+        {
+            "eval": 32
+        },
+        {
+            "eval": 24
+        },
+        {
+            "eval": 0
+        },
+        {
+            "eval": 26
+        },
+        {
+            "eval": 35
+        },
+        {
+            "eval": 0
+        },
+        {
+            "eval": -1
+        },
+        {
+            "eval": -5
+        },
+        {
+            "eval": 63,
+            "best": "c8d7",
+            "variation": "Bd7 d4 cxd4 Qxd4 Nc6 Qe3 Nxe5 Qxe5 e6 Bf4",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. Bd7 was best."
+            }
+        },
+        {
+            "eval": -65,
+            "best": "f1c4",
+            "variation": "Bc4 e6 d4 cxd4 Bb5+ Bd7 Nxd7 Nbxd7 Qxd4 Bg7",
+            "judgment": {
+                "name": "Mistake",
+                "comment": "Mistake. Bc4 was best."
+            }
+        },
+        {
+            "eval": -54
+        },
+        {
+            "eval": -67
+        },
+        {
+            "eval": -32
+        },
+        {
+            "eval": -43
+        },
+        {
+            "eval": -18
+        },
+        {
+            "eval": -1020,
+            "best": "a3a4",
+            "variation": "a4 Nc6",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. a4 was best."
+            }
+        },
+        {
+            "eval": -945
+        },
+        {
+            "eval": -1263
+        },
+        {
+            "eval": -1265
+        },
+        {
+            "eval": -1442
+        },
+        {
+            "eval": -1407
+        },
+        {
+            "eval": -1435
+        },
+        {
+            "eval": -1435
+        },
+        {
+            "eval": -1734
+        },
+        {
+            "eval": -1485
+        },
+        {
+            "eval": -1890
+        },
+        {
+            "eval": -1902
+        },
+        {
+            "eval": -1876
+        },
+        {
+            "eval": -2103
+        },
+        {
+            "mate": -2,
+            "best": "h2h4",
+            "variation": "h4 Bc6 Kf1 Qf3 Be3 Bxb2 Rad1 Qg2+ Ke2 Bc3 Bxc5 Nd7 d4 Qf3+",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Checkmate is now unavoidable. h4 was best."
+            }
+        },
+        {
+            "eval": -1841,
+            "best": "h5h3",
+            "variation": "Qh3 a4 Qg2#",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Lost forced checkmate sequence. Qh3 was best."
+            }
+        },
+        {
+            "mate": -2,
+            "best": "e7e3",
+            "variation": "Re3 Bd1 Re4 Bc2 Bd2 Bxb2 Rae1 Bxa3 R4e3 Bb2 Kg2 b6 h4 Rad8",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Checkmate is now unavoidable. Re3 was best."
+            }
+        },
+        {
+            "mate": -4
+        },
+        {
+            "mate": -2
+        },
+        {
+            "mate": -3
+        },
+        {
+            "mate": -3
+        },
+        {
+            "mate": -4
+        },
+        {
+            "mate": -3
+        },
+        {
+            "mate": -3
+        },
+        {
+            "mate": -2
+        }
+    ],
+    "clock": {
+        "initial": 600,
+        "increment": 0,
+        "totalTime": 600
+    }
+}

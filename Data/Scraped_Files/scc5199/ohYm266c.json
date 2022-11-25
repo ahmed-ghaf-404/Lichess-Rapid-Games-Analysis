@@ -1,0 +1,150 @@
+{
+    "id": "ohYm266c",
+    "rated": true,
+    "variant": "standard",
+    "speed": "rapid",
+    "perf": "rapid",
+    "createdAt": "2022-10-04 05:19:30.860000+00:00",
+    "lastMoveAt": "2022-10-04 05:21:32.010000+00:00",
+    "status": "mate",
+    "players": {
+        "white": {
+            "user": {
+                "name": "artemida45454545",
+                "id": "artemida45454545"
+            },
+            "rating": 1736,
+            "ratingDiff": 6,
+            "analysis": {
+                "inaccuracy": 2,
+                "mistake": 1,
+                "blunder": 1,
+                "acpl": 63
+            }
+        },
+        "black": {
+            "user": {
+                "name": "scc5199",
+                "id": "scc5199"
+            },
+            "rating": 1747,
+            "ratingDiff": -6,
+            "analysis": {
+                "inaccuracy": 1,
+                "mistake": 1,
+                "blunder": 1,
+                "acpl": 172
+            }
+        }
+    },
+    "winner": "white",
+    "opening": {
+        "eco": "B00",
+        "name": "Nimzowitsch Defense: Scandinavian Variation, Exchange Variation, Marshall Gambit",
+        "ply": 7
+    },
+    "moves": "e4 Nc6 d4 d5 exd5 Qxd5 Nc3 Qxd4 Qf3 Be6 Bb5 Bd7 Nge2 Qf6 Qg3 O-O-O Nd5 Qe6 Qxc7#",
+    "analysis": [
+        {
+            "eval": 0
+        },
+        {
+            "eval": 51
+        },
+        {
+            "eval": 48
+        },
+        {
+            "eval": 36
+        },
+        {
+            "eval": 14
+        },
+        {
+            "eval": 32
+        },
+        {
+            "eval": -89,
+            "best": "g1f3",
+            "variation": "Nf3 Bg4 Be2 O-O-O Be3 e5 Nc3 Qa5 Nxe5 Bxe2",
+            "judgment": {
+                "name": "Mistake",
+                "comment": "Mistake. Nf3 was best."
+            }
+        },
+        {
+            "eval": -94
+        },
+        {
+            "eval": -193,
+            "best": "d1e2",
+            "variation": "Qe2 e5 Nf3 Qg4 h3 Qe6 Ng5 Qe7 Be3 f6",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. Qe2 was best."
+            }
+        },
+        {
+            "eval": -29,
+            "best": "c8g4",
+            "variation": "Bg4 Qg3 O-O-O Nf3 Bxf3 Qxf3 e6 Be2 Nf6 O-O Qh4 Ba6 Rd6 Bd3",
+            "judgment": {
+                "name": "Mistake",
+                "comment": "Mistake. Bg4 was best."
+            }
+        },
+        {
+            "eval": -20
+        },
+        {
+            "eval": -19
+        },
+        {
+            "eval": -106,
+            "best": "c1e3",
+            "variation": "Be3 Qg4 Bxc6 bxc6 Bf4 f6 Bxc7 Rc8 Bg3 e5 Qxg4 Bxg4 f3 Be6",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. Be3 was best."
+            }
+        },
+        {
+            "eval": -93
+        },
+        {
+            "eval": -85
+        },
+        {
+            "eval": -6,
+            "best": "e7e5",
+            "variation": "e5 Bg5",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. e5 was best."
+            }
+        },
+        {
+            "eval": -223,
+            "best": "c1f4",
+            "variation": "Bf4 Qg6 Bxc7 Qxg3 Bxg3 Nh6 h3 Nf5 Bh2 f6 O-O-O e5 Rd3 a6",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Bf4 was best."
+            }
+        },
+        {
+            "mate": 1,
+            "best": "f6d6",
+            "variation": "Qd6",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Checkmate is now unavoidable. Qd6 was best."
+            }
+        }
+    ],
+    "clock": {
+        "initial": 600,
+        "increment": 0,
+        "totalTime": 600
+    }
+}

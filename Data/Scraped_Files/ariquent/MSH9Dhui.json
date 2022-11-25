@@ -1,0 +1,207 @@
+{
+    "id": "MSH9Dhui",
+    "rated": true,
+    "variant": "standard",
+    "speed": "rapid",
+    "perf": "rapid",
+    "createdAt": "2022-10-23 06:44:20.117000+00:00",
+    "lastMoveAt": "2022-10-23 06:52:26.209000+00:00",
+    "status": "mate",
+    "players": {
+        "white": {
+            "user": {
+                "name": "Ariquent",
+                "id": "ariquent"
+            },
+            "rating": 1751,
+            "ratingDiff": -5,
+            "analysis": {
+                "inaccuracy": 1,
+                "mistake": 1,
+                "blunder": 2,
+                "acpl": 77
+            }
+        },
+        "black": {
+            "user": {
+                "name": "Oleg_Yampo",
+                "id": "oleg_yampo"
+            },
+            "rating": 1835,
+            "ratingDiff": 4,
+            "analysis": {
+                "inaccuracy": 1,
+                "mistake": 1,
+                "blunder": 0,
+                "acpl": 28
+            }
+        }
+    },
+    "winner": "black",
+    "opening": {
+        "eco": "C41",
+        "name": "Philidor Defense: Exchange Variation",
+        "ply": 8
+    },
+    "moves": "e4 e5 Nf3 d6 d4 exd4 Nxd4 Nf6 Nc3 a6 Bd3 Be7 O-O O-O h3 Re8 Re1 Nbd7 b3 Ne5 Be2 c5 Nf3 Ng6 Bb2 b5 a3 Bb7 Bd3 Qc7 e5 Nxe5 Nxe5 dxe5 Bxb5 axb5 Nxb5 Qc6 a4 Qxg2#",
+    "analysis": [
+        {
+            "eval": 0
+        },
+        {
+            "eval": 12
+        },
+        {
+            "eval": 19
+        },
+        {
+            "eval": 82,
+            "best": "b8c6",
+            "variation": "Nc6 Bb5 Nf6 d3 Bc5 c3 O-O O-O d5 Nbd2",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. Nc6 was best."
+            }
+        },
+        {
+            "eval": 57
+        },
+        {
+            "eval": 91
+        },
+        {
+            "eval": 52
+        },
+        {
+            "eval": 91
+        },
+        {
+            "eval": 64
+        },
+        {
+            "eval": 92
+        },
+        {
+            "eval": 35,
+            "best": "c1f4",
+            "variation": "Bf4 Be7 Qf3 Bg4 Qg3 Qd7 Qe3 Nc6 f3 Be6",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. Bf4 was best."
+            }
+        },
+        {
+            "eval": 69
+        },
+        {
+            "eval": 44
+        },
+        {
+            "eval": 57
+        },
+        {
+            "eval": 59
+        },
+        {
+            "eval": 62
+        },
+        {
+            "eval": 71
+        },
+        {
+            "eval": 62
+        },
+        {
+            "eval": 37
+        },
+        {
+            "eval": 26
+        },
+        {
+            "eval": -6
+        },
+        {
+            "eval": 47
+        },
+        {
+            "eval": 47
+        },
+        {
+            "eval": 60
+        },
+        {
+            "eval": 37
+        },
+        {
+            "eval": 29
+        },
+        {
+            "eval": 0
+        },
+        {
+            "eval": 0
+        },
+        {
+            "eval": -1
+        },
+        {
+            "eval": 51
+        },
+        {
+            "eval": -350,
+            "best": "c3d5",
+            "variation": "Nd5 Bxd5 exd5 c4 bxc4 bxc4 Bf1 Rab8 Qd4 Rec8 Bc3 Rb5 Rab1 h6",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Nd5 was best."
+            }
+        },
+        {
+            "eval": -162,
+            "best": "d6e5",
+            "variation": "dxe5 a4",
+            "judgment": {
+                "name": "Mistake",
+                "comment": "Mistake. dxe5 was best."
+            }
+        },
+        {
+            "eval": -156
+        },
+        {
+            "eval": -165
+        },
+        {
+            "eval": -899,
+            "best": "c3e4",
+            "variation": "Ne4 Nxe4",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Ne4 was best."
+            }
+        },
+        {
+            "eval": -905
+        },
+        {
+            "eval": -914
+        },
+        {
+            "eval": -905
+        },
+        {
+            "mate": -1,
+            "best": "f2f3",
+            "variation": "f3 Qxb5",
+            "judgment": {
+                "name": "Mistake",
+                "comment": "Checkmate is now unavoidable. f3 was best."
+            }
+        }
+    ],
+    "clock": {
+        "initial": 600,
+        "increment": 5,
+        "totalTime": 800
+    }
+}

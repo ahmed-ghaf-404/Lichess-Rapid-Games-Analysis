@@ -1,0 +1,563 @@
+{
+    "id": "ukchSRlp",
+    "rated": true,
+    "variant": "standard",
+    "speed": "rapid",
+    "perf": "rapid",
+    "createdAt": "2022-10-23 07:48:03.257000+00:00",
+    "lastMoveAt": "2022-10-23 08:12:41.124000+00:00",
+    "status": "draw",
+    "players": {
+        "white": {
+            "user": {
+                "name": "Brutor",
+                "id": "brutor"
+            },
+            "rating": 1036,
+            "ratingDiff": 0,
+            "analysis": {
+                "inaccuracy": 5,
+                "mistake": 3,
+                "blunder": 5,
+                "acpl": 107
+            }
+        },
+        "black": {
+            "user": {
+                "name": "isokinetic",
+                "id": "isokinetic"
+            },
+            "rating": 1028,
+            "ratingDiff": 0,
+            "analysis": {
+                "inaccuracy": 4,
+                "mistake": 5,
+                "blunder": 4,
+                "acpl": 107
+            }
+        }
+    },
+    "opening": {
+        "eco": "C41",
+        "name": "Philidor Defense",
+        "ply": 5
+    },
+    "moves": "e4 e5 Nf3 d6 d4 Nc6 d5 Nce7 Bg5 f6 Be3 f5 Nc3 f4 Bd2 Bg4 h3 Bxf3 gxf3 Qd7 Bb5 c6 dxc6 bxc6 Bc4 d5 exd5 cxd5 Bb5 Nc6 Qe2 d4 Ne4 O-O-O Ba6+ Kc7 Nc5 Bxc5 Ba5+ Nxa5 Qxe5+ Qd6 Qxg7+ Qe7+ Qxe7+ Nxe7 Bf1 Nc4 O-O-O Nxb2 Kxb2 Rb8+ Kc1 Nf5 Bd3 Rhf8 Rhe1 Ba3+ Kd2 Bb4+ Ke2 Bxe1 Kxe1 Rfe8+ Kd2 Nd6 Re1 Rxe1 Kxe1 Rb1+ Kd2 Rb4 c3 dxc3+ Kxc3 Ra4 Bxh7 Rxa2 h4 Rxf2 h5 Rxf3+ Kd4 Nb5+ Ke5 Rf1 Bd3 Re1+ Kxf4 a6 h6 Rh1 h7 Nc3 Kg5 Rg1+ Kh6 Rh1+ Kg7 Rg1+ Kh6 Rh1+ Kg6 a5 Kg7 Rg1+ Bg6 Rh1 h8=Q Rxh8 Kxh8 a4 Bf7 a3 Kg7 a2 Bxa2 Nxa2",
+    "analysis": [
+        {
+            "eval": 0
+        },
+        {
+            "eval": 12
+        },
+        {
+            "eval": 19
+        },
+        {
+            "eval": 82,
+            "best": "b8c6",
+            "variation": "Nc6 Bb5 Nf6 d3 Bc5 c3 O-O O-O d5 Nbd2",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. Nc6 was best."
+            }
+        },
+        {
+            "eval": 57
+        },
+        {
+            "eval": 97
+        },
+        {
+            "eval": 93
+        },
+        {
+            "eval": 102
+        },
+        {
+            "eval": 44,
+            "best": "c2c4",
+            "variation": "c4 b6 Nc3 g6 Be2 Bg7 h3 Nf6 Be3 O-O",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. c4 was best."
+            }
+        },
+        {
+            "eval": 61
+        },
+        {
+            "eval": 13
+        },
+        {
+            "eval": 30
+        },
+        {
+            "eval": 30
+        },
+        {
+            "eval": 133,
+            "best": "a7a6",
+            "variation": "a6 exf5 Nxf5 Bd2 Nf6 Bd3 Be7 h3 b5 Qe2",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. a6 was best."
+            }
+        },
+        {
+            "eval": 114
+        },
+        {
+            "eval": 190,
+            "best": "a7a6",
+            "variation": "a6 g3 Ng6 h4 fxg3 fxg3 Be7 Ng5 Nf8 Qh5+ g6 Qf3 Nf6 Nd1",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. a6 was best."
+            }
+        },
+        {
+            "eval": 116,
+            "best": "g2g3",
+            "variation": "g3 Nf6",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. g3 was best."
+            }
+        },
+        {
+            "eval": 284,
+            "best": "g4d7",
+            "variation": "Bd7 g3 fxg3 fxg3 Nf6 Qe2 a6 O-O-O Ng6 h4 Be7 h5 Nf8 Qg2",
+            "judgment": {
+                "name": "Mistake",
+                "comment": "Mistake. Bd7 was best."
+            }
+        },
+        {
+            "eval": 15,
+            "best": "d1f3",
+            "variation": "Qxf3 Nf6 h4 g6 g3 Bg7 gxf4 exf4 Ne2 O-O Nd4 c6 O-O-O Qb6",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Qxf3 was best."
+            }
+        },
+        {
+            "eval": 217,
+            "best": "e7g6",
+            "variation": "Ng6",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Ng6 was best."
+            }
+        },
+        {
+            "eval": 125,
+            "best": "h3h4",
+            "variation": "h4 Qd8 Bb5+ c6 dxc6 Nxc6 Nd5 Be7 Bc3 Bxh4 Rxh4 Qxh4 Nc7+ Kd7",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. h4 was best."
+            }
+        },
+        {
+            "eval": 138
+        },
+        {
+            "eval": 102
+        },
+        {
+            "eval": 143
+        },
+        {
+            "eval": 114
+        },
+        {
+            "eval": 257,
+            "best": "e7c8",
+            "variation": "Nc8",
+            "judgment": {
+                "name": "Mistake",
+                "comment": "Mistake. Nc8 was best."
+            }
+        },
+        {
+            "eval": 277
+        },
+        {
+            "eval": 287
+        },
+        {
+            "eval": 263
+        },
+        {
+            "eval": 257
+        },
+        {
+            "eval": 264
+        },
+        {
+            "eval": 451,
+            "best": "g8e7",
+            "variation": "Nge7 O-O-O O-O-O Be1 Qc7 Bxc6 Qxc6 Qxe5 Kb7 Qxf4 Ng6 Qa4 Qxa4 Nxa4",
+            "judgment": {
+                "name": "Mistake",
+                "comment": "Mistake. Nge7 was best."
+            }
+        },
+        {
+            "eval": 332,
+            "best": "e1a1",
+            "variation": "O-O-O",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. O-O-O was best."
+            }
+        },
+        {
+            "eval": 492,
+            "best": "g8e7",
+            "variation": "Nge7 Rg1 Rb8 O-O-O Qd5 Bc4 Qd7 Kb1 Rb6 h4 Nf5 Bc3 Kd8",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. Nge7 was best."
+            }
+        },
+        {
+            "eval": 215,
+            "best": "e2c4",
+            "variation": "Qc4 Kb7 Rg1 Rc8 Ba6+ Ka8 Bxc8 Qxc8 b4 Nf6 Nxf6 gxf6 Kd1 Qd7",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Qc4 was best."
+            }
+        },
+        {
+            "eval": 512,
+            "best": "c8b8",
+            "variation": "Kb8 Ng5",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Kb8 was best."
+            }
+        },
+        {
+            "eval": -412,
+            "best": "e2b5",
+            "variation": "Qb5 Rb8 Ba5+ Rb6 Bxb6+ axb6 Qc4 Nf6 Nxf6 gxf6 a3 Kb8 O-O-O Na5",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Qb5 was best."
+            }
+        },
+        {
+            "eval": -379
+        },
+        {
+            "eval": -943,
+            "best": "b2b4",
+            "variation": "b4 d3 Bxd3 Bd6 Bb5 Kb8 Bc3 Bc7 O-O Nge7 Rad1 Qe6 a4 Nd5",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. b4 was best."
+            }
+        },
+        {
+            "eval": -910
+        },
+        {
+            "eval": -966
+        },
+        {
+            "eval": -940
+        },
+        {
+            "eval": -1134
+        },
+        {
+            "eval": -880
+        },
+        {
+            "eval": -883
+        },
+        {
+            "eval": -856
+        },
+        {
+            "eval": -922
+        },
+        {
+            "eval": -464,
+            "best": "c5b4",
+            "variation": "Bb4+ Kd1 Nac6 Bd3 Bd6 Rg1 Be5 Kd2 Bf6 Rae1 Ne5 Rxe5 Bxe5 Rg5",
+            "judgment": {
+                "name": "Mistake",
+                "comment": "Mistake. Bb4+ was best."
+            }
+        },
+        {
+            "eval": -938,
+            "best": "f1c4",
+            "variation": "Bxc4 Nc6 Bd3 Ne5 Ke2 Rhe8 Rhg1 Re7 Be4 d3+ cxd3 Nxd3 b4 Bb6",
+            "judgment": {
+                "name": "Mistake",
+                "comment": "Mistake. Bxc4 was best."
+            }
+        },
+        {
+            "eval": -681
+        },
+        {
+            "eval": -686
+        },
+        {
+            "eval": -684
+        },
+        {
+            "eval": -656
+        },
+        {
+            "eval": -555
+        },
+        {
+            "eval": -566
+        },
+        {
+            "eval": -474
+        },
+        {
+            "eval": -703,
+            "best": "d1g1",
+            "variation": "Rdg1 Rf7 Rg5 Ba3+ Kd2 Nd6 Be4 d3 Kxd3 Rd7 Rd5 Rb5 c4 Rxd5+",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. Rdg1 was best."
+            }
+        },
+        {
+            "eval": -700
+        },
+        {
+            "eval": -703
+        },
+        {
+            "eval": -708
+        },
+        {
+            "eval": -773
+        },
+        {
+            "eval": -750
+        },
+        {
+            "eval": -746
+        },
+        {
+            "eval": -712
+        },
+        {
+            "eval": -704
+        },
+        {
+            "eval": -700
+        },
+        {
+            "eval": -895
+        },
+        {
+            "eval": -912
+        },
+        {
+            "eval": -903
+        },
+        {
+            "eval": -873
+        },
+        {
+            "eval": -873
+        },
+        {
+            "eval": -786
+        },
+        {
+            "eval": -1126
+        },
+        {
+            "eval": -786
+        },
+        {
+            "eval": -791
+        },
+        {
+            "eval": -826
+        },
+        {
+            "eval": -825
+        },
+        {
+            "eval": -821
+        },
+        {
+            "eval": -1112
+        },
+        {
+            "eval": -1136
+        },
+        {
+            "eval": -1144
+        },
+        {
+            "eval": -1136
+        },
+        {
+            "eval": -1161
+        },
+        {
+            "eval": -920
+        },
+        {
+            "eval": -1181
+        },
+        {
+            "eval": -935
+        },
+        {
+            "eval": -1140
+        },
+        {
+            "eval": -757
+        },
+        {
+            "eval": -724
+        },
+        {
+            "eval": -630
+        },
+        {
+            "eval": -670
+        },
+        {
+            "eval": -464
+        },
+        {
+            "eval": -448
+        },
+        {
+            "eval": -430
+        },
+        {
+            "eval": -902,
+            "best": "d3a6",
+            "variation": "Bxa6 Rxh7 Bd3 Re7 Ba6 Kd6 Bc8 Nd5+ Kg3 Ra7 Kf2 Ke5 Kf3 Nc3",
+            "judgment": {
+                "name": "Mistake",
+                "comment": "Mistake. Bxa6 was best."
+            }
+        },
+        {
+            "eval": -429,
+            "best": "a6a5",
+            "variation": "a5 Bc2 a4 Bxa4 Nxa4 Kg6 Nc5 Kg7 Ne6+ Kf6 Kd7 Kf5 Rxh7 Ke5",
+            "judgment": {
+                "name": "Mistake",
+                "comment": "Mistake. a5 was best."
+            }
+        },
+        {
+            "eval": -895,
+            "best": "g5f4",
+            "variation": "Kf4 Rh1 Bxa6 Rxh7 Bd3 Re7 Kf3 Kd6 Bg6 Ke5 Bh5 Nd5 Bg6 Kf6",
+            "judgment": {
+                "name": "Mistake",
+                "comment": "Mistake. Kf4 was best."
+            }
+        },
+        {
+            "eval": -893
+        },
+        {
+            "eval": -881
+        },
+        {
+            "eval": -49,
+            "best": "a6a5",
+            "variation": "a5 Bc2 Kb6 Kf6 Kc5 Ke6 a4 Bxa4 Nxa4 Kf6 Rxh7 Kg5 Kb4 Kf6",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. a5 was best."
+            }
+        },
+        {
+            "eval": -908,
+            "best": "d3g6",
+            "variation": "Bg6 Rh1 h8=R Rxh8 Kxh8 Kd6 Kg7 a5 Bc2 Ne4 Bxe4 a4 Kf6 Kc5",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Bg6 was best."
+            }
+        },
+        {
+            "eval": -907
+        },
+        {
+            "eval": -961
+        },
+        {
+            "eval": -859
+        },
+        {
+            "eval": -968
+        },
+        {
+            "eval": -898
+        },
+        {
+            "eval": -902
+        },
+        {
+            "eval": -971
+        },
+        {
+            "eval": -1104
+        },
+        {
+            "eval": -1043
+        },
+        {
+            "eval": -1092
+        },
+        {
+            "eval": -1131
+        },
+        {
+            "eval": -1341
+        },
+        {
+            "eval": -1112
+        },
+        {
+            "eval": -1188
+        },
+        {
+            "eval": 0,
+            "best": "c7d6",
+            "variation": "Kd6",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Kd6 was best."
+            }
+        },
+        {
+            "eval": 0
+        },
+        {
+            "eval": 37
+        }
+    ],
+    "clock": {
+        "initial": 600,
+        "increment": 5,
+        "totalTime": 800
+    }
+}

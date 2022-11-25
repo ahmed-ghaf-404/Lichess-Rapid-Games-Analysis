@@ -1,0 +1,166 @@
+{
+    "id": "gakyAGsq",
+    "rated": true,
+    "variant": "standard",
+    "speed": "rapid",
+    "perf": "rapid",
+    "createdAt": "2020-09-12 11:42:53.716000+00:00",
+    "lastMoveAt": "2020-09-12 11:45:28.189000+00:00",
+    "status": "timeout",
+    "players": {
+        "white": {
+            "user": {
+                "name": "kat-il",
+                "id": "kat-il"
+            },
+            "rating": 1623,
+            "ratingDiff": 7,
+            "analysis": {
+                "inaccuracy": 1,
+                "mistake": 3,
+                "blunder": 0,
+                "acpl": 45
+            }
+        },
+        "black": {
+            "user": {
+                "name": "danmudan",
+                "id": "danmudan"
+            },
+            "rating": 1777,
+            "ratingDiff": -97,
+            "provisional": true,
+            "analysis": {
+                "inaccuracy": 2,
+                "mistake": 1,
+                "blunder": 1,
+                "acpl": 58
+            }
+        }
+    },
+    "winner": "white",
+    "opening": {
+        "eco": "C25",
+        "name": "Vienna Game",
+        "ply": 3
+    },
+    "moves": "e4 e5 Nc3 c6 Bc4 Nf6 d3 h6 Nf3 d5 exd5 cxd5 Bb5+ Bd7 Bxd7+ Nbxd7 Qe2 Qa5 O-O d4 Ne4",
+    "analysis": [
+        {
+            "eval": 25
+        },
+        {
+            "eval": 31
+        },
+        {
+            "eval": 0
+        },
+        {
+            "eval": 63,
+            "best": "g8f6",
+            "variation": "Nf6 Nf3 Nc6 d4 exd4 Nxd4 Bb4 Nxc6 bxc6 Bd3",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. Nf6 was best."
+            }
+        },
+        {
+            "eval": 67
+        },
+        {
+            "eval": 46
+        },
+        {
+            "eval": -36,
+            "best": "d2d4",
+            "variation": "d4 Bb4 dxe5 Nxe4 Qd4 O-O Bd3 Bxc3+ bxc3 d5",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. d4 was best."
+            }
+        },
+        {
+            "eval": 32,
+            "best": "d7d5",
+            "variation": "d5 Bb3 dxe4 Nxe4 Nxe4 dxe4 Qxd1+ Kxd1 f6 Nf3",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. d5 was best."
+            }
+        },
+        {
+            "eval": 47
+        },
+        {
+            "eval": 51
+        },
+        {
+            "eval": 48
+        },
+        {
+            "eval": 51
+        },
+        {
+            "eval": 58
+        },
+        {
+            "eval": 94
+        },
+        {
+            "eval": -27,
+            "best": "f3e5",
+            "variation": "Nxe5 Bxb5 Nxb5 Qa5+ Nc3 Bd6 O-O Bxe5 Re1 Nc6",
+            "judgment": {
+                "name": "Mistake",
+                "comment": "Mistake. Nxe5 was best."
+            }
+        },
+        {
+            "eval": -22
+        },
+        {
+            "eval": -32
+        },
+        {
+            "eval": 203,
+            "best": "f8d6",
+            "variation": "Bd6 Nd4",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Bd6 was best."
+            }
+        },
+        {
+            "eval": 86,
+            "best": "f3e5",
+            "variation": "Nxe5",
+            "judgment": {
+                "name": "Mistake",
+                "comment": "Mistake. Nxe5 was best."
+            }
+        },
+        {
+            "eval": 250,
+            "best": "f8d6",
+            "variation": "Bd6 Nxe5 Nxe5 d4 O-O dxe5 Rfe8 f4 Bc5+ Kh1 d4 Nd1 Rad8 Nf2",
+            "judgment": {
+                "name": "Mistake",
+                "comment": "Mistake. Bd6 was best."
+            }
+        },
+        {
+            "eval": 122,
+            "best": "f3d4",
+            "variation": "Nxd4 a6 Bd2 Qb6 Nf5 g6 Ne3 Bg7 Nc4 Qe6 Rfe1 O-O a4 Nd5",
+            "judgment": {
+                "name": "Mistake",
+                "comment": "Mistake. Nxd4 was best."
+            }
+        }
+    ],
+    "clock": {
+        "initial": 600,
+        "increment": 3,
+        "totalTime": 720
+    }
+}

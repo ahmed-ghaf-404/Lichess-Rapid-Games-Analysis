@@ -1,0 +1,222 @@
+{
+    "id": "p6ZS4S7C",
+    "rated": true,
+    "variant": "standard",
+    "speed": "rapid",
+    "perf": "rapid",
+    "createdAt": "2022-06-29 10:01:40.562000+00:00",
+    "lastMoveAt": "2022-06-29 10:13:16.943000+00:00",
+    "status": "resign",
+    "players": {
+        "white": {
+            "user": {
+                "name": "Mayhem1337",
+                "id": "mayhem1337"
+            },
+            "rating": 1468,
+            "ratingDiff": -5,
+            "analysis": {
+                "inaccuracy": 1,
+                "mistake": 2,
+                "blunder": 1,
+                "acpl": 55
+            }
+        },
+        "black": {
+            "user": {
+                "name": "oga_gaa",
+                "id": "oga_gaa"
+            },
+            "rating": 1488,
+            "ratingDiff": 5,
+            "analysis": {
+                "inaccuracy": 1,
+                "mistake": 0,
+                "blunder": 0,
+                "acpl": 12
+            }
+        }
+    },
+    "winner": "black",
+    "opening": {
+        "eco": "B50",
+        "name": "Sicilian Defense: Delayed Alapin",
+        "ply": 5
+    },
+    "moves": "e4 c5 Nf3 d6 c3 Nf6 Bb5+ Nc6 d3 g6 Bg5 Bg7 O-O O-O Re1 h6 Bxf6 Bxf6 Bxc6 bxc6 d4 cxd4 cxd4 Bg4 e5 dxe5 dxe5 Qxd1 Rxd1 Bxe5 Rd7 Bxd7 Nxe5 Rfd8 Nc3 Be8 b4 a5 a3 axb4 Ne2 Rxa3 Rxa3 bxa3 Nc3 a2",
+    "analysis": [
+        {
+            "eval": 33
+        },
+        {
+            "eval": 32
+        },
+        {
+            "eval": 0
+        },
+        {
+            "eval": 0
+        },
+        {
+            "eval": 0
+        },
+        {
+            "eval": 0
+        },
+        {
+            "eval": 0
+        },
+        {
+            "eval": 35
+        },
+        {
+            "eval": 0
+        },
+        {
+            "eval": 4
+        },
+        {
+            "eval": -10
+        },
+        {
+            "eval": -11
+        },
+        {
+            "eval": -12
+        },
+        {
+            "eval": 0
+        },
+        {
+            "eval": -20
+        },
+        {
+            "eval": -13
+        },
+        {
+            "eval": -46
+        },
+        {
+            "eval": -50
+        },
+        {
+            "eval": -75
+        },
+        {
+            "eval": -77
+        },
+        {
+            "eval": -175,
+            "best": "b1d2",
+            "variation": "Nbd2 Bg7 Rc1 a5 b3 a4 e5 Qc7 h3 Be6 d4 axb3 axb3 Rfd8",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. Nbd2 was best."
+            }
+        },
+        {
+            "eval": -175
+        },
+        {
+            "eval": -187
+        },
+        {
+            "eval": -189
+        },
+        {
+            "eval": -371,
+            "best": "b1a3",
+            "variation": "Na3 Bxf3",
+            "judgment": {
+                "name": "Mistake",
+                "comment": "Mistake. Na3 was best."
+            }
+        },
+        {
+            "eval": -394
+        },
+        {
+            "eval": -375
+        },
+        {
+            "eval": -326
+        },
+        {
+            "eval": -374
+        },
+        {
+            "eval": -369
+        },
+        {
+            "eval": -890,
+            "best": "b1c3",
+            "variation": "Nc3 Bxf3 gxf3 Rfb8 Re1 Bf6 Nd1 Rb6 Rc1 Rd8 Re2 Rd3 b3 Rxf3",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Nc3 was best."
+            }
+        },
+        {
+            "eval": -759
+        },
+        {
+            "eval": -742
+        },
+        {
+            "eval": -776
+        },
+        {
+            "eval": -745
+        },
+        {
+            "eval": -760
+        },
+        {
+            "eval": -785
+        },
+        {
+            "eval": -761
+        },
+        {
+            "eval": -928
+        },
+        {
+            "eval": -927
+        },
+        {
+            "eval": -934
+        },
+        {
+            "eval": -954
+        },
+        {
+            "mate": -1,
+            "best": "a1e1",
+            "variation": "Re1 c5",
+            "judgment": {
+                "name": "Mistake",
+                "comment": "Checkmate is now unavoidable. Re1 was best."
+            }
+        },
+        {
+            "eval": -1349,
+            "best": "d8d1",
+            "variation": "Rd1#",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Lost forced checkmate sequence. Rd1# was best."
+            }
+        },
+        {
+            "eval": -1662
+        },
+        {
+            "eval": -1553
+        }
+    ],
+    "clock": {
+        "initial": 600,
+        "increment": 5,
+        "totalTime": 800
+    }
+}

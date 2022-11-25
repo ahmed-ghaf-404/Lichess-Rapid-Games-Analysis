@@ -55,7 +55,7 @@ class Helper:
             print("{} has already been mined".format(username))
             return 
         game_added_counter = 0
-        new_username = None
+        new_username = set()
         # print('scraping {} game(s) the username: {}'.format(num_of_games, username))
         try:
             gameLists = C.CLIENT.games.export_by_player(username=username, as_pgn=False, max=num_of_games,rated=True,perf_type="rapid", analysed=True, moves=True, evals=True,opening=True)
@@ -65,17 +65,19 @@ class Helper:
                 if os.path.isfile(f"{path}/{username}/{game['id']}.json"):
                     if os.path.getsize(f"{path}/{username}/{game['id']}.json") == 0:
                         os.remove(f"{path}/{username}/{game['id']}.json")
-                        continue
+                    continue
+                
                 if is_need_more_players:
                     if username.lower() == game["players"]["white"]["user"]["name"].lower():
-                        new_username = game["players"]["black"]["user"]["name"]
+                        new_username.add(game["players"]["black"]["user"]["name"])
                     else:
-                        new_username = game["players"]["white"]["user"]["name"]
+                        new_username.add(game["players"]["white"]["user"]["name"])
                 with open(f"{path}/{username}/{game['id']}.json", 'w+') as f:
                     json.dump(game, f, indent=4, sort_keys=False, default=str)
                 if self.validateGame(f"{path}/{username}/{game['id']}.json"):
                     game_added_counter += 1
-                    print(f"{path}/{username}/{game['id']}.json")
+                else:
+                    os.remove(f"{path}/{username}/{game['id']}.json")
                     
         except Exception as e:
             print(e)

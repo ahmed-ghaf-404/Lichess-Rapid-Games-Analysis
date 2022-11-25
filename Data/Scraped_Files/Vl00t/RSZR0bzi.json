@@ -1,0 +1,215 @@
+{
+    "id": "RSZR0bzi",
+    "rated": true,
+    "variant": "standard",
+    "speed": "rapid",
+    "perf": "rapid",
+    "createdAt": "2020-08-12 06:11:13.780000+00:00",
+    "lastMoveAt": "2020-08-12 06:21:13.763000+00:00",
+    "status": "resign",
+    "players": {
+        "white": {
+            "user": {
+                "name": "Vl00t",
+                "id": "vl00t"
+            },
+            "rating": 1427,
+            "ratingDiff": -7,
+            "analysis": {
+                "inaccuracy": 1,
+                "mistake": 3,
+                "blunder": 1,
+                "acpl": 86
+            }
+        },
+        "black": {
+            "user": {
+                "name": "BeiYang",
+                "id": "beiyang"
+            },
+            "rating": 1376,
+            "ratingDiff": 7,
+            "analysis": {
+                "inaccuracy": 0,
+                "mistake": 1,
+                "blunder": 0,
+                "acpl": 40
+            }
+        }
+    },
+    "winner": "black",
+    "opening": {
+        "eco": "C20",
+        "name": "King's Pawn Game: Leonardis Variation",
+        "ply": 3
+    },
+    "moves": "e4 e5 d3 Nf6 Nf3 Nc6 h3 Bc5 c3 O-O d4 exd4 Nxd4 Nxe4 Nxc6 bxc6 Be3 Re8 Qf3 Bb7 Bxc5 Nxc5+ Be2 Ba6 O-O Bxe2 Qh5 Bxh5 Nd2 Qe7 Rae1 Be2 f3 Qe3+ Rf2 Qxd2 Rfxe2 Rxe2 Rxe2 Qxe2 Kh2",
+    "analysis": [
+        {
+            "eval": 0
+        },
+        {
+            "eval": 28
+        },
+        {
+            "eval": 0
+        },
+        {
+            "eval": 9
+        },
+        {
+            "eval": -17
+        },
+        {
+            "eval": 0
+        },
+        {
+            "eval": -54,
+            "best": "g2g3",
+            "variation": "g3 Bc5 Bg2 d6 h3 O-O O-O a5 a4 Re8"
+        },
+        {
+            "eval": -11
+        },
+        {
+            "eval": -46
+        },
+        {
+            "eval": 3
+        },
+        {
+            "eval": -113,
+            "best": "b2b4",
+            "variation": "b4 Bb6 Be2 d5 Nbd2 Be6 a4 a6 Ba3 Re8",
+            "judgment": {
+                "name": "Mistake",
+                "comment": "Mistake. b4 was best."
+            }
+        },
+        {
+            "eval": -110
+        },
+        {
+            "eval": -297,
+            "best": "c3d4",
+            "variation": "cxd4",
+            "judgment": {
+                "name": "Mistake",
+                "comment": "Mistake. cxd4 was best."
+            }
+        },
+        {
+            "eval": -300
+        },
+        {
+            "eval": -884,
+            "best": "f1e2",
+            "variation": "Be2 Nxd4 cxd4 Qf6 O-O Bxd4 Bf3 Bxb2 Bxb2 Qxb2 Na3 Ng5 Qd3 c6",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Be2 was best."
+            }
+        },
+        {
+            "eval": -884
+        },
+        {
+            "eval": -930
+        },
+        {
+            "eval": -908
+        },
+        {
+            "eval": -992
+        },
+        {
+            "eval": -454,
+            "best": "e4f2",
+            "variation": "Nxf2 Qxf2 Rxe3+ Kd1 Rd3+ Bxd3 Bxf2 Nd2 Qh4 Bf5 Qg3 Be4 d5 Bf3",
+            "judgment": {
+                "name": "Mistake",
+                "comment": "Mistake. Nxf2 was best."
+            }
+        },
+        {
+            "eval": -465
+        },
+        {
+            "eval": -454
+        },
+        {
+            "eval": -488
+        },
+        {
+            "eval": -434
+        },
+        {
+            "eval": -950,
+            "best": "c3c4",
+            "variation": "c4 Bxc4 Nc3 Nd3+ Kf1 Nxb2 g3 d5 Bxc4 Nxc4 Rd1 Qd6 Kg2 Rad8",
+            "judgment": {
+                "name": "Mistake",
+                "comment": "Mistake. c4 was best."
+            }
+        },
+        {
+            "eval": -928
+        },
+        {
+            "eval": -2377
+        },
+        {
+            "eval": -2308
+        },
+        {
+            "eval": -2336
+        },
+        {
+            "eval": -2180
+        },
+        {
+            "eval": -2337
+        },
+        {
+            "eval": -2311
+        },
+        {
+            "eval": -3600
+        },
+        {
+            "eval": -3572
+        },
+        {
+            "eval": -3524
+        },
+        {
+            "eval": -3346
+        },
+        {
+            "mate": -7,
+            "best": "e1f1",
+            "variation": "Ref1 Nd3 Kh2 Qxb2 f4 Qxc3 f5 Nxf2 Rxf2 Qe1 Rf4 Re3 f6 Qg3+",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Checkmate is now unavoidable. Ref1 was best."
+            }
+        },
+        {
+            "mate": -6
+        },
+        {
+            "mate": -6
+        },
+        {
+            "mate": -5
+        },
+        {
+            "mate": -5
+        }
+    ],
+    "clock": {
+        "initial": 600,
+        "increment": 5,
+        "totalTime": 800
+    }
+}

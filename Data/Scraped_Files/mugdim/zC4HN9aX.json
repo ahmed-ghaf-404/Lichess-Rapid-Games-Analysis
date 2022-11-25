@@ -1,0 +1,222 @@
+{
+    "id": "zC4HN9aX",
+    "rated": true,
+    "variant": "standard",
+    "speed": "rapid",
+    "perf": "rapid",
+    "createdAt": "2022-11-19 18:23:46.551000+00:00",
+    "lastMoveAt": "2022-11-19 18:33:20.684000+00:00",
+    "status": "resign",
+    "players": {
+        "white": {
+            "user": {
+                "name": "Mugdim",
+                "id": "mugdim"
+            },
+            "rating": 1205,
+            "ratingDiff": -5,
+            "analysis": {
+                "inaccuracy": 2,
+                "mistake": 1,
+                "blunder": 2,
+                "acpl": 77
+            }
+        },
+        "black": {
+            "user": {
+                "name": "abney713",
+                "id": "abney713"
+            },
+            "rating": 1222,
+            "ratingDiff": 5,
+            "analysis": {
+                "inaccuracy": 2,
+                "mistake": 0,
+                "blunder": 0,
+                "acpl": 20
+            }
+        }
+    },
+    "winner": "black",
+    "opening": {
+        "eco": "B15",
+        "name": "Caro-Kann Defense: Campomanes Attack",
+        "ply": 6
+    },
+    "moves": "d4 c6 e4 d5 Nc3 Nf6 e5 Ne4 Nxe4 dxe4 Nh3 e6 Ng5 Qd5 c4 Qa5+ Bd2 Qb6 Nxe4 Qxd4 f3 Qxb2 Rb1 Qxe5 c5 Nd7 f4 Qxe4+ Be2 Nxc5 f5 Nd3+ Kf1 Qxf5+ Bf3 Bc5 Ba5 O-O Ke2 Nf2 Qd3 Nxd3",
+    "analysis": [
+        {
+            "eval": 0
+        },
+        {
+            "eval": 50
+        },
+        {
+            "eval": 41
+        },
+        {
+            "eval": 28
+        },
+        {
+            "eval": 27
+        },
+        {
+            "eval": 60
+        },
+        {
+            "eval": 137
+        },
+        {
+            "eval": 153
+        },
+        {
+            "eval": 185
+        },
+        {
+            "eval": 163
+        },
+        {
+            "eval": 111
+        },
+        {
+            "eval": 188,
+            "best": "c8h3",
+            "variation": "Bxh3 gxh3 e6 Bg2 c5 Bxe4 Nc6 d5 Nxe5 Qh5 Qc7 dxe6 O-O-O exf7",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. Bxh3 was best."
+            }
+        },
+        {
+            "eval": 248
+        },
+        {
+            "eval": 259
+        },
+        {
+            "eval": 326
+        },
+        {
+            "eval": 355
+        },
+        {
+            "eval": 365
+        },
+        {
+            "eval": 409
+        },
+        {
+            "eval": 118,
+            "best": "d2c3",
+            "variation": "Bc3 c5",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Bc3 was best."
+            }
+        },
+        {
+            "eval": 99
+        },
+        {
+            "eval": -54,
+            "best": "d1c2",
+            "variation": "Qc2 Na6",
+            "judgment": {
+                "name": "Mistake",
+                "comment": "Mistake. Qc2 was best."
+            }
+        },
+        {
+            "eval": -80
+        },
+        {
+            "eval": -83
+        },
+        {
+            "eval": -96
+        },
+        {
+            "eval": -199,
+            "best": "d2c3",
+            "variation": "Bc3 Qf4 g3 Qe3+ Be2 f5 Rb3 fxe4 Bxg7 Qxb3 axb3 Bxg7 Qd6 Nd7",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. Bc3 was best."
+            }
+        },
+        {
+            "eval": -174
+        },
+        {
+            "eval": -902,
+            "best": "d2c3",
+            "variation": "Bc3 Qf4 Qd4 Qh6 Bb4 e5 Qc3 a5 Ba3 Be7 Bc4 Qh4+ g3 Qh3",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Bc3 was best."
+            }
+        },
+        {
+            "eval": -930
+        },
+        {
+            "eval": -904
+        },
+        {
+            "eval": -817
+        },
+        {
+            "eval": -1027
+        },
+        {
+            "eval": -989
+        },
+        {
+            "eval": -961
+        },
+        {
+            "eval": -925
+        },
+        {
+            "eval": -928
+        },
+        {
+            "eval": -924
+        },
+        {
+            "eval": -1210
+        },
+        {
+            "eval": -1055
+        },
+        {
+            "eval": -1571
+        },
+        {
+            "eval": -1554
+        },
+        {
+            "mate": -6,
+            "best": "b1b3",
+            "variation": "Rb3",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Checkmate is now unavoidable. Rb3 was best."
+            }
+        },
+        {
+            "eval": -2039,
+            "best": "f5d3",
+            "variation": "Qxd3+ Ke1 Qxb1+ Ke2 Qd3+ Ke1 Qe3+ Kf1 Nd3 Be1 Qxe1#",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Lost forced checkmate sequence. Qxd3+ was best."
+            }
+        }
+    ],
+    "clock": {
+        "initial": 600,
+        "increment": 0,
+        "totalTime": 600
+    }
+}

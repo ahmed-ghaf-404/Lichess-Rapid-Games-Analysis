@@ -1,0 +1,102 @@
+{
+    "id": "s2PaRqZo",
+    "rated": true,
+    "variant": "standard",
+    "speed": "rapid",
+    "perf": "rapid",
+    "createdAt": "2022-07-19 21:43:09.340000+00:00",
+    "lastMoveAt": "2022-07-19 21:44:14.738000+00:00",
+    "status": "mate",
+    "players": {
+        "white": {
+            "user": {
+                "name": "Orno",
+                "id": "orno"
+            },
+            "rating": 1166,
+            "ratingDiff": 5,
+            "analysis": {
+                "inaccuracy": 0,
+                "mistake": 0,
+                "blunder": 1,
+                "acpl": 123
+            }
+        },
+        "black": {
+            "user": {
+                "name": "Javidovi",
+                "id": "javidovi"
+            },
+            "rating": 1143,
+            "ratingDiff": -14,
+            "analysis": {
+                "inaccuracy": 0,
+                "mistake": 0,
+                "blunder": 2,
+                "acpl": 317
+            }
+        }
+    },
+    "winner": "white",
+    "opening": {
+        "eco": "C42",
+        "name": "Russian Game: Damiano Variation",
+        "ply": 6
+    },
+    "moves": "e4 e5 Nf3 Nf6 Nxe5 Nxe4 Qe2 f5 Qc4 Nc6 Qf7#",
+    "analysis": [
+        {
+            "eval": 33
+        },
+        {
+            "eval": 12
+        },
+        {
+            "eval": 19
+        },
+        {
+            "eval": 50
+        },
+        {
+            "eval": 34
+        },
+        {
+            "eval": 64
+        },
+        {
+            "eval": 75
+        },
+        {
+            "eval": 552,
+            "best": "d8e7",
+            "variation": "Qe7 Qxe4 d6 d4 dxe5 dxe5 Nc6 Nc3 Qxe5 Qxe5+",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Qe7 was best."
+            }
+        },
+        {
+            "eval": -48,
+            "best": "e2h5",
+            "variation": "Qh5+ g6 Nxg6 hxg6 Qxh8 Qe7 Be2 Nc6 Nc3 Nf6",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Qh5+ was best."
+            }
+        },
+        {
+            "mate": 1,
+            "best": "d7d5",
+            "variation": "d5 Qe2 Qf6 d4 Bd6 Nc3 Bb4 Bd2 Bxc3 bxc3",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Checkmate is now unavoidable. d5 was best."
+            }
+        }
+    ],
+    "clock": {
+        "initial": 600,
+        "increment": 0,
+        "totalTime": 600
+    }
+}

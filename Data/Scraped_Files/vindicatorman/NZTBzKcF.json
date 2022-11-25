@@ -1,0 +1,213 @@
+{
+    "id": "NZTBzKcF",
+    "rated": true,
+    "variant": "standard",
+    "speed": "rapid",
+    "perf": "rapid",
+    "createdAt": "2022-11-24 18:45:23.115000+00:00",
+    "lastMoveAt": "2022-11-24 18:51:08.251000+00:00",
+    "status": "resign",
+    "players": {
+        "white": {
+            "user": {
+                "name": "vindicatorman",
+                "id": "vindicatorman"
+            },
+            "rating": 1088,
+            "ratingDiff": 7,
+            "analysis": {
+                "inaccuracy": 2,
+                "mistake": 0,
+                "blunder": 0,
+                "acpl": 5
+            }
+        },
+        "black": {
+            "user": {
+                "name": "csc827",
+                "id": "csc827"
+            },
+            "rating": 1009,
+            "ratingDiff": -5,
+            "analysis": {
+                "inaccuracy": 2,
+                "mistake": 0,
+                "blunder": 1,
+                "acpl": 53
+            }
+        }
+    },
+    "winner": "white",
+    "opening": {
+        "eco": "C42",
+        "name": "Russian Game",
+        "ply": 5
+    },
+    "moves": "e4 e5 Nf3 Nf6 Nxe5 Qe7 Ng4 Qxe4+ Qe2 d6 Nxf6+ gxf6 Qxe4+ Kd8 Bb5 Bd7 Bxd7 Nxd7 Qxb7 Nb6 Qe4 Bh6 O-O Re8 Qxh7 Kd7 Qxh6 Nd5 Nc3 Rh8 Qg7 Nf4 Qxf7+ Kc6 Qc4+ Kd7 Qxf4 Rag8 g3 Rh7 Qf5+ Kc6 Qxh7",
+    "analysis": [
+        {
+            "eval": 36
+        },
+        {
+            "eval": 12
+        },
+        {
+            "eval": 29
+        },
+        {
+            "eval": 50
+        },
+        {
+            "eval": 34
+        },
+        {
+            "eval": 94,
+            "best": "d7d6",
+            "variation": "d6 Nf3 Nxe4 d4 d5 Bd3 Bd6 O-O O-O c4",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. d6 was best."
+            }
+        },
+        {
+            "eval": 25,
+            "best": "d2d4",
+            "variation": "d4 d6 Nf3 Qxe4+ Be2 Bf5 Na3 Qe7 O-O Qd7",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. d4 was best."
+            }
+        },
+        {
+            "eval": 8
+        },
+        {
+            "eval": -23
+        },
+        {
+            "eval": 1230,
+            "best": "e4e2",
+            "variation": "Qxe2+ Bxe2 Nxg4 Bxg4 Nc6 Nc3 Nd4 Kd1 Ne6 Re1",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Qxe2+ was best."
+            }
+        },
+        {
+            "eval": 1241
+        },
+        {
+            "eval": 1225
+        },
+        {
+            "eval": 1238
+        },
+        {
+            "eval": 1328
+        },
+        {
+            "eval": 1249
+        },
+        {
+            "eval": 1454
+        },
+        {
+            "eval": 1341
+        },
+        {
+            "eval": 1347
+        },
+        {
+            "eval": 1338
+        },
+        {
+            "eval": 1361
+        },
+        {
+            "eval": 1322
+        },
+        {
+            "eval": 1400
+        },
+        {
+            "eval": 1331
+        },
+        {
+            "eval": 1424
+        },
+        {
+            "eval": 1446
+        },
+        {
+            "eval": 1637
+        },
+        {
+            "eval": 1630
+        },
+        {
+            "eval": 1722
+        },
+        {
+            "eval": 1492
+        },
+        {
+            "eval": 1915
+        },
+        {
+            "eval": 1621
+        },
+        {
+            "eval": 2023
+        },
+        {
+            "eval": 2015
+        },
+        {
+            "eval": 2015
+        },
+        {
+            "eval": 2012
+        },
+        {
+            "eval": 2051
+        },
+        {
+            "eval": 2071
+        },
+        {
+            "eval": 2231
+        },
+        {
+            "eval": 2023
+        },
+        {
+            "eval": 2711
+        },
+        {
+            "eval": 2665
+        },
+        {
+            "mate": 1,
+            "best": "d7d8",
+            "variation": "Kd8 Qxh7 Rg5 Ne4 Kc8 Nxf6 Kb7 Qe4+ Kb8 f4 Rg7 Qe8+ Kb7 Qd7",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Checkmate is now unavoidable. Kd8 was best."
+            }
+        },
+        {
+            "eval": 2593,
+            "best": "f5b5",
+            "variation": "Qb5#",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Lost forced checkmate sequence. Qb5# was best."
+            }
+        }
+    ],
+    "clock": {
+        "initial": 600,
+        "increment": 0,
+        "totalTime": 600
+    }
+}

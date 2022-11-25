@@ -1,0 +1,171 @@
+{
+    "id": "w5OVXX6n",
+    "rated": true,
+    "variant": "standard",
+    "speed": "rapid",
+    "perf": "rapid",
+    "createdAt": "2022-07-28 10:10:28.793000+00:00",
+    "lastMoveAt": "2022-07-28 10:13:28.474000+00:00",
+    "status": "mate",
+    "players": {
+        "white": {
+            "user": {
+                "name": "kai_roo",
+                "id": "kai_roo"
+            },
+            "rating": 1377,
+            "ratingDiff": -6,
+            "analysis": {
+                "inaccuracy": 1,
+                "mistake": 1,
+                "blunder": 2,
+                "acpl": 138
+            }
+        },
+        "black": {
+            "user": {
+                "name": "Mikhail_Isak",
+                "id": "mikhail_isak"
+            },
+            "rating": 1377,
+            "ratingDiff": 6,
+            "analysis": {
+                "inaccuracy": 0,
+                "mistake": 2,
+                "blunder": 1,
+                "acpl": 64
+            }
+        }
+    },
+    "winner": "black",
+    "opening": {
+        "eco": "D00",
+        "name": "Queen's Pawn Game: Accelerated London System",
+        "ply": 3
+    },
+    "moves": "d4 d5 Bf4 Bf5 e3 a6 c4 e6 Nc3 c5 cxd5 exd5 Nf3 cxd4 Qxd4 Nc6 Nxd5 Nxd4 exd4 Qa5+ Nc3 Bb4 O-O-O Bxc3 bxc3 Qxc3#",
+    "analysis": [
+        {
+            "eval": 0
+        },
+        {
+            "eval": 38
+        },
+        {
+            "eval": 0
+        },
+        {
+            "eval": 32
+        },
+        {
+            "eval": 22
+        },
+        {
+            "eval": 52
+        },
+        {
+            "eval": 58
+        },
+        {
+            "eval": 71
+        },
+        {
+            "eval": 62
+        },
+        {
+            "eval": 179,
+            "best": "d5c4",
+            "variation": "dxc4 Bxc4 Bd6 Nge2 Nf6 f3 Nc6 e4 Bxf4 Nxf4",
+            "judgment": {
+                "name": "Mistake",
+                "comment": "Mistake. dxc4 was best."
+            }
+        },
+        {
+            "eval": 173
+        },
+        {
+            "eval": 203
+        },
+        {
+            "eval": 69,
+            "best": "d4c5",
+            "variation": "dxc5 Nc6",
+            "judgment": {
+                "name": "Mistake",
+                "comment": "Mistake. dxc5 was best."
+            }
+        },
+        {
+            "eval": 293,
+            "best": "g8f6",
+            "variation": "Nf6 dxc5 Bxc5 Bd3 Be6 O-O O-O Rc1 Nc6 Na4 Ba7 Bxa6 Bxe3 Bxe3",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Nf6 was best."
+            }
+        },
+        {
+            "eval": 50,
+            "best": "f3d4",
+            "variation": "Nxd4 Bd7",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Nxd4 was best."
+            }
+        },
+        {
+            "eval": 191,
+            "best": "g8f6",
+            "variation": "Nf6",
+            "judgment": {
+                "name": "Mistake",
+                "comment": "Mistake. Nf6 was best."
+            }
+        },
+        {
+            "eval": -1001,
+            "best": "d4d5",
+            "variation": "Qxd5",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Qxd5 was best."
+            }
+        },
+        {
+            "eval": -1022
+        },
+        {
+            "eval": -1066
+        },
+        {
+            "eval": -919
+        },
+        {
+            "eval": -912
+        },
+        {
+            "eval": -846
+        },
+        {
+            "eval": -1374
+        },
+        {
+            "eval": -1322
+        },
+        {
+            "mate": -1,
+            "best": "f1d3",
+            "variation": "Bd3 Rc8 Bxf5 Bd2+ Kb1 Qxf5+ Ka1 Bxf4 d5 Bd6 Rc1 Rd8 Nd2 Bb4",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Checkmate is now unavoidable. Bd3 was best."
+            }
+        }
+    ],
+    "clock": {
+        "initial": 600,
+        "increment": 5,
+        "totalTime": 800
+    }
+}

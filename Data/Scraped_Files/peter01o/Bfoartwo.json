@@ -1,0 +1,75 @@
+{
+    "id": "Bfoartwo",
+    "rated": true,
+    "variant": "standard",
+    "speed": "rapid",
+    "perf": "rapid",
+    "createdAt": "2022-07-28 17:07:47.541000+00:00",
+    "lastMoveAt": "2022-07-28 17:08:07.095000+00:00",
+    "status": "resign",
+    "players": {
+        "white": {
+            "user": {
+                "name": "peter01o",
+                "id": "peter01o"
+            },
+            "rating": 999,
+            "ratingDiff": 4,
+            "analysis": {
+                "inaccuracy": 0,
+                "mistake": 0,
+                "blunder": 0,
+                "acpl": 14
+            }
+        },
+        "black": {
+            "user": {
+                "name": "ChessyChesterton12",
+                "id": "chessychesterton12"
+            },
+            "rating": 883,
+            "ratingDiff": -4,
+            "analysis": {
+                "inaccuracy": 1,
+                "mistake": 0,
+                "blunder": 0,
+                "acpl": 59
+            }
+        }
+    },
+    "winner": "white",
+    "opening": {
+        "eco": "A40",
+        "name": "Mikenas Defense",
+        "ply": 2
+    },
+    "moves": "d4 Nc6 d5 Ne5 f4",
+    "analysis": [
+        {
+            "eval": 0
+        },
+        {
+            "eval": 89,
+            "best": "g8f6",
+            "variation": "Nf6 c4 e6 Nf3 d5 cxd5 exd5 Bf4 c6 Nc3",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. Nf6 was best."
+            }
+        },
+        {
+            "eval": 62
+        },
+        {
+            "eval": 90
+        },
+        {
+            "eval": 90
+        }
+    ],
+    "clock": {
+        "initial": 600,
+        "increment": 0,
+        "totalTime": 600
+    }
+}

@@ -127,7 +127,7 @@ class DatabaseManager:
                         game = json.load(f)['players']
                         
                         userId = game['white']['user']['id']
-
+                        
                         try:
                             title = game['white']['user']['title']
                         except Exception as e:
@@ -153,8 +153,6 @@ class DatabaseManager:
                 self.userIds.add(userId)
                 title = f"'{title}'" if title is not None else 'NULL'
                 cmd += f"('{userId}', {title}, {rating}),"
-            else:
-                print(entry)
         cmd = cmd[:-1]
         if cmd[-1] != ')':
             return
@@ -203,11 +201,16 @@ class DatabaseManager:
                     # we have access to indivisual games
                     with open(path+user+'/'+g) as f:
                         game = json.load(f)
+                        if 'opening' not in game:
+                            os.remove(path+user+'/'+g)
+                            continue
+                        
                         gameId = game['id']
                         if gameId is not None and gameId not in self.gameIds:
                             self.gameIds.add(gameId)
+                        else:
+                            continue
                         status = game['status']
-
                         whiteId = game['players']['white']['user']['id']
                         blackId = game['players']['black']['user']['id']
                         eco = game['opening']['eco']
@@ -270,6 +273,9 @@ class DatabaseManager:
                     # we have access to indivisual games
                     with open(path+user+'/'+g) as f:
                         game = json.load(f)
+                        if 'opening' not in game:
+                            os.remove(path+user+'/'+g)
+                            continue
 
                         gameId = game['id']
                         if gameId not in self.gameStatsIds:

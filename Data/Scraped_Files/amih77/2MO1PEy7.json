@@ -1,0 +1,201 @@
+{
+    "id": "2MO1PEy7",
+    "rated": true,
+    "variant": "standard",
+    "speed": "rapid",
+    "perf": "rapid",
+    "createdAt": "2022-11-19 17:20:14.547000+00:00",
+    "lastMoveAt": "2022-11-19 17:31:30.879000+00:00",
+    "status": "resign",
+    "players": {
+        "white": {
+            "user": {
+                "name": "David_Sanfilippo",
+                "id": "david_sanfilippo"
+            },
+            "rating": 1476,
+            "ratingDiff": 6,
+            "analysis": {
+                "inaccuracy": 1,
+                "mistake": 0,
+                "blunder": 0,
+                "acpl": 11
+            }
+        },
+        "black": {
+            "user": {
+                "name": "amih77",
+                "id": "amih77"
+            },
+            "rating": 1517,
+            "ratingDiff": -6,
+            "analysis": {
+                "inaccuracy": 2,
+                "mistake": 0,
+                "blunder": 1,
+                "acpl": 58
+            }
+        }
+    },
+    "winner": "white",
+    "opening": {
+        "eco": "C02",
+        "name": "French Defense: Advance Variation, Milner-Barry Gambit",
+        "ply": 11
+    },
+    "moves": "e4 e6 d4 d5 e5 c5 c3 Nc6 Nf3 Qb6 Bd3 cxd4 O-O Nh6 cxd4 Nxd4 Nxd4 Bd7 Nb3 Nf5 Bxf5 exf5 Nc3 Be6 Be3 Qd8 Qf3 b6 Rfd1 Bb4 Nxd5 Bxd5 Rxd5 Qc8 Rc1 Qe6 Nd4 Qg6 Rd6 f6 Qxa8+",
+    "analysis": [
+        {
+            "eval": 36
+        },
+        {
+            "eval": 0
+        },
+        {
+            "eval": 30
+        },
+        {
+            "eval": 25
+        },
+        {
+            "eval": 0
+        },
+        {
+            "eval": 30
+        },
+        {
+            "eval": 30
+        },
+        {
+            "eval": 0
+        },
+        {
+            "eval": 0
+        },
+        {
+            "eval": 29
+        },
+        {
+            "eval": 0
+        },
+        {
+            "eval": 0
+        },
+        {
+            "eval": -55,
+            "best": "c3d4",
+            "variation": "cxd4 Bd7 Be2 Nh6 Nc3 Nf5 Na4 Qa5+ Nc3",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. cxd4 was best."
+            }
+        },
+        {
+            "eval": 34,
+            "best": "c8d7",
+            "variation": "Bd7 cxd4 Nxd4 Nbd2 Ne7 Nxd4 Qxd4 Nf3 Qb6 Be3",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. Bd7 was best."
+            }
+        },
+        {
+            "eval": 50
+        },
+        {
+            "eval": 604,
+            "best": "h6f5",
+            "variation": "Nf5",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Nf5 was best."
+            }
+        },
+        {
+            "eval": 571
+        },
+        {
+            "eval": 571
+        },
+        {
+            "eval": 590
+        },
+        {
+            "eval": 671
+        },
+        {
+            "eval": 692
+        },
+        {
+            "eval": 694
+        },
+        {
+            "eval": 684
+        },
+        {
+            "eval": 669
+        },
+        {
+            "eval": 710
+        },
+        {
+            "eval": 686
+        },
+        {
+            "eval": 662
+        },
+        {
+            "eval": 806
+        },
+        {
+            "eval": 779
+        },
+        {
+            "eval": 889
+        },
+        {
+            "eval": 901
+        },
+        {
+            "eval": 894
+        },
+        {
+            "eval": 899
+        },
+        {
+            "eval": 936
+        },
+        {
+            "eval": 915
+        },
+        {
+            "eval": 1063
+        },
+        {
+            "eval": 1076
+        },
+        {
+            "eval": 1071
+        },
+        {
+            "eval": 1101
+        },
+        {
+            "mate": 2,
+            "best": "e8g8",
+            "variation": "O-O Rxg6 hxg6 Nc6 Rac8 Nxb4 Rxc1+ Bxc1 Rd8 Nc6 Rd7 Qb3 Kh7 Qa4",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Checkmate is now unavoidable. O-O was best."
+            }
+        },
+        {
+            "mate": 1
+        }
+    ],
+    "clock": {
+        "initial": 900,
+        "increment": 10,
+        "totalTime": 1300
+    }
+}

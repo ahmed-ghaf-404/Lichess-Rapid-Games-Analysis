@@ -1,0 +1,156 @@
+{
+    "id": "i2opeNzt",
+    "rated": true,
+    "variant": "standard",
+    "speed": "rapid",
+    "perf": "rapid",
+    "createdAt": "2022-11-13 13:30:20.709000+00:00",
+    "lastMoveAt": "2022-11-13 13:34:21.161000+00:00",
+    "status": "resign",
+    "players": {
+        "white": {
+            "user": {
+                "name": "Reda46",
+                "id": "reda46"
+            },
+            "rating": 1667,
+            "ratingDiff": -5,
+            "analysis": {
+                "inaccuracy": 2,
+                "mistake": 1,
+                "blunder": 1,
+                "acpl": 110
+            }
+        },
+        "black": {
+            "user": {
+                "name": "Vapon",
+                "id": "vapon"
+            },
+            "rating": 1708,
+            "ratingDiff": 5,
+            "analysis": {
+                "inaccuracy": 1,
+                "mistake": 0,
+                "blunder": 0,
+                "acpl": 56
+            }
+        }
+    },
+    "winner": "black",
+    "opening": {
+        "eco": "B20",
+        "name": "Sicilian Defense: Bowdler Attack",
+        "ply": 3
+    },
+    "moves": "e4 c5 Bc4 Nc6 Nf3 d6 Ng5 e6 Nc3 Qxg5 O-O Qd8 Re1 e5 d3 Nf6 f4 Bg4 Qd2 Nd4 h3 Bxh3 gxh3 Nf3+",
+    "analysis": [
+        {
+            "eval": 36
+        },
+        {
+            "eval": 32
+        },
+        {
+            "eval": 0
+        },
+        {
+            "eval": 0
+        },
+        {
+            "eval": 0
+        },
+        {
+            "eval": 36
+        },
+        {
+            "eval": -96,
+            "best": "d2d4",
+            "variation": "d4 cxd4 Nxd4 Nf6 Nc3 e6 Bb3 Bd7 Be3 Nxd4",
+            "judgment": {
+                "name": "Mistake",
+                "comment": "Mistake. d4 was best."
+            }
+        },
+        {
+            "eval": -93
+        },
+        {
+            "eval": -800,
+            "best": "g5f3",
+            "variation": "Nf3 Nf6 d3 d5 exd5 exd5 Bb3 h6 Bf4 g5",
+            "judgment": {
+                "name": "Blunder",
+                "comment": "Blunder. Nf3 was best."
+            }
+        },
+        {
+            "eval": -578
+        },
+        {
+            "eval": -505
+        },
+        {
+            "eval": -725
+        },
+        {
+            "eval": -738
+        },
+        {
+            "eval": -601
+        },
+        {
+            "eval": -637
+        },
+        {
+            "eval": -621
+        },
+        {
+            "eval": -654
+        },
+        {
+            "eval": -649
+        },
+        {
+            "eval": -635
+        },
+        {
+            "eval": -406,
+            "best": "e5f4",
+            "variation": "exf4 Qxf4 Be7 Nd5 Ne5 b4 cxb4 Bb2 Be6 Bb5+ Bd7 Bxd7+ Nfxd7 Qf5",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. exf4 was best."
+            }
+        },
+        {
+            "eval": -569,
+            "best": "f4f5",
+            "variation": "f5 g6 Nd5 Nxd5 Bxd5 Qh4 c3 Nc2 Rf1 Nxa1 Bxb7 Rb8 Bc6+ Kd8",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. f5 was best."
+            }
+        },
+        {
+            "eval": -575
+        },
+        {
+            "eval": -777,
+            "best": "f4f5",
+            "variation": "f5 Bg4 Nd5 Nxd5 Bxd5 Be7 c3 Nc6 a4 Bh4 a5 Bxe1 Qxe1 a6",
+            "judgment": {
+                "name": "Inaccuracy",
+                "comment": "Inaccuracy. f5 was best."
+            }
+        },
+        {
+            "eval": -749
+        }
+    ],
+    "clock": {
+        "initial": 900,
+        "increment": 10,
+        "totalTime": 1300
+    }
+}
