@@ -1,12 +1,18 @@
 
-# Python Project Template
+# Lichess Players Performance Analysis 
 
-A low dependency and really simple to start project template for Python Projects.
+
+### DEPENDENCIES:
+- [pandas](https://pandas.pydata.org/docs/getting_started/install.html): {brief explanation}
+- [berserk](https://github.com/rhgrant10/berserk): {brief explanation}
+- [NumPy](https://numpy.org/install/): {brief explanation}
 
 See also 
-- [Flask-Project-Template](https://github.com/rochacbruno/flask-project-template/) for a full feature Flask project including database, API, admin interface, etc.
-- [FastAPI-Project-Template](https://github.com/rochacbruno/fastapi-project-template/) The base to start an openapi project featuring: SQLModel, Typer, FastAPI, JWT Token Auth, Interactive Shell, Management Commands.
+- [lichess](https://lichess.org/about) is a free/libre, open-source chess server powered by volunteers and donations created in 2010.
+- [Elo rating system](https://en.wikipedia.org/wiki/Elo_rating_system) is the rating system used in online chess and FIDE.
 
+# README writing progress!
+==============================================
 ### HOW TO USE THIS TEMPLATE
 
 > **DO NOT FORK** this is meant to be used from **[Use this template](https://github.com/rochacbruno/python-project-template/generate)** feature.
