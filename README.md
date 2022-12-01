@@ -1,16 +1,10 @@
 # Chess-Level-Guesser
-## Requirements:
-- Berserk API
-- Pandas
+### DEPENDENCIES:
+- [pandas](https://pandas.pydata.org/docs/getting_started/install.html): {brief explanation}
+- [berserk](https://github.com/rhgrant10/berserk): {brief explanation}
+- [NumPy](https://numpy.org/install/): {brief explanation}
+- [Seaborn](https://seaborn.pydata.org/): {brief explanation}
 
-## Data Scraping:
-- Used berserk API to extend on an [outdated kaggle dataset](https://www.kaggle.com/datasets/datasnaek/chess) and scrape more recent and active players.
-- Scraped Lichess Titled Arena to get high quality chess
-## Data Cleaning:
-
-## Feature Engineering:
-
-
-https://medium.com/@adejuyigbetemitayo/understanding-the-data-science-workflow-using-the-crisp-dm-model-pipeline-5241425f9283
-
-Hi future Ahmed ;)
+See also 
+- [lichess](https://lichess.org/about) is a free/libre, open-source chess server powered by volunteers and donations created in 2010.
+- [Elo rating system](https://en.wikipedia.org/wiki/Elo_rating_system) is the rating system used in online chess and FIDE.
