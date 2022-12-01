@@ -1,9 +1,9 @@
 # Chess-Level-Guesser
 ## DEPENDENCIES:
-- [pandas](https://pandas.pydata.org/docs/getting_started/install.html): {brief explanation}
-- [berserk](https://github.com/rhgrant10/berserk): {brief explanation}
-- [NumPy](https://numpy.org/install/): {brief explanation}
-- [Seaborn](https://seaborn.pydata.org/): {brief explanation}
+- [pandas](https://pandas.pydata.org/docs/getting_started/install.html): A data analysis and manipulation tool built on top of Python
+- [berserk](https://berserk.readthedocs.io/en/master): Python client for the Lichess API 
+- [NumPy](https://numpy.org/install/): Numerical computing library in Python.
+- [Seaborn](https://seaborn.pydata.org/): A Python data visualization library based on matplotlib.
 
 See also 
 - [lichess](https://lichess.org/about) is a free/libre, open-source chess server powered by volunteers and donations created in 2010.
