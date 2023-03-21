@@ -1,5 +1,5 @@
-from project_name.base import NAME
+from lichess_rapid_games_analysis.base import NAME
 
 
 def test_base():
-    assert NAME == "project_name"
+    assert NAME == "lichess_rapid_games_analysis"

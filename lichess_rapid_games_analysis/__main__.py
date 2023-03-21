@@ -1,4 +1,4 @@
-"""Entry point for project_name."""
+"""Entry point for lichess_rapid_games_analysis."""
 
 from .cli import main  # pragma: no cover
 
