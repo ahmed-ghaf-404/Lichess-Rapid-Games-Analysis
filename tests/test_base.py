@@ -1,4 +1,4 @@
-from lichess_rapid_games_analysis.base import NAME
+from lichess_rapid_games_analysis.constants import NAME
 
 
 def test_base():

@@ -1,0 +1,11 @@
+
+
+# API TOKEN
+BERSERK_ACCESS_TOKEN="BERSERK_ACCESS_TOKEN"
+
+# Scraper configuration
+MAX_GAMES_PER_USER="games_per_user"
+IS_RATED="rated"
+GAME_TIME_CONTROL="perf"
+RAPID_GAME_TIME_CONTROL="rapid"
+IS_ANALYZED_GAME="analysed"
