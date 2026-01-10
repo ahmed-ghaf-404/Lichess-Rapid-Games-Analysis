@@ -1,0 +1,59 @@
+# .github/workflows/monthly_scraper.yml
+name: Monthly Lichess Scraper
+
+on:
+  schedule:
+    - cron: '0 0 1 * *'  # 1st day of each month, 00:00 UTC
+  workflow_dispatch:      # allow manual trigger
+
+jobs:
+  scrape_monthly_games:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout repository
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # Set up Python
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      # Install dependencies
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e ".[test]"
+
+      # Run monthly scraper
+      - name: Run scraper
+        env:
+          BERSERK_ACCESS_TOKEN: ${{ secrets.LICHESS_API_TOKEN }}
+        run: |
+          python - <<EOF
+          import os
+          from datetime import datetime
+          from lichess_rapid_games_analysis.backend.scraper import run_scrape_lichess, DEFAULT_CONFIG
+
+          # Usernames to scrape
+          usernames = ["ericrosen"]  # Add more if needed
+
+          # Build monthly output path
+          now = datetime.utcnow()
+          output_path = f"monthly_games/{now.year}/{now.month:02d}"
+
+          # Run scraper
+          run_scrape_lichess(usernames, DEFAULT_CONFIG, output_path)
+          EOF
+
+      # Commit scraped games
+      - name: Commit and push scraped games
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add monthly_games/
+          git commit -m "Add monthly Lichess games for $(date +'%Y-%m')"
+          git push
+        continue-on-error: true
