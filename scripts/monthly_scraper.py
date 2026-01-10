@@ -16,22 +16,23 @@ DEFAULT_CONFIG = {
 }
 
 def main():
-    username = ["ericrosen"]
+    usernames = ["ericrosen"]
     token = os.environ[BERSERK_ACCESS_TOKEN]
     client = berserk.Client(berserk.TokenSession(token))
     scraper = LichessGameScraper(client, DEFAULT_CONFIG)
 
-    games = list(scraper.fetch_games(username))
-    print(f"Fetched {len(games)} games for {username}")
-
     now = datetime.utcnow()
     out_dir = Path("data/monthly_games") / str(now.year) / f"{now.month:02}"
     out_dir.mkdir(parents=True, exist_ok=True)
-    out_path = out_dir / f"{username}_games.json"
-    with open(out_path, "w", encoding="utf-8") as f:
-        json.dump(games, f, indent=2, default=str)
 
-    print(f"Saved games to {out_path}")
+    for username in usernames:
+        games = list(scraper.fetch_games(username))
+        print(f"Fetched {len(games)} games for {username}")
+
+        out_path = out_dir / f"{username}_games.json"
+        with open(out_path, "w", encoding="utf-8") as f:
+            json.dump(games, f, indent=2, default=str)
+        print(f"Saved games to {out_path}")
 
 if __name__ == "__main__":
     main()
