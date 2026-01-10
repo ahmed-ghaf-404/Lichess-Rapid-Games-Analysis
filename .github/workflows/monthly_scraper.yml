@@ -34,10 +34,3 @@ jobs:
           BERSERK_ACCESS_TOKEN: ${{ secrets.LICHESS_API_TOKEN }}
         run: |
           python scripts/monthly_scraper.py
-
-      # 5️⃣ Optional: upload data as artifact
-      - name: Upload monthly games
-        uses: actions/upload-artifact@v3
-        with:
-          name: monthly-games
-          path: data/monthly_games
