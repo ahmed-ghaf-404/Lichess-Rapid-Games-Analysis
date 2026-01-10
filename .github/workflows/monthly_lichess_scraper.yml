@@ -1,0 +1,64 @@
+# .github/workflows/monthly_scraper.yml
+name: Monthly Lichess Scraper
+
+# Trigger monthly on the 1st day of every month at 00:00 UTC
+on:
+  schedule:
+    - cron: '0 0 1 * *'  # Runs at 00:00 UTC on the 1st of every month
+  workflow_dispatch:      # Optional: allow manual trigger
+
+jobs:
+  scrape_monthly_games:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout repository
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # Set up Python
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      # Install dependencies
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e ".[test]"  # installs your package + test/dev dependencies
+
+      # Run monthly scraper script
+      - name: Run monthly scraper
+        env:
+          LICHESS_TOKEN: ${{ secrets.LICHESS_API_TOKEN }}  # Store your Lichess API token in GitHub Secrets
+        run: |
+          python - <<EOF
+          import os
+          import berserk
+          from lichess_rapid_games_analysis.backend.scraper import LichessGameScraper
+          from lichess_rapid_games_analysis.backend.constant import MAX_GAMES_PER_USER, RAPID_GAME_TIME_CONTROL, IS_RATED, IS_ANALYZED_GAME
+
+          # Config for scraper
+          config = {
+              MAX_GAMES_PER_USER: 1000,
+              IS_RATED: True,
+              GAME_TIME_CONTROL: RAPID_GAME_TIME_CONTROL,
+              IS_ANALYZED_GAME: True
+          }
+
+          # Initialize Lichess client
+          token = os.environ["LICHESS_TOKEN"]
+          session = berserk.TokenSession(token)
+          client = berserk.Client(session=session)
+
+          scraper = LichessGameScraper(client, config)
+          username = "YOUR_LICHESS_USERNAME"  # Replace with your username
+
+          games = list(scraper.fetch_games(username))
+          print(f"Fetched {len(games)} games")
+          # Optional: save games to a JSON file
+          import json
+          with open("monthly_games.json", "w") as f:
+              json.dump(games, f, indent=2)
+          EOF
