@@ -1,11 +1,10 @@
-name: Rename the project from template
-
+name: Chess Games Scraper 
 on: [push]
 
 permissions: write-all
 
 jobs:
-  rename-project:
+  chess-games-scraper:
     if: ${{ !contains (github.repository, '/python-project-template') }}
     runs-on: ubuntu-latest
     steps:
@@ -29,7 +28,7 @@ jobs:
         id: is_template
         run: echo "::set-output name=is_template::$(ls .github/template.yml &> /dev/null && echo true || echo false)"
 
-      - name: Rename the project
+      - name: Chess Games Scraper
         if: steps.is_template.outputs.is_template == 'true'
         run: |
           echo "Renaming the project with -a(author) ${{ env.REPOSITORY_OWNER }} -n(name) ${{ env.REPOSITORY_NAME }} -u(urlname) ${{ env.REPOSITORY_URLNAME }}"
