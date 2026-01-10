@@ -31,6 +31,6 @@ jobs:
       # 4️⃣ Run the scraper
       - name: Run Monthly Scraper
         env:
-          BERSERK_ACCESS_TOKEN: ${{ secrets.LICHESS_API_TOKEN }}
+          BERSERK_ACCESS_TOKEN: ${{ secrets.BERSERK_ACCESS_TOKEN }}
         run: |
           python scripts/monthly_scraper.py
