@@ -5,7 +5,7 @@ from pathlib import Path
 from datetime import datetime
 import berserk
 
-from backend.scrape import LichessGameScraper
+from backend.scrape.lichess import LichessGameScraper
 from backend.constant import BERSERK_ACCESS_TOKEN, GAME_TIME_CONTROL, MAX_GAMES_PER_USER, RAPID_GAME_TIME_CONTROL, IS_RATED, IS_ANALYZED_GAME
 
 DEFAULT_CONFIG = {
