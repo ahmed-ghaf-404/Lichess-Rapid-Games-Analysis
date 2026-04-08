@@ -1,5 +1,10 @@
+
+def is_standard_chess(game):
+    return game.get("variant") == "standard"
+
 def is_valid_game(game: dict) -> bool:
-    if game.get("variant") != "standard":
+
+    if not is_standard_chess(game):
         return False
 
     if "opening" not in game:
@@ -14,7 +19,7 @@ def is_valid_game(game: dict) -> bool:
     if abs(white["rating"] - black["rating"]) > 100:
         return False
 
-    if len(game.get("moves", "").split()) < 40:
+    if len(game.get("moves", "").split()) < 10:
         return False
 
     if "ratingDiff" in white and "ratingDiff" in black:

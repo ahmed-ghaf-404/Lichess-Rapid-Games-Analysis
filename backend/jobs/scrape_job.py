@@ -1,6 +1,6 @@
 from backend.utils.client import get_client
-from backend.scrape.lichess import LichessGameScraper
-from backend.scrape.sink import FileSystemSink
+from backend.scrape.LichessRapidGameScraper import LichessGameScraper
+from backend.scrape.FileSystemSink import FileSystemSink
 
 ##
 # Job: Scrapes games for a list of usernames
