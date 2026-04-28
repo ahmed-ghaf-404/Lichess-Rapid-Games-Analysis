@@ -1,0 +1,155 @@
+:root {
+  --bg: #0f172a;            /* dark slate */
+  --panel: #1e293b;         /* card background */
+  --border: #334155;
+
+  --text: #e2e8f0;          /* main text */
+  --text-muted: #94a3b8;
+
+  --accent: #3b82f6;        /* blue */
+  --accent-hover: #2563eb;
+
+  --button-bg: #1e293b;
+  --button-hover: #334155;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+button {
+  font: inherit;
+  color: var(--text);
+}
+
+/* Layout */
+
+.app-shell {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.page-header {
+  margin-bottom: 24px;
+}
+
+.page-header h1 {
+  margin: 0 0 8px;
+  font-size: 2rem;
+  color: white;
+}
+
+/* Grid */
+
+.app-grid {
+  display: grid;
+  grid-template-columns: minmax(320px, 560px) minmax(280px, 1fr);
+  gap: 24px;
+}
+
+.left-column,
+.right-column {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Panels */
+
+.panel {
+  background: var(--panel);
+  border-radius: 12px;
+  padding: 16px;
+  border: 1px solid var(--border);
+}
+
+/* Controls */
+
+.controls {
+  display: flex;
+  gap: 12px;
+}
+
+.controls button {
+  background: var(--button-bg);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 10px 14px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.controls button:hover:not(:disabled) {
+  background: var(--button-hover);
+}
+
+.controls button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* Variations */
+
+.variation-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.variation-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background: var(--button-bg);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 10px 14px;
+
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.variation-button:hover {
+  background: var(--button-hover);
+}
+
+.variation-count {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+/* Text */
+
+.fen-text {
+  word-break: break-word;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-top: 8px;
+}
+
+/* States */
+
+.state-message {
+  padding: 24px;
+}
+
+.error {
+  color: #f87171;
+}
+
+/* Mobile */
+
+@media (max-width: 900px) {
+  .app-grid {
+    grid-template-columns: 1fr;
+  }
+}
