@@ -10,6 +10,9 @@ class RecommendRequest(BaseModel):
     color: Literal["white", "black"] | None = None
     max_candidates: int = Field(default=8, ge=1, le=20)
 
+    use_cache: bool = True
+    refresh_cache: bool = False
+    force_recompute: bool = False
 
 class CandidateMove(BaseModel):
     move_uci: str

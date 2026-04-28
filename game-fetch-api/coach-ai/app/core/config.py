@@ -13,5 +13,9 @@ class Settings(BaseSettings):
     stockfish_path: str = "/usr/local/bin/stockfish"
     engine_depth: int = 14
 
+    redis_url: str = "redis://localhost:6379/0"
+    cache_ttl_seconds: int = 60 * 60 * 24 * 7
+    recommender_version: str = "heuristic_v1"
+
 
 settings = Settings()
