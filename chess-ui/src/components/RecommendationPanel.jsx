@@ -1,4 +1,10 @@
-export default function RecommendationPanel({ recommendation, loading, error }) {
+export default function RecommendationPanel({
+  recommendation,
+  loading,
+  error,
+  onMoveHover,
+  onMoveLeave,
+}) {
   if (loading) {
     return (
       <section className="panel">
@@ -32,7 +38,11 @@ export default function RecommendationPanel({ recommendation, loading, error }) 
     <section className="panel">
       <h2>Coach Recommendation</h2>
 
-      <div style={{ marginBottom: "12px" }}>
+      <div
+        style={{ marginBottom: "12px", cursor: "pointer" }}
+        onMouseEnter={() => onMoveHover?.(top)}
+        onMouseLeave={onMoveLeave}
+      >
         <div style={{ fontSize: "0.9rem", opacity: 0.8 }}>Recommended move</div>
         <div style={{ fontSize: "1.25rem", fontWeight: 700 }}>{top.move_san}</div>
         <div style={{ fontSize: "0.9rem", opacity: 0.8 }}>
@@ -42,6 +52,7 @@ export default function RecommendationPanel({ recommendation, loading, error }) 
 
       <div style={{ marginBottom: "12px" }}>
         <div style={{ fontSize: "0.9rem", opacity: 0.8 }}>Why</div>
+
         {top.reasons?.length ? (
           <ul style={{ margin: "6px 0 0 18px" }}>
             {top.reasons.map((reason) => (
@@ -60,7 +71,13 @@ export default function RecommendationPanel({ recommendation, loading, error }) 
 
         <div className="variation-list">
           {[top, ...rest].slice(0, 3).map((move) => (
-            <div key={move.move_uci} className="variation-button" style={{ cursor: "default" }}>
+            <div
+              key={move.move_uci}
+              className="variation-button"
+              style={{ cursor: "pointer" }}
+              onMouseEnter={() => onMoveHover?.(move)}
+              onMouseLeave={onMoveLeave}
+            >
               <span>{move.move_san}</span>
               <span className="variation-count">
                 {Math.round(move.peer_frequency * 100)}% · {move.peer_games} games

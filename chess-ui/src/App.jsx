@@ -1,3 +1,4 @@
+import { useState } from "react";
 import "./styles/App.css";
 import Header from "./components/Header";
 import ChessBoardPanel from "./components/ChessBoardPanel";
@@ -15,6 +16,8 @@ import { buildRecommendationArrows } from "./utils/recommendationArrows";
 export default function App() {
   const username = "chocoroku";
   const rating = 1858;
+
+  const [hoveredRecommendationMove, setHoveredRecommendationMove] = useState(null);
 
   const { games, loading, error } = useGames(username);
 
@@ -45,7 +48,9 @@ export default function App() {
     enabled: Boolean(boardFen),
   });
 
-  const arrows = buildRecommendationArrows(recommendation?.candidates ?? []);
+  const arrows = hoveredRecommendationMove
+    ? buildRecommendationArrows([hoveredRecommendationMove])
+    : buildRecommendationArrows(recommendation?.candidates ?? []);
 
   if (loading) return <LoadingState />;
   if (error) return <ErrorState message={error} />;
@@ -70,11 +75,15 @@ export default function App() {
 
         <section className="right-column">
           <CurrentLine line={line} fen={boardFen} />
+
           <RecommendationPanel
             recommendation={recommendation}
             loading={recommendationLoading}
             error={recommendationError}
+            onMoveHover={setHoveredRecommendationMove}
+            onMoveLeave={() => setHoveredRecommendationMove(null)}
           />
+
           <VariationList childrenNodes={children} onSelect={goToNode} />
         </section>
       </div>
