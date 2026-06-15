@@ -9,26 +9,29 @@ import CurrentLine from "./components/CurrentLine";
 import RecommendationPanel from "./components/RecommendationPanel";
 import LoadingState from "./components/LoadingState";
 import ErrorState from "./components/ErrorState";
+import PreloadControls from "./components/PreloadControls";
 import { useGames } from "./hooks/useGames";
 import { useOpeningExplorer } from "./hooks/useOpeningExplorer";
 import { useRecommendation } from "./hooks/useRecommendation";
+import { useRecommendationWarmup } from "./hooks/useRecommendationWarmup";
 import { buildRecommendationArrows } from "./utils/recommendationArrows";
-
-function getSideToMove(fen) {
-  return fen?.includes(" w ") ? "white" : "black";
-}
+import { getSideToMove } from "./utils/recommendationApi";
 
 export default function App() {
   const username = "chocoroku";
   const rating = 1858;
 
   const [hoveredRecommendationMove, setHoveredRecommendationMove] = useState(null);
-  const [analysisFen, setAnalysisFen] = useState(null);
+  const [analysisHistory, setAnalysisHistory] = useState([]);
+  const [analysisIndex, setAnalysisIndex] = useState(-1);
+
+  const analysisFen = analysisIndex >= 0 ? analysisHistory[analysisIndex] : null;
 
   const { games, loading, error } = useGames(username);
 
   const {
     currentNode,
+    currentNodeId,
     boardFen,
     children,
     parent,
@@ -38,11 +41,11 @@ export default function App() {
     goToParent,
     goToNext,
     goToStart,
+    tree,
   } = useOpeningExplorer(games);
 
   useEffect(() => {
-    setAnalysisFen(null);
-    setHoveredRecommendationMove(null);
+    clearAnalysisLine();
   }, [boardFen]);
 
   const displayFen = analysisFen ?? boardFen;
@@ -50,6 +53,16 @@ export default function App() {
   const isFollowingRecommendation = Boolean(analysisFen);
   const hasKnownMoves = !isFollowingRecommendation && children.length > 0;
   const shouldShowRecommendation = isFollowingRecommendation || !hasKnownMoves;
+
+  const warmup = useRecommendationWarmup({
+    tree,
+    currentNodeId,
+    displayFen,
+    analysisPosition: isFollowingRecommendation,
+    userId: username,
+    rating,
+    enabled: !loading && !error && Boolean(currentNode),
+  });
 
   const {
     data: recommendation,
@@ -69,6 +82,22 @@ export default function App() {
       : buildRecommendationArrows(recommendation?.candidates ?? [])
     : [];
 
+  function clearAnalysisLine() {
+    setAnalysisHistory([]);
+    setAnalysisIndex(-1);
+    setHoveredRecommendationMove(null);
+  }
+
+  function pushAnalysisPosition(nextFen, preloadReason) {
+    setHoveredRecommendationMove(null);
+    setAnalysisHistory((history) => [
+      ...history.slice(0, analysisIndex + 1),
+      nextFen,
+    ]);
+    setAnalysisIndex((index) => index + 1);
+    warmup.runBackgroundPreload([nextFen], preloadReason);
+  }
+
   function playRecommendedMove(move) {
     const game = new Chess(displayFen);
 
@@ -83,33 +112,115 @@ export default function App() {
       return;
     }
 
+    pushAnalysisPosition(
+      game.fen(),
+      "Played recommendation; refilling next branches"
+    );
+  }
+
+  function handleBoardMove(sourceSquare, targetSquare) {
+    if (!targetSquare || sourceSquare === targetSquare) return false;
+
+    const game = new Chess(displayFen);
+
+    const result = game.move({
+      from: sourceSquare,
+      to: targetSquare,
+      promotion: "q",
+    });
+
+    if (!result) return false;
+
+    const nextFen = game.fen();
+
+    if (!isFollowingRecommendation) {
+      const matchingChild = children.find((child) => child.fen === nextFen);
+
+      if (matchingChild) {
+        setHoveredRecommendationMove(null);
+        goToNode(matchingChild.id);
+        return true;
+      }
+    }
+
+    pushAnalysisPosition(nextFen, "Dragged move on board; refilling next branches");
+    return true;
+  }
+
+  function goToPreviousPosition() {
     setHoveredRecommendationMove(null);
-    setAnalysisFen(game.fen());
+
+    if (isFollowingRecommendation) {
+      if (analysisIndex > 0) {
+        setAnalysisIndex((index) => index - 1);
+      } else {
+        clearAnalysisLine();
+      }
+      return;
+    }
+
+    goToParent();
+  }
+
+  function goToNextPosition() {
+    setHoveredRecommendationMove(null);
+
+    if (isFollowingRecommendation) {
+      if (analysisIndex < analysisHistory.length - 1) {
+        setAnalysisIndex((index) => index + 1);
+      }
+      return;
+    }
+
+    goToNext();
+  }
+
+  function goToStartPosition() {
+    clearAnalysisLine();
+    goToStart();
   }
 
   function returnToExplorerPosition() {
-    setAnalysisFen(null);
-    setHoveredRecommendationMove(null);
+    clearAnalysisLine();
   }
 
-  if (loading) return <LoadingState />;
+  if (loading) return <LoadingState message="Loading games..." />;
   if (error) return <ErrorState message={error} />;
   if (!currentNode) return <ErrorState message="No opening tree available." />;
+  if (warmup.loading) {
+    return (
+      <LoadingState
+        message="Precomputing coach analysis..."
+        detail={`Buffered ${warmup.startup.completed} of about ${warmup.startup.total} positions. You can change the preload shape below.`}
+      >
+        <PreloadControls warmup={warmup} compact />
+      </LoadingState>
+    );
+  }
 
   return (
     <main className="app-shell">
-      <Header username={username} gameCount={games.length} />
+      <Header username={username} gameCount={games.length} warmup={warmup} />
 
       <div className="app-grid">
         <section className="left-column">
-          <ChessBoardPanel fen={displayFen} arrows={arrows} />
+          <ChessBoardPanel
+            fen={displayFen}
+            arrows={arrows}
+            sideToMove={sideToMove}
+            onMove={handleBoardMove}
+          />
 
           <MoveControls
-            canGoBack={Boolean(parent)}
-            canGoForward={Boolean(next)}
-            onBack={goToParent}
-            onForward={goToNext}
-            onStart={goToStart}
+            canGoBack={isFollowingRecommendation || Boolean(parent)}
+            canGoForward={
+              isFollowingRecommendation
+                ? analysisIndex < analysisHistory.length - 1
+                : Boolean(next)
+            }
+            onBack={goToPreviousPosition}
+            onForward={goToNextPosition}
+            onStart={goToStartPosition}
           />
 
           {isFollowingRecommendation && (
@@ -139,6 +250,8 @@ export default function App() {
               onSelect={goToNode}
             />
           )}
+
+          <PreloadControls warmup={warmup} />
         </section>
       </div>
     </main>

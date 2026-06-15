@@ -1,6 +1,10 @@
 import { useEffect, useState } from "react";
+import {
+  fetchRecommendation,
+  getCachedRecommendation,
+} from "../utils/recommendationApi";
 
-const API_BASE = "http://127.0.0.1:8001";
+const MAX_CANDIDATES = Number(import.meta.env.VITE_RECOMMENDATION_MAX_CANDIDATES ?? 6);
 
 export function useRecommendation({ fen, userId, rating, color, enabled = true }) {
   const [data, setData] = useState(null);
@@ -10,6 +14,23 @@ export function useRecommendation({ fen, userId, rating, color, enabled = true }
   useEffect(() => {
     if (!enabled || !fen || !userId) return;
 
+    const params = {
+      fen,
+      userId,
+      rating,
+      color,
+      maxCandidates: MAX_CANDIDATES,
+    };
+
+    const cached = getCachedRecommendation(params);
+    if (cached) {
+      setData(cached);
+      setLoading(false);
+      setError("");
+      return;
+    }
+
+    const controller = new AbortController();
     let cancelled = false;
 
     async function run() {
@@ -17,30 +38,16 @@ export function useRecommendation({ fen, userId, rating, color, enabled = true }
         setLoading(true);
         setError("");
 
-        const res = await fetch(`${API_BASE}/recommend/position`, {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            fen,
-            user_id: userId,
-            rating,
-            color,
-            max_candidates: 6,
-          }),
+        const json = await fetchRecommendation({
+          ...params,
+          signal: controller.signal,
         });
 
-        if (!res.ok) {
-          throw new Error(`Recommendation request failed: ${res.status}`);
-        }
-
-        const json = await res.json();
         if (!cancelled) {
           setData(json);
         }
       } catch (err) {
-        if (!cancelled) {
+        if (!cancelled && err.name !== "AbortError") {
           setError(err.message || "Failed to load recommendation.");
         }
       } finally {
@@ -54,6 +61,7 @@ export function useRecommendation({ fen, userId, rating, color, enabled = true }
 
     return () => {
       cancelled = true;
+      controller.abort();
     };
   }, [fen, userId, rating, color, enabled]);
 
