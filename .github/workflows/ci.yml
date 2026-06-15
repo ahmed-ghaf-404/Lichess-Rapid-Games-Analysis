@@ -15,9 +15,6 @@ jobs:
   ui:
     name: UI lint and build
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: chess-ui
 
     steps:
       - name: Checkout
@@ -31,12 +28,15 @@ jobs:
           cache-dependency-path: chess-ui/package-lock.json
 
       - name: Install UI dependencies
-        run: npm ci
+        working-directory: chess-ui
+        run: npm ci --prefer-offline --no-audit --no-fund
 
       - name: Lint UI
+        working-directory: chess-ui
         run: npm run lint
 
       - name: Build UI
+        working-directory: chess-ui
         run: npm run build
 
   python-services:
@@ -46,7 +46,7 @@ jobs:
       fail-fast: false
       matrix:
         service:
-          - fastapi
+          - game-scraper
           - coach-ai
 
     steps:
