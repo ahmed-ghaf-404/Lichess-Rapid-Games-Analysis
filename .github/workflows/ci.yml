@@ -46,8 +46,8 @@ jobs:
       fail-fast: false
       matrix:
         service:
-          - game-fetch-api/fastapi
-          - game-fetch-api/coach-ai
+          - fastapi
+          - coach-ai
 
     steps:
       - name: Checkout
