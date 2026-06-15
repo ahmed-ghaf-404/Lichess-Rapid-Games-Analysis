@@ -27,9 +27,14 @@ jobs:
           cache: npm
           cache-dependency-path: chess-ui/package-lock.json
 
-      - name: Install UI dependencies
+      - name: Debug npm
         working-directory: chess-ui
-        run: npm ci --prefer-offline --no-audit --no-fund
+        run: |
+          node --version
+          npm --version
+          du -sh .
+          cat package.json
+          npm ci --verbose --no-audit --no-fund
 
       - name: Lint UI
         working-directory: chess-ui
