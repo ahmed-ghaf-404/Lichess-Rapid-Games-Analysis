@@ -1,14 +1,16 @@
 export default function RecommendationPanel({
+  sideToMove,
   recommendation,
   loading,
   error,
   onMoveHover,
   onMoveLeave,
+  onMoveSelect,
 }) {
   if (loading) {
     return (
       <section className="panel">
-        <h2>Coach Recommendation</h2>
+        <h2>Coach Recommendation · {sideToMove === "white" ? "White" : "Black"} to move</h2>
         <p>Loading recommendation...</p>
       </section>
     );
@@ -17,7 +19,7 @@ export default function RecommendationPanel({
   if (error) {
     return (
       <section className="panel">
-        <h2>Coach Recommendation</h2>
+        <h2>Coach Recommendation · {sideToMove === "white" ? "White" : "Black"} to move</h2>
         <p className="error">{error}</p>
       </section>
     );
@@ -26,7 +28,7 @@ export default function RecommendationPanel({
   if (!recommendation || !recommendation.candidates?.length) {
     return (
       <section className="panel">
-        <h2>Coach Recommendation</h2>
+        <h2>Coach Recommendation · {sideToMove === "white" ? "White" : "Black"} to move</h2>
         <p>No recommendation available for this position.</p>
       </section>
     );
@@ -36,12 +38,14 @@ export default function RecommendationPanel({
 
   return (
     <section className="panel">
-      <h2>Coach Recommendation</h2>
+      <h2>Coach Recommendation · {sideToMove === "white" ? "White" : "Black"} to move</h2>
 
       <div
         style={{ marginBottom: "12px", cursor: "pointer" }}
         onMouseEnter={() => onMoveHover?.(top)}
         onMouseLeave={onMoveLeave}
+        onClick={() => onMoveSelect?.(top)}
+        title="Click to play this move"
       >
         <div style={{ fontSize: "0.9rem", opacity: 0.8 }}>Recommended move</div>
         <div style={{ fontSize: "1.25rem", fontWeight: 700 }}>{top.move_san}</div>
@@ -77,6 +81,8 @@ export default function RecommendationPanel({
               style={{ cursor: "pointer" }}
               onMouseEnter={() => onMoveHover?.(move)}
               onMouseLeave={onMoveLeave}
+              onClick={() => onMoveSelect?.(move)}
+              title="Click to play this move"
             >
               <span>{move.move_san}</span>
               <span className="variation-count">

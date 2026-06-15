@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { Chess } from "chess.js";
 import "./styles/App.css";
 import Header from "./components/Header";
 import ChessBoardPanel from "./components/ChessBoardPanel";
@@ -13,11 +14,16 @@ import { useOpeningExplorer } from "./hooks/useOpeningExplorer";
 import { useRecommendation } from "./hooks/useRecommendation";
 import { buildRecommendationArrows } from "./utils/recommendationArrows";
 
+function getSideToMove(fen) {
+  return fen?.includes(" w ") ? "white" : "black";
+}
+
 export default function App() {
   const username = "chocoroku";
   const rating = 1858;
 
   const [hoveredRecommendationMove, setHoveredRecommendationMove] = useState(null);
+  const [analysisFen, setAnalysisFen] = useState(null);
 
   const { games, loading, error } = useGames(username);
 
@@ -34,23 +40,57 @@ export default function App() {
     goToStart,
   } = useOpeningExplorer(games);
 
-  const sideToMove = boardFen?.includes(" w ") ? "white" : "black";
+  useEffect(() => {
+    setAnalysisFen(null);
+    setHoveredRecommendationMove(null);
+  }, [boardFen]);
+
+  const displayFen = analysisFen ?? boardFen;
+  const sideToMove = getSideToMove(displayFen);
+  const isFollowingRecommendation = Boolean(analysisFen);
+  const hasKnownMoves = !isFollowingRecommendation && children.length > 0;
+  const shouldShowRecommendation = isFollowingRecommendation || !hasKnownMoves;
 
   const {
     data: recommendation,
     loading: recommendationLoading,
     error: recommendationError,
   } = useRecommendation({
-    fen: boardFen,
+    fen: displayFen,
     userId: username,
     rating,
     color: sideToMove,
-    enabled: Boolean(boardFen),
+    enabled: Boolean(displayFen) && shouldShowRecommendation,
   });
 
-  const arrows = hoveredRecommendationMove
-    ? buildRecommendationArrows([hoveredRecommendationMove])
-    : buildRecommendationArrows(recommendation?.candidates ?? []);
+  const arrows = shouldShowRecommendation
+    ? hoveredRecommendationMove
+      ? buildRecommendationArrows([hoveredRecommendationMove])
+      : buildRecommendationArrows(recommendation?.candidates ?? [])
+    : [];
+
+  function playRecommendedMove(move) {
+    const game = new Chess(displayFen);
+
+    const result = game.move({
+      from: move.move_uci.slice(0, 2),
+      to: move.move_uci.slice(2, 4),
+      promotion: move.move_uci[4] || "q",
+    });
+
+    if (!result) {
+      console.warn("Could not play recommended move:", move);
+      return;
+    }
+
+    setHoveredRecommendationMove(null);
+    setAnalysisFen(game.fen());
+  }
+
+  function returnToExplorerPosition() {
+    setAnalysisFen(null);
+    setHoveredRecommendationMove(null);
+  }
 
   if (loading) return <LoadingState />;
   if (error) return <ErrorState message={error} />;
@@ -62,7 +102,7 @@ export default function App() {
 
       <div className="app-grid">
         <section className="left-column">
-          <ChessBoardPanel fen={boardFen} arrows={arrows} />
+          <ChessBoardPanel fen={displayFen} arrows={arrows} />
 
           <MoveControls
             canGoBack={Boolean(parent)}
@@ -71,20 +111,34 @@ export default function App() {
             onForward={goToNext}
             onStart={goToStart}
           />
+
+          {isFollowingRecommendation && (
+            <button type="button" onClick={returnToExplorerPosition}>
+              Back to explored position
+            </button>
+          )}
         </section>
 
         <section className="right-column">
-          <CurrentLine line={line} fen={boardFen} />
+          <CurrentLine line={line} fen={displayFen} />
 
-          <RecommendationPanel
-            recommendation={recommendation}
-            loading={recommendationLoading}
-            error={recommendationError}
-            onMoveHover={setHoveredRecommendationMove}
-            onMoveLeave={() => setHoveredRecommendationMove(null)}
-          />
-
-          <VariationList childrenNodes={children} onSelect={goToNode} />
+          {shouldShowRecommendation ? (
+            <RecommendationPanel
+              sideToMove={sideToMove}
+              recommendation={recommendation}
+              loading={recommendationLoading}
+              error={recommendationError}
+              onMoveHover={setHoveredRecommendationMove}
+              onMoveLeave={() => setHoveredRecommendationMove(null)}
+              onMoveSelect={playRecommendedMove}
+            />
+          ) : (
+            <VariationList
+              childrenNodes={children}
+              sideToMove={sideToMove}
+              onSelect={goToNode}
+            />
+          )}
         </section>
       </div>
     </main>
