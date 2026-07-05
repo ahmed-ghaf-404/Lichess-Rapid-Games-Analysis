@@ -44,14 +44,9 @@ export default function App() {
     tree,
   } = useOpeningExplorer(games);
 
-  useEffect(() => {
-    clearAnalysisLine();
-  }, [boardFen]);
-
   const displayFen = analysisFen ?? boardFen;
   const sideToMove = getSideToMove(displayFen);
   const isFollowingRecommendation = Boolean(analysisFen);
-  const hasKnownMoves = !isFollowingRecommendation && children.length > 0;
   const shouldShowRecommendation = Boolean(displayFen);
 
 
@@ -86,6 +81,10 @@ export default function App() {
     setAnalysisIndex(-1);
     setHoveredRecommendationMove(null);
   }
+
+  useEffect(() => {
+    clearAnalysisLine();
+  }, [boardFen]);
 
   function pushAnalysisPosition(nextFen, preloadReason) {
     setHoveredRecommendationMove(null);
@@ -177,10 +176,6 @@ export default function App() {
   function goToStartPosition() {
     clearAnalysisLine();
     goToStart();
-  }
-
-  function returnToExplorerPosition() {
-    clearAnalysisLine();
   }
 
   if (loading) return <LoadingState message="Loading games..." />;

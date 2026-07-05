@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 import { buildTree } from "../utils/buildTree";
 import {
   getChildren,
@@ -10,11 +10,16 @@ import {
 
 export function useOpeningExplorer(games) {
   const tree = useMemo(() => buildTree(games), [games]);
-  const [currentNodeId, setCurrentNodeId] = useState(tree.rootId);
 
-  useEffect(() => {
-    setCurrentNodeId(tree.rootId);
-  }, [tree.rootId]);
+  const [explorerState, setExplorerState] = useState({
+    treeRootId: tree.rootId,
+    currentNodeId: tree.rootId,
+  });
+
+  const currentNodeId =
+    explorerState.treeRootId === tree.rootId
+      ? explorerState.currentNodeId
+      : tree.rootId;
 
   const currentNode = useMemo(
     () => getNode(tree, currentNodeId),
@@ -45,19 +50,36 @@ export function useOpeningExplorer(games) {
 
   function goToNode(nodeId) {
     if (!nodeId) return;
-    setCurrentNodeId(nodeId);
+
+    setExplorerState({
+      treeRootId: tree.rootId,
+      currentNodeId: nodeId,
+    });
   }
 
   function goToParent() {
-    if (parent) setCurrentNodeId(parent.id);
+    if (!parent) return;
+
+    setExplorerState({
+      treeRootId: tree.rootId,
+      currentNodeId: parent.id,
+    });
   }
 
   function goToNext() {
-    if (next) setCurrentNodeId(next.id);
+    if (!next) return;
+
+    setExplorerState({
+      treeRootId: tree.rootId,
+      currentNodeId: next.id,
+    });
   }
 
   function goToStart() {
-    setCurrentNodeId(tree.rootId);
+    setExplorerState({
+      treeRootId: tree.rootId,
+      currentNodeId: tree.rootId,
+    });
   }
 
   return {
