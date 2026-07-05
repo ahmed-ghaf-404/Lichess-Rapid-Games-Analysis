@@ -1,30 +1,6 @@
 name: chess-production
 
 services:
-  caddy:
-    image: caddy:2-alpine
-    container_name: chess-caddy
-    restart: unless-stopped
-
-    ports:
-      - "80:80"
-      - "443:443"
-      - "443:443/udp"
-
-    volumes:
-      - ./Caddyfile:/etc/caddy/Caddyfile:ro
-      - caddy_data:/data
-      - caddy_config:/config
-
-    depends_on:
-      - chess-ui
-      - coach-ai
-      - games-api
-
-    networks:
-      - frontend
-      - backend
-
   chess-ui:
     container_name: chess-ui
     restart: unless-stopped
@@ -40,7 +16,7 @@ services:
       - "80"
 
     networks:
-      - frontend
+      - caddy_net
 
     init: true
 
@@ -69,7 +45,8 @@ services:
         condition: service_healthy
 
     networks:
-      - backend
+      - caddy_net
+      - chess_backend
 
     init: true
 
@@ -94,7 +71,8 @@ services:
       - "8000"
 
     networks:
-      - backend
+      - caddy_net
+      - chess_backend
 
     init: true
 
@@ -127,7 +105,7 @@ services:
       start_period: 5s
 
     networks:
-      - backend
+      - chess_backend
 
     logging:
       driver: json-file
@@ -136,14 +114,12 @@ services:
         max-file: "3"
 
 networks:
-  frontend:
-    driver: bridge
+  caddy_net:
+    external: true
 
-  backend:
+  chess_backend:
     driver: bridge
     internal: true
 
 volumes:
   redis_data:
-  caddy_data:
-  caddy_config:
