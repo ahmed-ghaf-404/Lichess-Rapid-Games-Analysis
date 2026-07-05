@@ -1,53 +1,119 @@
-services:
-  # mongo:
-  #   image: mongo:7
-  #   container_name: chess-mongo
-  #   ports:
-  #     - "27017:27017"
-  #   volumes:
-  #     - mongo_data:/data/db
+name: chess-production
 
+services:
   redis:
     image: redis:7-alpine
     container_name: chess-redis
-    ports:
-      - "6379:6379"
-    command: redis-server --appendonly yes
+    restart: unless-stopped
+
+    command:
+      - redis-server
+      - --appendonly
+      - "yes"
+      - --appendfsync
+      - everysec
+
     volumes:
       - redis_data:/data
 
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 5s
+
+    networks:
+      - chess-internal
+
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
+
   games-api:
     container_name: chess-games-api
+    restart: unless-stopped
+
     build:
       context: ./game-scraper
+      dockerfile: Dockerfile
+
     env_file:
       - ./game-scraper/.env
+
     ports:
-      - "8000:8000"
-    
+      - "127.0.0.1:8000:8000"
+
+    networks:
+      - chess-internal
+
+    init: true
+
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
+
   coach-ai:
+    container_name: chess-coach-ai
+    restart: unless-stopped
+
     build:
       context: ./coach-ai
-    container_name: chess-coach-ai
-    ports:
-      - "8001:8001"
+      dockerfile: Dockerfile
+
     env_file:
       - ./coach-ai/.env
+
+    ports:
+      - "127.0.0.1:8001:8001"
+
     depends_on:
-      # - mongo
-      - redis
+      redis:
+        condition: service_healthy
+
+    networks:
+      - chess-internal
+
+    init: true
+
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
 
   chess-ui:
-    build: ./chess-ui
+    container_name: chess-ui
+    restart: unless-stopped
+
+    build:
+      context: ./chess-ui
+      dockerfile: Dockerfile
+      args:
+        VITE_GAMES_API_URL: https://games.chocodojo.tech
+        VITE_COACH_AI_URL: https://api.chocodojo.tech
+
     ports:
-      - "5173:5173"
-    volumes:
-      - ./chess-ui:/app
-      - /app/node_modules
-    environment:
-      - CHOKIDAR_USEPOLLING=true
-      
+      - "127.0.0.1:3000:80"
+
+    networks:
+      - chess-internal
+
+    init: true
+
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+networks:
+  chess-internal:
+    driver: bridge
 
 volumes:
-  # mongo_data:
   redis_data:
