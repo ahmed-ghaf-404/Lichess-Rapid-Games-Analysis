@@ -14,7 +14,7 @@ app.include_router(recommend_router)
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[os.getenv("CHESS_UI_URL", "http://localhost:5173")],  
+    allow_origins=[str(os.getenv("CHESS_UI_URL"))],  
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],

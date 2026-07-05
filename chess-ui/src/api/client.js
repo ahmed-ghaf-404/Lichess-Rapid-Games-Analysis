@@ -1,4 +1,4 @@
-export const API_BASE_URL = "http://127.0.0.1:8000";
+export const API_BASE_URL = import.meta.env.VITE_GAMES_API_URL || "/games";
 
 export async function apiGet(path) {
   const response = await fetch(`${API_BASE_URL}${path}`);

@@ -1,6 +1,6 @@
 import { Chess } from "chess.js";
 
-const API_BASE = import.meta.env.VITE_COACH_AI_URL || "http://127.0.0.1:8001";
+const API_BASE = import.meta.env.VITE_COACH_AI_URL || "/api";
 const recommendationCache = new Map();
 
 export function getSideToMove(fen) {
