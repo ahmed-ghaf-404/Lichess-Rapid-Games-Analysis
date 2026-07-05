@@ -1,6 +1,109 @@
 name: chess-production
 
 services:
+  caddy:
+    image: caddy:2-alpine
+    container_name: chess-caddy
+    restart: unless-stopped
+
+    ports:
+      - "80:80"
+      - "443:443"
+      - "443:443/udp"
+
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data
+      - caddy_config:/config
+
+    depends_on:
+      - chess-ui
+      - coach-ai
+      - games-api
+
+    networks:
+      - frontend
+      - backend
+
+  chess-ui:
+    container_name: chess-ui
+    restart: unless-stopped
+
+    build:
+      context: ./chess-ui
+      dockerfile: Dockerfile
+      args:
+        VITE_COACH_AI_URL: /api
+        VITE_GAMES_API_URL: /games
+
+    expose:
+      - "80"
+
+    networks:
+      - frontend
+
+    init: true
+
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+  coach-ai:
+    container_name: chess-coach-ai
+    restart: unless-stopped
+
+    build:
+      context: ./coach-ai
+      dockerfile: Dockerfile
+
+    env_file:
+      - ./coach-ai/.env
+
+    expose:
+      - "8001"
+
+    depends_on:
+      redis:
+        condition: service_healthy
+
+    networks:
+      - backend
+
+    init: true
+
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+  games-api:
+    container_name: chess-games-api
+    restart: unless-stopped
+
+    build:
+      context: ./game-scraper
+      dockerfile: Dockerfile
+
+    env_file:
+      - ./game-scraper/.env
+
+    expose:
+      - "8000"
+
+    networks:
+      - backend
+
+    init: true
+
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
+
   redis:
     image: redis:7-alpine
     container_name: chess-redis
@@ -24,86 +127,7 @@ services:
       start_period: 5s
 
     networks:
-      - chess-internal
-
-    logging:
-      driver: json-file
-      options:
-        max-size: "10m"
-        max-file: "3"
-
-  games-api:
-    container_name: chess-games-api
-    restart: unless-stopped
-
-    build:
-      context: ./game-scraper
-      dockerfile: Dockerfile
-
-    env_file:
-      - ./game-scraper/.env
-
-    ports:
-      - "127.0.0.1:8000:8000"
-
-    networks:
-      - chess-internal
-
-    init: true
-
-    logging:
-      driver: json-file
-      options:
-        max-size: "10m"
-        max-file: "3"
-
-  coach-ai:
-    container_name: chess-coach-ai
-    restart: unless-stopped
-
-    build:
-      context: ./coach-ai
-      dockerfile: Dockerfile
-
-    env_file:
-      - ./coach-ai/.env
-
-    ports:
-      - "127.0.0.1:8001:8001"
-
-    depends_on:
-      redis:
-        condition: service_healthy
-
-    networks:
-      - chess-internal
-
-    init: true
-
-    logging:
-      driver: json-file
-      options:
-        max-size: "10m"
-        max-file: "3"
-
-  chess-ui:
-    container_name: chess-ui
-    restart: unless-stopped
-
-    build:
-      context: ./chess-ui
-      dockerfile: Dockerfile
-      args:
-        VITE_GAMES_API_URL: https://games.chocodojo.tech
-        VITE_COACH_AI_URL: https://api.chocodojo.tech
-
-    ports:
-      - "127.0.0.1:3000:80"
-
-    networks:
-      - chess-internal
-
-    init: true
+      - backend
 
     logging:
       driver: json-file
@@ -112,8 +136,14 @@ services:
         max-file: "3"
 
 networks:
-  chess-internal:
+  frontend:
     driver: bridge
+
+  backend:
+    driver: bridge
+    internal: true
 
 volumes:
   redis_data:
+  caddy_data:
+  caddy_config:
