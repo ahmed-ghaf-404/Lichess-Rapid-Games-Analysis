@@ -1,0 +1,53 @@
+services:
+  # mongo:
+  #   image: mongo:7
+  #   container_name: chess-mongo
+  #   ports:
+  #     - "27017:27017"
+  #   volumes:
+  #     - mongo_data:/data/db
+
+  redis:
+    image: redis:7-alpine
+    container_name: chess-redis
+    ports:
+      - "6379:6379"
+    command: redis-server --appendonly yes
+    volumes:
+      - redis_data:/data
+
+  games-api:
+    container_name: chess-games-api
+    build:
+      context: ./game-scraper
+    env_file:
+      - ./game-scraper/.env
+    ports:
+      - "8000:8000"
+    
+  coach-ai:
+    build:
+      context: ./coach-ai
+    container_name: chess-coach-ai
+    ports:
+      - "8001:8001"
+    env_file:
+      - ./coach-ai/.env
+    depends_on:
+      # - mongo
+      - redis
+
+  chess-ui:
+    build: ./chess-ui
+    ports:
+      - "5173:5173"
+    volumes:
+      - ./chess-ui:/app
+      - /app/node_modules
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+      
+
+volumes:
+  # mongo_data:
+  redis_data:

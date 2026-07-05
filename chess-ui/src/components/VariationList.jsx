@@ -1,7 +1,7 @@
-export default function VariationList({ childrenNodes, onSelect }) {
+export default function VariationList({ childrenNodes, sideToMove, onSelect }) {
   return (
     <section className="panel">
-      <h2>Variations</h2>
+      <h2>{sideToMove === "white" ? "White" : "Black"} to move</h2>
 
       {childrenNodes.length === 0 ? (
         <p>No moves from this position.</p>

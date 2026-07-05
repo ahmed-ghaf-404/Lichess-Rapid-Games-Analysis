@@ -7,16 +7,16 @@ export default function MoveControls({
 }) {
   return (
     <div className="controls">
+      <button type="button" onClick={onStart}>
+        ⏮ Start
+      </button>
+
       <button type="button" onClick={onBack} disabled={!canGoBack}>
-        ◀ Prev
+        ◀ Previous
       </button>
 
       <button type="button" onClick={onForward} disabled={!canGoForward}>
         Next ▶
-      </button>
-
-      <button type="button" onClick={onStart}>
-        ⏮ Start
       </button>
     </div>
   );
