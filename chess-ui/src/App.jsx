@@ -52,7 +52,8 @@ export default function App() {
   const sideToMove = getSideToMove(displayFen);
   const isFollowingRecommendation = Boolean(analysisFen);
   const hasKnownMoves = !isFollowingRecommendation && children.length > 0;
-  const shouldShowRecommendation = isFollowingRecommendation || !hasKnownMoves;
+  const shouldShowRecommendation = Boolean(displayFen);
+
 
   const warmup = useRecommendationWarmup({
     tree,
@@ -76,11 +77,9 @@ export default function App() {
     enabled: Boolean(displayFen) && shouldShowRecommendation,
   });
 
-  const arrows = shouldShowRecommendation
-    ? hoveredRecommendationMove
+  const arrows = hoveredRecommendationMove
       ? buildRecommendationArrows([hoveredRecommendationMove])
-      : buildRecommendationArrows(recommendation?.candidates ?? [])
-    : [];
+      : buildRecommendationArrows(recommendation?.candidates ?? []);
 
   function clearAnalysisLine() {
     setAnalysisHistory([]);
@@ -223,27 +222,22 @@ export default function App() {
             onStart={goToStartPosition}
           />
 
-          {isFollowingRecommendation && (
-            <button type="button" onClick={returnToExplorerPosition}>
-              Back to explored position
-            </button>
-          )}
         </section>
 
         <section className="right-column">
           <CurrentLine line={line} fen={displayFen} />
 
-          {shouldShowRecommendation ? (
-            <RecommendationPanel
-              sideToMove={sideToMove}
-              recommendation={recommendation}
-              loading={recommendationLoading}
-              error={recommendationError}
-              onMoveHover={setHoveredRecommendationMove}
-              onMoveLeave={() => setHoveredRecommendationMove(null)}
-              onMoveSelect={playRecommendedMove}
-            />
-          ) : (
+          <RecommendationPanel
+            sideToMove={sideToMove}
+            recommendation={recommendation}
+            loading={recommendationLoading}
+            error={recommendationError}
+            onMoveHover={setHoveredRecommendationMove}
+            onMoveLeave={() => setHoveredRecommendationMove(null)}
+            onMoveSelect={playRecommendedMove}
+          />
+
+          {!isFollowingRecommendation && children.length > 0 && (
             <VariationList
               childrenNodes={children}
               sideToMove={sideToMove}

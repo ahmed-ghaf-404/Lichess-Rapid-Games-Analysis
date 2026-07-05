@@ -86,7 +86,7 @@ export default function RecommendationPanel({
             >
               <span>{move.move_san}</span>
               <span className="variation-count">
-                {Math.round(move.peer_frequency * 100)}% · {move.peer_games} games
+                Eval: {sideToMove === "white" ? move.engine_eval_cp/100 : move.engine_eval_cp/-100} · Win rate: {Math.round(move.peer_frequency * 100)}% · {move.peer_games} games
               </span>
             </div>
           ))}

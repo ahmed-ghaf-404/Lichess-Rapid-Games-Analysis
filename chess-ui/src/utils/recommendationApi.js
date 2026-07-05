@@ -51,7 +51,11 @@ export async function fetchRecommendation({
   });
 
   if (!res.ok) {
-    throw new Error(`Recommendation request failed: ${res.status}`);
+      const errorText = await res.text();
+
+      throw new Error(
+        `Recommendation request failed: ${res.status} ${res.statusText} - ${errorText}`
+      );
   }
 
   const json = await res.json();
