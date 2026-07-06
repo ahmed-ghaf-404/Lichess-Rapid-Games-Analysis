@@ -1,0 +1,116 @@
+name: chess-development
+
+services:
+  chess-ui:
+    container_name: chess-ui-dev
+
+    build:
+      context: ./chess-ui
+      dockerfile: Dockerfile.dev
+
+    ports:
+      - "5173:5173"
+
+    environment:
+      VITE_COACH_AI_URL: ${VITE_COACH_AI_URL:-http://localhost:8001}
+      VITE_GAMES_API_URL: ${VITE_GAMES_API_URL:-http://localhost:8000}
+
+    volumes:
+      - ./chess-ui:/app
+      - chess_ui_node_modules:/app/node_modules
+
+    depends_on:
+      coach-ai:
+        condition: service_started
+      games-api:
+        condition: service_started
+
+    networks:
+      - chess_backend
+
+    init: true
+
+  coach-ai:
+    container_name: chess-coach-ai-dev
+
+    build:
+      context: ./coach-ai
+      dockerfile: Dockerfile.dev
+
+    ports:
+      - "8001:8001"
+
+    env_file:
+      - ./coach-ai/.env
+
+    environment:
+      REDIS_URL: ${COACH_REDIS_URL:-redis://redis:6379/0}
+
+    volumes:
+      - ./coach-ai:/app
+
+    depends_on:
+      redis:
+        condition: service_healthy
+
+    networks:
+      - chess_backend
+
+    init: true
+
+  games-api:
+    container_name: chess-games-api-dev
+
+    build:
+      context: ./game-scraper
+      dockerfile: Dockerfile.dev
+
+    ports:
+      - "8000:8000"
+
+    env_file:
+      - ./game-scraper/.env
+
+    volumes:
+      - ./game-scraper:/app
+
+    networks:
+      - chess_backend
+
+    init: true
+
+  redis:
+    image: redis:7-alpine
+    container_name: chess-redis-dev
+    restart: unless-stopped
+
+    command:
+      - redis-server
+      - --appendonly
+      - "yes"
+      - --appendfsync
+      - everysec
+
+    ports:
+      - "6379:6379"
+
+    volumes:
+      - redis_dev_data:/data
+
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+      start_period: 3s
+
+    networks:
+      - chess_backend
+
+networks:
+  chess_backend:
+    driver: bridge
+
+volumes:
+  redis_dev_data:
+  chess_ui_node_modules:
