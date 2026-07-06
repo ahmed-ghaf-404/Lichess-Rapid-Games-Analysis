@@ -1,0 +1,19 @@
+{
+	alghaf.ahmd@gmail.com
+}
+
+chess.chocodojo.tech {
+	encode zstd gzip
+
+	handle_path /api/* {
+		reverse_proxy coach-ai:8001
+	}
+
+	handle_path /games/* {
+		reverse_proxy games-api:8000
+	}
+
+	handle {
+		reverse_proxy chess-ui:80
+	}
+}
