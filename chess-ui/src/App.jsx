@@ -18,8 +18,8 @@ import { buildRecommendationArrows } from "./utils/recommendationArrows";
 import { getSideToMove } from "./utils/recommendationApi";
 
 export default function App() {
-  const username = "chocoroku";
-  const rating = 1858;
+  const username = "EricRosen";
+  const rating = 2538;
 
   const [hoveredRecommendationMove, setHoveredRecommendationMove] = useState(null);
   const [analysisHistory, setAnalysisHistory] = useState([]);
