@@ -3,6 +3,7 @@ import {
   fetchRecommendation,
   getCachedRecommendation,
 } from "../utils/recommendationApi";
+import { logger } from "../utils/logger";
 
 const MAX_CANDIDATES = Number(import.meta.env.VITE_RECOMMENDATION_MAX_CANDIDATES ?? 6);
 
@@ -48,6 +49,7 @@ export function useRecommendation({ fen, userId, rating, color, enabled = true }
         }
       } catch (err) {
         if (!cancelled && err.name !== "AbortError") {
+          logger.error("Loading recommendation failed", err);
           setError(err.message || "Failed to load recommendation.");
         }
       } finally {

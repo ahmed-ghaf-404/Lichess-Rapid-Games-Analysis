@@ -1,4 +1,5 @@
 import chess
+import logging
 from fastapi import APIRouter, HTTPException
 
 from app.core.config import settings
@@ -13,14 +14,23 @@ router = APIRouter(prefix="/recommend", tags=["recommend"])
 candidate_generator = CandidateGenerator()
 feature_builder = FeatureBuilder()
 ranker = HeuristicRanker()
+logger = logging.getLogger(__name__)
 
 
 @router.post("/position", response_model=RecommendResponse)
 async def recommend_position(payload: RecommendRequest) -> RecommendResponse:
+    logger.debug(
+        "recommendation.started user_id=%s rating=%s max_candidates=%d use_cache=%s",
+        payload.user_id,
+        payload.rating,
+        payload.max_candidates,
+        payload.use_cache,
+    )
     try:
         board = chess.Board(payload.fen)
         normalized_fen = board.fen()
     except Exception as exc:
+        logger.warning("recommendation.invalid_fen error=%s", exc)
         raise HTTPException(status_code=400, detail=f"Invalid FEN: {exc}") from exc
 
     cache_key = make_cache_key(
@@ -36,8 +46,10 @@ async def recommend_position(payload: RecommendRequest) -> RecommendResponse:
     if payload.use_cache and not payload.force_recompute and not payload.refresh_cache:
         cached = await get_json(cache_key)
         if cached is not None:
+            logger.debug("recommendation.cache_hit cache_key=%s", cache_key)
             cached["metadata"]["cache"] = "hit"
             return RecommendResponse(**cached)
+        logger.debug("recommendation.cache_miss cache_key=%s", cache_key)
 
     try:
         generated = await candidate_generator.generate(
@@ -49,6 +61,11 @@ async def recommend_position(payload: RecommendRequest) -> RecommendResponse:
         candidates = generated["candidates"]
 
         if not candidates:
+            logger.warning(
+                "recommendation.no_candidates user_id=%s rating_bucket=%s",
+                payload.user_id,
+                generated["rating_bucket"],
+            )
             response = RecommendResponse(
                 fen=normalized_fen,
                 recommended_move=None,
@@ -92,9 +109,21 @@ async def recommend_position(payload: RecommendRequest) -> RecommendResponse:
                 settings.cache_ttl_seconds,
             )
 
+        logger.info(
+            "recommendation.completed user_id=%s recommended_move=%s candidate_count=%d sample_size=%d",
+            payload.user_id,
+            response.recommended_move,
+            len(response.candidates),
+            response.metadata.get("sample_size", 0),
+        )
         return response
 
     except HTTPException:
         raise
     except Exception as exc:
+        logger.exception(
+            "recommendation.failed user_id=%s stockfish_path=%s",
+            payload.user_id,
+            settings.stockfish_path,
+        )
         raise HTTPException(status_code=500, detail=str(exc)) from exc

@@ -5,8 +5,21 @@ React/Vite UI for exploring the user opening tree and requesting coach recommend
 ## Development
 
 ```bash
-npm install
+cp .env.example .env
+npm ci
 npm run dev
+```
+
+The development view includes raw position data and cache controls. Production
+builds hide those diagnostics while keeping the player picker, board, opening
+line, recommendations, and popular continuations.
+
+## Quality checks
+
+```bash
+npm run test
+npm run lint
+VITE_APP_MODE=production npm run build
 ```
 
 ## Recommendation warmup / Redis buffer
@@ -18,9 +31,10 @@ Create `.env` from `.env.example`:
 ```env
 VITE_GAMES_API_URL=http://localhost:8000
 VITE_COACH_AI_URL=http://localhost:8001
+VITE_APP_MODE=development
 
 VITE_WARMUP_ENABLED=true
-VITE_WARMUP_BLOCKING=true
+VITE_WARMUP_BLOCKING=false
 VITE_WARMUP_MAX_POSITIONS=12
 VITE_WARMUP_DEPTH=2
 VITE_WARMUP_BRANCHING=2

@@ -14,6 +14,8 @@ services:
     environment:
       VITE_COACH_AI_URL: ${VITE_COACH_AI_URL:-http://localhost:8001}
       VITE_GAMES_API_URL: ${VITE_GAMES_API_URL:-http://localhost:8000}
+      VITE_APP_MODE: development
+      VITE_LOG_LEVEL: ${VITE_LOG_LEVEL:-debug}
 
     volumes:
       - ./chess-ui:/app
@@ -45,6 +47,7 @@ services:
 
     environment:
       REDIS_URL: ${COACH_REDIS_URL:-redis://redis:6379/0}
+      LOG_LEVEL: ${COACH_LOG_LEVEL:-DEBUG}
 
     volumes:
       - ./coach-ai:/app
@@ -70,6 +73,9 @@ services:
 
     env_file:
       - ./game-scraper/.env
+
+    environment:
+      LOG_LEVEL: ${GAMES_LOG_LEVEL:-DEBUG}
 
     volumes:
       - ./game-scraper:/app

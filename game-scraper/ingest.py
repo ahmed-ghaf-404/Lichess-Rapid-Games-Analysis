@@ -1,9 +1,14 @@
 import os
 import json
+import logging
 from db_sync import games_collection
 
 
+logger = logging.getLogger(__name__)
+
+
 def ingest(folder="../data/raw/chocoroku"):
+    logger.info("ingest.scan_started folder=%s", folder)
     inserted = 0
     updated = 0
 
@@ -28,7 +33,7 @@ def ingest(folder="../data/raw/chocoroku"):
             else:
                 updated += 1
 
-    print(f"Inserted: {inserted}, Updated: {updated}")
+    logger.info("ingest.scan_completed inserted=%d updated=%d", inserted, updated)
 
 
 if __name__ == "__main__":

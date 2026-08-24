@@ -1,149 +1,147 @@
-# Lichess Rapid Games Analysis / Chess Coach App
+# Chess Coach
 
-A full-stack chess analysis project that imports Lichess rapid games, builds an opening tree in a React UI, and recommends candidate moves using a FastAPI coaching service backed by Stockfish, MongoDB, and Redis caching.
+Chess Coach turns a Lichess player's rapid-game history into an interactive
+opening map, then combines Stockfish evaluation with peer statistics and
+repertoire fit to recommend practical next moves.
 
-## Features
+This project is designed as a production-shaped full-stack system rather than a
+single analysis script: it separates game access from recommendation work,
+caches expensive calculations, offers focused production and diagnostic
+development views, and ships with automated tests and deployment gates.
 
-- Fetch and serve Lichess game data from MongoDB
-- Explore a player's opening tree from game history
-- Analyze FEN positions with Stockfish
-- Rank candidate moves with heuristic and player-context features
-- Cache expensive recommendations with Redis
-- React/Vite frontend with an interactive chessboard and recommendation panel
+## Product highlights
 
-## Tech Stack
+- Search for an imported Lichess player, with `ericrosen` as the default demo
+- Explore the player's most frequent opening branches on an interactive board
+- Play a recommendation or drag a legal move to continue an analysis line
+- Compare practical candidates using engine evaluation and peer-game evidence
+- Precompute and cache expensive recommendation branches in Redis
+- Keep raw FEN and cache warmup controls in development mode only
+- Recover cleanly from malformed usernames, unknown players, and API failures
 
-| Layer | Tools |
+## Architecture
+
+```mermaid
+flowchart LR
+    UI[React opening explorer] --> Games[FastAPI games service]
+    UI --> Coach[FastAPI coach service]
+    Games --> Mongo[(MongoDB game history)]
+    Coach --> Mongo
+    Coach --> Redis[(Redis recommendation cache)]
+    Coach --> Stockfish[Stockfish engine]
+```
+
+| Layer | Technology |
 | --- | --- |
-| Frontend | React, Vite, chess.js, react-chessboard |
-| Game API | FastAPI, Motor, MongoDB |
-| Coach API | FastAPI, python-chess, Stockfish, PyMongo async, Redis |
-| Data tooling | Python, Berserk/Lichess tooling |
-| Dev services | Docker Compose, MongoDB, Redis |
+| Frontend | React 19, Vite, chess.js, react-chessboard |
+| Games API | FastAPI, Motor, MongoDB |
+| Coach API | FastAPI, python-chess, Stockfish, PyMongo async |
+| Cache | Redis |
+| Data collection | Python, Berserk, Lichess API |
+| Delivery | Docker Compose, Nginx, Caddy, GitHub Actions |
+| Testing | Vitest, Pytest |
 
-## Repository Structure
+## Repository layout
 
 ```text
 .
-├── chess-ui/                    # React/Vite frontend
-├── game-fetch-api/
-│   ├── fastapi/                 # Games API: serves MongoDB game records
-│   └── coach-ai/                # Recommendation API: Stockfish + Redis cache
-├── backend/                     # Scraping and data ingestion utilities
-├── data/                        # Local generated data; ignored except .gitkeep
-├── docker-compose.yml           # MongoDB, Redis, APIs, and frontend
-├── .env.example                 # Example local environment variables
-└── README.md
+├── chess-ui/             React application and frontend tests
+├── game-scraper/         Games API and MongoDB access
+├── coach-ai/             Recommendation API, ranking, Stockfish, and Redis
+├── backend/              Lichess collection and ingestion utilities
+├── data/                 Local generated data (ignored by Git)
+├── docker-compose.dev.yml
+├── docker-compose.yml    Production stack
+└── DEPLOYMENT.md         Production release setup and runbook
 ```
 
-## Prerequisites
+## Run locally
+
+### Prerequisites
 
 - Docker and Docker Compose
-- Node.js 20+ if running the frontend outside Docker
-- Python 3.11+ if running the backend outside Docker
-- Stockfish if running `coach-ai` outside Docker
+- A MongoDB connection containing imported Lichess games
+- Node.js 20+ and Python 3.11+ only if running services outside Docker
 
-## Quick Start with Docker
-
-From the repo root:
+Copy the safe examples, then replace the MongoDB values with your development
+connection:
 
 ```bash
-docker compose up --build
+cp chess-ui/.env.example chess-ui/.env
+cp game-scraper/.env.example game-scraper/.env
+cp coach-ai/.env.example coach-ai/.env
 ```
 
-Then open:
-
-- Frontend: <http://localhost:5173>
-- Games API: <http://localhost:8000>
-- Coach AI health check: <http://localhost:8001/health>
-- Coach AI docs: <http://localhost:8001/docs>
-
-Docker Compose starts MongoDB, Redis, the games API, the coach API, and the React frontend.
-
-## Local Development Without Docker
-
-### 1. Start MongoDB and Redis
+Start the development stack:
 
 ```bash
-docker compose up -d mongo redis
+docker compose -f docker-compose.dev.yml up --build
 ```
 
-### 2. Run the Games API
+Open:
 
-```bash
-cd game-fetch-api/fastapi
-python -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
-cp .env.example .env
-uvicorn main:app --reload --port 8000
-```
+- UI: <http://localhost:5173>
+- Games API docs: <http://localhost:8000/docs>
+- Coach API docs: <http://localhost:8001/docs>
+- Coach health check: <http://localhost:8001/health>
 
-### 3. Run the Coach AI API
+The app queries already-imported games. An unknown username therefore returns a
+clear “no imported rapid games” response instead of silently building an empty
+tree.
 
-```bash
-cd game-fetch-api/coach-ai
-python -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
-cp .env.example .env
-uvicorn app.main:app --reload --port 8001
-```
+## Development and production views
 
-### 4. Run the React UI
+`VITE_APP_MODE=development` displays cache warmup controls, progress, raw FEN,
+and a mode badge. Production builds set `VITE_APP_MODE=production`, leaving the
+player search, board, current line, recommendations, and continuations visible.
+
+To inspect diagnostics in a production-mode local build, set
+`VITE_SHOW_DEVELOPER_TOOLS=true` explicitly.
+
+## Tests and quality checks
+
+Frontend:
 
 ```bash
 cd chess-ui
-npm install
-npm run dev
+npm ci
+npm run test
+npm run lint
+npm run build
 ```
 
-## Environment Variables
+Python services:
 
-### Games API
-
-```env
-MONGO_URL=mongodb://localhost:27017
-DB_NAME=chessdb
+```bash
+cd game-scraper && pip install -r requirements-dev.txt && pytest -q
+cd ../coach-ai && pip install -r requirements-dev.txt && pytest -q
 ```
 
-### Coach AI API
+CI runs these suites for both `main` and `prod`, then validates and builds the
+production containers.
 
-```env
-MONGO_URI=mongodb://localhost:27017
-MONGO_DB=chess-games
-REDIS_URL=redis://localhost:6379/0
-STOCKFISH_PATH=/usr/local/bin/stockfish
-ENGINE_DEPTH=14
-CACHE_TTL_SECONDS=604800
-RECOMMENDER_VERSION=heuristic_v1
-```
+## API overview
 
-Do not commit real `.env` files. Use `.env.example` files for shared defaults.
-
-## API Overview
-
-### Games API
+### Player games
 
 ```http
 GET /games/user/{username}
 ```
 
-Returns stored games for a Lichess username.
+The route validates Lichess-compatible usernames, performs a case-insensitive
+lookup, and returns `404` when no imported games are available.
 
-### Coach AI API
+### Position recommendation
 
 ```http
 POST /recommend/position
 ```
 
-Example request:
-
 ```json
 {
   "fen": "r1bqkbnr/pppppppp/2n5/8/8/2N5/PPPPPPPP/R1BQKBNR w KQkq - 2 2",
-  "user_id": "demo-user",
-  "rating": 1500,
+  "user_id": "ericrosen",
+  "rating": 2538,
   "color": "white",
   "max_candidates": 6,
   "use_cache": true,
@@ -152,47 +150,21 @@ Example request:
 }
 ```
 
-The response includes the recommended move, ranked candidates, and metadata such as cache hit/miss status.
+Cache keys include normalized FEN, player, rating, candidate count, engine
+depth, and recommender version so expensive work can be reused safely.
 
-## Redis Caching Strategy
+## Security and deployment
 
-The Coach AI service uses Redis to avoid recalculating expensive Stockfish recommendations for repeated positions.
+- Real `.env` files, keys, certificates, local databases, generated data, and
+  build/test output are ignored.
+- Each Docker context excludes real environment files so credentials cannot be
+  copied into images by `COPY . .`.
+- GitHub Actions deploys only the `prod` branch after CI succeeds.
+- Production credentials live in a protected GitHub environment, never in the
+  repository.
 
-Cache keys include normalized FEN, user id, rating, candidate count, engine depth, and recommender version.
-
-Useful request flags:
-
-- `use_cache`: read/write cached results
-- `refresh_cache`: recompute and overwrite the cached result
-- `force_recompute`: bypass cache for this request
-
-## Data Notes
-
-Local generated data is ignored by Git:
-
-```text
-data/*
-!data/.gitkeep
-```
-
-This keeps sample databases, scraped games, and user-specific data out of the public repository.
-
-## GitHub Readiness Checklist
-
-- [ ] Confirm `.env` files are not staged
-- [ ] Confirm `venv/`, `.venv/`, `node_modules/`, `__pycache__/`, and `.git/` are not included in uploaded zips
-- [ ] Add screenshots or a short GIF to `docs/`
-- [ ] Replace hardcoded demo username/rating in the UI with controls or config
-- [ ] Add tests for API routes and recommendation scoring
-
-## Future Improvements
-
-- Add frontend controls for username, rating, cache mode, and candidate count
-- Add background refresh for stale cached recommendations
-- Store durable analysis snapshots separately from Redis cache
-- Add CI for linting, backend tests, and frontend build
-- Deploy APIs and frontend to a cloud provider
+See [DEPLOYMENT.md](DEPLOYMENT.md) for required secrets and the release flow.
 
 ## License
 
-MIT License. Update this section if you choose a different license.
+MIT — see [LICENSE](LICENSE).

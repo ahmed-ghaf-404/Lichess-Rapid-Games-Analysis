@@ -6,8 +6,8 @@ export default function MoveControls({
   onStart,
 }) {
   return (
-    <div className="controls">
-      <button type="button" onClick={onStart}>
+    <nav className="controls" aria-label="Opening navigation">
+      <button type="button" onClick={onStart} title="Return to the starting position">
         ⏮ Start
       </button>
 
@@ -18,6 +18,6 @@ export default function MoveControls({
       <button type="button" onClick={onForward} disabled={!canGoForward}>
         Next ▶
       </button>
-    </div>
+    </nav>
   );
 }

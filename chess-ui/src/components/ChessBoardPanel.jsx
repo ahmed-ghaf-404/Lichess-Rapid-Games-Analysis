@@ -9,7 +9,7 @@ export default function ChessBoardPanel({
   const sidePrefix = sideToMove === "white" ? "w" : "b";
 
   return (
-    <section className="panel board-panel">
+    <section className="panel board-panel" aria-label="Interactive chessboard">
       <Chessboard
         options={{
           position: fen,

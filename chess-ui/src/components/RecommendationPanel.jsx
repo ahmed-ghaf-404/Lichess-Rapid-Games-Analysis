@@ -7,19 +7,31 @@ export default function RecommendationPanel({
   onMoveLeave,
   onMoveSelect,
 }) {
+  const title = `${sideToMove === "white" ? "White" : "Black"} to move`;
+
   if (loading) {
     return (
-      <section className="panel">
-        <h2>Coach Recommendation · {sideToMove === "white" ? "White" : "Black"} to move</h2>
-        <p>Loading recommendation...</p>
+      <section className="panel recommendation-panel" aria-busy="true">
+        <div className="panel-heading">
+          <div>
+            <span className="panel-kicker">Coach recommendation</span>
+            <h2>{title}</h2>
+          </div>
+        </div>
+        <div className="recommendation-skeleton" aria-label="Loading recommendation" />
       </section>
     );
   }
 
   if (error) {
     return (
-      <section className="panel">
-        <h2>Coach Recommendation · {sideToMove === "white" ? "White" : "Black"} to move</h2>
+      <section className="panel recommendation-panel">
+        <div className="panel-heading">
+          <div>
+            <span className="panel-kicker">Coach recommendation</span>
+            <h2>{title}</h2>
+          </div>
+        </div>
         <p className="error">{error}</p>
       </section>
     );
@@ -27,9 +39,14 @@ export default function RecommendationPanel({
 
   if (!recommendation || !recommendation.candidates?.length) {
     return (
-      <section className="panel">
-        <h2>Coach Recommendation · {sideToMove === "white" ? "White" : "Black"} to move</h2>
-        <p>No recommendation available for this position.</p>
+      <section className="panel recommendation-panel">
+        <div className="panel-heading">
+          <div>
+            <span className="panel-kicker">Coach recommendation</span>
+            <h2>{title}</h2>
+          </div>
+        </div>
+        <p className="empty-copy">No recommendation is available for this position.</p>
       </section>
     );
   }
@@ -37,61 +54,80 @@ export default function RecommendationPanel({
   const [top, ...rest] = recommendation.candidates;
 
   return (
-    <section className="panel">
-      <h2>Coach Recommendation · {sideToMove === "white" ? "White" : "Black"} to move</h2>
+    <section className="panel recommendation-panel">
+      <div className="panel-heading">
+        <div>
+          <span className="panel-kicker">Coach recommendation</span>
+          <h2>{title}</h2>
+        </div>
+        <span className="coach-badge">Best practical move</span>
+      </div>
 
-      <div
-        style={{ marginBottom: "12px", cursor: "pointer" }}
+      <button
+        type="button"
+        className="recommendation-hero"
         onMouseEnter={() => onMoveHover?.(top)}
         onMouseLeave={onMoveLeave}
         onClick={() => onMoveSelect?.(top)}
         title="Click to play this move"
       >
-        <div style={{ fontSize: "0.9rem", opacity: 0.8 }}>Recommended move</div>
-        <div style={{ fontSize: "1.25rem", fontWeight: 700 }}>{top.move_san}</div>
-        <div style={{ fontSize: "0.9rem", opacity: 0.8 }}>
-          Score: {top.score} · Peer games: {top.peer_games}
-        </div>
-      </div>
+        <span className="recommendation-label">Recommended move</span>
+        <span className="recommendation-move">{top.move_san}</span>
+        <span className="recommendation-meta">
+          Practical score {top.score} · {top.peer_games} peer games
+        </span>
+        <span className="play-hint" aria-hidden="true">
+          Play move <span>→</span>
+        </span>
+      </button>
 
-      <div style={{ marginBottom: "12px" }}>
-        <div style={{ fontSize: "0.9rem", opacity: 0.8 }}>Why</div>
+      <div className="reason-block">
+        <span className="section-label">Why it works</span>
 
         {top.reasons?.length ? (
-          <ul style={{ margin: "6px 0 0 18px" }}>
+          <ul className="reason-list">
             {top.reasons.map((reason) => (
               <li key={reason}>{reason}</li>
             ))}
           </ul>
         ) : (
-          <p>No explanation yet.</p>
+          <p className="empty-copy">No explanation yet.</p>
         )}
       </div>
 
-      <div>
-        <div style={{ fontSize: "0.9rem", opacity: 0.8, marginBottom: "8px" }}>
-          Other candidates
-        </div>
+      {rest.length ? <div>
+        <span className="section-label candidate-heading">Other candidates</span>
 
         <div className="variation-list">
-          {[top, ...rest].slice(0, 3).map((move) => (
-            <div
-              key={move.move_uci}
-              className="variation-button"
-              style={{ cursor: "pointer" }}
-              onMouseEnter={() => onMoveHover?.(move)}
-              onMouseLeave={onMoveLeave}
-              onClick={() => onMoveSelect?.(move)}
-              title="Click to play this move"
-            >
-              <span>{move.move_san}</span>
-              <span className="variation-count">
-                Eval: {sideToMove === "white" ? move.engine_eval_cp/100 : move.engine_eval_cp/-100} · Win rate: {Math.round(move.peer_frequency * 100)}% · {move.peer_games} games
-              </span>
-            </div>
-          ))}
+          {rest.slice(0, 3).map((move) => {
+            const evaluation = Number.isFinite(move.engine_eval_cp)
+              ? (sideToMove === "white"
+                ? move.engine_eval_cp / 100
+                : move.engine_eval_cp / -100).toFixed(2)
+              : "—";
+            const winRate = Number.isFinite(move.peer_frequency)
+              ? `${Math.round(move.peer_frequency * 100)}%`
+              : "—";
+
+            return (
+              <button
+                key={move.move_uci}
+                type="button"
+                className="variation-button candidate-button"
+                onMouseEnter={() => onMoveHover?.(move)}
+                onMouseLeave={onMoveLeave}
+                onClick={() => onMoveSelect?.(move)}
+                title="Click to play this move"
+              >
+                <span className="candidate-move">{move.move_san}</span>
+                <span className="variation-count">
+                  Eval {evaluation} · Frequency {winRate} · {move.peer_games} games
+                </span>
+              </button>
+            );
+          })}
         </div>
-      </div>
+      </div> : null}
     </section>
   );
 }

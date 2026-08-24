@@ -49,7 +49,8 @@ export default function PreloadControls({
   const { settings } = warmup;
 
   return (
-    <section className={`panel preload-panel${compact ? " compact" : ""}`}>
+    <section className={`panel preload-panel developer-panel${compact ? " compact" : ""}`}>
+      <span className="developer-label">Development tools</span>
       <div className="preload-title-row">
         <div>
           <h2>Analysis buffer</h2>

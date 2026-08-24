@@ -1,0 +1,43 @@
+name: Deploy production
+
+on:
+  workflow_run:
+    workflows: [CI]
+    branches: [prod]
+    types: [completed]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: chess-coach-production
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    name: Deploy to production server
+    if: >-
+      (github.event_name == 'workflow_run' && github.event.workflow_run.conclusion == 'success') ||
+      (github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/prod')
+    runs-on: ubuntu-latest
+    environment: production
+
+    steps:
+      - name: Deploy verified prod branch
+        uses: appleboy/ssh-action@v1.2.2
+        env:
+          PROD_APP_PATH: ${{ secrets.PROD_APP_PATH }}
+        with:
+          host: ${{ secrets.PROD_HOST }}
+          username: ${{ secrets.PROD_USER }}
+          key: ${{ secrets.PROD_SSH_KEY }}
+          envs: PROD_APP_PATH
+          script_stop: true
+          script: |
+            cd "$PROD_APP_PATH"
+            git fetch origin prod
+            git checkout prod
+            git pull --ff-only origin prod
+            docker compose -f docker-compose.yml up -d --build --remove-orphans
+            docker compose -f docker-compose.yml ps

@@ -1,7 +1,15 @@
 export default function VariationList({ childrenNodes, sideToMove, onSelect }) {
   return (
     <section className="panel">
-      <h2>{sideToMove === "white" ? "White" : "Black"} to move</h2>
+      <div className="panel-heading">
+        <div>
+          <span className="panel-kicker">Game history</span>
+          <h2>Popular continuations</h2>
+        </div>
+        <span className="turn-badge">
+          {sideToMove === "white" ? "White" : "Black"} to move
+        </span>
+      </div>
 
       {childrenNodes.length === 0 ? (
         <p>No moves from this position.</p>
@@ -14,8 +22,10 @@ export default function VariationList({ childrenNodes, sideToMove, onSelect }) {
               className="variation-button"
               onClick={() => onSelect(node.id)}
             >
-              <span>{node.san}</span>
-              <span className="variation-count">{node.visitCount}</span>
+              <span className="candidate-move">{node.san}</span>
+              <span className="variation-count">
+                {node.visitCount} game{node.visitCount === 1 ? "" : "s"}
+              </span>
             </button>
           ))}
         </div>

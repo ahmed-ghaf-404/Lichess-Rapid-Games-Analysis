@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useMemo, useState } from "react";
 import { Chess } from "chess.js";
 import "./styles/App.css";
 import Header from "./components/Header";
@@ -16,10 +16,15 @@ import { useRecommendation } from "./hooks/useRecommendation";
 import { useRecommendationWarmup } from "./hooks/useRecommendationWarmup";
 import { buildRecommendationArrows } from "./utils/recommendationArrows";
 import { getSideToMove } from "./utils/recommendationApi";
+import {
+  DEFAULT_LICHESS_USERNAME,
+  getPlayerRating,
+} from "./utils/lichessUser";
+import { getAppMode, shouldShowDeveloperTools } from "./config/appMode";
+import { logger } from "./utils/logger";
 
 export default function App() {
-  const username = "EricRosen";
-  const rating = 2538;
+  const [username, setUsername] = useState(DEFAULT_LICHESS_USERNAME);
 
   const [hoveredRecommendationMove, setHoveredRecommendationMove] = useState(null);
   const [analysisHistory, setAnalysisHistory] = useState([]);
@@ -28,6 +33,12 @@ export default function App() {
   const analysisFen = analysisIndex >= 0 ? analysisHistory[analysisIndex] : null;
 
   const { games, loading, error } = useGames(username);
+  const rating = useMemo(
+    () => getPlayerRating(games, username),
+    [games, username]
+  );
+  const appMode = getAppMode();
+  const showDeveloperTools = shouldShowDeveloperTools();
 
   const {
     currentNode,
@@ -69,7 +80,12 @@ export default function App() {
     userId: username,
     rating,
     color: sideToMove,
-    enabled: Boolean(displayFen) && shouldShowRecommendation,
+    enabled:
+      !loading &&
+      !error &&
+      Boolean(currentNode) &&
+      Boolean(displayFen) &&
+      shouldShowRecommendation,
   });
 
   const arrows = hoveredRecommendationMove
@@ -81,10 +97,6 @@ export default function App() {
     setAnalysisIndex(-1);
     setHoveredRecommendationMove(null);
   }
-
-  useEffect(() => {
-    clearAnalysisLine();
-  }, [boardFen]);
 
   function pushAnalysisPosition(nextFen, preloadReason) {
     setHoveredRecommendationMove(null);
@@ -106,7 +118,7 @@ export default function App() {
     });
 
     if (!result) {
-      console.warn("Could not play recommended move:", move);
+      logger.warn("Could not play recommended move", { move });
       return;
     }
 
@@ -135,8 +147,7 @@ export default function App() {
       const matchingChild = children.find((child) => child.fen === nextFen);
 
       if (matchingChild) {
-        setHoveredRecommendationMove(null);
-        goToNode(matchingChild.id);
+        selectOpeningNode(matchingChild.id);
         return true;
       }
     }
@@ -157,6 +168,7 @@ export default function App() {
       return;
     }
 
+    clearAnalysisLine();
     goToParent();
   }
 
@@ -170,6 +182,7 @@ export default function App() {
       return;
     }
 
+    clearAnalysisLine();
     goToNext();
   }
 
@@ -178,26 +191,58 @@ export default function App() {
     goToStart();
   }
 
-  if (loading) return <LoadingState message="Loading games..." />;
-  if (error) return <ErrorState message={error} />;
-  if (!currentNode) return <ErrorState message="No opening tree available." />;
-  if (warmup.loading) {
-    return (
-      <LoadingState
-        message="Precomputing coach analysis..."
-        detail={`Buffered ${warmup.startup.completed} of about ${warmup.startup.total} positions. You can change the preload shape below.`}
-      >
-        <PreloadControls warmup={warmup} compact />
-      </LoadingState>
-    );
+  function selectUsername(nextUsername) {
+    clearAnalysisLine();
+    setUsername(nextUsername);
+  }
+
+  function selectOpeningNode(nodeId) {
+    clearAnalysisLine();
+    goToNode(nodeId);
   }
 
   return (
     <main className="app-shell">
-      <Header username={username} gameCount={games.length} warmup={warmup} />
+      <Header
+        username={username}
+        gameCount={games.length}
+        rating={rating}
+        loading={loading}
+        warmup={warmup}
+        appMode={appMode}
+        showDeveloperTools={showDeveloperTools}
+        onUsernameChange={selectUsername}
+      />
 
-      <div className="app-grid">
-        <section className="left-column">
+      {loading ? <LoadingState message={`Loading @${username}'s rapid games…`} /> : null}
+
+      {!loading && error ? (
+        <ErrorState
+          title="Player could not be loaded"
+          message={error}
+          detail="Check the spelling or try another Lichess username above."
+        />
+      ) : null}
+
+      {!loading && !error && !currentNode ? (
+        <ErrorState
+          title="Opening tree unavailable"
+          message="No opening tree could be built for this player."
+        />
+      ) : null}
+
+      {!loading && !error && currentNode && warmup.loading ? (
+        <LoadingState
+          message="Preparing coach analysis…"
+          detail={`Buffered ${warmup.startup.completed} of about ${warmup.startup.total} positions.`}
+        >
+          {showDeveloperTools ? <PreloadControls warmup={warmup} compact /> : null}
+        </LoadingState>
+      ) : null}
+
+      {!loading && !error && currentNode && !warmup.loading ? (
+        <div className="app-grid">
+          <section className="left-column">
           <ChessBoardPanel
             fen={displayFen}
             arrows={arrows}
@@ -217,10 +262,14 @@ export default function App() {
             onStart={goToStartPosition}
           />
 
-        </section>
+          </section>
 
-        <section className="right-column">
-          <CurrentLine line={line} fen={displayFen} />
+          <section className="right-column">
+            <CurrentLine
+              line={line}
+              fen={displayFen}
+              showFen={showDeveloperTools}
+            />
 
           <RecommendationPanel
             sideToMove={sideToMove}
@@ -236,13 +285,18 @@ export default function App() {
             <VariationList
               childrenNodes={children}
               sideToMove={sideToMove}
-              onSelect={goToNode}
+              onSelect={selectOpeningNode}
             />
           )}
 
-          <PreloadControls warmup={warmup} />
-        </section>
-      </div>
+          {showDeveloperTools ? <PreloadControls warmup={warmup} /> : null}
+          </section>
+        </div>
+      ) : null}
+
+      <footer className="app-footer">
+        Personal opening insights powered by Lichess game data and Stockfish.
+      </footer>
     </main>
   );
 }

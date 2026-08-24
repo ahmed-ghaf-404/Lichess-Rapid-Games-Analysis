@@ -12,12 +12,12 @@ export function useOpeningExplorer(games) {
   const tree = useMemo(() => buildTree(games), [games]);
 
   const [explorerState, setExplorerState] = useState({
-    treeRootId: tree.rootId,
+    tree,
     currentNodeId: tree.rootId,
   });
 
   const currentNodeId =
-    explorerState.treeRootId === tree.rootId
+    explorerState.tree === tree
       ? explorerState.currentNodeId
       : tree.rootId;
 
@@ -52,7 +52,7 @@ export function useOpeningExplorer(games) {
     if (!nodeId) return;
 
     setExplorerState({
-      treeRootId: tree.rootId,
+      tree,
       currentNodeId: nodeId,
     });
   }
@@ -61,7 +61,7 @@ export function useOpeningExplorer(games) {
     if (!parent) return;
 
     setExplorerState({
-      treeRootId: tree.rootId,
+      tree,
       currentNodeId: parent.id,
     });
   }
@@ -70,14 +70,14 @@ export function useOpeningExplorer(games) {
     if (!next) return;
 
     setExplorerState({
-      treeRootId: tree.rootId,
+      tree,
       currentNodeId: next.id,
     });
   }
 
   function goToStart() {
     setExplorerState({
-      treeRootId: tree.rootId,
+      tree,
       currentNodeId: tree.rootId,
     });
   }

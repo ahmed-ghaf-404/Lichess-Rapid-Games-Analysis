@@ -1,7 +1,11 @@
 import chess
 import chess.engine
+import logging
 
 from app.core.config import settings
+
+
+logger = logging.getLogger(__name__)
 
 
 class StockfishService:
@@ -12,8 +16,16 @@ class StockfishService:
     async def analyze_top_moves(self, fen: str, top_k: int = 5) -> list[dict]:
         board = chess.Board(fen)
 
-        transport, engine = await chess.engine.popen_uci(self.engine_path)
+        transport = None
+        engine = None
+        logger.debug(
+            "stockfish.analysis_started path=%s depth=%d top_k=%d",
+            self.engine_path,
+            self.depth,
+            top_k,
+        )
         try:
+            transport, engine = await chess.engine.popen_uci(self.engine_path)
             info = await engine.analyse(
                 board,
                 chess.engine.Limit(depth=self.depth),
@@ -51,7 +63,21 @@ class StockfishService:
                     }
                 )
 
+            logger.info(
+                "stockfish.analysis_completed depth=%d move_count=%d",
+                self.depth,
+                len(moves),
+            )
             return moves
+        except Exception:
+            logger.exception(
+                "stockfish.analysis_failed path=%s depth=%d",
+                self.engine_path,
+                self.depth,
+            )
+            raise
         finally:
-            await engine.quit()
-            transport.close()
+            if engine is not None:
+                await engine.quit()
+            if transport is not None:
+                transport.close()

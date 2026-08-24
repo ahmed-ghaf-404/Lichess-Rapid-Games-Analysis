@@ -4,6 +4,7 @@ import {
   fenAfterUciMove,
   getSideToMove,
 } from "../utils/recommendationApi";
+import { logger } from "../utils/logger";
 
 const envNumber = (name, fallback) => {
   const value = Number(import.meta.env[name]);
@@ -163,7 +164,7 @@ async function preloadRecommendationTree({
     const item = queue.shift();
     if (!item?.fen) continue;
 
-    const seenKey = `${item.fen}|d:${item.depth}|b:${branching}|m:${maxCandidates}`;
+    const seenKey = `${userId}|${item.fen}|d:${item.depth}|b:${branching}|m:${maxCandidates}`;
     if (seen?.has(seenKey)) continue;
     seen?.add(seenKey);
 
@@ -287,6 +288,10 @@ export function useRecommendationWarmup({
 
       backgroundRunningRef.current = true;
       const controller = new AbortController();
+      logger.info("Background recommendation warmup started", {
+        reason,
+        seedCount: seeds.length,
+      });
 
       try {
         setBackground({
@@ -325,8 +330,10 @@ export function useRecommendationWarmup({
           queued: 0,
           currentFen: "",
         }));
+        logger.info("Background recommendation warmup completed", { reason, completed });
       } catch (err) {
         if (err.name !== "AbortError") {
+          logger.warn("Background recommendation warmup failed", err);
           setBackground((current) => ({
             ...current,
             loading: false,
@@ -366,6 +373,7 @@ export function useRecommendationWarmup({
     });
 
     async function run() {
+      logger.info("Startup recommendation warmup started", { seedCount: seedFens.length });
       try {
         const completed = await preloadRecommendationTree({
           seedFens,
@@ -391,9 +399,11 @@ export function useRecommendationWarmup({
             queued: 0,
             currentFen: "",
           }));
+          logger.info("Startup recommendation warmup completed", { completed });
         }
       } catch (err) {
         if (!controller.signal.aborted) {
+          logger.warn("Startup recommendation warmup failed", err);
           setStartup((current) => ({
             ...current,
             loading: false,

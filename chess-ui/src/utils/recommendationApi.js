@@ -1,4 +1,5 @@
 import { Chess } from "chess.js";
+import { createRequestId, logger } from "./logger";
 
 const API_BASE = import.meta.env.VITE_COACH_AI_URL || "/api";
 const recommendationCache = new Map();
@@ -33,25 +34,52 @@ export async function fetchRecommendation({
 
   const params = { fen, userId, rating, color, maxCandidates };
   const cached = getCachedRecommendation(params);
-  if (cached) return cached;
+  if (cached) {
+    logger.debug("Recommendation cache hit", { userId, rating, color });
+    return cached;
+  }
 
-  const res = await fetch(`${API_BASE}/recommend/position`, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      fen,
-      user_id: userId,
-      rating,
-      color,
-      max_candidates: maxCandidates,
-    }),
-    signal,
+  const requestId = createRequestId();
+  logger.debug("Recommendation request started", {
+    requestId,
+    userId,
+    rating,
+    color,
+    maxCandidates,
   });
+  let res;
+  try {
+    res = await fetch(`${API_BASE}/recommend/position`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "X-Request-ID": requestId,
+      },
+      body: JSON.stringify({
+        fen,
+        user_id: userId,
+        rating,
+        color,
+        max_candidates: maxCandidates,
+      }),
+      signal,
+    });
+  } catch (error) {
+    if (error.name !== "AbortError") {
+      logger.error("Recommendation network request failed", { requestId, error });
+    }
+    throw error;
+  }
 
   if (!res.ok) {
-      const errorText = await res.text();
+    const errorText = await res.text();
+    const level = res.status >= 500 ? "error" : "warn";
+    logger[level]("Recommendation request rejected", {
+      status: res.status,
+      statusText: res.statusText,
+      detail: errorText,
+      requestId: res.headers.get("X-Request-ID") || requestId,
+    });
 
       throw new Error(
         `Recommendation request failed: ${res.status} ${res.statusText} - ${errorText}`
@@ -60,6 +88,12 @@ export async function fetchRecommendation({
 
   const json = await res.json();
   setCachedRecommendation(params, json);
+  logger.info("Recommendation request completed", {
+    status: res.status,
+    requestId: res.headers.get("X-Request-ID") || requestId,
+    candidateCount: json.candidates?.length ?? 0,
+    cache: json.metadata?.cache,
+  });
   return json;
 }
 

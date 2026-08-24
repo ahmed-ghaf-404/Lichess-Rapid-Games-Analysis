@@ -1,4 +1,5 @@
 import os
+import logging
 from pymongo import MongoClient
 from dotenv import load_dotenv
 
@@ -12,4 +13,4 @@ client = MongoClient(MONGO_URL)
 db = client[DB_NAME]
 games_collection = db["games"]
 
-print("Connected (sync) → MongoDB")
+logging.getLogger(__name__).debug("mongodb.client_created mode=sync database=%s", DB_NAME)
