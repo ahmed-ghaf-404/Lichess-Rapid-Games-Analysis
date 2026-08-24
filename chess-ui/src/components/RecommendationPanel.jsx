@@ -1,24 +1,69 @@
-export default function RecommendationPanel({
+import { memo } from "react";
+import { useLocalization } from "../i18n/useLocalization";
+
+
+const REASON_KEYS = {
+  "large peer sample": "reason.largePeerSample",
+  "reasonable peer sample": "reason.reasonablePeerSample",
+  "small peer sample": "reason.smallPeerSample",
+  "common at your rating": "reason.commonAtRating",
+  "played often in this pool": "reason.playedOften",
+  "strong peer win rate": "reason.strongWinRate",
+  "solid practical results": "reason.solidResults",
+  "top engine move": "reason.topEngine",
+  "engine-approved": "reason.engineApproved",
+  "fits your repertoire": "reason.fitsRepertoire",
+  "close to your repertoire": "reason.closeRepertoire",
+};
+
+
+function RecommendationPanel({
   sideToMove,
   recommendation,
+  recommendationsEnabled = true,
   loading,
   error,
+  onRecommendationsEnabledChange,
   onMoveHover,
   onMoveLeave,
   onMoveSelect,
 }) {
-  const title = `${sideToMove === "white" ? "White" : "Black"} to move`;
+  const { formatNumber, metadata, t } = useLocalization();
+  const title = t(sideToMove === "white" ? "recommendation.turnWhite" : "recommendation.turnBlack");
+  const heading = (showBadge = false) => (
+    <div className="panel-heading">
+      <div>
+        <span className="panel-kicker">{t("recommendation.kicker")}</span>
+        <h2>{title}</h2>
+      </div>
+      <div className="recommendation-heading-actions">
+        {showBadge ? <span className="coach-badge">{t("recommendation.bestPractical")}</span> : null}
+        <label className="recommendation-toggle">
+          <input
+            type="checkbox"
+            checked={recommendationsEnabled}
+            onChange={(event) => onRecommendationsEnabledChange?.(event.target.checked)}
+          />
+          {t("recommendation.compute")}
+        </label>
+      </div>
+    </div>
+  );
+
+  if (!recommendationsEnabled) {
+    return (
+      <section className="panel recommendation-panel recommendation-disabled">
+        {heading()}
+        <p className="empty-copy">{t("recommendation.paused")}</p>
+      </section>
+    );
+  }
 
   if (loading) {
     return (
       <section className="panel recommendation-panel" aria-busy="true">
-        <div className="panel-heading">
-          <div>
-            <span className="panel-kicker">Coach recommendation</span>
-            <h2>{title}</h2>
-          </div>
-        </div>
-        <div className="recommendation-skeleton" aria-label="Loading recommendation" />
+        {heading()}
+        <div className="recommendation-skeleton" aria-label={t("recommendation.loading")} />
       </section>
     );
   }
@@ -26,12 +71,7 @@ export default function RecommendationPanel({
   if (error) {
     return (
       <section className="panel recommendation-panel">
-        <div className="panel-heading">
-          <div>
-            <span className="panel-kicker">Coach recommendation</span>
-            <h2>{title}</h2>
-          </div>
-        </div>
+        {heading()}
         <p className="error">{error}</p>
       </section>
     );
@@ -40,13 +80,8 @@ export default function RecommendationPanel({
   if (!recommendation || !recommendation.candidates?.length) {
     return (
       <section className="panel recommendation-panel">
-        <div className="panel-heading">
-          <div>
-            <span className="panel-kicker">Coach recommendation</span>
-            <h2>{title}</h2>
-          </div>
-        </div>
-        <p className="empty-copy">No recommendation is available for this position.</p>
+        {heading()}
+        <p className="empty-copy">{t("recommendation.none")}</p>
       </section>
     );
   }
@@ -55,13 +90,7 @@ export default function RecommendationPanel({
 
   return (
     <section className="panel recommendation-panel">
-      <div className="panel-heading">
-        <div>
-          <span className="panel-kicker">Coach recommendation</span>
-          <h2>{title}</h2>
-        </div>
-        <span className="coach-badge">Best practical move</span>
-      </div>
+      {heading(true)}
 
       <button
         type="button"
@@ -69,34 +98,37 @@ export default function RecommendationPanel({
         onMouseEnter={() => onMoveHover?.(top)}
         onMouseLeave={onMoveLeave}
         onClick={() => onMoveSelect?.(top)}
-        title="Click to play this move"
+        title={t("recommendation.click")}
       >
-        <span className="recommendation-label">Recommended move</span>
-        <span className="recommendation-move">{top.move_san}</span>
+        <span className="recommendation-label">{t("recommendation.move")}</span>
+        <span className="recommendation-move chess-notation">{top.move_san}</span>
         <span className="recommendation-meta">
-          Practical score {top.score} · {top.peer_games} peer games
+          {t("recommendation.score", {
+            score: formatNumber(top.score),
+            count: formatNumber(top.peer_games),
+          })}
         </span>
         <span className="play-hint" aria-hidden="true">
-          Play move <span>→</span>
+          {t("recommendation.play")} <span>{metadata.direction === "rtl" ? "←" : "→"}</span>
         </span>
       </button>
 
       <div className="reason-block">
-        <span className="section-label">Why it works</span>
+        <span className="section-label">{t("recommendation.why")}</span>
 
         {top.reasons?.length ? (
           <ul className="reason-list">
             {top.reasons.map((reason) => (
-              <li key={reason}>{reason}</li>
+              <li key={reason}>{REASON_KEYS[reason] ? t(REASON_KEYS[reason]) : reason}</li>
             ))}
           </ul>
         ) : (
-          <p className="empty-copy">No explanation yet.</p>
+          <p className="empty-copy">{t("recommendation.noExplanation")}</p>
         )}
       </div>
 
       {rest.length ? <div>
-        <span className="section-label candidate-heading">Other candidates</span>
+        <span className="section-label candidate-heading">{t("recommendation.other")}</span>
 
         <div className="variation-list">
           {rest.slice(0, 3).map((move) => {
@@ -117,11 +149,15 @@ export default function RecommendationPanel({
                 onMouseEnter={() => onMoveHover?.(move)}
                 onMouseLeave={onMoveLeave}
                 onClick={() => onMoveSelect?.(move)}
-                title="Click to play this move"
+                title={t("recommendation.click")}
               >
-                <span className="candidate-move">{move.move_san}</span>
+                <span className="candidate-move chess-notation">{move.move_san}</span>
                 <span className="variation-count">
-                  Eval {evaluation} · Frequency {winRate} · {move.peer_games} games
+                  {t("recommendation.candidateMeta", {
+                    evaluation,
+                    frequency: winRate,
+                    count: formatNumber(move.peer_games),
+                  })}
                 </span>
               </button>
             );
@@ -131,3 +167,5 @@ export default function RecommendationPanel({
     </section>
   );
 }
+
+export default memo(RecommendationPanel);

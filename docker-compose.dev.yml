@@ -96,6 +96,10 @@ services:
       - "yes"
       - --appendfsync
       - everysec
+      - --maxmemory
+      - ${REDIS_MAX_MEMORY:-256mb}
+      - --maxmemory-policy
+      - allkeys-lru
 
     ports:
       - "6379:6379"

@@ -24,8 +24,8 @@ export function useGames(username) {
           setGames(Array.isArray(data) ? data : []);
         }
       } catch (err) {
-        logger.error("Loading player games failed", { username, error: err.message });
         if (!cancelled) {
+          logger.error("Loading player games failed", { username, error: err.message });
           setError(err.message || "Failed to load games.");
         }
       } finally {

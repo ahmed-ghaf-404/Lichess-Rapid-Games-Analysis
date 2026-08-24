@@ -14,6 +14,16 @@ The development view includes the Current Line panel, raw position data, and
 cache controls. Production builds hide those diagnostics while keeping the
 player picker, board, recommendations, and popular continuations.
 
+The UI is localized in 🇺🇸 English, 🇴🇲 Omani Arabic (RTL), and 🇯🇵 Japanese.
+Noto web fonts are installed by `npm ci` and bundled into the Vite output, so no
+system fonts need to be installed on developer machines, servers, or runtime
+containers.
+
+In development, Vite also returns an empty valid source map for the exact
+`installHook.js.map` filename injected by React Developer Tools. This prevents
+Firefox from parsing the SPA HTML fallback as JSON while leaving CCC's real
+source maps and the production build unchanged.
+
 Developed by **Ahmed H. K. Al Ghafri (ChocoRoku)**.
 
 ## Quality checks

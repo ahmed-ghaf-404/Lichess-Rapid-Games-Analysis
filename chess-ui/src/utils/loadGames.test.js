@@ -21,6 +21,26 @@ describe("loadGames", () => {
     );
   });
 
+  it("joins concurrent loads for the same account", async () => {
+    let resolveFetch;
+    const fetchMock = vi.fn(() => new Promise((resolve) => {
+      resolveFetch = resolve;
+    }));
+    vi.stubGlobal("fetch", fetchMock);
+
+    const first = loadGames("two-account-cache-test");
+    const second = loadGames("TWO-ACCOUNT-CACHE-TEST");
+    expect(fetchMock).toHaveBeenCalledTimes(1);
+
+    resolveFetch({
+      ok: true,
+      json: async () => [{ id: "game-2", moves: "d4 d5" }],
+    });
+
+    const [firstResult, secondResult] = await Promise.all([first, second]);
+    expect(firstResult).toBe(secondResult);
+  });
+
   it("surfaces a useful not-found response", async () => {
     vi.stubGlobal("fetch", vi.fn().mockResolvedValue({
       ok: false,

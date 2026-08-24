@@ -101,6 +101,10 @@ services:
       - "yes"
       - --appendfsync
       - everysec
+      - --maxmemory
+      - ${REDIS_MAX_MEMORY:-256mb}
+      - --maxmemory-policy
+      - allkeys-lru
 
     volumes:
       - redis_data:/data

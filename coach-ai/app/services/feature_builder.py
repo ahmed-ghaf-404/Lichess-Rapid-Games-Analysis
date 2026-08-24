@@ -6,20 +6,15 @@ class FeatureBuilder:
         self.repertoire = RepertoireService()
 
     async def enrich(self, user_id: str, fen: str, candidates: list[dict]) -> list[dict]:
-        enriched = []
-
-        for candidate in candidates:
-            repertoire_fit = await self.repertoire.get_move_fit(
-                user_id=user_id,
-                fen=fen,
-                move_uci=candidate["move_uci"],
-            )
-
-            enriched.append(
-                {
-                    **candidate,
-                    "repertoire_fit": repertoire_fit,
-                }
-            )
-
-        return enriched
+        move_fits = await self.repertoire.get_move_fits(
+            user_id=user_id,
+            fen=fen,
+            move_ucis=[candidate["move_uci"] for candidate in candidates],
+        )
+        return [
+            {
+                **candidate,
+                "repertoire_fit": move_fits.get(candidate["move_uci"], 0.0),
+            }
+            for candidate in candidates
+        ]

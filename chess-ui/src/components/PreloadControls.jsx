@@ -1,4 +1,7 @@
-function ProgressLine({ label, status }) {
+import { useLocalization } from "../i18n/useLocalization";
+
+
+function ProgressLine({ label, status, formatNumber, t }) {
   const total = Math.max(status?.total ?? 0, status?.completed ?? 0, 1);
   const completed = status?.completed ?? 0;
   const percent = Math.min(100, Math.round((completed / total) * 100));
@@ -8,7 +11,11 @@ function ProgressLine({ label, status }) {
       <div className="preload-progress-header">
         <span>{label}</span>
         <span>
-          {completed} / {status?.total ?? 0} positions · {percent}%
+          {t("dev.progress", {
+            completed: formatNumber(completed),
+            total: formatNumber(status?.total ?? 0),
+            percent: formatNumber(percent),
+          })}
         </span>
       </div>
       <div className="preload-progress-track">
@@ -16,7 +23,7 @@ function ProgressLine({ label, status }) {
       </div>
       {status?.loading ? (
         <p className="preload-note">
-          Loading {status.queued ?? 0} queued positions in the background…
+          {t("dev.queued", { count: formatNumber(status.queued ?? 0) })}
         </p>
       ) : null}
       {status?.error ? <p className="error">{status.error}</p> : null}
@@ -44,22 +51,21 @@ export default function PreloadControls({
   warmup,
   compact = false,
 }) {
+  const { formatNumber, t } = useLocalization();
   if (!warmup?.settings) return null;
 
   const { settings } = warmup;
 
   return (
     <section className={`panel preload-panel developer-panel${compact ? " compact" : ""}`}>
-      <span className="developer-label">Development tools</span>
+      <span className="developer-label">{t("dev.tools")}</span>
       <div className="preload-title-row">
         <div>
-          <h2>Analysis buffer</h2>
-          <p className="preload-note">
-            Control how aggressively the UI fills Redis before and during play.
-          </p>
+          <h2>{t("dev.buffer")}</h2>
+          <p className="preload-note">{t("dev.description")}</p>
         </div>
         <button type="button" onClick={warmup.restartStartup}>
-          Restart preload
+          {t("dev.restart")}
         </button>
       </div>
 
@@ -70,7 +76,7 @@ export default function PreloadControls({
             checked={settings.startupEnabled}
             onChange={(event) => warmup.setSettings({ startupEnabled: event.target.checked })}
           />
-          Startup preload
+          {t("dev.startupPreload")}
         </label>
         <label>
           <input
@@ -78,79 +84,87 @@ export default function PreloadControls({
             checked={settings.blockStartup}
             onChange={(event) => warmup.setSettings({ blockStartup: event.target.checked })}
           />
-          Wait before showing board
+          {t("dev.wait")}
         </label>
       </div>
 
       <div className="preload-grid-controls">
         <NumberField
-          label="Leaf positions"
+          label={t("dev.priority")}
           value={settings.maxLeafPositions}
           min={1}
           max={200}
           onChange={(value) => warmup.setSettings({ maxLeafPositions: value })}
-          hint="How many opening-tree leaves to seed."
+          hint={t("dev.priorityHint")}
         />
         <NumberField
-          label="Startup depth"
+          label={t("dev.startupDepth")}
           value={settings.startupDepth}
           min={1}
           max={5}
           onChange={(value) => warmup.setSettings({ startupDepth: value })}
-          hint="Ply levels from each leaf."
+          hint={t("dev.depthHint")}
         />
         <NumberField
-          label="Branches per leaf"
+          label={t("dev.branches")}
           value={settings.startupBranching}
           min={1}
           max={8}
           onChange={(value) => warmup.setSettings({ startupBranching: value })}
-          hint="2 or 3 means top 2/3 candidate moves per node."
+          hint={t("dev.branchesHint")}
         />
         <NumberField
-          label="Near-leaf threshold"
+          label={t("dev.threshold")}
           value={settings.nearLeafThreshold}
           min={0}
           max={10}
           onChange={(value) => warmup.setSettings({ nearLeafThreshold: value })}
-          hint="0 = at leaf, 1 = one move away."
+          hint={t("dev.thresholdHint")}
         />
         <NumberField
-          label="Background depth"
+          label={t("dev.backgroundDepth")}
           value={settings.backgroundDepth}
           min={1}
           max={5}
           onChange={(value) => warmup.setSettings({ backgroundDepth: value })}
-          hint="Extra ply levels to refill."
+          hint={t("dev.backgroundDepthHint")}
         />
         <NumberField
-          label="Background branches"
+          label={t("dev.backgroundBranches")}
           value={settings.backgroundBranching}
           min={1}
           max={8}
           onChange={(value) => warmup.setSettings({ backgroundBranching: value })}
-          hint="Use 3 to load three more candidate moves."
+          hint={t("dev.backgroundBranchesHint")}
         />
       </div>
 
       <div className="preload-summary">
-        <span>Startup estimate: about {warmup.estimatedStartupTotal} positions</span>
+        <span>{t("dev.startupEstimate", { count: formatNumber(warmup.estimatedStartupTotal) })}</span>
         <span>
-          Nearest opening-tree leaf: {warmup.nearestLeafDistance ?? "unknown"} move
-          {warmup.nearestLeafDistance === 1 ? "" : "s"} away
+          {t("dev.nearestLeaf", {
+            distance: warmup.nearestLeafDistance == null
+              ? t("dev.unknown")
+              : formatNumber(warmup.nearestLeafDistance),
+          })}
         </span>
-        <span>Background estimate: about {warmup.estimatedBackgroundTotal} positions</span>
+        <span>{t("dev.backgroundEstimate", { count: formatNumber(warmup.estimatedBackgroundTotal) })}</span>
       </div>
 
-      <ProgressLine label="Startup" status={warmup.startup} />
-      <ProgressLine label={`Background${warmup.background?.reason ? ` · ${warmup.background.reason}` : ""}`} status={warmup.background} />
+      <ProgressLine label={t("dev.startup")} status={warmup.startup} formatNumber={formatNumber} t={t} />
+      <ProgressLine
+        label={`${t("dev.background")}${warmup.background?.reason ? ` · ${warmup.background.reason}` : ""}`}
+        status={warmup.background}
+        formatNumber={formatNumber}
+        t={t}
+      />
 
       <div className="preload-actions">
         <button type="button" onClick={warmup.skipStartup} disabled={!warmup.startup?.loading}>
-          Skip startup loading
+          {t("dev.skip")}
         </button>
         <button type="button" onClick={() => warmup.runBackgroundPreload()} disabled={warmup.background?.loading}>
-          Fill from current position
+          {t("dev.fill")}
         </button>
       </div>
     </section>

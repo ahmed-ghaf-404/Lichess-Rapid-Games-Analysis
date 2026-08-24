@@ -13,7 +13,12 @@ export function useRecommendation({ fen, userId, rating, color, enabled = true }
   const [error, setError] = useState("");
 
   useEffect(() => {
-    if (!enabled || !fen || !userId) return;
+    if (!enabled || !fen || !userId) {
+      setData(null);
+      setLoading(false);
+      setError("");
+      return;
+    }
 
     const params = {
       fen,

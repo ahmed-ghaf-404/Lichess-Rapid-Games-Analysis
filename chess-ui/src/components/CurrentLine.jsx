@@ -1,16 +1,21 @@
+import { useLocalization } from "../i18n/useLocalization";
+
+
 export default function CurrentLine({ line, fen, showFen = false }) {
+  const { formatNumber, t } = useLocalization();
+
   return (
     <section className="panel">
       <div className="panel-heading">
         <div>
-          <span className="panel-kicker">Position</span>
-          <h2>Current line</h2>
+          <span className="panel-kicker">{t("line.position")}</span>
+          <h2>{t("line.current")}</h2>
         </div>
-        <span className="ply-count">{line.length} ply</span>
+        <span className="ply-count">{t("line.ply", { count: formatNumber(line.length) })}</span>
       </div>
 
       {line.length ? (
-        <div className="move-sequence" aria-label="Current move sequence">
+        <div className="move-sequence chess-notation" aria-label={t("line.sequence")}>
           {line.map((node, index) => (
             <span className="move-token" key={node.id}>
               {index % 2 === 0 ? `${Math.floor(index / 2) + 1}. ` : ""}
@@ -19,12 +24,12 @@ export default function CurrentLine({ line, fen, showFen = false }) {
           ))}
         </div>
       ) : (
-        <p className="empty-copy">Start position — choose a move to explore.</p>
+        <p className="empty-copy">{t("line.empty")}</p>
       )}
 
       {showFen ? (
         <details className="developer-details">
-          <summary>Developer: position FEN</summary>
+          <summary>{t("line.fen")}</summary>
           <code className="fen-text">{fen}</code>
         </details>
       ) : null}

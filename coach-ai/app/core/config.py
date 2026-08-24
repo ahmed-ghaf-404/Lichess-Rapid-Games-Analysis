@@ -14,8 +14,10 @@ class Settings(BaseSettings):
     engine_depth: int = 14
 
     redis_url: str
-    cache_ttl_seconds: int = 60 * 60 * 24 * 7 # a week
+    cache_ttl_seconds: int = 60 * 60 * 24 * 30  # one month
     recommender_version: str = "heuristic_v1"
+    repertoire_users: str = "ericrosen,chocoroku"
+    repertoire_write_key: str = ""
 
 
 settings = Settings()

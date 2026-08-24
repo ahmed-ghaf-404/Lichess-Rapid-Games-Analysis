@@ -6,8 +6,10 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 from app.api.recommend import router as recommend_router
+from app.api.repertoire import router as repertoire_router
 from app.core.config import settings
 from app.core.logging import configure_logging, request_logging_middleware
+from app.services.repertoire_store import ensure_repertoire_indexes
 
 from dotenv import load_dotenv
 import os
@@ -35,6 +37,11 @@ async def lifespan(_app: FastAPI):
             "dependency.missing name=stockfish path=%s hint=install_stockfish_or_set_STOCKFISH_PATH",
             settings.stockfish_path,
         )
+    try:
+        await ensure_repertoire_indexes()
+        logger.info("dependency.ready name=repertoire_indexes")
+    except Exception:
+        logger.exception("dependency.failed name=repertoire_indexes")
     yield
     logger.info("service.shutdown")
 
@@ -44,6 +51,7 @@ app = FastAPI(title="Choco Chess Coach AI", version="0.1.0", lifespan=lifespan)
 app.middleware("http")(request_logging_middleware)
 
 app.include_router(recommend_router)
+app.include_router(repertoire_router)
 
 app.add_middleware(
     CORSMiddleware,

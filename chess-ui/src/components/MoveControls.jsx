@@ -1,3 +1,6 @@
+import { useLocalization } from "../i18n/useLocalization";
+
+
 export default function MoveControls({
   canGoBack,
   canGoForward,
@@ -5,18 +8,20 @@ export default function MoveControls({
   onForward,
   onStart,
 }) {
+  const { t } = useLocalization();
+
   return (
-    <nav className="controls" aria-label="Opening navigation">
-      <button type="button" onClick={onStart} title="Return to the starting position">
-        ⏮ Start
+    <nav className="controls" aria-label={t("moves.navigation")}>
+      <button type="button" onClick={onStart} title={t("moves.startTitle")}>
+        ⏮ {t("moves.start")}
       </button>
 
       <button type="button" onClick={onBack} disabled={!canGoBack}>
-        ◀ Previous
+        ◀ {t("moves.previous")}
       </button>
 
       <button type="button" onClick={onForward} disabled={!canGoForward}>
-        Next ▶
+        {t("moves.next")} ▶
       </button>
     </nav>
   );

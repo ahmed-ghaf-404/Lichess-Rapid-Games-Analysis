@@ -4,6 +4,7 @@ import os
 
 from fastapi import FastAPI
 from routes.games import router as games_router
+from routes.contact import router as contact_router
 from fastapi.middleware.cors import CORSMiddleware
 from dotenv import load_dotenv
 
@@ -36,6 +37,7 @@ app = FastAPI(title="Choco Chess Coach Games API", lifespan=lifespan)
 app.middleware("http")(request_logging_middleware)
 
 app.include_router(games_router)
+app.include_router(contact_router)
 
 app.add_middleware(
     CORSMiddleware,
