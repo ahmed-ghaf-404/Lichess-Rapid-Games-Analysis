@@ -1,8 +1,8 @@
-# Chess Coach
+# Choco Chess Coach (CCC)
 
-Chess Coach turns a Lichess player's rapid-game history into an interactive
-opening map, then combines Stockfish evaluation with peer statistics and
-repertoire fit to recommend practical next moves.
+Choco Chess Coach (CCC) turns a Lichess player's rapid-game history into an
+interactive opening map, then combines Stockfish evaluation with peer
+statistics and repertoire fit to recommend practical next moves.
 
 This project is designed as a production-shaped full-stack system rather than a
 single analysis script: it separates game access from recommendation work,
@@ -16,7 +16,7 @@ development views, and ships with automated tests and deployment gates.
 - Play a recommendation or drag a legal move to continue an analysis line
 - Compare practical candidates using engine evaluation and peer-game evidence
 - Precompute and cache expensive recommendation branches in Redis
-- Keep raw FEN and cache warmup controls in development mode only
+- Keep the Current Line panel, raw FEN, and cache warmup controls in development mode only
 - Recover cleanly from malformed usernames, unknown players, and API failures
 
 ## Architecture
@@ -91,12 +91,19 @@ tree.
 
 ## Development and production views
 
-`VITE_APP_MODE=development` displays cache warmup controls, progress, raw FEN,
-and a mode badge. Production builds set `VITE_APP_MODE=production`, leaving the
-player search, board, current line, recommendations, and continuations visible.
+`VITE_APP_MODE=development` displays the Current Line panel, cache warmup
+controls, progress, raw FEN, and a mode badge. Production builds set
+`VITE_APP_MODE=production`, leaving the player search, board, recommendations,
+and continuations visible.
 
 To inspect diagnostics in a production-mode local build, set
-`VITE_SHOW_DEVELOPER_TOOLS=true` explicitly.
+`VITE_SHOW_DEVELOPER_TOOLS=true` explicitly. This override does not display the
+Current Line panel outside development mode.
+
+## Developer
+
+Choco Chess Coach is developed by **Ahmed H. K. Al Ghafri**, also known as
+**ChocoRoku**.
 
 ## Tests and quality checks
 

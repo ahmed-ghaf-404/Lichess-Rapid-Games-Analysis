@@ -39,7 +39,7 @@ async def lifespan(_app: FastAPI):
     logger.info("service.shutdown")
 
 
-app = FastAPI(title="Chess Coach AI", version="0.1.0", lifespan=lifespan)
+app = FastAPI(title="Choco Chess Coach AI", version="0.1.0", lifespan=lifespan)
 
 app.middleware("http")(request_logging_middleware)
 

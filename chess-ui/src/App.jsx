@@ -20,7 +20,11 @@ import {
   DEFAULT_LICHESS_USERNAME,
   getPlayerRating,
 } from "./utils/lichessUser";
-import { getAppMode, shouldShowDeveloperTools } from "./config/appMode";
+import {
+  getAppMode,
+  shouldShowCurrentLine,
+  shouldShowDeveloperTools,
+} from "./config/appMode";
 import { logger } from "./utils/logger";
 
 export default function App() {
@@ -38,6 +42,7 @@ export default function App() {
     [games, username]
   );
   const appMode = getAppMode();
+  const showCurrentLine = shouldShowCurrentLine();
   const showDeveloperTools = shouldShowDeveloperTools();
 
   const {
@@ -265,11 +270,9 @@ export default function App() {
           </section>
 
           <section className="right-column">
-            <CurrentLine
-              line={line}
-              fen={displayFen}
-              showFen={showDeveloperTools}
-            />
+            {showCurrentLine ? (
+              <CurrentLine line={line} fen={displayFen} showFen />
+            ) : null}
 
           <RecommendationPanel
             sideToMove={sideToMove}
@@ -295,7 +298,8 @@ export default function App() {
       ) : null}
 
       <footer className="app-footer">
-        Personal opening insights powered by Lichess game data and Stockfish.
+        Choco Chess Coach (CCC) · Developed by Ahmed H. K. Al Ghafri
+        (ChocoRoku) · Powered by Lichess game data and Stockfish.
       </footer>
     </main>
   );

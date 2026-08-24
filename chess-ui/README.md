@@ -1,4 +1,4 @@
-# Chess Coach UI
+# Choco Chess Coach (CCC) UI
 
 React/Vite UI for exploring the user opening tree and requesting coach recommendations.
 
@@ -10,9 +10,11 @@ npm ci
 npm run dev
 ```
 
-The development view includes raw position data and cache controls. Production
-builds hide those diagnostics while keeping the player picker, board, opening
-line, recommendations, and popular continuations.
+The development view includes the Current Line panel, raw position data, and
+cache controls. Production builds hide those diagnostics while keeping the
+player picker, board, recommendations, and popular continuations.
+
+Developed by **Ahmed H. K. Al Ghafri (ChocoRoku)**.
 
 ## Quality checks
 

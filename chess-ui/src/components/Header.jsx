@@ -39,12 +39,12 @@ export default function Header({
     <header className="page-header">
       <div className="header-copy">
         <div className="eyebrow-row">
-          <span className="eyebrow">Opening intelligence</span>
+          <span className="eyebrow">CCC · Opening intelligence</span>
           {showDeveloperTools ? (
             <span className="mode-badge">{appMode} view</span>
           ) : null}
         </div>
-        <h1>Chess Coach</h1>
+        <h1>Choco Chess Coach</h1>
         <p className="header-description">
           Turn a player’s rapid-game history into an opening map and practical,
           engine-informed recommendations.

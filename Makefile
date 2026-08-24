@@ -1,7 +1,7 @@
 .PHONY: help dev down test lint build check prod-config
 
 help: ## Show available project commands.
-	@awk 'BEGIN {FS = ":.*## "; print "Chess Coach commands:"} /^[a-zA-Z_-]+:.*## / {printf "  %-14s %s\n", $$1, $$2}' $(MAKEFILE_LIST)
+	@awk 'BEGIN {FS = ":.*## "; print "Choco Chess Coach (CCC) commands:"} /^[a-zA-Z_-]+:.*## / {printf "  %-14s %s\n", $$1, $$2}' $(MAKEFILE_LIST)
 
 dev: ## Start the complete development stack.
 	docker compose -f docker-compose.dev.yml up --build

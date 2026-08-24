@@ -31,7 +31,7 @@ async def lifespan(_app: FastAPI):
     logger.info("service.shutdown")
 
 
-app = FastAPI(title="Chess Games API", lifespan=lifespan)
+app = FastAPI(title="Choco Chess Coach Games API", lifespan=lifespan)
 
 app.middleware("http")(request_logging_middleware)
 

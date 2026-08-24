@@ -1,6 +1,10 @@
 import { describe, expect, it } from "vitest";
 
-import { getAppMode, shouldShowDeveloperTools } from "./appMode";
+import {
+  getAppMode,
+  shouldShowCurrentLine,
+  shouldShowDeveloperTools,
+} from "./appMode";
 
 
 describe("app mode", () => {
@@ -24,5 +28,17 @@ describe("app mode", () => {
     };
 
     expect(shouldShowDeveloperTools(env)).toBe(true);
+    expect(shouldShowCurrentLine(env)).toBe(false);
+  });
+
+  it("shows the current line only in development mode", () => {
+    expect(shouldShowCurrentLine({ DEV: true })).toBe(true);
+    expect(
+      shouldShowCurrentLine({
+        DEV: false,
+        VITE_APP_MODE: "production",
+        VITE_SHOW_DEVELOPER_TOOLS: "true",
+      })
+    ).toBe(false);
   });
 });

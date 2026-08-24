@@ -14,3 +14,7 @@ export function shouldShowDeveloperTools(env = import.meta.env) {
     env.VITE_SHOW_DEVELOPER_TOOLS === "true"
   );
 }
+
+export function shouldShowCurrentLine(env = import.meta.env) {
+  return getAppMode(env) === "development";
+}
