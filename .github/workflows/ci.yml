@@ -72,7 +72,7 @@ jobs:
           pip install -r requirements-dev.txt
 
       - name: Test Coach AI
-        run: pytest -q
+        run: python -m pytest -q
 
       - name: Compile Coach AI
         run: python -m compileall -q app
@@ -101,7 +101,7 @@ jobs:
           pip install -r requirements-dev.txt
 
       - name: Test Game Scraper
-        run: pytest -q
+        run: python -m pytest -q
 
       - name: Compile Game Scraper
         run: python -m compileall -q .
