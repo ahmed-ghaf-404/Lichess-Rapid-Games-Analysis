@@ -1,8 +1,8 @@
 {
-	alghaf.ahmd@gmail.com
+	email {$CADDY_EMAIL}
 }
 
-chess.chocodojo.tech {
+{$CHESS_DOMAIN:chess.example.com} {
 	encode zstd gzip
 
 	handle_path /api/* {

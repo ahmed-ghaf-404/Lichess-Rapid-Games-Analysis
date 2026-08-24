@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { Chess } from "chess.js";
 import "./styles/App.css";
 import Header from "./components/Header";
@@ -10,24 +10,76 @@ import RecommendationPanel from "./components/RecommendationPanel";
 import LoadingState from "./components/LoadingState";
 import ErrorState from "./components/ErrorState";
 import PreloadControls from "./components/PreloadControls";
+import RepertoirePanel from "./components/RepertoirePanel";
+import SiteFooter from "./components/SiteFooter";
+import SiteNavigation from "./components/SiteNavigation";
+import AboutPage from "./pages/AboutPage";
+import ContactPage from "./pages/ContactPage";
+import DevelopmentHistoryPage from "./pages/DevelopmentHistoryPage";
 import { useGames } from "./hooks/useGames";
 import { useOpeningExplorer } from "./hooks/useOpeningExplorer";
 import { useRecommendation } from "./hooks/useRecommendation";
 import { useRecommendationWarmup } from "./hooks/useRecommendationWarmup";
-import { buildRecommendationArrows } from "./utils/recommendationArrows";
+import { useRepertoire } from "./hooks/useRepertoire";
+import {
+  buildMoveArrows,
+  RECOMMENDATION_ARROW_COLOR,
+  REPERTOIRE_ARROW_COLOR,
+} from "./utils/recommendationArrows";
 import { getSideToMove } from "./utils/recommendationApi";
+import { inferOpeningName } from "./utils/repertoire";
+import {
+  DEFAULT_LICHESS_USERNAME,
+  getPlayerRating,
+} from "./utils/lichessUser";
+import {
+  getAppMode,
+  shouldShowCurrentLine,
+  shouldShowDeveloperTools,
+} from "./config/appMode";
+import { logger } from "./utils/logger";
+import { useLocalization } from "./i18n/useLocalization";
+
+
+function useStableCallback(callback) {
+  const callbackRef = useRef(callback);
+  useEffect(() => {
+    callbackRef.current = callback;
+  }, [callback]);
+  return useCallback((...args) => callbackRef.current(...args), []);
+}
 
 export default function App() {
-  const username = "EricRosen";
-  const rating = 2538;
+  const path = window.location.pathname.replace(/\/+$/, "") || "/";
+
+  if (path === "/about") return <AboutPage />;
+  if (path === "/contact") return <ContactPage />;
+  if (path === "/history") return <DevelopmentHistoryPage />;
+  return <ExplorerPage />;
+}
+
+
+function ExplorerPage() {
+  const { formatNumber, t } = useLocalization();
+  const [username, setUsername] = useState(DEFAULT_LICHESS_USERNAME);
 
   const [hoveredRecommendationMove, setHoveredRecommendationMove] = useState(null);
   const [analysisHistory, setAnalysisHistory] = useState([]);
   const [analysisIndex, setAnalysisIndex] = useState(-1);
+  const [recommendationsEnabled, setRecommendationsEnabled] = useState(
+    () => window.localStorage.getItem("ccc-recommendations-enabled") !== "false"
+  );
 
   const analysisFen = analysisIndex >= 0 ? analysisHistory[analysisIndex] : null;
 
   const { games, loading, error } = useGames(username);
+  const rating = useMemo(
+    () => getPlayerRating(games, username),
+    [games, username]
+  );
+  const appMode = getAppMode();
+  const showCurrentLine = shouldShowCurrentLine();
+  const showDeveloperTools = shouldShowDeveloperTools();
 
   const {
     currentNode,
@@ -48,6 +100,11 @@ export default function App() {
   const sideToMove = getSideToMove(displayFen);
   const isFollowingRecommendation = Boolean(analysisFen);
   const shouldShowRecommendation = Boolean(displayFen);
+  const openingName = useMemo(
+    () => inferOpeningName(games, line),
+    [games, line]
+  );
+  const repertoire = useRepertoire(username, displayFen);
 
 
   const warmup = useRecommendationWarmup({
@@ -57,7 +114,11 @@ export default function App() {
     analysisPosition: isFollowingRecommendation,
     userId: username,
     rating,
-    enabled: !loading && !error && Boolean(currentNode),
+    enabled:
+      recommendationsEnabled &&
+      !loading &&
+      !error &&
+      Boolean(currentNode),
   });
 
   const {
@@ -69,12 +130,44 @@ export default function App() {
     userId: username,
     rating,
     color: sideToMove,
-    enabled: Boolean(displayFen) && shouldShowRecommendation,
+    enabled:
+      !loading &&
+      !error &&
+      Boolean(currentNode) &&
+      Boolean(displayFen) &&
+      shouldShowRecommendation &&
+      recommendationsEnabled,
   });
 
-  const arrows = hoveredRecommendationMove
-      ? buildRecommendationArrows([hoveredRecommendationMove])
-      : buildRecommendationArrows(recommendation?.candidates ?? []);
+  const recommendationMoves = useMemo(() => {
+    if (!recommendationsEnabled) return [];
+    const savedMoveUcis = new Set(
+      repertoire.currentMoves.map((move) => move.move_uci)
+    );
+    return (recommendation?.candidates ?? []).filter(
+      (move) => !savedMoveUcis.has(move.move_uci)
+    );
+  }, [recommendation, recommendationsEnabled, repertoire.currentMoves]);
+  const arrows = useMemo(
+    () => hoveredRecommendationMove
+      ? buildMoveArrows(
+          [hoveredRecommendationMove],
+          hoveredRecommendationMove.visualSource === "repertoire"
+            ? REPERTOIRE_ARROW_COLOR
+            : RECOMMENDATION_ARROW_COLOR
+        )
+      : [
+          ...buildMoveArrows(repertoire.currentMoves, REPERTOIRE_ARROW_COLOR),
+          ...buildMoveArrows(recommendationMoves, RECOMMENDATION_ARROW_COLOR),
+        ],
+    [hoveredRecommendationMove, recommendationMoves, repertoire.currentMoves]
+  );
+
+  function updateRecommendationsEnabled(enabled) {
+    setRecommendationsEnabled(enabled);
+    window.localStorage.setItem("ccc-recommendations-enabled", String(enabled));
+    if (!enabled) setHoveredRecommendationMove(null);
+  }
 
   function clearAnalysisLine() {
     setAnalysisHistory([]);
@@ -82,18 +175,13 @@ export default function App() {
     setHoveredRecommendationMove(null);
   }
 
-  useEffect(() => {
-    clearAnalysisLine();
-  }, [boardFen]);
-
-  function pushAnalysisPosition(nextFen, preloadReason) {
+  function pushAnalysisPosition(nextFen) {
     setHoveredRecommendationMove(null);
     setAnalysisHistory((history) => [
       ...history.slice(0, analysisIndex + 1),
       nextFen,
     ]);
     setAnalysisIndex((index) => index + 1);
-    warmup.runBackgroundPreload([nextFen], preloadReason);
   }
 
   function playRecommendedMove(move) {
@@ -106,14 +194,11 @@ export default function App() {
     });
 
     if (!result) {
-      console.warn("Could not play recommended move:", move);
+      logger.warn("Could not play recommended move", { move });
       return;
     }
 
-    pushAnalysisPosition(
-      game.fen(),
-      "Played recommendation; refilling next branches"
-    );
+    pushAnalysisPosition(game.fen());
   }
 
   function handleBoardMove(sourceSquare, targetSquare) {
@@ -135,13 +220,12 @@ export default function App() {
       const matchingChild = children.find((child) => child.fen === nextFen);
 
       if (matchingChild) {
-        setHoveredRecommendationMove(null);
-        goToNode(matchingChild.id);
+        selectOpeningNode(matchingChild.id);
         return true;
       }
     }
 
-    pushAnalysisPosition(nextFen, "Dragged move on board; refilling next branches");
+    pushAnalysisPosition(nextFen);
     return true;
   }
 
@@ -157,6 +241,7 @@ export default function App() {
       return;
     }
 
+    clearAnalysisLine();
     goToParent();
   }
 
@@ -170,6 +255,7 @@ export default function App() {
       return;
     }
 
+    clearAnalysisLine();
     goToNext();
   }
 
@@ -178,31 +264,82 @@ export default function App() {
     goToStart();
   }
 
-  if (loading) return <LoadingState message="Loading games..." />;
-  if (error) return <ErrorState message={error} />;
-  if (!currentNode) return <ErrorState message="No opening tree available." />;
-  if (warmup.loading) {
-    return (
-      <LoadingState
-        message="Precomputing coach analysis..."
-        detail={`Buffered ${warmup.startup.completed} of about ${warmup.startup.total} positions. You can change the preload shape below.`}
-      >
-        <PreloadControls warmup={warmup} compact />
-      </LoadingState>
-    );
+  function selectUsername(nextUsername) {
+    clearAnalysisLine();
+    setUsername(nextUsername);
   }
+
+  function selectOpeningNode(nodeId) {
+    clearAnalysisLine();
+    goToNode(nodeId);
+  }
+
+  const stableBoardMove = useStableCallback(handleBoardMove);
+  const stablePlayMove = useStableCallback(playRecommendedMove);
+  const stableSelectOpeningNode = useStableCallback(selectOpeningNode);
+  const stableRecommendationToggle = useStableCallback(updateRecommendationsEnabled);
+  const hoverRecommendation = useStableCallback((move) =>
+    setHoveredRecommendationMove({ ...move, visualSource: "recommendation" })
+  );
+  const hoverRepertoire = useStableCallback((move) =>
+    setHoveredRecommendationMove({ ...move, visualSource: "repertoire" })
+  );
+  const clearHoveredMove = useStableCallback(() => setHoveredRecommendationMove(null));
 
   return (
     <main className="app-shell">
-      <Header username={username} gameCount={games.length} warmup={warmup} />
+      <SiteNavigation activePath="/" />
 
-      <div className="app-grid">
-        <section className="left-column">
+      <Header
+        username={username}
+        gameCount={games.length}
+        rating={rating}
+        loading={loading}
+        warmup={warmup}
+        appMode={appMode}
+        showDeveloperTools={showDeveloperTools}
+        onUsernameChange={selectUsername}
+      />
+
+      {loading ? (
+        <LoadingState message={t("app.loadingGames", { username })} />
+      ) : null}
+
+      {!loading && error ? (
+        <ErrorState
+          title={t("app.playerLoadError")}
+          message={error}
+          detail={t("app.playerLoadDetail")}
+        />
+      ) : null}
+
+      {!loading && !error && !currentNode ? (
+        <ErrorState
+          title={t("app.treeUnavailable")}
+          message={t("app.treeUnavailableMessage")}
+        />
+      ) : null}
+
+      {!loading && !error && currentNode && warmup.loading ? (
+        <LoadingState
+          message={t("app.preparing")}
+          detail={t("app.buffered", {
+            completed: formatNumber(warmup.startup.completed),
+            total: formatNumber(warmup.startup.total),
+          })}
+        >
+          {showDeveloperTools ? <PreloadControls warmup={warmup} compact /> : null}
+        </LoadingState>
+      ) : null}
+
+      {!loading && !error && currentNode && !warmup.loading ? (
+        <div className="app-grid">
+          <section className="left-column">
           <ChessBoardPanel
             fen={displayFen}
             arrows={arrows}
             sideToMove={sideToMove}
-            onMove={handleBoardMove}
+            onMove={stableBoardMove}
           />
 
           <MoveControls
@@ -217,32 +354,52 @@ export default function App() {
             onStart={goToStartPosition}
           />
 
-        </section>
+          </section>
 
-        <section className="right-column">
-          <CurrentLine line={line} fen={displayFen} />
+          <section className="right-column">
+            {showCurrentLine ? (
+              <CurrentLine line={line} fen={displayFen} showFen />
+            ) : null}
 
           <RecommendationPanel
             sideToMove={sideToMove}
             recommendation={recommendation}
+            recommendationsEnabled={recommendationsEnabled}
             loading={recommendationLoading}
             error={recommendationError}
-            onMoveHover={setHoveredRecommendationMove}
-            onMoveLeave={() => setHoveredRecommendationMove(null)}
-            onMoveSelect={playRecommendedMove}
+            onRecommendationsEnabledChange={stableRecommendationToggle}
+            onMoveHover={hoverRecommendation}
+            onMoveLeave={clearHoveredMove}
+            onMoveSelect={stablePlayMove}
           />
+
+          {repertoire.enabled ? (
+            <RepertoirePanel
+              username={username}
+              games={games}
+              openingName={openingName}
+              recommendation={recommendation}
+              repertoire={repertoire}
+              onMoveHover={hoverRepertoire}
+              onMoveLeave={clearHoveredMove}
+              onMoveSelect={stablePlayMove}
+            />
+          ) : null}
 
           {!isFollowingRecommendation && children.length > 0 && (
             <VariationList
               childrenNodes={children}
               sideToMove={sideToMove}
-              onSelect={goToNode}
+              onSelect={stableSelectOpeningNode}
             />
           )}
 
-          <PreloadControls warmup={warmup} />
-        </section>
-      </div>
+          {showDeveloperTools ? <PreloadControls warmup={warmup} /> : null}
+          </section>
+        </div>
+      ) : null}
+
+      <SiteFooter />
     </main>
   );
 }

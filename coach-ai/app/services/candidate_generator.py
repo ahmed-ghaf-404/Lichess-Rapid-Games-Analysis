@@ -1,7 +1,11 @@
 import chess
+import logging
 
 from app.services.peer_stats_service import PeerStatsService
 from app.services.stockfish_service import StockfishService
+
+
+logger = logging.getLogger(__name__)
 
 
 class CandidateGenerator:
@@ -17,6 +21,12 @@ class CandidateGenerator:
     ) -> dict:
         board = chess.Board(fen)
         side = "white" if board.turn == chess.WHITE else "black"
+        logger.debug(
+            "candidates.generation_started side=%s rating=%s max_candidates=%d",
+            side,
+            rating,
+            max_candidates,
+        )
 
         legal_moves = {move.uci(): move for move in board.legal_moves}
 
@@ -78,10 +88,17 @@ class CandidateGenerator:
             reverse=True,
         )
 
-        return {
+        result = {
             "fen": fen,
             "side_to_move": side,
             "rating_bucket": peer_data["rating_bucket"],
             "sample_size": peer_data["total_games"],
             "candidates": candidate_list[:max_candidates],
         }
+        logger.debug(
+            "candidates.generation_completed peer_moves=%d engine_moves=%d candidates=%d",
+            len(peer_data["moves"]),
+            len(engine_moves),
+            len(result["candidates"]),
+        )
+        return result

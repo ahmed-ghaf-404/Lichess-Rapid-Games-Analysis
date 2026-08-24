@@ -1,58 +1,93 @@
-from fastapi import APIRouter
+import re
+import logging
+
+from fastapi import APIRouter, HTTPException, Query, status
+
 from db import games_collection
 
+
 router = APIRouter(prefix="/games", tags=["games"])
+LICHESS_USERNAME_PATTERN = re.compile(r"^[a-zA-Z0-9_-]{2,30}$")
+logger = logging.getLogger(__name__)
 
 
-def clean_game(game):
-    game["_id"] = str(game["_id"])  # important
-    return game
+def normalize_username(username: str) -> str:
+    normalized = username.strip().lower()
+
+    if not LICHESS_USERNAME_PATTERN.fullmatch(normalized):
+        logger.warning("games.invalid_username username=%r", username)
+        raise HTTPException(
+            status_code=status.HTTP_422_UNPROCESSABLE_CONTENT,
+            detail="Use 2–30 letters, numbers, underscores, or hyphens.",
+        )
+
+    return normalized
+
+
+def clean_game(game: dict) -> dict:
+    cleaned = dict(game)
+    cleaned["_id"] = str(cleaned["_id"])
+    return cleaned
+
+
+async def collect_games(cursor) -> list[dict]:
+    return [clean_game(game) async for game in cursor]
 
 
 @router.get("/")
-async def get_games(limit: int = 50):
+async def get_games(limit: int = Query(default=50, ge=1, le=200)):
+    logger.debug("games.list_started limit=%d", limit)
     cursor = games_collection.find().limit(limit)
-
-    games = []
-    async for game in cursor:
-        games.append(clean_game(game))
-
-    return games
-
-@router.get("/user/{username}")
-async def get_games_by_user(username: str, limit: int = 50):
-    cursor = games_collection.find({
-        "$or": [
-            {"players.white.user.id": username},
-            {"players.black.user.id": username}
-        ]
-    }).limit(limit)
-
-    games = []
-    async for game in cursor:
-        games.append(clean_game(game))
-
+    games = await collect_games(cursor)
+    logger.info("games.list_completed count=%d limit=%d", len(games), limit)
     return games
 
 
 @router.get("/user/{username}")
-async def get_games_by_user(username: str, limit: int = 50):
-    cursor = games_collection.find({
-        "$or": [
-            {"players.white.user.id": username},
-            {"players.black.user.id": username}
-        ]
-    }).limit(limit)
+async def get_games_by_user(
+    username: str,
+    limit: int = Query(default=50, ge=1, le=200),
+):
+    normalized_username = normalize_username(username)
+    logger.debug("games.user_lookup_started username=%s limit=%d", normalized_username, limit)
+    exact_username = {
+        "$regex": f"^{re.escape(normalized_username)}$",
+        "$options": "i",
+    }
+    cursor = games_collection.find(
+        {
+            "$or": [
+                {"players.white.user.id": exact_username},
+                {"players.black.user.id": exact_username},
+            ]
+        }
+    ).sort("createdAt", -1).limit(limit)
 
-    games = []
-    async for game in cursor:
-        games.append(clean_game(game))
+    games = await collect_games(cursor)
 
+    if not games:
+        logger.warning("games.user_not_found username=%s", normalized_username)
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail=f"No imported rapid games were found for @{normalized_username}.",
+        )
+
+    logger.info("games.user_lookup_completed username=%s count=%d", normalized_username, len(games))
     return games
 
 
-@router.post("/ingest")
+@router.post("/ingest", status_code=status.HTTP_202_ACCEPTED)
 async def ingest_games():
     from ingest import ingest
-    await ingest() if callable(ingest) else ingest()
+
+    logger.info("games.ingest_started")
+    try:
+        result = ingest()
+        if hasattr(result, "__await__"):
+            await result
+    except Exception:
+        logger.exception("games.ingest_failed")
+        raise
+
+    logger.info("games.ingest_completed")
     return {"status": "ingested"}

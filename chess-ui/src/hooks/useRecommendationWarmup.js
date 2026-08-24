@@ -4,6 +4,7 @@ import {
   fenAfterUciMove,
   getSideToMove,
 } from "../utils/recommendationApi";
+import { logger } from "../utils/logger";
 
 const envNumber = (name, fallback) => {
   const value = Number(import.meta.env[name]);
@@ -18,13 +19,13 @@ const clampNumber = (value, min, max, fallback) => {
 
 export const DEFAULT_PRELOAD_SETTINGS = {
   startupEnabled: import.meta.env.VITE_WARMUP_ENABLED !== "false",
-  blockStartup: import.meta.env.VITE_WARMUP_BLOCKING !== "false",
-  maxLeafPositions: envNumber("VITE_WARMUP_MAX_POSITIONS", 12),
-  startupDepth: envNumber("VITE_WARMUP_DEPTH", 2),
+  blockStartup: import.meta.env.VITE_WARMUP_BLOCKING === "true",
+  maxLeafPositions: envNumber("VITE_WARMUP_MAX_POSITIONS", 18),
+  startupDepth: envNumber("VITE_WARMUP_DEPTH", 1),
   startupBranching: envNumber("VITE_WARMUP_BRANCHING", 2),
   nearLeafThreshold: envNumber("VITE_NEAR_LEAF_THRESHOLD", 1),
   backgroundDepth: envNumber("VITE_BACKGROUND_WARMUP_DEPTH", 2),
-  backgroundBranching: envNumber("VITE_BACKGROUND_WARMUP_BRANCHING", 3),
+  backgroundBranching: envNumber("VITE_BACKGROUND_WARMUP_BRANCHING", 2),
   maxCandidates: envNumber("VITE_RECOMMENDATION_MAX_CANDIDATES", 6),
 };
 
@@ -70,14 +71,15 @@ function getChildren(tree, nodeId) {
     .sort((a, b) => b.visitCount - a.visitCount);
 }
 
-function collectLeafFens(tree, maxPositions) {
+function collectPriorityFens(tree, maxPositions) {
   if (!tree?.nodesById) return [];
 
-  return Object.values(tree.nodesById)
-    .filter((node) => node?.fen && node.childIds.length === 0)
+  const root = tree.nodesById[tree.rootId];
+  const popular = Object.values(tree.nodesById)
+    .filter((node) => node?.fen && node.id !== tree.rootId)
     .sort((a, b) => b.visitCount - a.visitCount)
-    .slice(0, maxPositions)
     .map((node) => node.fen);
+  return uniqueFens([root?.fen, ...popular]).slice(0, maxPositions);
 }
 
 function getNearestLeafDistance(tree, nodeId, maxDepth = 10) {
@@ -163,7 +165,7 @@ async function preloadRecommendationTree({
     const item = queue.shift();
     if (!item?.fen) continue;
 
-    const seenKey = `${item.fen}|d:${item.depth}|b:${branching}|m:${maxCandidates}`;
+    const seenKey = `${userId}|${item.fen}|d:${item.depth}|b:${branching}|m:${maxCandidates}`;
     if (seen?.has(seenKey)) continue;
     seen?.add(seenKey);
 
@@ -235,7 +237,7 @@ export function useRecommendationWarmup({
   });
 
   const seedFens = useMemo(
-    () => collectLeafFens(tree, settings.maxLeafPositions),
+    () => collectPriorityFens(tree, settings.maxLeafPositions),
     [tree, settings.maxLeafPositions]
   );
 
@@ -287,6 +289,10 @@ export function useRecommendationWarmup({
 
       backgroundRunningRef.current = true;
       const controller = new AbortController();
+      logger.info("Background recommendation warmup started", {
+        reason,
+        seedCount: seeds.length,
+      });
 
       try {
         setBackground({
@@ -303,6 +309,7 @@ export function useRecommendationWarmup({
           error: "",
         });
 
+        let lastProgressUpdate = 0;
         const completed = await preloadRecommendationTree({
           seedFens: seeds,
           depth: settings.backgroundDepth,
@@ -313,7 +320,11 @@ export function useRecommendationWarmup({
           signal: controller.signal,
           seen: backgroundSeenRef.current,
           onProgress: (progress) => {
-            setBackground((current) => ({ ...current, ...progress, loading: true }));
+            const now = Date.now();
+            if (now - lastProgressUpdate >= 250) {
+              lastProgressUpdate = now;
+              setBackground((current) => ({ ...current, ...progress, loading: true }));
+            }
           },
         });
 
@@ -325,8 +336,10 @@ export function useRecommendationWarmup({
           queued: 0,
           currentFen: "",
         }));
+        logger.info("Background recommendation warmup completed", { reason, completed });
       } catch (err) {
         if (err.name !== "AbortError") {
+          logger.warn("Background recommendation warmup failed", err);
           setBackground((current) => ({
             ...current,
             loading: false,
@@ -366,7 +379,9 @@ export function useRecommendationWarmup({
     });
 
     async function run() {
+      logger.info("Startup recommendation warmup started", { seedCount: seedFens.length });
       try {
+        let lastProgressUpdate = 0;
         const completed = await preloadRecommendationTree({
           seedFens,
           depth: settings.startupDepth,
@@ -377,7 +392,11 @@ export function useRecommendationWarmup({
           signal: controller.signal,
           seen: startupSeenRef.current,
           onProgress: (progress) => {
-            setStartup((current) => ({ ...current, ...progress, loading: true }));
+            const now = Date.now();
+            if (now - lastProgressUpdate >= 250) {
+              lastProgressUpdate = now;
+              setStartup((current) => ({ ...current, ...progress, loading: true }));
+            }
           },
         });
 
@@ -391,9 +410,11 @@ export function useRecommendationWarmup({
             queued: 0,
             currentFen: "",
           }));
+          logger.info("Startup recommendation warmup completed", { completed });
         }
       } catch (err) {
         if (!controller.signal.aborted) {
+          logger.warn("Startup recommendation warmup failed", err);
           setStartup((current) => ({
             ...current,
             loading: false,
@@ -423,22 +444,26 @@ export function useRecommendationWarmup({
   useEffect(() => {
     if (!enabled || startup.loading || !displayFen) return;
 
-    if (analysisPosition) {
-      runBackgroundPreload([displayFen], "Following recommendation line");
-      return;
-    }
+    const timer = window.setTimeout(() => {
+      if (analysisPosition) {
+        runBackgroundPreload([displayFen], "Following recommendation line");
+        return;
+      }
 
-    if (nearLeafFens.length) {
-      runBackgroundPreload(
-        nearLeafFens,
-        `Near opening-tree leaf: ${nearestLeafDistance} move${nearestLeafDistance === 1 ? "" : "s"} away`
-      );
-      return;
-    }
+      if (nearLeafFens.length) {
+        runBackgroundPreload(
+          nearLeafFens,
+          `Near opening-tree leaf: ${nearestLeafDistance} move${nearestLeafDistance === 1 ? "" : "s"} away`
+        );
+        return;
+      }
 
-    if (nearestLeafDistance === 0) {
-      runBackgroundPreload([displayFen], "At opening-tree leaf");
-    }
+      if (nearestLeafDistance === 0) {
+        runBackgroundPreload([displayFen], "At opening-tree leaf");
+      }
+    }, 400);
+
+    return () => window.clearTimeout(timer);
   }, [
     enabled,
     startup.loading,
@@ -448,6 +473,12 @@ export function useRecommendationWarmup({
     nearestLeafDistance,
     runBackgroundPreload,
   ]);
+
+  const runManualBackgroundPreload = useCallback(
+    (fens = [displayFen], reason = "Manual background preload") =>
+      runBackgroundPreload(fens, reason),
+    [displayFen, runBackgroundPreload]
+  );
 
   return {
     loading: startup.loading && settings.blockStartup,
@@ -473,7 +504,6 @@ export function useRecommendationWarmup({
       settings.backgroundDepth,
       settings.backgroundBranching
     ),
-    runBackgroundPreload: (fens = [displayFen], reason = "Manual background preload") =>
-      runBackgroundPreload(fens, reason),
+    runBackgroundPreload: runManualBackgroundPreload,
   };
 }

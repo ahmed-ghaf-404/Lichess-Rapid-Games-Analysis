@@ -1,4 +1,5 @@
 import { Chess } from "chess.js";
+import { logger } from "./logger";
 import { createNode } from "./createNode";
 
 export function buildTree(games) {
@@ -27,7 +28,7 @@ export function buildTree(games) {
       const move = chess.move(san);
 
       if (!move) {
-        console.warn("Invalid move:", san, "in game:", game);
+        logger.warn("Invalid move while building opening tree", { san, gameId: game.id });
         break;
       }
 

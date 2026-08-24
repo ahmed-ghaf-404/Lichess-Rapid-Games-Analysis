@@ -65,6 +65,18 @@ dmypy.json
 .env
 .env.*
 !.env.example
+!.env.*.example
+.envrc
+.direnv/
+
+# Credentials and certificates
+*.pem
+*.key
+*.p12
+*.pfx
+*.crt
+*.cer
+secrets/
 
 # =========================
 # Database / local files
@@ -100,6 +112,9 @@ pnpm-debug.log*
 dist/
 build/
 coverage/
+.nyc_output/
+test-results/
+playwright-report/
 
 # React env files
 .env.local
@@ -131,3 +146,4 @@ verify_*.txt
 *.bak
 *.tmp
 *.temp
+*.orig

@@ -7,10 +7,12 @@ services:
 
     build:
       context: ./chess-ui
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile.prod
       args:
         VITE_COACH_AI_URL: /api
         VITE_GAMES_API_URL: /games
+        VITE_APP_MODE: production
+        VITE_LOG_LEVEL: ${VITE_LOG_LEVEL:-warn}
 
     expose:
       - "80"
@@ -32,10 +34,13 @@ services:
 
     build:
       context: ./coach-ai
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile.prod
 
     env_file:
       - ./coach-ai/.env
+
+    environment:
+      LOG_LEVEL: ${COACH_LOG_LEVEL:-INFO}
 
     expose:
       - "8001"
@@ -62,10 +67,13 @@ services:
 
     build:
       context: ./game-scraper
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile.prod
 
     env_file:
       - ./game-scraper/.env
+
+    environment:
+      LOG_LEVEL: ${GAMES_LOG_LEVEL:-INFO}
 
     expose:
       - "8000"
@@ -93,6 +101,10 @@ services:
       - "yes"
       - --appendfsync
       - everysec
+      - --maxmemory
+      - ${REDIS_MAX_MEMORY:-256mb}
+      - --maxmemory-policy
+      - allkeys-lru
 
     volumes:
       - redis_data:/data

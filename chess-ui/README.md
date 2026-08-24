@@ -1,12 +1,37 @@
-# Chess Coach UI
+# Choco Chess Coach (CCC) UI
 
 React/Vite UI for exploring the user opening tree and requesting coach recommendations.
 
 ## Development
 
 ```bash
-npm install
+cp .env.example .env
+npm ci
 npm run dev
+```
+
+The development view includes the Current Line panel, raw position data, and
+cache controls. Production builds hide those diagnostics while keeping the
+player picker, board, recommendations, and popular continuations.
+
+The UI is localized in 🇺🇸 English, 🇴🇲 Omani Arabic (RTL), and 🇯🇵 Japanese.
+Noto web fonts are installed by `npm ci` and bundled into the Vite output, so no
+system fonts need to be installed on developer machines, servers, or runtime
+containers.
+
+In development, Vite also returns an empty valid source map for the exact
+`installHook.js.map` filename injected by React Developer Tools. This prevents
+Firefox from parsing the SPA HTML fallback as JSON while leaving CCC's real
+source maps and the production build unchanged.
+
+Developed by **Ahmed H. K. Al Ghafri (ChocoRoku)**.
+
+## Quality checks
+
+```bash
+npm run test
+npm run lint
+VITE_APP_MODE=production npm run build
 ```
 
 ## Recommendation warmup / Redis buffer
@@ -18,9 +43,10 @@ Create `.env` from `.env.example`:
 ```env
 VITE_GAMES_API_URL=http://localhost:8000
 VITE_COACH_AI_URL=http://localhost:8001
+VITE_APP_MODE=development
 
 VITE_WARMUP_ENABLED=true
-VITE_WARMUP_BLOCKING=true
+VITE_WARMUP_BLOCKING=false
 VITE_WARMUP_MAX_POSITIONS=12
 VITE_WARMUP_DEPTH=2
 VITE_WARMUP_BRANCHING=2

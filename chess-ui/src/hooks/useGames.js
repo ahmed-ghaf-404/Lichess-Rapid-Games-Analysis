@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { loadGames } from "../utils/loadGames";
+import { logger } from "../utils/logger";
 
 export function useGames(username) {
   const [games, setGames] = useState([]);
@@ -15,6 +16,7 @@ export function useGames(username) {
       try {
         setLoading(true);
         setError("");
+        setGames([]);
 
         const data = await loadGames(username);
 
@@ -23,6 +25,7 @@ export function useGames(username) {
         }
       } catch (err) {
         if (!cancelled) {
+          logger.error("Loading player games failed", { username, error: err.message });
           setError(err.message || "Failed to load games.");
         }
       } finally {
