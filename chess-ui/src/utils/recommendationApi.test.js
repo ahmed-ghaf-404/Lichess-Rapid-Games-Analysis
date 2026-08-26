@@ -46,6 +46,24 @@ describe("recommendation request cache", () => {
     expect(equivalent).toBe(first);
   });
 
+  it("keeps master and peer recommendations in separate cache entries", () => {
+    const peer = getRecommendationCacheKey({
+      fen: START_FEN,
+      userId: "new-player",
+      rating: 1500,
+      color: "white",
+    });
+    const masters = getRecommendationCacheKey({
+      fen: START_FEN,
+      userId: "new-player",
+      rating: 1500,
+      color: "white",
+      useMasterGames: true,
+    });
+
+    expect(masters).not.toBe(peer);
+  });
+
   it("joins concurrent requests for the same position", async () => {
     let resolveFetch;
     const responsePromise = new Promise((resolve) => {

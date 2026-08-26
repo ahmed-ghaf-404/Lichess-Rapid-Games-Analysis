@@ -27,6 +27,8 @@ class HeuristicRanker:
         peer_frequency = candidate.get("peer_frequency", 0.0)
         peer_win_rate = candidate.get("peer_win_rate", 0.0)
         peer_games = candidate.get("peer_games", 0)
+        statistics_source = candidate.get("statistics_source", "peer")
+        uses_masters = statistics_source == "masters"
 
         engine_quality = self.normalize_engine(
             candidate.get("engine_eval_cp"),
@@ -50,21 +52,21 @@ class HeuristicRanker:
         reasons = []
 
         if peer_games >= 50:
-            reasons.append("large peer sample")
+            reasons.append("large master sample" if uses_masters else "large peer sample")
         elif peer_games >= 15:
-            reasons.append("reasonable peer sample")
+            reasons.append("reasonable master sample" if uses_masters else "reasonable peer sample")
         elif peer_games > 0:
-            reasons.append("small peer sample")
+            reasons.append("small master sample" if uses_masters else "small peer sample")
 
         if peer_frequency >= 0.25 and peer_games >= 10:
-            reasons.append("common at your rating")
+            reasons.append("common in master games" if uses_masters else "common at your rating")
         elif peer_frequency >= 0.10 and peer_games >= 10:
-            reasons.append("played often in this pool")
+            reasons.append("played often by masters" if uses_masters else "played often in this pool")
 
         if smoothed_win_rate >= 0.55 and peer_games >= 10:
-            reasons.append("strong peer win rate")
+            reasons.append("strong master results" if uses_masters else "strong peer win rate")
         elif smoothed_win_rate >= 0.50 and peer_games >= 10:
-            reasons.append("solid practical results")
+            reasons.append("solid master results" if uses_masters else "solid practical results")
 
         if candidate.get("engine_rank") == 1:
             reasons.append("top engine move")

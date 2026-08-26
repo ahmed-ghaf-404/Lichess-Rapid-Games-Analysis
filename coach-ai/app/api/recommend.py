@@ -21,25 +21,29 @@ logger = logging.getLogger(__name__)
 
 
 def recommendation_cache_key(payload: RecommendRequest, normalized_position: str) -> str:
+    statistics_bucket = "masters" if payload.use_master_games else get_rating_bucket(payload.rating)
     return make_cache_key(
         "recommend-position",
         settings.recommender_version,
         normalized_position,
         payload.user_id.strip().lower(),
-        get_rating_bucket(payload.rating),
+        statistics_bucket,
         payload.max_candidates,
         settings.engine_depth,
+        "masters" if payload.use_master_games else "peer",
     )
 
 
 def base_analysis_cache_key(payload: RecommendRequest, normalized_position: str) -> str:
+    statistics_bucket = "masters" if payload.use_master_games else get_rating_bucket(payload.rating)
     return make_cache_key(
         "recommend-base",
         settings.recommender_version,
         normalized_position,
-        get_rating_bucket(payload.rating),
+        statistics_bucket,
         payload.max_candidates,
         settings.engine_depth,
+        "masters" if payload.use_master_games else "peer",
     )
 
 
@@ -61,8 +65,12 @@ async def load_base_analysis(
             fen=analysis_fen,
             rating=payload.rating,
             max_candidates=payload.max_candidates,
+            use_master_games=payload.use_master_games,
         )
-        if payload.use_cache or payload.refresh_cache:
+        if (payload.use_cache or payload.refresh_cache) and generated.get(
+            "statistics_available",
+            True,
+        ):
             await set_json(cache_key, generated, settings.cache_ttl_seconds)
         return generated
 
@@ -122,7 +130,7 @@ async def recommend_position(payload: RecommendRequest) -> RecommendResponse:
                     "model": settings.recommender_version,
                     "rating_bucket": generated["rating_bucket"],
                     "side_to_move": generated["side_to_move"],
-                    "source": "peer+engine",
+                    "source": f'{generated["statistics_source"]}+engine',
                     "cache": "miss",
                 },
             )
@@ -144,12 +152,15 @@ async def recommend_position(payload: RecommendRequest) -> RecommendResponse:
                     "model": settings.recommender_version,
                     "rating_bucket": generated["rating_bucket"],
                     "side_to_move": generated["side_to_move"],
-                    "source": "peer+engine",
+                    "source": f'{generated["statistics_source"]}+engine',
                     "cache": "miss",
                 },
             )
 
-        if payload.use_cache or payload.refresh_cache:
+        if (payload.use_cache or payload.refresh_cache) and generated.get(
+            "statistics_available",
+            True,
+        ):
             await set_json(
                 cache_key,
                 response.model_dump(),

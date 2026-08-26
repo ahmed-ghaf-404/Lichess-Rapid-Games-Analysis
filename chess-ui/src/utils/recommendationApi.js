@@ -27,13 +27,21 @@ export function getRatingBucket(rating) {
   return "2200+";
 }
 
-export function getRecommendationCacheKey({ fen, userId, rating, color, maxCandidates = 6 }) {
+export function getRecommendationCacheKey({
+  fen,
+  userId,
+  rating,
+  color,
+  maxCandidates = 6,
+  useMasterGames = false,
+}) {
   return JSON.stringify({
     position: getPositionCacheKey(fen),
     userId: String(userId || "").toLowerCase(),
     ratingBucket: getRatingBucket(rating),
     color,
     maxCandidates,
+    statisticsSource: useMasterGames ? "masters" : "peer",
   });
 }
 
@@ -76,13 +84,14 @@ export async function fetchRecommendation({
   rating,
   color = getSideToMove(fen),
   maxCandidates = 6,
+  useMasterGames = false,
   signal,
 }) {
   if (!fen || !userId) {
     throw new Error("Missing FEN or user id for recommendation request.");
   }
 
-  const params = { fen, userId, rating, color, maxCandidates };
+  const params = { fen, userId, rating, color, maxCandidates, useMasterGames };
   const cached = getCachedRecommendation(params);
   if (cached) {
     logger.debug("Recommendation cache hit", { userId, rating, color });
@@ -103,6 +112,7 @@ export async function fetchRecommendation({
     rating,
     color,
     maxCandidates,
+    useMasterGames,
   });
   const request = (async () => {
     let res;
@@ -119,6 +129,7 @@ export async function fetchRecommendation({
           rating,
           color,
           max_candidates: maxCandidates,
+          use_master_games: useMasterGames,
         }),
       });
     } catch (error) {

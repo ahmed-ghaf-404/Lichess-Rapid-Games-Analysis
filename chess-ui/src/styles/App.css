@@ -364,6 +364,11 @@
   border-color: var(--border-strong);
 }
 
+.board-direction-lock {
+  direction: ltr;
+  unicode-bidi: isolate;
+}
+
 .panel-heading {
   justify-content: space-between;
   gap: 16px;

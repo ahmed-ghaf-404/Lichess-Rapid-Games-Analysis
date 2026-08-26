@@ -41,24 +41,22 @@ describe("loadGames", () => {
     expect(firstResult).toBe(secondResult);
   });
 
-  it("surfaces a useful not-found response", async () => {
+  it("falls back cleanly when a player has no imported games", async () => {
     vi.stubGlobal("fetch", vi.fn().mockResolvedValue({
       ok: false,
       status: 404,
       json: async () => ({ detail: "No imported rapid games were found." }),
     }));
 
-    await expect(loadGames("missing-user")).rejects.toThrow(
-      "No imported rapid games were found."
-    );
+    await expect(loadGames("missing-user")).resolves.toEqual([]);
   });
 
-  it("rejects an empty successful response", async () => {
+  it("accepts an empty successful response for the masters fallback", async () => {
     vi.stubGlobal("fetch", vi.fn().mockResolvedValue({
       ok: true,
       json: async () => [],
     }));
 
-    await expect(loadGames("missing-user")).rejects.toThrow(/no imported rapid games/i);
+    await expect(loadGames("missing-user")).resolves.toEqual([]);
   });
 });

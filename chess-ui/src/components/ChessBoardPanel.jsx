@@ -39,7 +39,9 @@ function ChessBoardPanel({
 
   return (
     <section className="panel board-panel" aria-label={t("board.label")}>
-      <Chessboard options={options} />
+      <div className="board-direction-lock" dir="ltr">
+        <Chessboard options={options} />
+      </div>
     </section>
   );
 }
