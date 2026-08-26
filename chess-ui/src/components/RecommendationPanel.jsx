@@ -28,10 +28,8 @@ function RecommendationPanel({
   sideToMove,
   recommendation,
   recommendationsEnabled = true,
-  recommendationsEnabled = true,
   loading,
   error,
-  onRecommendationsEnabledChange,
   onRecommendationsEnabledChange,
   onMoveHover,
   onMoveLeave,
@@ -68,42 +66,8 @@ function RecommendationPanel({
     );
   }
 
-  const { formatNumber, metadata, t } = useLocalization();
-  const title = t(sideToMove === "white" ? "recommendation.turnWhite" : "recommendation.turnBlack");
-  const heading = (showBadge = false) => (
-    <div className="panel-heading">
-      <div>
-        <span className="panel-kicker">{t("recommendation.kicker")}</span>
-        <h2>{title}</h2>
-      </div>
-      <div className="recommendation-heading-actions">
-        {showBadge ? <span className="coach-badge">{t("recommendation.bestPractical")}</span> : null}
-        <label className="recommendation-toggle">
-          <input
-            type="checkbox"
-            checked={recommendationsEnabled}
-            onChange={(event) => onRecommendationsEnabledChange?.(event.target.checked)}
-          />
-          {t("recommendation.compute")}
-        </label>
-      </div>
-    </div>
-  );
-
-  if (!recommendationsEnabled) {
-    return (
-      <section className="panel recommendation-panel recommendation-disabled">
-        {heading()}
-        <p className="empty-copy">{t("recommendation.paused")}</p>
-      </section>
-    );
-  }
-
   if (loading) {
     return (
-      <section className="panel recommendation-panel" aria-busy="true">
-        {heading()}
-        <div className="recommendation-skeleton" aria-label={t("recommendation.loading")} />
       <section className="panel recommendation-panel" aria-busy="true">
         {heading()}
         <div className="recommendation-skeleton" aria-label={t("recommendation.loading")} />
@@ -115,8 +79,6 @@ function RecommendationPanel({
     return (
       <section className="panel recommendation-panel">
         {heading()}
-      <section className="panel recommendation-panel">
-        {heading()}
         <p className="error">{error}</p>
       </section>
     );
@@ -124,9 +86,6 @@ function RecommendationPanel({
 
   if (!recommendation || !recommendation.candidates?.length) {
     return (
-      <section className="panel recommendation-panel">
-        {heading()}
-        <p className="empty-copy">{t("recommendation.none")}</p>
       <section className="panel recommendation-panel">
         {heading()}
         <p className="empty-copy">{t("recommendation.none")}</p>
@@ -140,19 +99,13 @@ function RecommendationPanel({
   return (
     <section className="panel recommendation-panel">
       {heading(true)}
-    <section className="panel recommendation-panel">
-      {heading(true)}
 
-      <button
-        type="button"
-        className="recommendation-hero"
       <button
         type="button"
         className="recommendation-hero"
         onMouseEnter={() => onMoveHover?.(top)}
         onMouseLeave={onMoveLeave}
         onClick={() => onMoveSelect?.(top)}
-        title={t("recommendation.click")}
         title={t("recommendation.click")}
       >
         <span className="recommendation-label">{t("recommendation.move")}</span>
@@ -173,20 +126,15 @@ function RecommendationPanel({
 
         {top.reasons?.length ? (
           <ul className="reason-list">
-          <ul className="reason-list">
             {top.reasons.map((reason) => (
-              <li key={reason}>{REASON_KEYS[reason] ? t(REASON_KEYS[reason]) : reason}</li>
               <li key={reason}>{REASON_KEYS[reason] ? t(REASON_KEYS[reason]) : reason}</li>
             ))}
           </ul>
         ) : (
           <p className="empty-copy">{t("recommendation.noExplanation")}</p>
-          <p className="empty-copy">{t("recommendation.noExplanation")}</p>
         )}
       </div>
 
-      {rest.length ? <div>
-        <span className="section-label candidate-heading">{t("recommendation.other")}</span>
       {rest.length ? <div>
         <span className="section-label candidate-heading">{t("recommendation.other")}</span>
 
@@ -224,12 +172,8 @@ function RecommendationPanel({
           })}
         </div>
       </div> : null}
-      </div> : null}
     </section>
   );
 }
-
-export default memo(RecommendationPanel);
-
 
 export default memo(RecommendationPanel);

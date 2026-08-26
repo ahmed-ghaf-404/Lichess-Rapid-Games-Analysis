@@ -16,12 +16,6 @@ import SiteNavigation from "./components/SiteNavigation";
 import AboutPage from "./pages/AboutPage";
 import ContactPage from "./pages/ContactPage";
 import DevelopmentHistoryPage from "./pages/DevelopmentHistoryPage";
-import RepertoirePanel from "./components/RepertoirePanel";
-import SiteFooter from "./components/SiteFooter";
-import SiteNavigation from "./components/SiteNavigation";
-import AboutPage from "./pages/AboutPage";
-import ContactPage from "./pages/ContactPage";
-import DevelopmentHistoryPage from "./pages/DevelopmentHistoryPage";
 import { useGames } from "./hooks/useGames";
 import { useOpeningExplorer } from "./hooks/useOpeningExplorer";
 import { useRecommendation } from "./hooks/useRecommendation";
@@ -32,34 +26,7 @@ import {
   RECOMMENDATION_ARROW_COLOR,
   REPERTOIRE_ARROW_COLOR,
 } from "./utils/recommendationArrows";
-import { useRepertoire } from "./hooks/useRepertoire";
-import {
-  buildMoveArrows,
-  RECOMMENDATION_ARROW_COLOR,
-  REPERTOIRE_ARROW_COLOR,
-} from "./utils/recommendationArrows";
 import { getSideToMove } from "./utils/recommendationApi";
-import { inferOpeningName } from "./utils/repertoire";
-import {
-  DEFAULT_LICHESS_USERNAME,
-  getPlayerRating,
-} from "./utils/lichessUser";
-import {
-  getAppMode,
-  shouldShowCurrentLine,
-  shouldShowDeveloperTools,
-} from "./config/appMode";
-import { logger } from "./utils/logger";
-import { useLocalization } from "./i18n/useLocalization";
-
-
-function useStableCallback(callback) {
-  const callbackRef = useRef(callback);
-  useEffect(() => {
-    callbackRef.current = callback;
-  }, [callback]);
-  return useCallback((...args) => callbackRef.current(...args), []);
-}
 import { inferOpeningName } from "./utils/repertoire";
 import {
   DEFAULT_LICHESS_USERNAME,
@@ -95,25 +62,10 @@ export default function App() {
 function ExplorerPage() {
   const { formatNumber, t } = useLocalization();
   const [username, setUsername] = useState(DEFAULT_LICHESS_USERNAME);
-  const path = window.location.pathname.replace(/\/+$/, "") || "/";
-
-  if (path === "/about") return <AboutPage />;
-  if (path === "/contact") return <ContactPage />;
-  if (path === "/history") return <DevelopmentHistoryPage />;
-  return <ExplorerPage />;
-}
-
-
-function ExplorerPage() {
-  const { formatNumber, t } = useLocalization();
-  const [username, setUsername] = useState(DEFAULT_LICHESS_USERNAME);
 
   const [hoveredRecommendationMove, setHoveredRecommendationMove] = useState(null);
   const [analysisHistory, setAnalysisHistory] = useState([]);
   const [analysisIndex, setAnalysisIndex] = useState(-1);
-  const [recommendationsEnabled, setRecommendationsEnabled] = useState(
-    () => window.localStorage.getItem("ccc-recommendations-enabled") !== "false"
-  );
   const [recommendationsEnabled, setRecommendationsEnabled] = useState(
     () => window.localStorage.getItem("ccc-recommendations-enabled") !== "false"
   );
@@ -149,11 +101,6 @@ function ExplorerPage() {
   const sideToMove = getSideToMove(displayFen);
   const isFollowingRecommendation = Boolean(analysisFen);
   const shouldShowRecommendation = Boolean(displayFen);
-  const openingName = useMemo(
-    () => inferOpeningName(games, line),
-    [games, line]
-  );
-  const repertoire = useRepertoire(username, displayFen);
   const openingName = useMemo(
     () => inferOpeningName(games, line),
     [games, line]
@@ -224,35 +171,6 @@ function ExplorerPage() {
     window.localStorage.setItem("ccc-recommendations-enabled", String(enabled));
     if (!enabled) setHoveredRecommendationMove(null);
   }
-  const recommendationMoves = useMemo(() => {
-    if (!recommendationsEnabled) return [];
-    const savedMoveUcis = new Set(
-      repertoire.currentMoves.map((move) => move.move_uci)
-    );
-    return (recommendation?.candidates ?? []).filter(
-      (move) => !savedMoveUcis.has(move.move_uci)
-    );
-  }, [recommendation, recommendationsEnabled, repertoire.currentMoves]);
-  const arrows = useMemo(
-    () => hoveredRecommendationMove
-      ? buildMoveArrows(
-          [hoveredRecommendationMove],
-          hoveredRecommendationMove.visualSource === "repertoire"
-            ? REPERTOIRE_ARROW_COLOR
-            : RECOMMENDATION_ARROW_COLOR
-        )
-      : [
-          ...buildMoveArrows(repertoire.currentMoves, REPERTOIRE_ARROW_COLOR),
-          ...buildMoveArrows(recommendationMoves, RECOMMENDATION_ARROW_COLOR),
-        ],
-    [hoveredRecommendationMove, recommendationMoves, repertoire.currentMoves]
-  );
-
-  function updateRecommendationsEnabled(enabled) {
-    setRecommendationsEnabled(enabled);
-    window.localStorage.setItem("ccc-recommendations-enabled", String(enabled));
-    if (!enabled) setHoveredRecommendationMove(null);
-  }
 
   function clearAnalysisLine() {
     setAnalysisHistory([]);
@@ -260,7 +178,6 @@ function ExplorerPage() {
     setHoveredRecommendationMove(null);
   }
 
-  function pushAnalysisPosition(nextFen) {
   function pushAnalysisPosition(nextFen) {
     setHoveredRecommendationMove(null);
     setAnalysisHistory((history) => [
@@ -281,11 +198,9 @@ function ExplorerPage() {
 
     if (!result) {
       logger.warn("Could not play recommended move", { move });
-      logger.warn("Could not play recommended move", { move });
       return;
     }
 
-    pushAnalysisPosition(game.fen());
     pushAnalysisPosition(game.fen());
   }
 
@@ -309,12 +224,10 @@ function ExplorerPage() {
 
       if (matchingChild) {
         selectOpeningNode(matchingChild.id);
-        selectOpeningNode(matchingChild.id);
         return true;
       }
     }
 
-    pushAnalysisPosition(nextFen);
     pushAnalysisPosition(nextFen);
     return true;
   }
@@ -332,7 +245,6 @@ function ExplorerPage() {
     }
 
     clearAnalysisLine();
-    clearAnalysisLine();
     goToParent();
   }
 
@@ -347,7 +259,6 @@ function ExplorerPage() {
     }
 
     clearAnalysisLine();
-    clearAnalysisLine();
     goToNext();
   }
 
@@ -356,27 +267,6 @@ function ExplorerPage() {
     goToStart();
   }
 
-  function selectUsername(nextUsername) {
-    clearAnalysisLine();
-    setUsername(nextUsername);
-  }
-
-  function selectOpeningNode(nodeId) {
-    clearAnalysisLine();
-    goToNode(nodeId);
-  }
-
-  const stableBoardMove = useStableCallback(handleBoardMove);
-  const stablePlayMove = useStableCallback(playRecommendedMove);
-  const stableSelectOpeningNode = useStableCallback(selectOpeningNode);
-  const stableRecommendationToggle = useStableCallback(updateRecommendationsEnabled);
-  const hoverRecommendation = useStableCallback((move) =>
-    setHoveredRecommendationMove({ ...move, visualSource: "recommendation" })
-  );
-  const hoverRepertoire = useStableCallback((move) =>
-    setHoveredRecommendationMove({ ...move, visualSource: "repertoire" })
-  );
-  const clearHoveredMove = useStableCallback(() => setHoveredRecommendationMove(null));
   function selectUsername(nextUsername) {
     clearAnalysisLine();
     setUsername(nextUsername);
@@ -454,7 +344,6 @@ function ExplorerPage() {
             arrows={arrows}
             sideToMove={sideToMove}
             onMove={stableBoardMove}
-            onMove={stableBoardMove}
           />
 
           <MoveControls
@@ -470,12 +359,7 @@ function ExplorerPage() {
           />
 
           </section>
-          </section>
 
-          <section className="right-column">
-            {showCurrentLine ? (
-              <CurrentLine line={line} fen={displayFen} showFen />
-            ) : null}
           <section className="right-column">
             {showCurrentLine ? (
               <CurrentLine line={line} fen={displayFen} showFen />
@@ -485,27 +369,8 @@ function ExplorerPage() {
             sideToMove={sideToMove}
             recommendation={recommendation}
             recommendationsEnabled={recommendationsEnabled}
-            recommendationsEnabled={recommendationsEnabled}
             loading={recommendationLoading}
             error={recommendationError}
-            onRecommendationsEnabledChange={stableRecommendationToggle}
-            onMoveHover={hoverRecommendation}
-            onMoveLeave={clearHoveredMove}
-            onMoveSelect={stablePlayMove}
-          />
-
-          {repertoire.enabled ? (
-            <RepertoirePanel
-              username={username}
-              games={games}
-              openingName={openingName}
-              recommendation={recommendation}
-              repertoire={repertoire}
-              onMoveHover={hoverRepertoire}
-              onMoveLeave={clearHoveredMove}
-              onMoveSelect={stablePlayMove}
-            />
-          ) : null}
             onRecommendationsEnabledChange={stableRecommendationToggle}
             onMoveHover={hoverRecommendation}
             onMoveLeave={clearHoveredMove}
@@ -530,7 +395,6 @@ function ExplorerPage() {
               childrenNodes={children}
               sideToMove={sideToMove}
               onSelect={stableSelectOpeningNode}
-              onSelect={stableSelectOpeningNode}
             />
           )}
 
@@ -540,13 +404,6 @@ function ExplorerPage() {
       ) : null}
 
       <SiteFooter />
-          {showDeveloperTools ? <PreloadControls warmup={warmup} /> : null}
-          </section>
-        </div>
-      ) : null}
-
-      <SiteFooter />
     </main>
   );
 }
-

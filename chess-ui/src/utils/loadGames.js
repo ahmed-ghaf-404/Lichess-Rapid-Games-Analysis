@@ -3,27 +3,8 @@ const PLAYER_CACHE_LIMIT = 2;
 const PLAYER_CACHE_TTL_MS = 5 * 60 * 1000;
 const playerCache = new Map();
 const inFlightPlayers = new Map();
-const PLAYER_CACHE_LIMIT = 2;
-const PLAYER_CACHE_TTL_MS = 5 * 60 * 1000;
-const playerCache = new Map();
-const inFlightPlayers = new Map();
 
 export async function loadGames(username) {
-  const cacheKey = String(username || "").trim().toLowerCase();
-  const cached = playerCache.get(cacheKey);
-  if (cached && Date.now() - cached.storedAt < PLAYER_CACHE_TTL_MS) {
-    playerCache.delete(cacheKey);
-    playerCache.set(cacheKey, cached);
-    return cached.games;
-  }
-
-  const existingRequest = inFlightPlayers.get(cacheKey);
-  if (existingRequest) return existingRequest;
-
-  const request = (async () => {
-    const res = await fetch(
-      `${BASE_URL}/games/user/${encodeURIComponent(username)}`
-    );
   const cacheKey = String(username || "").trim().toLowerCase();
   const cached = playerCache.get(cacheKey);
   if (cached && Date.now() - cached.storedAt < PLAYER_CACHE_TTL_MS) {

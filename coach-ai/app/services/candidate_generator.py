@@ -31,12 +31,6 @@ class CandidateGenerator:
             rating,
             max_candidates,
         )
-        logger.debug(
-            "candidates.generation_started side=%s rating=%s max_candidates=%d",
-            side,
-            rating,
-            max_candidates,
-        )
 
         legal_moves = {move.uci(): move for move in board.legal_moves}
 
@@ -108,7 +102,6 @@ class CandidateGenerator:
         )
 
         result = {
-        result = {
             "fen": fen,
             "side_to_move": side,
             "rating_bucket": peer_data["rating_bucket"],
@@ -117,14 +110,6 @@ class CandidateGenerator:
             "statistics_available": peer_data.get("statistics_available", True),
             "candidates": candidate_list[:max_candidates],
         }
-        logger.debug(
-            "candidates.generation_completed peer_moves=%d engine_moves=%d candidates=%d",
-            len(peer_data["moves"]),
-            len(engine_moves),
-            len(result["candidates"]),
-        )
-        return result
-
         logger.debug(
             "candidates.generation_completed peer_moves=%d engine_moves=%d candidates=%d",
             len(peer_data["moves"]),

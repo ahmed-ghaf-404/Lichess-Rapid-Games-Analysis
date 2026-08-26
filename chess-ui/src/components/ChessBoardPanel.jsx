@@ -1,15 +1,5 @@
 import { memo, useCallback, useMemo } from "react";
-import { memo, useCallback, useMemo } from "react";
 import { Chessboard } from "react-chessboard";
-import { useLocalization } from "../i18n/useLocalization";
-
-
-const BOARD_ANIMATION_MS = Math.max(
-  0,
-  Number(import.meta.env.VITE_BOARD_ANIMATION_MS ?? 120)
-);
-
-function ChessBoardPanel({
 import { useLocalization } from "../i18n/useLocalization";
 
 
