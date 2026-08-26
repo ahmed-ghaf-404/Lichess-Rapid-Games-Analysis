@@ -166,7 +166,7 @@ async function preloadRecommendationTree({
     const item = queue.shift();
     if (!item?.fen) continue;
 
-    const seenKey = `${userId}|${useMasterGames ? "masters" : "peer"}|${item.fen}|d:${item.depth}|b:${branching}|m:${maxCandidates}`;
+    const seenKey = `${userId}|${useMasterGames ? "masters" : "peer"}|${userId}|${item.fen}|d:${item.depth}|b:${branching}|m:${maxCandidates}`;
     if (seen?.has(seenKey)) continue;
     seen?.add(seenKey);
 

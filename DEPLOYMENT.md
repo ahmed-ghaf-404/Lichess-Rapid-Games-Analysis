@@ -1,19 +1,19 @@
 # Production deployment
 
-Production deploys are branch-gated. A push to `prod` runs the full CI
-workflow. Only after that workflow succeeds does the deployment workflow
-connect to the server and update the Docker Compose stack.
+Production deployments are started manually from GitHub Actions. The workflow
+only permits deployment when the selected branch is `prod`. Before starting a
+deployment, confirm that CI passed for the commit currently on `prod`.
 
 ## One-time GitHub setup
 
 Create a protected GitHub environment named `production`, then add these
 environment secrets:
 
-| Secret | Purpose |
-| --- | --- |
-| `PROD_HOST` | Server hostname or IP address |
-| `PROD_USER` | SSH user allowed to run Docker Compose |
-| `PROD_SSH_KEY` | Private SSH key for that user |
+| Secret          | Purpose                                       |
+| --------------- | --------------------------------------------- |
+| `PROD_HOST`     | Server hostname or IP address                 |
+| `PROD_USER`     | SSH user allowed to run Docker Compose        |
+| `PROD_SSH_KEY`  | Private SSH key for that user                 |
 | `PROD_APP_PATH` | Absolute path to the existing server checkout |
 
 Require reviewer approval on the `production` environment if you want a manual
@@ -40,10 +40,10 @@ dedicated to deployment and stored as an encrypted GitHub secret.
 
 This creates two files:
 
-| File | Keep it where? | Purpose |
-| --- | --- | --- |
-| `~/.ssh/ccc_github_actions` | Your Mac and `PROD_SSH_KEY` only | Private key; never share or commit it |
-| `~/.ssh/ccc_github_actions.pub` | VPS `authorized_keys` only | Public key; safe to install on the server |
+| File                            | Keep it where?                   | Purpose                                   |
+| ------------------------------- | -------------------------------- | ----------------------------------------- |
+| `~/.ssh/ccc_github_actions`     | Your Mac and `PROD_SSH_KEY` only | Private key; never share or commit it     |
+| `~/.ssh/ccc_github_actions.pub` | VPS `authorized_keys` only       | Public key; safe to install on the server |
 
 ### Install the public key on the VPS
 
@@ -103,10 +103,7 @@ VPS.
 ## Release flow
 
 1. Merge reviewed work into `main`.
-2. Fast-forward `prod` to the release commit.
-3. Push `prod` when ready to deploy.
-4. Confirm both **CI** and **Deploy production** pass in GitHub Actions.
-
-The workflow never commits secrets. Example environment files document every
-required key, while `.dockerignore` prevents real environment files from being
-copied into container images.
+2. Update `prod` to the tested release commit.
+3. Open **Actions → Deploy production → Run workflow**.
+4. Select the `prod` branch and start the workflow.
+5. Confirm the deployment and Docker Compose status steps pass.

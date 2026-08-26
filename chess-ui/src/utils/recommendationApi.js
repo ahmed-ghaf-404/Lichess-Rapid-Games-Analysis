@@ -27,6 +27,23 @@ export function getRatingBucket(rating) {
   return "2200+";
 }
 
+export function getPositionCacheKey(fen) {
+  return String(fen || "").trim().split(/\s+/).slice(0, 4).join(" ");
+}
+
+export function getRatingBucket(rating) {
+  if (rating === null || rating === undefined || rating === "") return "unknown";
+  if (!Number.isFinite(Number(rating))) return "unknown";
+  const value = Number(rating);
+  if (value < 1200) return "0-1199";
+  if (value < 1400) return "1200-1399";
+  if (value < 1600) return "1400-1599";
+  if (value < 1800) return "1600-1799";
+  if (value < 2000) return "1800-1999";
+  if (value < 2200) return "2000-2199";
+  return "2200+";
+}
+
 export function getRecommendationCacheKey({
   fen,
   userId,
@@ -53,9 +70,36 @@ export function getCachedRecommendation(params) {
   recommendationCache.delete(key);
   recommendationCache.set(key, cached);
   return cached;
+  const key = getRecommendationCacheKey(params);
+  const cached = recommendationCache.get(key);
+  if (!cached) return null;
+
+  recommendationCache.delete(key);
+  recommendationCache.set(key, cached);
+  return cached;
 }
 
 export function setCachedRecommendation(params, recommendation) {
+  const key = getRecommendationCacheKey(params);
+  recommendationCache.delete(key);
+  recommendationCache.set(key, recommendation);
+
+  while (recommendationCache.size > MAX_RECOMMENDATION_CACHE_ENTRIES) {
+    recommendationCache.delete(recommendationCache.keys().next().value);
+  }
+}
+
+function waitForSharedRequest(request, signal) {
+  if (!signal) return request;
+  if (signal.aborted) {
+    return Promise.reject(new DOMException("The operation was aborted.", "AbortError"));
+  }
+
+  return new Promise((resolve, reject) => {
+    const abort = () => reject(new DOMException("The operation was aborted.", "AbortError"));
+    signal.addEventListener("abort", abort, { once: true });
+    request.then(resolve, reject).finally(() => signal.removeEventListener("abort", abort));
+  });
   const key = getRecommendationCacheKey(params);
   recommendationCache.delete(key);
   recommendationCache.set(key, recommendation);
@@ -93,6 +137,10 @@ export async function fetchRecommendation({
 
   const params = { fen, userId, rating, color, maxCandidates, useMasterGames };
   const cached = getCachedRecommendation(params);
+  if (cached) {
+    logger.debug("Recommendation cache hit", { userId, rating, color });
+    return cached;
+  }
   if (cached) {
     logger.debug("Recommendation cache hit", { userId, rating, color });
     return cached;
@@ -138,7 +186,15 @@ export async function fetchRecommendation({
     }
 
     if (!res.ok) {
+    if (!res.ok) {
       const errorText = await res.text();
+      const level = res.status >= 500 ? "error" : "warn";
+      logger[level]("Recommendation request rejected", {
+        status: res.status,
+        statusText: res.statusText,
+        detail: errorText,
+        requestId: res.headers.get("X-Request-ID") || requestId,
+      });
       const level = res.status >= 500 ? "error" : "warn";
       logger[level]("Recommendation request rejected", {
         status: res.status,
@@ -151,7 +207,28 @@ export async function fetchRecommendation({
         `Recommendation request failed: ${res.status} ${res.statusText} - ${errorText}`
       );
     }
+    }
 
+    const json = await res.json();
+    setCachedRecommendation(params, json);
+    logger.info("Recommendation request completed", {
+      status: res.status,
+      requestId: res.headers.get("X-Request-ID") || requestId,
+      candidateCount: json.candidates?.length ?? 0,
+      cache: json.metadata?.cache,
+    });
+    return json;
+  })();
+
+  inFlightRecommendations.set(cacheKey, request);
+  const clearInFlight = () => {
+    if (inFlightRecommendations.get(cacheKey) === request) {
+      inFlightRecommendations.delete(cacheKey);
+    }
+  };
+  request.then(clearInFlight, clearInFlight);
+
+  return waitForSharedRequest(request, signal);
     const json = await res.json();
     setCachedRecommendation(params, json);
     logger.info("Recommendation request completed", {
