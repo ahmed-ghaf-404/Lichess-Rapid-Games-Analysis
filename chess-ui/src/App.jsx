@@ -73,6 +73,7 @@ function ExplorerPage() {
   const analysisFen = analysisIndex >= 0 ? analysisHistory[analysisIndex] : null;
 
   const { games, loading, error } = useGames(username);
+  const usingMasterFallback = !loading && !error && games.length === 0;
   const rating = useMemo(
     () => getPlayerRating(games, username),
     [games, username]
@@ -114,6 +115,7 @@ function ExplorerPage() {
     analysisPosition: isFollowingRecommendation,
     userId: username,
     rating,
+    useMasterGames: usingMasterFallback,
     enabled:
       recommendationsEnabled &&
       !loading &&
@@ -130,6 +132,7 @@ function ExplorerPage() {
     userId: username,
     rating,
     color: sideToMove,
+    useMasterGames: usingMasterFallback,
     enabled:
       !loading &&
       !error &&
@@ -295,6 +298,7 @@ function ExplorerPage() {
         gameCount={games.length}
         rating={rating}
         loading={loading}
+        usingMasterFallback={usingMasterFallback}
         warmup={warmup}
         appMode={appMode}
         showDeveloperTools={showDeveloperTools}

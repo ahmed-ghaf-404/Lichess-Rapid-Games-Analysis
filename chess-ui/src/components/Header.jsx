@@ -10,6 +10,7 @@ export default function Header({
   gameCount,
   rating,
   loading,
+  usingMasterFallback = false,
   warmup,
   appMode,
   showDeveloperTools,
@@ -54,6 +55,12 @@ export default function Header({
             <span>@{username}</span>
             <span>{t("header.rapidGames", { count: formatNumber(gameCount) })}</span>
             <span>{t("header.rating", { rating: formatNumber(rating) })}</span>
+          </div>
+        ) : null}
+        {!loading && usingMasterFallback ? (
+          <div className="player-summary" aria-live="polite">
+            <span>@{username}</span>
+            <span>{t("header.masterFallback")}</span>
           </div>
         ) : null}
       </div>

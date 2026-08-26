@@ -9,6 +9,7 @@ class RecommendRequest(BaseModel):
     rating: int | None = None
     color: Literal["white", "black"] | None = None
     max_candidates: int = Field(default=8, ge=1, le=20)
+    use_master_games: bool = False
 
     use_cache: bool = True
     refresh_cache: bool = False
@@ -25,6 +26,7 @@ class CandidateMove(BaseModel):
     engine_eval_cp: int | None = None
     engine_loss_cp: int | None = None
     repertoire_fit: float = 0.0
+    statistics_source: Literal["peer", "masters", "engine"] = "peer"
     reasons: list[str] = []
 
 

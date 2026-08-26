@@ -1,6 +1,8 @@
 import chess
+import asyncio
 import logging
 
+from app.services.master_stats_service import MasterStatsService
 from app.services.peer_stats_service import PeerStatsService
 from app.services.stockfish_service import StockfishService
 
@@ -11,6 +13,7 @@ logger = logging.getLogger(__name__)
 class CandidateGenerator:
     def __init__(self):
         self.peer_stats = PeerStatsService()
+        self.master_stats = MasterStatsService()
         self.stockfish = StockfishService()
 
     async def generate(
@@ -18,6 +21,7 @@ class CandidateGenerator:
         fen: str,
         rating: int | None,
         max_candidates: int = 8,
+        use_master_games: bool = False,
     ) -> dict:
         board = chess.Board(fen)
         side = "white" if board.turn == chess.WHITE else "black"
@@ -30,13 +34,20 @@ class CandidateGenerator:
 
         legal_moves = {move.uci(): move for move in board.legal_moves}
 
-        peer_data = await self.peer_stats.get_move_stats(
-            fen=fen,
-            rating=rating,
-            side_to_move=side,
-            limit=max_candidates,
+        statistics_service = self.master_stats if use_master_games else self.peer_stats
+        peer_data, engine_moves = await asyncio.gather(
+            statistics_service.get_move_stats(
+                fen=fen,
+                rating=rating,
+                side_to_move=side,
+                limit=max_candidates,
+            ),
+            self.stockfish.analyze_top_moves(fen, top_k=max_candidates),
         )
-        engine_moves = await self.stockfish.analyze_top_moves(fen, top_k=max_candidates)
+        statistics_source = peer_data.get(
+            "statistics_source",
+            "masters" if use_master_games else "peer",
+        )
 
         candidates: dict[str, dict] = {}
 
@@ -53,6 +64,7 @@ class CandidateGenerator:
                 "engine_rank": None,
                 "engine_eval_cp": None,
                 "engine_loss_cp": None,
+                "statistics_source": statistics_source,
             }
 
         for move in engine_moves:
@@ -74,6 +86,7 @@ class CandidateGenerator:
                 "engine_rank": move["rank"],
                 "engine_eval_cp": move["cp"],
                 "engine_loss_cp": move["loss_cp"],
+                "statistics_source": existing.get("statistics_source", "engine"),
             }
 
         candidate_list = list(candidates.values())
@@ -93,6 +106,8 @@ class CandidateGenerator:
             "side_to_move": side,
             "rating_bucket": peer_data["rating_bucket"],
             "sample_size": peer_data["total_games"],
+            "statistics_source": statistics_source,
+            "statistics_available": peer_data.get("statistics_available", True),
             "candidates": candidate_list[:max_candidates],
         }
         logger.debug(

@@ -66,11 +66,8 @@ async def get_games_by_user(
     games = await collect_games(cursor)
 
     if not games:
-        logger.warning("games.user_not_found username=%s", normalized_username)
-        raise HTTPException(
-            status_code=status.HTTP_404_NOT_FOUND,
-            detail=f"No imported rapid games were found for @{normalized_username}.",
-        )
+        logger.info("games.user_fallback_to_masters username=%s", normalized_username)
+        return []
 
     logger.info("games.user_lookup_completed username=%s count=%d", normalized_username, len(games))
     return games

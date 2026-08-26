@@ -6,10 +6,17 @@ const REASON_KEYS = {
   "large peer sample": "reason.largePeerSample",
   "reasonable peer sample": "reason.reasonablePeerSample",
   "small peer sample": "reason.smallPeerSample",
+  "large master sample": "reason.largeMasterSample",
+  "reasonable master sample": "reason.reasonableMasterSample",
+  "small master sample": "reason.smallMasterSample",
   "common at your rating": "reason.commonAtRating",
   "played often in this pool": "reason.playedOften",
+  "common in master games": "reason.commonInMasterGames",
+  "played often by masters": "reason.playedOftenByMasters",
   "strong peer win rate": "reason.strongWinRate",
   "solid practical results": "reason.solidResults",
+  "strong master results": "reason.strongMasterResults",
+  "solid master results": "reason.solidMasterResults",
   "top engine move": "reason.topEngine",
   "engine-approved": "reason.engineApproved",
   "fits your repertoire": "reason.fitsRepertoire",
@@ -87,6 +94,7 @@ function RecommendationPanel({
   }
 
   const [top, ...rest] = recommendation.candidates;
+  const usesMasterGames = recommendation.metadata?.source === "masters+engine";
 
   return (
     <section className="panel recommendation-panel">
@@ -103,7 +111,7 @@ function RecommendationPanel({
         <span className="recommendation-label">{t("recommendation.move")}</span>
         <span className="recommendation-move chess-notation">{top.move_san}</span>
         <span className="recommendation-meta">
-          {t("recommendation.score", {
+          {t(usesMasterGames ? "recommendation.scoreMasters" : "recommendation.score", {
             score: formatNumber(top.score),
             count: formatNumber(top.peer_games),
           })}
@@ -153,7 +161,7 @@ function RecommendationPanel({
               >
                 <span className="candidate-move chess-notation">{move.move_san}</span>
                 <span className="variation-count">
-                  {t("recommendation.candidateMeta", {
+                  {t(usesMasterGames ? "recommendation.candidateMetaMasters" : "recommendation.candidateMeta", {
                     evaluation,
                     frequency: winRate,
                     count: formatNumber(move.peer_games),

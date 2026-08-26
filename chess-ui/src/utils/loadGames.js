@@ -32,9 +32,7 @@ export async function loadGames(username) {
       }
 
       if (res.status === 404) {
-        throw new Error(
-          detail || `No imported rapid games were found for @${username}.`
-        );
+        return [];
       }
 
       if (res.status === 422) {
@@ -46,8 +44,8 @@ export async function loadGames(username) {
 
     const games = await res.json();
 
-    if (!Array.isArray(games) || games.length === 0) {
-      throw new Error(`No imported rapid games were found for @${username}.`);
+    if (!Array.isArray(games)) {
+      throw new Error("The games service returned an invalid response.");
     }
 
     playerCache.delete(cacheKey);

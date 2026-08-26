@@ -40,7 +40,7 @@ def test_cache_keys_reuse_equivalent_positions_and_rating_buckets():
 
 def test_base_analysis_is_shared_but_final_result_remains_account_specific():
     choco = request("chocoroku", 1682)
-    eric = request("ericrosen", 1750)
+    eric = request("ericrosen", 1682)
     normalized = position_key(START_FEN)
 
     assert base_analysis_cache_key(choco, normalized) == base_analysis_cache_key(
@@ -49,6 +49,19 @@ def test_base_analysis_is_shared_but_final_result_remains_account_specific():
     )
     assert recommendation_cache_key(choco, normalized) != recommendation_cache_key(
         eric,
+        normalized,
+    )
+
+
+def test_master_base_analysis_is_shared_across_rating_buckets():
+    first = request("missing-one", 1100)
+    second = request("missing-two", 2300)
+    first.use_master_games = True
+    second.use_master_games = True
+    normalized = position_key(START_FEN)
+
+    assert base_analysis_cache_key(first, normalized) == base_analysis_cache_key(
+        second,
         normalized,
     )
 

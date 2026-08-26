@@ -68,11 +68,9 @@ def test_user_games_are_returned_newest_first_query(monkeypatch):
     assert white_query["$options"] == "i"
 
 
-def test_unknown_user_returns_not_found(monkeypatch):
+def test_unknown_user_returns_empty_list_for_master_fallback(monkeypatch):
     monkeypatch.setattr(games_route, "games_collection", FakeCollection([]))
 
-    with pytest.raises(HTTPException) as error:
-        asyncio.run(games_route.get_games_by_user("unknown-player", 50))
+    result = asyncio.run(games_route.get_games_by_user("unknown-player", 50))
 
-    assert error.value.status_code == 404
-    assert "@unknown-player" in error.value.detail
+    assert result == []

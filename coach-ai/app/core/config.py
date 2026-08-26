@@ -18,6 +18,8 @@ class Settings(BaseSettings):
     recommender_version: str = "heuristic_v1"
     repertoire_users: str = "ericrosen,chocoroku"
     repertoire_write_key: str = ""
+    master_explorer_url: str = "https://explorer.lichess.org/masters"
+    master_explorer_timeout_seconds: float = 6.0
 
 
 settings = Settings()

@@ -12,16 +12,16 @@ concurrency:
 
 jobs:
   deploy:
+    name: Deploy to production server
     if: github.ref == 'refs/heads/prod'
     runs-on: ubuntu-latest
     environment: production
 
     steps:
-      - name: Deploy verified prod branch
+      - name: Deploy prod branch
         uses: appleboy/ssh-action@v1.2.2
         env:
           PROD_APP_PATH: ${{ secrets.PROD_APP_PATH }}
-          RELEASE_SHA: ${{ github.sha }}
         with:
           host: ${{ secrets.PROD_HOST }}
           username: ${{ secrets.PROD_USER }}
@@ -31,7 +31,7 @@ jobs:
           script: |
             cd "$PROD_APP_PATH"
             git fetch origin prod
-            git checkout --detach "$RELEASE_SHA"
-            git pull --ff-only origin prod
+            git switch prod
+            git reset --hard origin/prod
             docker compose -f docker-compose.yml up -d --build --remove-orphans
             docker compose -f docker-compose.yml ps

@@ -146,6 +146,7 @@ async function preloadRecommendationTree({
   maxCandidates,
   userId,
   rating,
+  useMasterGames,
   signal,
   seen,
   onProgress,
@@ -165,7 +166,7 @@ async function preloadRecommendationTree({
     const item = queue.shift();
     if (!item?.fen) continue;
 
-    const seenKey = `${userId}|${item.fen}|d:${item.depth}|b:${branching}|m:${maxCandidates}`;
+    const seenKey = `${userId}|${useMasterGames ? "masters" : "peer"}|${item.fen}|d:${item.depth}|b:${branching}|m:${maxCandidates}`;
     if (seen?.has(seenKey)) continue;
     seen?.add(seenKey);
 
@@ -175,6 +176,7 @@ async function preloadRecommendationTree({
       rating,
       color: getSideToMove(item.fen),
       maxCandidates,
+      useMasterGames,
       signal,
     });
 
@@ -205,6 +207,7 @@ export function useRecommendationWarmup({
   analysisPosition = false,
   userId,
   rating,
+  useMasterGames = false,
   enabled = true,
 }) {
   const [settings, setSettingsState] = useState(() =>
@@ -317,6 +320,7 @@ export function useRecommendationWarmup({
           maxCandidates: settings.maxCandidates,
           userId,
           rating,
+          useMasterGames,
           signal: controller.signal,
           seen: backgroundSeenRef.current,
           onProgress: (progress) => {
@@ -354,6 +358,7 @@ export function useRecommendationWarmup({
       enabled,
       userId,
       rating,
+      useMasterGames,
       settings.backgroundDepth,
       settings.backgroundBranching,
       settings.maxCandidates,
@@ -389,6 +394,7 @@ export function useRecommendationWarmup({
           maxCandidates: settings.maxCandidates,
           userId,
           rating,
+          useMasterGames,
           signal: controller.signal,
           seen: startupSeenRef.current,
           onProgress: (progress) => {
@@ -439,6 +445,7 @@ export function useRecommendationWarmup({
     seedFens,
     userId,
     rating,
+    useMasterGames,
   ]);
 
   useEffect(() => {

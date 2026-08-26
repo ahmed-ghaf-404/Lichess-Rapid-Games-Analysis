@@ -1,4 +1,4 @@
-export const DEFAULT_LICHESS_USERNAME = "ericrosen";
+export const DEFAULT_LICHESS_USERNAME = "chocoroku";
 
 const LICHESS_USERNAME_PATTERN = /^[a-zA-Z0-9_-]{2,30}$/;
 

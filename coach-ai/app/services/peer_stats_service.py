@@ -29,6 +29,8 @@ class PeerStatsService:
                 "side_to_move": side_to_move,
                 "total_games": 0,
                 "moves": [],
+                "statistics_source": "peer",
+                "statistics_available": True,
             }
 
         total_games = sum(document.get("total_games", 0) for document in documents)
@@ -67,4 +69,6 @@ class PeerStatsService:
             "side_to_move": side_to_move,
             "total_games": total_games,
             "moves": moves[:limit],
+            "statistics_source": "peer",
+            "statistics_available": True,
         }

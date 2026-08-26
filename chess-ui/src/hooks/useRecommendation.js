@@ -7,7 +7,14 @@ import { logger } from "../utils/logger";
 
 const MAX_CANDIDATES = Number(import.meta.env.VITE_RECOMMENDATION_MAX_CANDIDATES ?? 6);
 
-export function useRecommendation({ fen, userId, rating, color, enabled = true }) {
+export function useRecommendation({
+  fen,
+  userId,
+  rating,
+  color,
+  useMasterGames = false,
+  enabled = true,
+}) {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
@@ -26,6 +33,7 @@ export function useRecommendation({ fen, userId, rating, color, enabled = true }
       rating,
       color,
       maxCandidates: MAX_CANDIDATES,
+      useMasterGames,
     };
 
     const cached = getCachedRecommendation(params);
@@ -70,7 +78,7 @@ export function useRecommendation({ fen, userId, rating, color, enabled = true }
       cancelled = true;
       controller.abort();
     };
-  }, [fen, userId, rating, color, enabled]);
+  }, [fen, userId, rating, color, useMasterGames, enabled]);
 
   return { data, loading, error };
 }
