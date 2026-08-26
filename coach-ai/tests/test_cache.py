@@ -40,14 +40,15 @@ def test_cache_keys_reuse_equivalent_positions_and_rating_buckets():
 
 def test_base_analysis_is_shared_but_final_result_remains_account_specific():
     choco = request("chocoroku", 1682)
+    eric = request("ericrosen", 1682)
     normalized = position_key(START_FEN)
 
     assert base_analysis_cache_key(choco, normalized) == base_analysis_cache_key(
-        choco,
+        eric,
         normalized,
     )
     assert recommendation_cache_key(choco, normalized) != recommendation_cache_key(
-        choco,
+        eric,
         normalized,
     )
 
