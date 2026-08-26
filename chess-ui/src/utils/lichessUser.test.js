@@ -9,8 +9,8 @@ import {
 
 
 describe("Lichess username helpers", () => {
-  it("uses ericrosen as the portfolio-friendly default", () => {
-    expect(DEFAULT_LICHESS_USERNAME).toBe("ericrosen");
+  it("uses chocoroku as the project default", () => {
+    expect(DEFAULT_LICHESS_USERNAME).toBe("chocoroku");
   });
 
   it("normalizes usernames before requesting games", () => {
